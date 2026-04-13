@@ -4,6 +4,98 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio Signal Center</title>
+<script>
+(function() {
+  const SESSION_KEY = 'psc_auth';
+  const HASH = '8c7afc3b9d2e1f506a4b8c3d7e9f2a1b'; // SHA-lite placeholder – wird unten gesetzt
+
+  // Passwort-Hash Funktion (einfaches djb2 – reicht für diesen Zweck)
+  function hashStr(s) {
+    let h = 5381;
+    for (let i = 0; i < s.length; i++) h = ((h << 5) + h) ^ s.charCodeAt(i);
+    return (h >>> 0).toString(16);
+  }
+
+  const CORRECT_HASH = hashStr('signal2033');  // ← Dein Passwort hier ändern
+
+  if (sessionStorage.getItem(SESSION_KEY) === 'ok') return; // Bereits authentifiziert
+
+  // Login-Screen anzeigen
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.style.display = 'none';
+  });
+
+  const overlay = document.createElement('div');
+  overlay.id = 'psc-lock';
+  overlay.innerHTML = `
+    <style>
+      #psc-lock {
+        position:fixed;inset:0;z-index:99999;
+        background:#05050d;
+        display:flex;align-items:center;justify-content:center;
+        font-family:'Outfit',sans-serif;
+        background-image:
+          radial-gradient(ellipse 80% 50% at 50% -20%,rgba(0,245,160,.05),transparent),
+          radial-gradient(circle,rgba(255,255,255,.018) 1px,transparent 1px);
+        background-size:100% 100%,30px 30px;
+      }
+      #psc-lock .box {
+        background:#0d0d1a;border:1px solid #222238;border-radius:16px;
+        padding:36px 32px;max-width:360px;width:90%;text-align:center;
+      }
+      #psc-lock .logo {
+        font-size:28px;font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:6px;
+      }
+      #psc-lock .logo em { color:#00f5a0;font-style:normal; }
+      #psc-lock .sub { font-size:12px;color:#505068;margin-bottom:28px;font-family:'DM Mono',monospace; }
+      #psc-lock input {
+        width:100%;background:#111120;border:1px solid #222238;border-radius:10px;
+        padding:12px 16px;color:#d4d4f0;font-size:15px;font-family:'DM Mono',monospace;
+        outline:none;text-align:center;letter-spacing:.15em;margin-bottom:12px;
+        transition:border-color .2s;
+      }
+      #psc-lock input:focus { border-color:rgba(0,245,160,.4); }
+      #psc-lock button {
+        width:100%;background:rgba(0,245,160,.1);border:1px solid rgba(0,245,160,.3);
+        border-radius:10px;padding:12px;color:#00f5a0;font-size:14px;font-weight:600;
+        cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;
+      }
+      #psc-lock button:hover { background:rgba(0,245,160,.18); }
+      #psc-lock .err {
+        font-family:'DM Mono',monospace;font-size:11px;color:#ff2d55;
+        margin-top:10px;min-height:18px;
+      }
+      #psc-lock .hint { font-family:'DM Mono',monospace;font-size:10px;color:#505068;margin-top:16px; }
+    </style>
+    <div class="box">
+      <div class="logo">Portfolio <em>Signals</em></div>
+      <div class="sub">7-Jahres-Plan · Privater Bereich</div>
+      <input type="password" id="psc-pw" placeholder="Passwort" autocomplete="current-password" />
+      <button onclick="pscLogin()">Einloggen</button>
+      <div class="err" id="psc-err"></div>
+      <div class="hint">Drücke Enter zum Bestätigen</div>
+    </div>
+  `;
+  document.currentScript.parentElement.appendChild(overlay);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') pscLogin();
+  });
+
+  window.pscLogin = function() {
+    const pw = document.getElementById('psc-pw').value;
+    if (hashStr(pw) === CORRECT_HASH) {
+      sessionStorage.setItem(SESSION_KEY, 'ok');
+      document.getElementById('psc-lock').remove();
+      document.body.style.display = '';
+    } else {
+      document.getElementById('psc-err').textContent = 'Falsches Passwort.';
+      document.getElementById('psc-pw').value = '';
+      document.getElementById('psc-pw').focus();
+    }
+  };
+})();
+</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap');
 

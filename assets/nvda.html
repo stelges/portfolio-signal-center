@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nvidia · Portfolio Signal Center</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+:root{--bg:#05050d;--card:#0d0d1a;--card2:#111120;--line:#1a1a2e;--line2:#222238;--buy:#00f5a0;--buy-bg:rgba(0,245,160,.07);--buy-b:rgba(0,245,160,.2);--hold:#f5c000;--hold-bg:rgba(245,192,0,.07);--hold-b:rgba(245,192,0,.2);--cash:#ff7b00;--cash-bg:rgba(255,123,0,.07);--cash-b:rgba(255,123,0,.2);--sell:#ff2d55;--sell-bg:rgba(255,45,85,.07);--sell-b:rgba(255,45,85,.2);--txt:#d4d4f0;--hi:#9090b8;--dim:#505068;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--txt);font-family:'Outfit',sans-serif;min-height:100vh;background-image:radial-gradient(ellipse 80% 50% at 50% -20%,rgba(118,185,0,.04),transparent),radial-gradient(circle,rgba(255,255,255,.018) 1px,transparent 1px);background-size:100% 100%,30px 30px;}
+.wrap{max-width:840px;margin:0 auto;padding:28px 16px 100px;}
+.back{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;color:var(--dim);text-decoration:none;margin-bottom:20px;padding:6px 12px;border:1px solid var(--line2);border-radius:8px;transition:all .2s;}
+.back:hover{color:var(--txt);background:var(--card);}
+.hero{display:flex;align-items:center;gap:18px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line2);}
+.hero-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;background:rgba(118,185,0,.1);color:#76b900;font-family:'DM Mono',monospace;flex-shrink:0;}
+.hero-name{font-size:clamp(28px,5vw,40px);font-weight:800;color:#fff;line-height:1;}
+.hero-ticker{font-family:'DM Mono',monospace;font-size:12px;color:var(--dim);margin-top:4px;}
+.hero-right{margin-left:auto;text-align:right;}
+.hero-price{font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:#fff;}
+.hero-signal{display:inline-block;font-family:'DM Mono',monospace;font-size:11px;padding:5px 14px;border-radius:20px;margin-top:6px;}
+.hero-signal.HOLD{color:var(--hold);background:var(--hold-bg);border:1px solid var(--hold-b);}
+.hero-signal.BUY{color:var(--buy);background:var(--buy-bg);border:1px solid var(--buy-b);}
+.hero-signal.CASH{color:var(--cash);background:var(--cash-bg);border:1px solid var(--cash-b);}
+.slabel{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin:22px 0 10px;display:flex;align-items:center;gap:10px;}
+.slabel::after{content:'';flex:1;height:1px;background:var(--line);}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+@media(max-width:500px){.grid3{grid-template-columns:1fr 1fr;}}
+.card{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:16px;}
+.card-label{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;}
+.card-val{font-family:'DM Mono',monospace;font-size:20px;font-weight:700;}
+.card-val.g{color:var(--buy);}.card-val.y{color:var(--hold);}.card-val.o{color:var(--cash);}.card-val.r{color:var(--sell);}.card-val.n{color:var(--txt);}
+.ai-block{background:var(--card);border:1px solid rgba(138,43,226,.2);border-radius:12px;padding:18px;}
+.ai-hdr{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.ai-hdr-title{font-size:16px;font-weight:700;color:#fff;}
+.ai-hdr-ts{font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);margin-left:auto;}
+.ai-summary{font-size:13px;color:var(--hi);line-height:1.7;margin-bottom:14px;}
+.ai-cases{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
+@media(max-width:500px){.ai-cases{grid-template-columns:1fr;}}
+.ai-case{border-radius:8px;padding:12px;}
+.ai-case.bull{background:var(--buy-bg);border:1px solid var(--buy-b);}
+.ai-case.bear{background:var(--sell-bg);border:1px solid var(--sell-b);}
+.ai-case-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;}
+.ai-case.bull .ai-case-label{color:var(--buy);}
+.ai-case.bear .ai-case-label{color:var(--sell);}
+.ai-case-text{font-size:12px;color:var(--hi);line-height:1.6;}
+.earnings-block{background:rgba(118,185,0,.05);border:1px solid rgba(118,185,0,.15);border-radius:12px;padding:16px;margin-bottom:8px;}
+.earnings-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:10px;}
+.earnings-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.earnings-item{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;}
+.earnings-label{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);margin-bottom:4px;}
+.earnings-val{font-family:'DM Mono',monospace;font-size:13px;font-weight:600;color:var(--txt);}
+.news-list{list-style:none;}
+.news-item{padding:8px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--hi);}
+.news-item:last-child{border-bottom:none;}
+.news-item::before{content:'→ ';color:var(--dim);}
+.zones-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.zone{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;text-align:center;}
+.zone-label{font-size:10px;color:var(--dim);margin-bottom:4px;}
+.zone-val{font-family:'DM Mono',monospace;font-size:12px;font-weight:600;}
+.zone-val.g{color:var(--buy);}.zone-val.y{color:var(--hold);}.zone-val.r{color:var(--sell);}
+.strategy-note{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:12px;color:var(--hi);line-height:1.6;}
+.strategy-note strong{color:var(--txt);}
+.footer{text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);line-height:2.2;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">&#x2190; Dashboard</a>
+
+  <div class="hero">
+    <div class="hero-icon">NV</div>
+    <div>
+      <div class="hero-name">Nvidia</div>
+      <div class="hero-ticker">NVDA · 15% Portfolio-Allokation · NASDAQ</div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-price" id="heroPrice">Lädt...</div>
+      <div class="hero-signal HOLD" id="heroSignal">● HOLD</div>
+    </div>
+  </div>
+
+  <!-- Metriken -->
+  <div class="slabel">Aktuelle Metriken (KI-aktualisiert)</div>
+  <div class="grid3">
+    <div class="card"><div class="card-label">Preis</div><div class="card-val n" id="mPrice">—</div></div>
+    <div class="card"><div class="card-label">P/E Ratio</div><div class="card-val y" id="mPe">—</div></div>
+    <div class="card"><div class="card-label">52W High</div><div class="card-val n" id="m52h">—</div></div>
+    <div class="card"><div class="card-label">Revenue Growth</div><div class="card-val g" id="mRev">—</div></div>
+    <div class="card"><div class="card-label">Nächste Earnings</div><div class="card-val y" id="mEarnings">Mai 2026</div></div>
+    <div class="card"><div class="card-label">KI-Capex Trend</div><div class="card-val g">Wachsend ↑</div></div>
+  </div>
+
+  <!-- Kaufzonen -->
+  <div class="slabel">Signal-Zonen</div>
+  <div class="zones-row">
+    <div class="zone"><div class="zone-label">&#x1F7E2; Kaufen</div><div class="zone-val g">-25% vom High<br><span style="font-size:10px;color:var(--dim)">Nach Dip</span></div></div>
+    <div class="zone"><div class="zone-label">&#x1F7E1; Halten</div><div class="zone-val y">KGV 30–60x<br><span style="font-size:10px;color:var(--dim)">DCA fortführen</span></div></div>
+    <div class="zone"><div class="zone-label">&#x1F534; Prüfen</div><div class="zone-val r">KGV &gt; 70x<br><span style="font-size:10px;color:var(--dim)">Bei stag. Wachstum</span></div></div>
+  </div>
+
+  <!-- Earnings -->
+  <div class="slabel">Letztes Quartal (KI-Update)</div>
+  <div class="earnings-block">
+    <div class="earnings-title">&#x1F4CA; Quartalsergebnisse</div>
+    <div class="earnings-grid">
+      <div class="earnings-item"><div class="earnings-label">Quartal</div><div class="earnings-val" id="eQtr">—</div></div>
+      <div class="earnings-item"><div class="earnings-label">Revenue</div><div class="earnings-val" id="eRev">—</div></div>
+      <div class="earnings-item"><div class="earnings-label">EPS (Ist)</div><div class="earnings-val" id="eEps">—</div></div>
+      <div class="earnings-item"><div class="earnings-label">EPS (Schätzung)</div><div class="earnings-val" id="eEpsEst">—</div></div>
+    </div>
+    <div id="eGuidance" style="margin-top:10px;font-size:12px;color:var(--hi);font-family:'DM Mono',monospace;"></div>
+  </div>
+
+  <!-- KI Analyse -->
+  <div class="slabel">KI-Wochenanalyse (Claude AI)</div>
+  <div class="ai-block">
+    <div class="ai-hdr">
+      <div style="font-size:18px;">&#x2728;</div>
+      <div class="ai-hdr-title">Nvidia · KI-Analyse</div>
+      <div class="ai-hdr-ts" id="aiTs">—</div>
+    </div>
+    <div class="ai-summary" id="aiSummary">Wird am nächsten Freitag automatisch aktualisiert.</div>
+    <div class="ai-cases">
+      <div class="ai-case bull"><div class="ai-case-label">&#x1F7E2; Bull Case</div><div class="ai-case-text" id="aiBull">Ausstehend.</div></div>
+      <div class="ai-case bear"><div class="ai-case-label">&#x1F534; Bear Case</div><div class="ai-case-text" id="aiBear">Ausstehend.</div></div>
+    </div>
+    <div class="card-label" style="margin-bottom:8px;">Aktuelle News-Katalysatoren</div>
+    <ul class="news-list" id="newsList"><li class="news-item" style="color:var(--dim);">Update erfolgt freitags automatisch.</li></ul>
+  </div>
+
+  <!-- Strategie -->
+  <div class="slabel">Strategie-Kontext</div>
+  <div class="strategy-note">
+    <strong>Der Stabilitätsanker (15% Allokation).</strong> Läuft auch wenn Crypto schläft. KI-Infrastruktur ist unvermeidlich – Nvidia ist der einzige Profiteur ohne echte Konkurrenz. Quartalsmäßiger Check genügt.<br><br>
+    <strong>Kaufregel:</strong> DCA quartalsweise + Nachkauf bei -25% vom Hoch oder nach Earnings-Dip.<br>
+    <strong>Verkauf:</strong> Bei KGV &gt; 70x bei stagnierendem Wachstum evaluieren.
+  </div>
+
+  <div class="footer">Nvidia · Portfolio Signal Center · 7-Jahres-Plan 2026–2033<br>KI-Analyse: Claude AI (freitags) · &#x26A0;&#xFE0F; Kein Anlageberatung</div>
+</div>
+
+<script>
+async function load() {
+  try {
+    const ai = await fetch('../data/nvda.json').then(r=>r.json());
+    if (ai.price_usd) {
+      document.getElementById('heroPrice').textContent = '$'+ai.price_usd.toLocaleString('en-US');
+      document.getElementById('mPrice').textContent = '$'+ai.price_usd.toLocaleString('en-US');
+    } else {
+      document.getElementById('heroPrice').textContent = '~$104';
+    }
+    if (ai.pe_ratio) document.getElementById('mPe').textContent = ai.pe_ratio+'x';
+    if (ai.price_52w_high_usd) document.getElementById('m52h').textContent = '$'+ai.price_52w_high_usd;
+    if (ai.revenue_growth_yoy_pct) document.getElementById('mRev').textContent = '+'+ai.revenue_growth_yoy_pct+'%';
+    if (ai.next_earnings) document.getElementById('mEarnings').textContent = ai.next_earnings;
+    if (ai.signal) {
+      const sigEl = document.getElementById('heroSignal');
+      const sigTxt = {BUY:'● Kaufen',HOLD:'● Halten',CASH:'● Cash sammeln'};
+      sigEl.textContent = sigTxt[ai.signal]||'● Halten'; sigEl.className = 'hero-signal '+(ai.signal||'HOLD');
+    }
+    if (ai.quarterly_review) {
+      const q = ai.quarterly_review;
+      if (q.last_quarter) document.getElementById('eQtr').textContent = q.last_quarter;
+      if (q.revenue_usd_billions) document.getElementById('eRev').textContent = '$'+q.revenue_usd_billions+'B';
+      if (q.eps_actual) document.getElementById('eEps').textContent = '$'+q.eps_actual;
+      if (q.eps_estimate) document.getElementById('eEpsEst').textContent = '$'+q.eps_estimate;
+      if (q.guidance_note) document.getElementById('eGuidance').textContent = q.guidance_note;
+    }
+    if (ai.ai_analysis) {
+      const a = ai.ai_analysis;
+      if (a.summary && !a.summary.includes('Ausstehend')) document.getElementById('aiSummary').textContent = a.summary;
+      if (a.bull_case && !a.bull_case.includes('Ausstehend')) document.getElementById('aiBull').textContent = a.bull_case;
+      if (a.bear_case && !a.bear_case.includes('Ausstehend')) document.getElementById('aiBear').textContent = a.bear_case;
+      if (a.updated) document.getElementById('aiTs').textContent = 'Update: '+a.updated;
+      if (a.news_headlines?.length > 0) document.getElementById('newsList').innerHTML = a.news_headlines.map(h=>`<li class="news-item">${h}</li>`).join('');
+    }
+  } catch(e) { console.warn('Error:', e); document.getElementById('heroPrice').textContent = '~$104'; }
+}
+load();
+</script>
+</body>
+</html>

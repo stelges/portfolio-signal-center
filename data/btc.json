@@ -1,0 +1,28 @@
+{
+  "asset": "Bitcoin",
+  "ticker": "BTC",
+  "allocation_pct": 38,
+  "icon": "₿",
+  "color": "#f7931a",
+  "signal": "HOLD",
+  "price_usd": null,
+  "ath_usd": 109000,
+  "ath_dist_pct": null,
+  "change_30d_pct": null,
+  "next_halving": "April 2028",
+  "zones": {
+    "buy":  { "label": "F&G<30 / -40% vom ATH", "threshold_usd": 65400 },
+    "hold": { "label": "-20% bis -40% vom ATH",  "range_usd": "65400-87200" },
+    "sell": { "label": "BTC > $300.000",          "threshold_usd": 300000 }
+  },
+  "ai_analysis": {
+    "summary": "Ausstehend – wird am Freitag automatisch aktualisiert.",
+    "bull_case": "Ausstehend.",
+    "bear_case": "Ausstehend.",
+    "key_catalysts": [],
+    "news_headlines": [],
+    "confidence": null,
+    "updated": "2026-04-13"
+  },
+  "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios."
+}

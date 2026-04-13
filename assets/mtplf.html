@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metaplanet · Portfolio Signal Center</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+:root{--bg:#05050d;--card:#0d0d1a;--card2:#111120;--line:#1a1a2e;--line2:#222238;--buy:#00f5a0;--buy-bg:rgba(0,245,160,.07);--buy-b:rgba(0,245,160,.2);--hold:#f5c000;--hold-bg:rgba(245,192,0,.07);--hold-b:rgba(245,192,0,.2);--cash:#ff7b00;--cash-bg:rgba(255,123,0,.07);--cash-b:rgba(255,123,0,.2);--sell:#ff2d55;--sell-bg:rgba(255,45,85,.07);--sell-b:rgba(255,45,85,.2);--txt:#d4d4f0;--hi:#9090b8;--dim:#505068;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--txt);font-family:'Outfit',sans-serif;min-height:100vh;background-image:radial-gradient(ellipse 80% 50% at 50% -20%,rgba(255,74,104,.04),transparent),radial-gradient(circle,rgba(255,255,255,.018) 1px,transparent 1px);background-size:100% 100%,30px 30px;}
+.wrap{max-width:840px;margin:0 auto;padding:28px 16px 100px;}
+.back{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;color:var(--dim);text-decoration:none;margin-bottom:20px;padding:6px 12px;border:1px solid var(--line2);border-radius:8px;transition:all .2s;}
+.back:hover{color:var(--txt);background:var(--card);}
+.hero{display:flex;align-items:center;gap:18px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line2);}
+.hero-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;background:rgba(255,74,104,.1);color:#ff4a68;font-family:'DM Mono',monospace;flex-shrink:0;}
+.hero-name{font-size:clamp(28px,5vw,40px);font-weight:800;color:#fff;line-height:1;}
+.hero-ticker{font-family:'DM Mono',monospace;font-size:12px;color:var(--dim);margin-top:4px;}
+.hero-right{margin-left:auto;text-align:right;}
+.hero-price{font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:#fff;}
+.hero-signal{display:inline-block;font-family:'DM Mono',monospace;font-size:11px;padding:5px 14px;border-radius:20px;margin-top:6px;}
+.hero-signal.BUY{color:var(--buy);background:var(--buy-bg);border:1px solid var(--buy-b);}
+.hero-signal.HOLD{color:var(--hold);background:var(--hold-bg);border:1px solid var(--hold-b);}
+.hero-signal.CASH{color:var(--cash);background:var(--cash-bg);border:1px solid var(--cash-b);}
+.hero-signal.SELL{color:var(--sell);background:var(--sell-bg);border:1px solid var(--sell-b);}
+.slabel{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin:22px 0 10px;display:flex;align-items:center;gap:10px;}
+.slabel::after{content:'';flex:1;height:1px;background:var(--line);}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+@media(max-width:500px){.grid3{grid-template-columns:1fr 1fr;}}
+.card{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:16px;}
+.card-label{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;}
+.card-val{font-family:'DM Mono',monospace;font-size:20px;font-weight:700;}
+.card-val.g{color:var(--buy);}.card-val.y{color:var(--hold);}.card-val.o{color:var(--cash);}.card-val.r{color:var(--sell);}.card-val.n{color:var(--txt);}
+.mnav-big{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:20px;text-align:center;margin-bottom:8px;}
+.mnav-num{font-size:52px;font-weight:800;line-height:1;}
+.mnav-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);margin-top:6px;}
+.mnav-formula{font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);margin-top:8px;line-height:1.7;}
+.ai-block{background:var(--card);border:1px solid rgba(138,43,226,.2);border-radius:12px;padding:18px;}
+.ai-hdr{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.ai-hdr-title{font-size:16px;font-weight:700;color:#fff;}
+.ai-hdr-ts{font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);margin-left:auto;}
+.ai-summary{font-size:13px;color:var(--hi);line-height:1.7;margin-bottom:14px;}
+.ai-cases{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
+@media(max-width:500px){.ai-cases{grid-template-columns:1fr;}}
+.ai-case{border-radius:8px;padding:12px;}
+.ai-case.bull{background:var(--buy-bg);border:1px solid var(--buy-b);}
+.ai-case.bear{background:var(--sell-bg);border:1px solid var(--sell-b);}
+.ai-case-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;}
+.ai-case.bull .ai-case-label{color:var(--buy);}
+.ai-case.bear .ai-case-label{color:var(--sell);}
+.ai-case-text{font-size:12px;color:var(--hi);line-height:1.6;}
+.news-list{list-style:none;}
+.news-item{padding:8px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--hi);}
+.news-item:last-child{border-bottom:none;}
+.news-item::before{content:'→ ';color:var(--dim);}
+.zones-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.zone{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;text-align:center;}
+.zone-label{font-size:10px;color:var(--dim);margin-bottom:4px;}
+.zone-val{font-family:'DM Mono',monospace;font-size:12px;font-weight:600;}
+.zone-val.g{color:var(--buy);}.zone-val.y{color:var(--hold);}.zone-val.r{color:var(--sell);}
+.strategy-note{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:12px;color:var(--hi);line-height:1.6;}
+.strategy-note strong{color:var(--txt);}
+.footer{text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);line-height:2.2;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">&#x2190; Dashboard</a>
+
+  <div class="hero">
+    <div class="hero-icon">&#x2B21;</div>
+    <div>
+      <div class="hero-name">Metaplanet</div>
+      <div class="hero-ticker">MTPLF · 20% Portfolio-Allokation · Tokyo Stock Exchange</div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-price" id="heroPrice">mNAV lädt...</div>
+      <div class="hero-signal HOLD" id="heroSignal">● HOLD</div>
+    </div>
+  </div>
+
+  <!-- mNAV Hauptanzeige -->
+  <div class="mnav-big">
+    <div class="mnav-num" id="mnavBig" style="color:var(--hold)">—</div>
+    <div class="mnav-label">mNAV (Market-NAV-Ratio) · Live berechnet</div>
+    <div class="mnav-formula">EV ÷ BTC-NAV &nbsp;|&nbsp; EV = MarketCap + Schulden &nbsp;|&nbsp; BTC-NAV = 40.177 BTC × BTC-Preis (live)</div>
+  </div>
+
+  <!-- Live Metriken -->
+  <div class="slabel">Metaplanet Metriken</div>
+  <div class="grid3">
+    <div class="card"><div class="card-label">mNAV</div><div class="card-val" id="mMnav">—</div><div style="font-size:10px;color:var(--dim);margin-top:4px;font-family:'DM Mono',monospace;">Schlüssel-Indikator</div></div>
+    <div class="card"><div class="card-label">BTC Holdings</div><div class="card-val n" style="font-size:14px;">40.177 BTC</div><div style="font-size:10px;color:var(--dim);margin-top:4px;font-family:'DM Mono',monospace;">Stand Apr 2026</div></div>
+    <div class="card"><div class="card-label">BTC-NAV</div><div class="card-val n" id="mBtcNav" style="font-size:14px;">—</div><div style="font-size:10px;color:var(--dim);margin-top:4px;font-family:'DM Mono',monospace;">40.177 × BTC-Preis</div></div>
+    <div class="card"><div class="card-label">Schulden</div><div class="card-val n" style="font-size:14px;">~$280M</div></div>
+    <div class="card"><div class="card-label">Aktien</div><div class="card-val n" style="font-size:14px;">1.459M</div></div>
+    <div class="card"><div class="card-label">Aktienpreis</div><div class="card-val n" style="font-size:14px;">~$1.90</div><div style="font-size:10px;color:var(--dim);margin-top:4px;font-family:'DM Mono',monospace;">OTC (MTPLF)</div></div>
+  </div>
+
+  <!-- Kaufzonen -->
+  <div class="slabel">mNAV Signal-Zonen</div>
+  <div class="zones-row">
+    <div class="zone"><div class="zone-label">&#x1F7E2; Kaufen</div><div class="zone-val g">mNAV &lt; 1.1x<br><span style="font-size:10px;color:var(--dim)">BTC mit Rabatt</span></div></div>
+    <div class="zone"><div class="zone-label">&#x1F7E1; Halten</div><div class="zone-val y">1.1x – 1.8x<br><span style="font-size:10px;color:var(--dim)">Faire Bewertung</span></div></div>
+    <div class="zone"><div class="zone-label">&#x1F534; Sichern</div><div class="zone-val r">mNAV &gt; 2.5x<br><span style="font-size:10px;color:var(--dim)">20–50% verkaufen</span></div></div>
+  </div>
+
+  <!-- KI Analyse -->
+  <div class="slabel">KI-Wochenanalyse (Claude AI)</div>
+  <div class="ai-block">
+    <div class="ai-hdr">
+      <div style="font-size:18px;">&#x2728;</div>
+      <div class="ai-hdr-title">Metaplanet · KI-Analyse</div>
+      <div class="ai-hdr-ts" id="aiTs">—</div>
+    </div>
+    <div class="ai-summary" id="aiSummary">Wird am nächsten Freitag automatisch aktualisiert.</div>
+    <div class="ai-cases">
+      <div class="ai-case bull"><div class="ai-case-label">&#x1F7E2; Bull Case</div><div class="ai-case-text" id="aiBull">Ausstehend.</div></div>
+      <div class="ai-case bear"><div class="ai-case-label">&#x1F534; Bear Case</div><div class="ai-case-text" id="aiBear">Ausstehend.</div></div>
+    </div>
+    <div class="card-label" style="margin-bottom:8px;">Aktuelle News-Katalysatoren</div>
+    <ul class="news-list" id="newsList"><li class="news-item" style="color:var(--dim);">Update erfolgt freitags automatisch.</li></ul>
+  </div>
+
+  <!-- Strategie -->
+  <div class="slabel">Strategie-Kontext</div>
+  <div class="strategy-note">
+    <strong>Der Bitcoin-Hebel (20% Allokation).</strong> Wenn BTC 5x macht, macht MTPLF potenziell 10–15x. Das mNAV ist der einzige Kompass – keine Ausnahmen.<br><br>
+    <strong>Kaufregel:</strong> Nur kaufen wenn mNAV &lt; 1.2x. Über 2.5x kein einziger Neukauf.<br>
+    <strong>Verkauf-Stufen:</strong> mNAV &gt; 2.5x → 20–30% · mNAV &gt; 4.0x → 50% verkaufen.
+  </div>
+
+  <div class="footer">Metaplanet · Portfolio Signal Center · 7-Jahres-Plan 2026–2033<br>mNAV: Live-Berechnung · KI-Analyse: Claude AI (freitags) · &#x26A0;&#xFE0F; Kein Anlageberatung</div>
+</div>
+
+<script>
+const MTPLF_HOLD=40177, MTPLF_DEBT_M=280, MTPLF_SHARES_M=1459, MTPLF_USD=1.90;
+
+async function load() {
+  try {
+    const priceRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd').then(r=>r.json());
+    const btc = priceRes?.bitcoin?.usd;
+    if (btc) {
+      const mnav = (MTPLF_SHARES_M*1e6*MTPLF_USD + MTPLF_DEBT_M*1e6) / (MTPLF_HOLD * btc);
+      const mc = mnav<1.0?'var(--buy)':mnav<1.3?'var(--hold)':mnav<2.5?'var(--cash)':'var(--sell)';
+      document.getElementById('mnavBig').textContent = mnav.toFixed(3)+'x';
+      document.getElementById('mnavBig').style.color = mc;
+      document.getElementById('mMnav').textContent = mnav.toFixed(3)+'x';
+      document.getElementById('mMnav').className = 'card-val ' + (mnav<1.0?'g':mnav<1.3?'y':mnav<2.5?'o':'r');
+      document.getElementById('mBtcNav').textContent = '$'+(MTPLF_HOLD*btc/1e9).toFixed(2)+'B';
+      document.getElementById('heroPrice').textContent = 'mNAV '+mnav.toFixed(3)+'x';
+      const sig = mnav<1.1?'BUY':mnav<1.8?'HOLD':mnav<2.5?'CASH':'SELL';
+      const sigTxt = {BUY:'● Kaufen',HOLD:'● Halten',CASH:'● Cash sammeln',SELL:'● Sichern'};
+      const sigEl = document.getElementById('heroSignal');
+      sigEl.textContent = sigTxt[sig]; sigEl.className = 'hero-signal '+sig;
+    }
+  } catch(e) { console.warn('Live error:', e); }
+  try {
+    const ai = await fetch('../data/mtplf.json').then(r=>r.json());
+    if (ai.ai_analysis) {
+      const a = ai.ai_analysis;
+      if (a.summary && !a.summary.includes('Ausstehend')) document.getElementById('aiSummary').textContent = a.summary;
+      if (a.bull_case && !a.bull_case.includes('Ausstehend')) document.getElementById('aiBull').textContent = a.bull_case;
+      if (a.bear_case && !a.bear_case.includes('Ausstehend')) document.getElementById('aiBear').textContent = a.bear_case;
+      if (a.updated) document.getElementById('aiTs').textContent = 'Update: '+a.updated;
+      if (a.news_headlines?.length > 0) document.getElementById('newsList').innerHTML = a.news_headlines.map(h=>`<li class="news-item">${h}</li>`).join('');
+    }
+  } catch(e) { console.warn('AI error:', e); }
+}
+load();
+</script>
+</body>
+</html>

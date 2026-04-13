@@ -1,0 +1,85 @@
+name: Weekly AI Intelligence Update
+
+on:
+  schedule:
+    # Jeden Freitag um 18:00 UTC
+    - cron: "0 18 * * 5"
+  # Manueller Trigger für Tests
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update-intelligence:
+    name: Fetch Data & Run AI Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Intelligence Updater
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python update_intelligence.py
+
+      - name: Commit Updated Files
+        run: |
+          git config --global user.name  "Portfolio Signal Bot"
+          git config --global user.email "bot@portfolio-signal-center.ai"
+
+          git add data/portfolio.json \
+                  data/btc.json \
+                  data/mtplf.json \
+                  data/nvda.json \
+                  data/sol.json \
+                  data/tao.json \
+                  strategy.log
+
+          # Commit nur wenn es Änderungen gibt
+          if git diff --staged --quiet; then
+            echo "Keine Änderungen – kein Commit nötig."
+          else
+            git commit -m "chore: weekly AI intelligence update $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+  deploy-pages:
+    name: Deploy to GitHub Pages
+    needs: update-intelligence
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: main  # Immer den frisch gepushten Stand nehmen
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

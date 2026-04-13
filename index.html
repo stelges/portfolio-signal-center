@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Signal Center</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg:#05050d;
+  --card:#0d0d1a;
+  --card2:#111120;
+  --line:#1a1a2e;
+  --line2:#222238;
+  --buy:#00f5a0;
+  --buy-bg:rgba(0,245,160,.07);
+  --buy-b:rgba(0,245,160,.2);
+  --hold:#f5c000;
+  --hold-bg:rgba(245,192,0,.07);
+  --hold-b:rgba(245,192,0,.2);
+  --cash:#ff7b00;
+  --cash-bg:rgba(255,123,0,.07);
+  --cash-b:rgba(255,123,0,.2);
+  --sell:#ff2d55;
+  --sell-bg:rgba(255,45,85,.07);
+  --sell-b:rgba(255,45,85,.2);
+  --txt:#d4d4f0;
+  --hi:#9090b8;
+  --dim:#505068;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  background:var(--bg);
+  color:var(--txt);
+  font-family:'Outfit',sans-serif;
+  min-height:100vh;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%,rgba(0,245,160,.05),transparent),
+    radial-gradient(circle,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:100% 100%, 30px 30px;
+}
+
+.wrap{max-width:840px;margin:0 auto;padding:28px 16px 100px;}
+
+/* ── HEADER ── */
+.hdr{margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line2);}
+.hdr-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:10px;}
+.logo{font-size:clamp(26px,5vw,38px);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1;}
+.logo em{color:var(--buy);font-style:normal;}
+.sub{font-size:13px;color:var(--dim);margin-top:4px;}
+.badge-row{display:flex;flex-direction:column;align-items:flex-end;gap:4px;}
+.live-badge{display:inline-flex;align-items:center;gap:5px;background:var(--buy-bg);border:1px solid var(--buy-b);border-radius:20px;padding:3px 10px;font-family:'DM Mono',monospace;font-size:10px;color:var(--buy);}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--buy);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+.ts{font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);}
+.ai-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(138,43,226,.1);border:1px solid rgba(138,43,226,.3);border-radius:20px;padding:3px 10px;font-family:'DM Mono',monospace;font-size:10px;color:#b06aff;margin-top:4px;}
+
+/* ── GLOBAL ── */
+.global{border-radius:12px;padding:18px 20px;margin-bottom:14px;border:1px solid;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;transition:all .4s;}
+.global.BUY{background:var(--buy-bg);border-color:var(--buy-b);}
+.global.HOLD{background:var(--hold-bg);border-color:var(--hold-b);}
+.global.CASH{background:var(--cash-bg);border-color:var(--cash-b);}
+.g-tag{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px;}
+.g-sig{font-size:20px;font-weight:700;}
+.g-sig.BUY{color:var(--buy);}
+.g-sig.HOLD{color:var(--hold);}
+.g-sig.CASH{color:var(--cash);}
+.g-pills{display:flex;gap:8px;flex-wrap:wrap;}
+.gpill{font-family:'DM Mono',monospace;font-size:11px;background:var(--card2);border:1px solid var(--line2);padding:4px 10px;border-radius:8px;color:var(--hi);}
+.gpill strong{color:var(--txt);}
+
+/* ── AI BRIEFING ── */
+.ai-briefing{background:var(--card);border:1px solid rgba(138,43,226,.2);border-radius:12px;padding:14px 18px;margin-bottom:14px;}
+.ai-briefing-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.ai-briefing-icon{font-size:16px;}
+.ai-briefing-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;color:#b06aff;text-transform:uppercase;}
+.ai-briefing-ts{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);margin-left:auto;}
+.ai-briefing-text{font-size:13px;color:var(--hi);line-height:1.65;}
+
+/* ── mNAV ── */
+.mnav-bar{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:14px 18px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.mnav-l{}
+.mnav-tag{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px;}
+.mnav-num{font-size:30px;font-weight:800;}
+.mnav-r{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.mnav-chip{font-family:'DM Mono',monospace;font-size:11px;padding:4px 12px;border-radius:8px;border:1px solid;}
+.mnav-formula{font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);line-height:1.6;}
+
+/* ── SECTION LABEL ── */
+.slabel{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin:22px 0 10px;display:flex;align-items:center;gap:10px;}
+.slabel::after{content:'';flex:1;height:1px;background:var(--line);}
+
+/* ── ASSET CARDS ── */
+.cards{display:grid;gap:8px;}
+.ac{background:var(--card);border:1px solid var(--line2);border-radius:12px;overflow:hidden;transition:border-color .3s;}
+.ac.BUY{border-color:var(--buy-b);}
+.ac.HOLD{border-color:var(--hold-b);}
+.ac.CASH{border-color:var(--cash-b);}
+.ac.SELL{border-color:var(--sell-b);}
+
+.act{display:grid;grid-template-columns:46px 1fr auto;gap:12px;padding:14px 16px;cursor:pointer;align-items:center;}
+.ai{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;font-family:'DM Mono',monospace;flex-shrink:0;}
+.an{font-size:17px;font-weight:700;color:#fff;line-height:1.15;}
+.at{font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);margin-top:1px;}
+.ar{display:flex;flex-direction:column;align-items:flex-end;gap:5px;}
+.sb{font-family:'DM Mono',monospace;font-size:10px;padding:4px 11px;border-radius:20px;border:1px solid;white-space:nowrap;font-weight:500;}
+.sb.BUY{color:var(--buy);background:var(--buy-bg);border-color:var(--buy-b);}
+.sb.HOLD{color:var(--hold);background:var(--hold-bg);border-color:var(--hold-b);}
+.sb.CASH{color:var(--cash);background:var(--cash-bg);border-color:var(--cash-b);}
+.sb.SELL{color:var(--sell);background:var(--sell-bg);border-color:var(--sell-b);}
+.ap{font-family:'DM Mono',monospace;font-size:13px;color:var(--txt);}
+.ach{font-family:'DM Mono',monospace;font-size:10px;}
+
+.acb{display:none;border-top:1px solid var(--line);padding:14px 16px;animation:sdown .2s ease;}
+.acb.open{display:block;}
+@keyframes sdown{from{opacity:0;transform:translateY(-4px);}to{opacity:1;transform:translateY(0);}}
+
+.abox{display:flex;gap:10px;padding:12px 14px;border-radius:9px;border:1px solid;margin-bottom:10px;align-items:flex-start;}
+.abox.BUY{background:var(--buy-bg);border-color:var(--buy-b);}
+.abox.HOLD{background:var(--hold-bg);border-color:var(--hold-b);}
+.abox.CASH{background:var(--cash-bg);border-color:var(--cash-b);}
+.abox.SELL{background:var(--sell-bg);border-color:var(--sell-b);}
+.abox-ico{font-size:20px;flex-shrink:0;line-height:1;}
+.abox-what{font-size:13px;font-weight:600;color:#fff;margin-bottom:2px;}
+.abox-why{font-size:12px;color:var(--hi);line-height:1.55;}
+
+.mets{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:9px;}
+@media(max-width:460px){.mets{grid-template-columns:repeat(2,1fr);}}
+.mb{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;}
+.ml{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;}
+.mv{font-family:'DM Mono',monospace;font-size:14px;font-weight:500;}
+.mv.g{color:var(--buy);}.mv.y{color:var(--hold);}.mv.o{color:var(--cash);}.mv.r{color:var(--sell);}.mv.n{color:var(--txt);}
+
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:9px;}
+.zone{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;text-align:center;}
+.zl{font-size:10px;color:var(--dim);margin-bottom:3px;}
+.zv{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;}
+.zv.g{color:var(--buy);}.zv.y{color:var(--hold);}.zv.r{color:var(--sell);}
+
+/* ── AI ANALYSIS IN CARD ── */
+.ai-card{background:rgba(138,43,226,.05);border:1px solid rgba(138,43,226,.15);border-radius:8px;padding:10px 12px;margin-bottom:9px;}
+.ai-card-hdr{font-family:'DM Mono',monospace;font-size:9px;color:#b06aff;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;}
+.ai-card-text{font-size:12px;color:var(--hi);line-height:1.6;}
+.ai-card-text strong{color:var(--txt);}
+.detail-link{display:inline-flex;align-items:center;gap:4px;font-family:'DM Mono',monospace;font-size:10px;color:#b06aff;text-decoration:none;background:rgba(138,43,226,.08);border:1px solid rgba(138,43,226,.2);padding:4px 10px;border-radius:6px;margin-top:6px;transition:background .2s;}
+.detail-link:hover{background:rgba(138,43,226,.15);}
+
+/* ── INDICATORS ── */
+.inds{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:16px;}
+.ind{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);}
+.ind:last-child{border-bottom:none;}
+.in{font-size:12px;color:var(--hi);width:145px;flex-shrink:0;}
+.it{flex:1;height:5px;background:var(--line2);border-radius:3px;overflow:hidden;}
+.if{height:100%;border-radius:3px;transition:width 1s ease;}
+.iv{font-family:'DM Mono',monospace;font-size:12px;font-weight:600;width:62px;text-align:right;}
+.is{font-family:'DM Mono',monospace;font-size:10px;width:85px;text-align:right;flex-shrink:0;}
+
+/* ── SOURCES ── */
+.stbl{background:var(--card);border:1px solid var(--line2);border-radius:12px;overflow:hidden;}
+.srow{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);font-size:12px;}
+.srow:last-child{border-bottom:none;}
+.sn{color:var(--dim);font-family:'DM Mono',monospace;}
+.sv{display:flex;align-items:center;gap:7px;}
+.stag{font-size:9px;font-family:'DM Mono',monospace;padding:2px 7px;border-radius:5px;}
+.stag.live{background:var(--buy-bg);color:var(--buy);border:1px solid var(--buy-b);}
+.stag.calc{background:var(--hold-bg);color:var(--hold);border:1px solid var(--hold-b);}
+.stag.fixed{background:rgba(100,100,150,.08);color:var(--dim);border:1px solid var(--line);}
+.stag.ai{background:rgba(138,43,226,.1);color:#b06aff;border:1px solid rgba(138,43,226,.3);}
+
+/* ── STRATEGY CARD ── */
+.strat{background:var(--card);border:1px solid var(--line2);border-radius:12px;overflow:hidden;margin-top:8px;}
+.strat-hdr{background:linear-gradient(135deg,rgba(0,245,160,.08),rgba(245,192,0,.05));border-bottom:1px solid var(--line2);padding:18px 20px;}
+.strat-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;}
+.strat-sub{font-size:13px;color:var(--dim);}
+.strat-body{padding:0;}
+.strat-section{border-bottom:1px solid var(--line);}
+.strat-section:last-child{border-bottom:none;}
+.ss-hdr{display:flex;align-items:center;gap:12px;padding:14px 20px;cursor:pointer;user-select:none;}
+.ss-hdr:hover{background:rgba(255,255,255,.02);}
+.ss-num{font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:var(--buy);line-height:1;width:32px;flex-shrink:0;}
+.ss-info{}
+.ss-name{font-size:15px;font-weight:700;color:#fff;margin-bottom:2px;}
+.ss-tag{font-size:12px;color:var(--dim);}
+.ss-arr{margin-left:auto;color:var(--dim);font-size:18px;transition:transform .2s;}
+.ss-arr.open{transform:rotate(180deg);}
+.ss-body{display:none;padding:0 20px 16px 64px;animation:sdown .2s ease;}
+.ss-body.open{display:block;}
+.ss-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
+@media(max-width:480px){.ss-grid{grid-template-columns:1fr;}}
+.ss-card{border-radius:8px;padding:10px 12px;border:1px solid;}
+.ss-card.buy{background:var(--buy-bg);border-color:var(--buy-b);}
+.ss-card.hold{background:var(--hold-bg);border-color:var(--hold-b);}
+.ss-card.cash{background:var(--cash-bg);border-color:var(--cash-b);}
+.ss-card.sell{background:var(--sell-bg);border-color:var(--sell-b);}
+.ss-card-label{font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;}
+.ss-card.buy .ss-card-label{color:var(--buy);}
+.ss-card.hold .ss-card-label{color:var(--hold);}
+.ss-card.cash .ss-card-label{color:var(--cash);}
+.ss-card.sell .ss-card-label{color:var(--sell);}
+.ss-card-text{font-size:12px;color:var(--hi);line-height:1.55;}
+.ss-card-text strong{color:var(--txt);}
+.ss-rules{margin-top:8px;}
+.ss-rule{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--hi);line-height:1.55;}
+.ss-rule:last-child{border-bottom:none;}
+.ss-rule-num{font-family:'DM Mono',monospace;font-size:14px;color:var(--buy);font-weight:600;flex-shrink:0;width:20px;}
+.ss-rule-txt strong{color:var(--hold);}
+
+/* Alloc pill */
+.alloc-overview{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;padding:14px 20px;border-bottom:1px solid var(--line);}
+.ao{background:var(--card2);border:1px solid var(--line2);border-radius:8px;padding:10px 12px;}
+.ao-pct{font-size:22px;font-weight:800;color:#fff;}
+.ao-name{font-size:12px;color:var(--dim);margin-top:2px;}
+.ao-bar{height:3px;border-radius:2px;margin-top:7px;}
+
+.footer{text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);line-height:2.2;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-top">
+    <div>
+      <div class="logo">Portfolio <em>Signals</em></div>
+      <div class="sub">7-Jahres-Plan · Ziel: Finanzielle Freiheit 2033</div>
+    </div>
+    <div class="badge-row">
+      <div class="live-badge"><div class="dot"></div>LIVE</div>
+      <div class="ai-badge">&#x2728; KI-Update freitags</div>
+      <div class="ts" id="ts">Initialisiere...</div>
+    </div>
+  </div>
+</div>
+
+<!-- GLOBAL SIGNAL -->
+<div class="global HOLD" id="gbanner">
+  <div>
+    <div class="g-tag">Globales Markt-Signal</div>
+    <div class="g-sig HOLD" id="gsig">WIRD GELADEN...</div>
+  </div>
+  <div class="g-pills">
+    <div class="gpill">F&G: <strong id="tfg">—</strong></div>
+    <div class="gpill">BTC: <strong id="tbtc">—</strong></div>
+    <div class="gpill">ATH-Dist: <strong id="tath">—</strong></div>
+  </div>
+</div>
+
+<!-- KI WOCHENBRIEFING -->
+<div class="ai-briefing" id="aiBriefing" style="display:none;">
+  <div class="ai-briefing-hdr">
+    <div class="ai-briefing-icon">&#x2728;</div>
+    <div class="ai-briefing-title">KI-Wochenbriefing</div>
+    <div class="ai-briefing-ts" id="aiBriefingTs">—</div>
+  </div>
+  <div class="ai-briefing-text" id="aiBriefingText">Wird geladen...</div>
+</div>
+
+<!-- mNAV -->
+<div class="mnav-bar">
+  <div>
+    <div class="mnav-tag">Metaplanet mNAV – Auto berechnet</div>
+    <div class="mnav-num" id="mnavNum" style="color:var(--hold)">—</div>
+  </div>
+  <div class="mnav-formula">EV ÷ BTC-NAV<br>EV = MarketCap + Schulden<br>BTC-NAV = Holdings × BTC (live)</div>
+  <div class="mnav-r" id="mnavChips">
+    <div class="mnav-chip" style="color:var(--dim);border-color:var(--line)">Berechne...</div>
+  </div>
+</div>
+
+<!-- ASSETS -->
+<div class="slabel">Assets · Live Signale</div>
+<div class="cards" id="cards"></div>
+
+<!-- INDICATORS -->
+<div class="slabel" style="margin-top:22px;">Schlüssel-Indikatoren</div>
+<div class="inds" id="inds"></div>
+
+<!-- SOURCES -->
+<div class="slabel" style="margin-top:22px;">Datenquellen</div>
+<div class="stbl">
+  <div class="srow"><div class="sn">BTC · SOL · TAO Preis</div><div class="sv"><span style="font-family:'DM Mono',monospace;font-size:11px;" id="srcBtc">—</span><span class="stag live">CoinGecko · Live</span></div></div>
+  <div class="srow"><div class="sn">Fear & Greed Index</div><div class="sv"><span style="font-family:'DM Mono',monospace;font-size:11px;" id="srcFg">—</span><span class="stag live">Alternative.me · Live</span></div></div>
+  <div class="srow"><div class="sn">Metaplanet mNAV</div><div class="sv"><span style="font-family:'DM Mono',monospace;font-size:11px;" id="srcMnav">—</span><span class="stag calc">Auto-Berechnung</span></div></div>
+  <div class="srow"><div class="sn">NVDA · Metaplanet News</div><div class="sv"><span style="font-family:'DM Mono',monospace;font-size:11px;" id="srcAi">—</span><span class="stag ai">Claude AI · Freitags</span></div></div>
+  <div class="srow"><div class="sn">BTC Holdings (Metaplanet)</div><div class="sv"><span style="font-family:'DM Mono',monospace;font-size:11px;">40.177 BTC</span><span class="stag fixed">Stand Apr 2026</span></div></div>
+</div>
+
+<!-- STRATEGY CARD -->
+<div class="slabel" style="margin-top:22px;">Die Strategie – vollständige Erklärung</div>
+<div class="strat">
+  <div class="strat-hdr">
+    <div class="strat-title">&#x1F4CB; Wie die Strategie funktioniert</div>
+    <div class="strat-sub">Aggressiv · 7 Jahre Horizont · Ziel: 1,5–3M € → 5.000–10.000 €/Monat passives Einkommen</div>
+  </div>
+
+  <!-- Portfolio Übersicht -->
+  <div class="alloc-overview">
+    <div class="ao"><div class="ao-pct">38%</div><div class="ao-name">Bitcoin</div><div class="ao-bar" style="background:var(--buy);width:38%"></div></div>
+    <div class="ao"><div class="ao-pct">20%</div><div class="ao-name">Metaplanet</div><div class="ao-bar" style="background:var(--sell);width:20%"></div></div>
+    <div class="ao"><div class="ao-pct">15%</div><div class="ao-name">Nvidia</div><div class="ao-bar" style="background:#76b900;width:15%"></div></div>
+    <div class="ao"><div class="ao-pct">14%</div><div class="ao-name">Solana</div><div class="ao-bar" style="background:#9945ff;width:14%"></div></div>
+    <div class="ao"><div class="ao-pct">8%</div><div class="ao-name">Bittensor</div><div class="ao-bar" style="background:#00d4ff;width:8%"></div></div>
+    <div class="ao"><div class="ao-pct">5%</div><div class="ao-name">Cash-Reserve</div><div class="ao-bar" style="background:var(--dim);width:5%"></div></div>
+  </div>
+
+  <div class="strat-body" id="stratBody">
+
+    <!-- 1: Grundprinzip -->
+    <div class="strat-section">
+      <div class="ss-hdr" onclick="togS('s1')">
+        <div class="ss-num">01</div>
+        <div class="ss-info">
+          <div class="ss-name">Das Grundprinzip</div>
+          <div class="ss-tag">Warum diese 5 Assets und kein anderes</div>
+        </div>
+        <div class="ss-arr" id="arr-s1">▼</div>
+      </div>
+      <div class="ss-body" id="s1">
+        <p style="font-size:13px;color:var(--hi);line-height:1.7;margin-bottom:12px;">
+          Das Portfolio besteht aus <strong style="color:#fff">5 Positionen</strong> – bewusst nicht mehr. Mehr Positionen bedeuten mehr Komplexität und mehr emotionale Entscheidungen im Crash. Die Auswahl basiert auf einem Kernprinzip: <strong style="color:var(--buy)">Jede Position muss einen eigenen, nicht duplizierten Vorteil haben.</strong>
+        </p>
+        <div class="ss-grid">
+          <div class="ss-card buy">
+            <div class="ss-card-label">Bitcoin 38%</div>
+            <div class="ss-card-text"><strong>Der Anker.</strong> Fixes Supply, kein Gegenpartei-Risiko, in jedem 4-Jahres-Zeitraum positiv. Fundament gegen das alles andere gemessen wird.</div>
+          </div>
+          <div class="ss-card" style="background:rgba(255,74,104,.07);border-color:rgba(255,74,104,.2);">
+            <div class="ss-card-label" style="color:#ff4a68;">Metaplanet 20%</div>
+            <div class="ss-card-text"><strong>Der Bitcoin-Hebel.</strong> Wenn BTC 5x macht, macht MTPLF potenziell 10–15x. Aktuell mNAV unter 1x = Bitcoin mit Rabatt kaufen. Einzigartig in Asien.</div>
+          </div>
+          <div class="ss-card" style="background:rgba(118,185,0,.07);border-color:rgba(118,185,0,.2);">
+            <div class="ss-card-label" style="color:#76b900;">Nvidia 15%</div>
+            <div class="ss-card-text"><strong>Der Stabilitätsanker.</strong> Läuft auch wenn Crypto schläft. KI-Infrastruktur ist unvermeidlich – Nvidia ist der einzige Profiteur ohne Konkurrenz.</div>
+          </div>
+          <div class="ss-card" style="background:rgba(153,69,255,.07);border-color:rgba(153,69,255,.2);">
+            <div class="ss-card-label" style="color:#9945ff;">Solana 14%</div>
+            <div class="ss-card-text"><strong>Der L1-Wachstumswert.</strong> 2,85B$ echtes Netzwerk-Revenue. Nicht nur Narrativ – echte Adoption. ETH-Konkurrent mit besserem Speed-Profil.</div>
+          </div>
+          <div class="ss-card" style="background:rgba(0,212,255,.07);border-color:rgba(0,212,255,.2);">
+            <div class="ss-card-label" style="color:#00d4ff;">Bittensor 8%</div>
+            <div class="ss-card-text"><strong>Die asymmetrische Wette.</strong> KI-Infrastruktur auf Blockchain mit Bitcoin-Mechanik (21M Supply, Halving). Kleinster Market Cap = größtes Upside-Potenzial.</div>
+          </div>
+          <div class="ss-card hold">
+            <div class="ss-card-label">Cash 5%</div>
+            <div class="ss-card-text"><strong>Das Nachkauf-Pulver.</strong> Nie vollständig investiert. Diese 5% werden bei -40% Bitcoin-Korrekturen eingesetzt. Psychologischer Anker im Crash.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2: Kauf-Strategie -->
+    <div class="strat-section">
+      <div class="ss-hdr" onclick="togS('s2')">
+        <div class="ss-num">02</div>
+        <div class="ss-info">
+          <div class="ss-name">Wann & wie kaufen</div>
+          <div class="ss-tag">DCA + Indikatoren-gesteuerter Nachkauf</div>
+        </div>
+        <div class="ss-arr" id="arr-s2">▼</div>
+      </div>
+      <div class="ss-body" id="s2">
+        <p style="font-size:13px;color:var(--hi);line-height:1.7;margin-bottom:12px;">
+          Die Basis ist <strong style="color:#fff">monatliches DCA (Dollar-Cost-Averaging)</strong> – du kaufst jeden Monat unabhängig vom Preis. Darüber liegt eine <strong style="color:var(--buy)">Nachkauf-Schicht</strong> die auf konkrete Signale reagiert.
+        </p>
+        <div class="ss-grid">
+          <div class="ss-card buy">
+            <div class="ss-card-label">&#x1F7E2; Sparrate verdoppeln wenn...</div>
+            <div class="ss-card-text">
+              <strong>Fear & Greed unter 25</strong> – Institutionen kaufen, Retail verkauft<br>
+              <strong>BTC -40% vom ATH</strong> – historisch bester Einstieg<br>
+              <strong>MTPLF mNAV unter 1.0x</strong> – Bitcoin mit echtem Rabatt
+            </div>
+          </div>
+          <div class="ss-card hold">
+            <div class="ss-card-label">&#x1F7E1; Normal DCA wenn...</div>
+            <div class="ss-card-text">
+              <strong>Fear & Greed 25–65</strong><br>
+              <strong>BTC -20% bis -40% vom ATH</strong><br>
+              <strong>MTPLF mNAV 1.1x–1.8x</strong><br>
+              Kein besonderes Signal – einfach weitersparen
+            </div>
+          </div>
+          <div class="ss-card cash">
+            <div class="ss-card-label">&#x1F7E0; Sparrate halbieren wenn...</div>
+            <div class="ss-card-text">
+              <strong>Fear & Greed über 75</strong> – Markt überhitzt<br>
+              <strong>BTC +100% in 90 Tagen</strong> – zu schnell<br>
+              <strong>MTPLF mNAV über 1.8x</strong> – zu teuer
+            </div>
+          </div>
+          <div class="ss-card buy" style="background:rgba(0,245,160,.05);">
+            <div class="ss-card-label">Bitcoin-Halving Strategie</div>
+            <div class="ss-card-text">
+              <strong>April 2028 ist das nächste Halving.</strong> 12 Monate vorher maximale Aggression. Historisch stieg BTC in jedem Zyklus danach. Das ist der wichtigste Kaufzeitpunkt des Plans.
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;font-family:'DM Mono',monospace;font-size:11px;color:var(--dim);background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+          &#x1F4C5; SPARPLAN: Jetzt 1.000–2.000€/Monat → ab Monat 7 (Frau arbeitet): 3.000–4.000€/Monat<br>
+          Die größte Hebelwirkung kommt nicht von der Asset-Wahl, sondern von der Sparrate.
+        </div>
+      </div>
+    </div>
+
+    <!-- 3: Verkaufs-Strategie -->
+    <div class="strat-section">
+      <div class="ss-hdr" onclick="togS('s3')">
+        <div class="ss-num">03</div>
+        <div class="ss-info">
+          <div class="ss-name">Wann & wie verkaufen</div>
+          <div class="ss-tag">Schrittweise Gewinnsicherung – nie alles auf einmal</div>
+        </div>
+        <div class="ss-arr" id="arr-s3">▼</div>
+      </div>
+      <div class="ss-body" id="s3">
+        <p style="font-size:13px;color:var(--hi);line-height:1.7;margin-bottom:12px;">
+          <strong style="color:#fff">Regel 1: Niemals alles auf einmal verkaufen.</strong> Schrittweise Teilgewinne sind die einzige Methode die funktioniert. Wer auf den perfekten Zeitpunkt wartet, verpasst ihn immer.
+        </p>
+        <div class="ss-grid">
+          <div class="ss-card sell">
+            <div class="ss-card-label">Bitcoin Verkauf-Stufen</div>
+            <div class="ss-card-text">
+              BTC > 300.000$ → <strong>10% verkaufen</strong><br>
+              BTC > 500.000$ → <strong>weitere 15%</strong><br>
+              BTC > 800.000$ → <strong>weitere 15%</strong><br>
+              <em style="color:var(--dim)">Nie mehr als 50% der BTC-Position</em>
+            </div>
+          </div>
+          <div class="ss-card sell">
+            <div class="ss-card-label">Metaplanet Verkauf</div>
+            <div class="ss-card-text">
+              mNAV > 2.5x → <strong>20–30% verkaufen</strong><br>
+              mNAV > 4.0x → <strong>50% verkaufen</strong><br>
+              <em style="color:var(--dim)">mNAV ist der einzige Kompass</em>
+            </div>
+          </div>
+          <div class="ss-card sell">
+            <div class="ss-card-label">Solana Verkauf</div>
+            <div class="ss-card-text">
+              SOL > 400$ → <strong>25% verkaufen</strong><br>
+              SOL > 700$ → <strong>weitere 25%</strong><br>
+              <em style="color:var(--dim)">Nie mehr als 50% der SOL-Position</em>
+            </div>
+          </div>
+          <div class="ss-card sell">
+            <div class="ss-card-label">Bittensor Verkauf</div>
+            <div class="ss-card-text">
+              Market Cap > 20B$ → <strong>30% verkaufen</strong><br>
+              Market Cap > 50B$ → <strong>weitere 30%</strong><br>
+              <em style="color:var(--dim)">Bei 100B$ alles außer 10%</em>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;font-family:'DM Mono',monospace;font-size:11px;color:var(--dim);background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+          &#x1F3AF; ZIEL 2029–2030: Wenn Gesamtvermögen über 1,5M€ → 30% in dividendenstarke ETFs umschichten → passives Einkommen aufbauen
+        </div>
+      </div>
+    </div>
+
+    <!-- 4: Die Indikatoren -->
+    <div class="strat-section">
+      <div class="ss-hdr" onclick="togS('s4')">
+        <div class="ss-num">04</div>
+        <div class="ss-info">
+          <div class="ss-name">Die 3 Kern-Indikatoren</div>
+          <div class="ss-tag">Was du wöchentlich checkst – in 5 Minuten</div>
+        </div>
+        <div class="ss-arr" id="arr-s4">▼</div>
+      </div>
+      <div class="ss-body" id="s4">
+        <div class="ss-rules">
+          <div class="ss-rule">
+            <div class="ss-rule-num">&#x2460;</div>
+            <div class="ss-rule-txt">
+              <strong style="color:#fff">Fear & Greed Index (alternative.me)</strong><br>
+              Misst die emotionale Stimmung des Marktes. Unter 25 = alle haben Angst = Kaufzone. Über 75 = alle sind gierig = aufpassen. Der Counter-Intuitivste aber mächtigste Indikator.
+            </div>
+          </div>
+          <div class="ss-rule">
+            <div class="ss-rule-num">&#x2461;</div>
+            <div class="ss-rule-txt">
+              <strong style="color:#fff">MVRV Z-Score (bitcoinmagazinepro.com)</strong><br>
+              Vergleicht Marktwert mit realisiertem Wert aller Bitcoin. Im grünen Bereich (unter 1) = historisch bester Kaufzeitpunkt. Im roten Bereich (über 7) = historische Top-Signale. Hat alle Hochs auf 2 Wochen genau vorhergesagt.
+            </div>
+          </div>
+          <div class="ss-rule">
+            <div class="ss-rule-num">&#x2462;</div>
+            <div class="ss-rule-txt">
+              <strong style="color:#fff">Metaplanet mNAV (dieses Dashboard)</strong><br>
+              Vergleicht den Unternehmenswert mit dem Wert der Bitcoin-Holdings. Unter 1.0x = du kaufst Bitcoin mit Rabatt durch die Aktie. Das ist das schärfste Signal für Metaplanet-Käufe.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5: Psychologie -->
+    <div class="strat-section">
+      <div class="ss-hdr" onclick="togS('s5')">
+        <div class="ss-num">05</div>
+        <div class="ss-info">
+          <div class="ss-name">Die 5 unverbrüchlichen Regeln</div>
+          <div class="ss-tag">Psychologie schlägt Analyse – diese Regeln nie brechen</div>
+        </div>
+        <div class="ss-arr" id="arr-s5">▼</div>
+      </div>
+      <div class="ss-body" id="s5">
+        <div class="ss-rules">
+          <div class="ss-rule"><div class="ss-rule-num">1</div><div class="ss-rule-txt"><strong style="color:var(--hold)">Kaufentscheidungen im Ruhezustand festlegen.</strong> Schreib heute auf: "Wenn BTC auf X€ fällt, kaufe ich Y€ nach." Im Crash entscheidest du mit Panik – auf Papier mit Verstand.</div></div>
+          <div class="ss-rule"><div class="ss-rule-num">2</div><div class="ss-rule-txt"><strong style="color:var(--hold)">Nie wegen Medienberichten verkaufen.</strong> Wenn CNN über den Bitcoin-Crash berichtet: das ist der Boden. Wenn alle Medien über Krypto reden: das ist die Nähe des Tops.</div></div>
+          <div class="ss-rule"><div class="ss-rule-num">3</div><div class="ss-rule-txt"><strong style="color:var(--hold)">Metaplanet/MSTR nur kaufen wenn mNAV unter 1.2x.</strong> Über 2.5x kein einziger Neukauf. Das mNAV ist dein einziger Kompass – keine Ausnahmen.</div></div>
+          <div class="ss-rule"><div class="ss-rule-num">4</div><div class="ss-rule-txt"><strong style="color:var(--hold)">3–6 Monate Notreserve außerhalb des Portfolios.</strong> Auf Tagesgeld, niemals investiert. Investment-Kapital ist nie dein Sicherheitsnetz.</div></div>
+          <div class="ss-rule"><div class="ss-rule-num">5</div><div class="ss-rule-txt"><strong style="color:var(--hold)">Gewinne sichern ist keine Schwäche.</strong> Bei 10x auf TAO oder SOL 30% rausnehmen. Du kannst mit dem gesicherten Kapital risikolos weiter akkumulieren.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6: Szenarien -->
+    <div class="strat-section">
+      <div class="ss-hdr" onclick="togS('s6')">
+        <div class="ss-num">06</div>
+        <div class="ss-info">
+          <div class="ss-name">Szenarien bis 2033</div>
+          <div class="ss-tag">Best Case · Base Case · Worst Case</div>
+        </div>
+        <div class="ss-arr" id="arr-s6">▼</div>
+      </div>
+      <div class="ss-body" id="s6">
+        <div class="ss-grid">
+          <div class="ss-card buy">
+            <div class="ss-card-label">&#x1F680; Bull Case · 20–25%</div>
+            <div class="ss-card-text">
+              BTC 500k–1M$ · Vermögen: <strong>2,5–4M€</strong><br>
+              Passives Einkommen: <strong>8.000–13.000€/Mo</strong><br>
+              <em style="color:var(--dim)">Finanzielle Freiheit erreicht ✓</em>
+            </div>
+          </div>
+          <div class="ss-card hold">
+            <div class="ss-card-label">&#x1F4CA; Base Case · 40–45%</div>
+            <div class="ss-card-text">
+              BTC 200k–350k$ · Vermögen: <strong>600k–1,2M€</strong><br>
+              Passives Einkommen: <strong>2.000–4.000€/Mo</strong><br>
+              <em style="color:var(--dim)">Teilziel – 10–12 Jahre Horizont</em>
+            </div>
+          </div>
+          <div class="ss-card cash">
+            <div class="ss-card-label">&#x1F4C9; Bear Case · 20–25%</div>
+            <div class="ss-card-text">
+              BTC unter 80k$ langfristig · <strong>150–350k€</strong><br>
+              Passives Einkommen: <strong>500–1.200€/Mo</strong><br>
+              <em style="color:var(--dim)">Ziel verfehlt – Horizont verlängern</em>
+            </div>
+          </div>
+          <div class="ss-card sell">
+            <div class="ss-card-label">&#x26AB; Crash · 10%</div>
+            <div class="ss-card-text">
+              BTC-Totalversagen oder Regulierung<br>
+              Kapitalverlust möglich<br>
+              <em style="color:var(--dim)">Deshalb: max. 100% Verlusttoleranz</em>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;font-family:'DM Mono',monospace;font-size:11px;color:var(--dim);background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+          &#x1F4A1; Der Base Case ist der wahrscheinlichste. 600k–1,2M€ aus fast nichts in 7 Jahren ist außergewöhnlich – auch wenn es nicht das volle Ziel ist. Der Plan funktioniert in jedem Szenario außer Crash.
+        </div>
+      </div>
+    </div>
+
+    <!-- 7: Fahrplan -->
+    <div class="strat-section">
+      <div class="ss-hdr" onclick="togS('s7')">
+        <div class="ss-num">07</div>
+        <div class="ss-info">
+          <div class="ss-name">Zeitlicher Fahrplan</div>
+          <div class="ss-tag">Was wann zu tun ist</div>
+        </div>
+        <div class="ss-arr" id="arr-s7">▼</div>
+      </div>
+      <div class="ss-body" id="s7">
+        <div class="ss-rules">
+          <div class="ss-rule"><div class="ss-rule-num" style="color:var(--buy)">&#x25B8;</div><div class="ss-rule-txt"><strong style="color:#fff">Jetzt – Monat 6 (1.000–2.000€/Mo):</strong> Fundament aufbauen. BTC DCA starten. Metaplanet Tranche 1 (mNAV aktuell günstig). TAO und SOL aufbauen. Nvidia kaufen.</div></div>
+          <div class="ss-rule"><div class="ss-rule-num" style="color:var(--hold)">&#x25B8;</div><div class="ss-rule-txt"><strong style="color:#fff">Ab Monat 7 (3.500–4.000€/Mo):</strong> Frau arbeitet → Sparrate fast verdoppelt. Gleiche Verteilung, höherer Einsatz. Bitcoin-Bärenmarktboden abwarten und aggressiv kaufen.</div></div>
+          <div class="ss-rule"><div class="ss-rule-num" style="color:var(--cash)">&#x25B8;</div><div class="ss-rule-txt"><strong style="color:#fff">2027 – Pre-Halving:</strong> 12 Monate vor dem Halving (April 2028) maximale Aggression auf BTC und MTPLF. Cash-Reserve vollständig einsetzen. Letzter großer Akkumulationspunkt.</div></div>
+          <div class="ss-rule"><div class="ss-rule-num" style="color:var(--sell)">&#x25B8;</div><div class="ss-rule-txt"><strong style="color:#fff">2029–2030 – Bull Run:</strong> Schrittweise Gewinne sichern wenn Ziele erreicht (BTC 300k+, SOL 400+, TAO 20B+ MCap). 30% in ETFs umschichten für passives Einkommen.</div></div>
+          <div class="ss-rule"><div class="ss-rule-num" style="color:#fff">&#x25B8;</div><div class="ss-rule-txt"><strong style="color:#fff">Ab 1,5M€ Vermögen:</strong> Strategie-Shift. 30% in dividendenstarke ETFs (MSCI World, S&P 500 High Dividend). 4% Entnahmerate = 5.000€/Mo passives Einkommen. Ziel erreicht.</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  Portfolio Signal Center · 7-Jahres-Plan 2026–2033<br>
+  Live: CoinGecko + Alternative.me · KI-Analyse: Claude AI (freitags) · mNAV: Eigene Berechnung<br>
+  Hosting: GitHub Pages · Auto-KI-Update jeden Freitag 18:00 UTC<br>
+  &#x26A0;&#xFE0F; Kein Anlageberatung · Eigene Recherche notwendig (DYOR)
+</div>
+</div>
+
+<script>
+// ── CONSTANTS ──
+const BTC_ATH = 109000, SOL_ATH = 294, TAO_CIRC = 10750000;
+const MTPLF_HOLD = 40177, MTPLF_DEBT_M = 280, MTPLF_SHARES_M = 1459;
+const MTPLF_USD = 1.90;
+
+// ── STATE ──
+let D = { fg:null, btc:null, sol:null, tao:null, p30:null, mnav:null };
+let AI = { portfolio:{}, btc:{}, mtplf:{}, nvda:{}, sol:{}, tao:{} };
+
+// ── mNAV ──
+function calcMnav(p) {
+  if (!p) return null;
+  return (MTPLF_SHARES_M*1e6*MTPLF_USD + MTPLF_DEBT_M*1e6) / (MTPLF_HOLD * p);
+}
+
+// ── SIGNALS ──
+const sigBtc  = () => { const f=D.fg, p=D.btc, a=p?((p-BTC_ATH)/BTC_ATH)*100:-35; return f<20||a<-55?'BUY':f>78||D.p30>70?'CASH':p>280000?'SELL':'HOLD'; };
+const sigMtp  = () => { const m=D.mnav; return !m?'HOLD':m<1.1?'BUY':m<1.8?'HOLD':m<2.5?'CASH':'SELL'; };
+const sigSol  = () => { const p=D.sol; if(!p)return'HOLD'; const a=((p-SOL_ATH)/SOL_ATH)*100; return a<-55?'BUY':a<-20?'HOLD':p>400?'SELL':'HOLD'; };
+const sigTao  = () => { const p=D.tao; if(!p)return'HOLD'; const m=p*TAO_CIRC; return m<2.5e9?'BUY':m<8e9?'HOLD':m>20e9?'SELL':'HOLD'; };
+const sigGlob = () => { const f=D.fg, p=D.btc, a=p?((p-BTC_ATH)/BTC_ATH)*100:-35; return(f!==null&&f<25)||a<-50?'BUY':f>75?'CASH':'HOLD'; };
+const sigNvda = () => AI.nvda.signal || 'HOLD';
+
+const SL={BUY:'● Kaufen',HOLD:'● Halten',CASH:'● Cash sammeln',SELL:'● Sichern'};
+const GS={BUY:'🟢 Akkumulieren – günstige Phase aktiv',HOLD:'🟡 Normal – DCA fortführen',CASH:'🟠 Vorsicht – Cash aufbauen'};
+const SC={BUY:'var(--buy)',HOLD:'var(--hold)',CASH:'var(--cash)',SELL:'var(--sell)'};
+
+// ── ASSET DEFS ──
+function makeAssets() {
+  const ba=((D.btc-BTC_ATH)/BTC_ATH*100)||0, sa=((D.sol-SOL_ATH)/SOL_ATH*100)||0;
+  const nvdaAi = AI.nvda.ai_analysis || {};
+  const btcAi  = AI.btc.ai_analysis  || {};
+  const mtpAi  = AI.mtplf.ai_analysis || {};
+  const solAi  = AI.sol.ai_analysis  || {};
+  const taoAi  = AI.tao.ai_analysis  || {};
+
+  return [
+    { id:'btc', name:'Bitcoin', ticker:'BTC·38%', icon:'₿', ib:'#f7931a18', ic:'#f7931a', sig:sigBtc(),
+      price:D.btc?'$'+D.btc.toLocaleString('de-DE'):'—',
+      chg:D.p30!==null?(D.p30>0?'+':'')+D.p30.toFixed(1)+'% (30d)':null, cc:D.p30<0?'var(--buy)':'var(--hold)',
+      detailUrl:'assets/btc.html',
+      aiSummary: btcAi.summary || null,
+      acts:{BUY:{e:'🔥',w:'Sparrate 1.5–2× erhöhen',y:'Fear<30 oder BTC -40% vom ATH – Institutionen kaufen jetzt.'},HOLD:{e:'⚖️',w:'Normales DCA fortführen',y:'Neutrale Marktphase. Sparplan läuft – kein Handlungsbedarf.'},CASH:{e:'💰',w:'Sparrate halbieren',y:'Fear>75 oder BTC +100% in 90 Tagen – überhitzt.'},SELL:{e:'🎯',w:'10–15% Teilverkauf',y:'BTC über 300.000$ – schrittweise Gewinne sichern.'}},
+      mets:[{l:'Fear & Greed',v:D.fg!==null?D.fg+'/100':'—',c:D.fg<30?'g':D.fg<55?'y':'r'},{l:'Vom ATH',v:D.btc?ba.toFixed(1)+'%':'—',c:ba<-45?'g':ba<-25?'y':'r'},{l:'30d Perf',v:D.p30!==null?(D.p30>0?'+':'')+D.p30.toFixed(1)+'%':'—',c:D.p30<-15?'g':D.p30<30?'y':'o'},{l:'Nächstes Halving',v:'Apr 2028',c:'n'},{l:'Kaufzone',v:'-40% vom ATH',c:'n'},{l:'1. Verkauf',v:'> 300.000$',c:'n'}],
+      zones:[{l:'🟢 Kaufen',v:'F&G<30 / -40%',c:'g'},{l:'🟡 Halten',v:'-20% bis -40%',c:'y'},{l:'🔴 Sichern',v:'BTC > 300k$',c:'r'}]
+    },
+    { id:'mtp', name:'Metaplanet', ticker:'MTPLF·20%', icon:'⬡', ib:'#ff4a6818', ic:'#ff4a68', sig:sigMtp(),
+      price:D.mnav?'mNAV '+D.mnav.toFixed(3)+'x':'Berechne...',
+      chg:'BTC-Hebel · 40.177 BTC', cc:'var(--dim)',
+      detailUrl:'assets/mtplf.html',
+      aiSummary: mtpAi.summary || null,
+      acts:{BUY:{e:'🔥',w:'Sparrate 2× – jetzt!',y:'mNAV unter 1.1x: Bitcoin mit Rabatt kaufen. Seltener Einstiegspunkt.'},HOLD:{e:'⚖️',w:'Normales DCA',y:'mNAV 1.1–1.8x: faire Bewertung, Flywheel intakt.'},CASH:{e:'💰',w:'Keine Neukäufe',y:'mNAV über 1.8x: deutlicher Aufpreis auf Bitcoin. Warten.'},SELL:{e:'🎯',w:'20–50% verkaufen',y:'mNAV über 2.5x: Markt zahlt doppelten BTC-Preis. Teilgewinne.'}},
+      mets:[{l:'mNAV (berechnet)',v:D.mnav?D.mnav.toFixed(3)+'x':'—',c:D.mnav<1.0?'g':D.mnav<1.3?'y':D.mnav<2.5?'o':'r'},{l:'BTC Holdings',v:'40.177 BTC',c:'n'},{l:'BTC-NAV',v:D.btc?'$'+(MTPLF_HOLD*D.btc/1e9).toFixed(2)+'B':'—',c:'n'},{l:'Schulden',v:'~$280M',c:'n'},{l:'Kaufzone',v:'mNAV < 1.1x',c:'n'},{l:'Verkaufzone',v:'mNAV > 2.5x',c:'n'}],
+      zones:[{l:'🟢 Kaufen',v:'mNAV < 1.1x',c:'g'},{l:'🟡 Halten',v:'1.1x – 1.8x',c:'y'},{l:'🔴 Sichern',v:'mNAV > 2.5x',c:'r'}]
+    },
+    { id:'nvda', name:'Nvidia', ticker:'NVDA·15%', icon:'⬡', ib:'#76b90018', ic:'#76b900', sig:sigNvda(),
+      price: AI.nvda.price_usd ? '$'+AI.nvda.price_usd.toLocaleString('en-US') : '~$104',
+      chg:'Quartals-Check genügt', cc:'var(--dim)',
+      detailUrl:'assets/nvda.html',
+      aiSummary: nvdaAi.summary || null,
+      acts:{BUY:{e:'🔥',w:'Sparrate 1.5× erhöhen',y:'Nach Earnings-Dip oder -25% vom Hoch.'},HOLD:{e:'⚖️',w:'Quartalsweise DCA',y:'KI-Capex der Hyperscaler wächst – Nvidia unvermeidlich.'},CASH:{e:'💰',w:'Sparrate pausieren',y:'+80% in 6 Mon. oder KGV > 60x.'},SELL:{e:'🎯',w:'Überprüfen',y:'KGV > 70x bei stagnierendem Wachstum.'}},
+      mets:[{l:'Check-Frequenz',v:'Quartalsweise',c:'n'},{l:'KI-Capex Trend',v:'Wachsend ↑',c:'g'},{l:'Nächste Earnings',v: AI.nvda.next_earnings || 'Mai 2026',c:'y'},{l:'P/E Ratio',v: AI.nvda.pe_ratio ? AI.nvda.pe_ratio+'x' : '—',c:'n'},{l:'Kaufzone',v:'-25% vom High',c:'n'},{l:'Strategie',v:'DCA halten',c:'n'}],
+      zones:[{l:'🟢 Kaufen',v:'-25% vom High',c:'g'},{l:'🟡 Halten',v:'KGV 30–60x',c:'y'},{l:'🔴 Prüfen',v:'KGV > 70x',c:'r'}]
+    },
+    { id:'sol', name:'Solana', ticker:'SOL·14%', icon:'◎', ib:'#9945ff18', ic:'#9945ff', sig:sigSol(),
+      price:D.sol?'$'+D.sol.toFixed(1):'—',
+      chg:D.sol?sa.toFixed(1)+'% vom ATH (294$)':'L1 · 2.85B$/Jahr', cc:sa<-50?'var(--buy)':'var(--dim)',
+      detailUrl:'assets/sol.html',
+      aiSummary: solAi.summary || null,
+      acts:{BUY:{e:'🔥',w:'Sparrate 2× erhöhen',y:'SOL über 50% unter ATH – solide Basis, echtes Revenue.'},HOLD:{e:'⚖️',w:'Normales DCA',y:'SOL 20–50% unter ATH. Firedancer-Upgrade kommt.'},CASH:{e:'💰',w:'Sparrate halbieren',y:'+150% in 90 Tagen – zu schnell gestiegen.'},SELL:{e:'🎯',w:'25% Teilverkauf',y:'SOL über 400$ – erstes Ziel. Schrittweise sichern.'}},
+      mets:[{l:'Vom ATH (294$)',v:D.sol?sa.toFixed(1)+'%':'—',c:sa<-50?'g':sa<-25?'y':'r'},{l:'Network Revenue',v:'2.85B$/Jahr',c:'g'},{l:'ETF Status',v:'In Prüfung',c:'y'},{l:'Firedancer',v:'Coming 2026',c:'y'},{l:'1. Verkauf',v:'SOL > 400$',c:'n'},{l:'Verkauf Aktion',v:'25%',c:'n'}],
+      zones:[{l:'🟢 Kaufen',v:'SOL -50% ATH',c:'g'},{l:'🟡 Halten',v:'-20% bis -50%',c:'y'},{l:'🔴 Sichern',v:'SOL > 400$',c:'r'}]
+    },
+    { id:'tao', name:'Bittensor', ticker:'TAO·8%', icon:'τ', ib:'#00d4ff18', ic:'#00d4ff', sig:sigTao(),
+      price:D.tao?'$'+D.tao.toFixed(0):'—',
+      chg:D.tao?'MCap: $'+(D.tao*TAO_CIRC/1e9).toFixed(1)+'B':'KI+BTC Mechanik · 21M', cc:D.tao&&D.tao*TAO_CIRC<3e9?'var(--buy)':'var(--dim)',
+      detailUrl:'assets/tao.html',
+      aiSummary: taoAi.summary || null,
+      acts:{BUY:{e:'🔥',w:'2× Sparrate + Nachkauf',y:'MCap unter 3B$ – kleinstes Cap, größtes Upside.'},HOLD:{e:'⚖️',w:'Monatliches DCA',y:'MCap 3–8B$. Grayscale ETF beantragt.'},CASH:{e:'💰',w:'Sparrate stoppen',y:'+200% in 90 Tagen – halten was da ist.'},SELL:{e:'🎯',w:'30% Teilverkauf',y:'MCap über 20B$ (~8–10x) – erstes Gewinnziel.'}},
+      mets:[{l:'Market Cap',v:D.tao?'$'+(D.tao*TAO_CIRC/1e9).toFixed(1)+'B':'—',c:D.tao&&D.tao*TAO_CIRC<3e9?'g':D.tao&&D.tao*TAO_CIRC<8e9?'y':'o'},{l:'Max Supply',v:'21M TAO',c:'n'},{l:'Halving',v:'Dez 2025 ✓',c:'g'},{l:'Grayscale ETF',v:'Beantragt',c:'y'},{l:'1. Verkauf',v:'MCap > 20B$',c:'n'},{l:'Aktion',v:'30% sichern',c:'n'}],
+      zones:[{l:'🟢 Kaufen',v:'MCap < 3B$',c:'g'},{l:'🟡 Halten',v:'3B$ – 8B$',c:'y'},{l:'🔴 Sichern',v:'MCap > 20B$',c:'r'}]
+    }
+  ];
+}
+
+// ── RENDER ──
+function render() {
+  const gs = sigGlob();
+  document.getElementById('gbanner').className = 'global ' + gs;
+  const gl = document.getElementById('gsig');
+  gl.textContent = GS[gs]; gl.className = 'g-sig ' + gs;
+  document.getElementById('tfg').textContent = D.fg !== null ? D.fg+'/100' : '—';
+  document.getElementById('tbtc').textContent = D.btc ? '$'+D.btc.toLocaleString('de-DE') : '—';
+  document.getElementById('tath').textContent = D.btc ? ((D.btc-BTC_ATH)/BTC_ATH*100).toFixed(1)+'%' : '—';
+
+  // KI Briefing
+  const briefing = AI.portfolio;
+  if (briefing && briefing.ai_weekly_briefing && briefing.ai_weekly_briefing !== 'Initialisierung. Erster automatischer Update erfolgt am nächsten Freitag um 18:00 UTC.') {
+    document.getElementById('aiBriefing').style.display = 'block';
+    document.getElementById('aiBriefingText').textContent = briefing.ai_weekly_briefing;
+    if (briefing.last_updated) {
+      const d = new Date(briefing.last_updated);
+      document.getElementById('aiBriefingTs').textContent = d.toLocaleDateString('de-DE') + ' · KI-Update';
+    }
+  }
+
+  // mNAV
+  const mn = D.mnav;
+  const mEl = document.getElementById('mnavNum');
+  mEl.textContent = mn ? mn.toFixed(3)+'x' : '—';
+  const mc = mn<1.0?'var(--buy)':mn<1.3?'var(--hold)':mn<2.5?'var(--cash)':'var(--sell)';
+  mEl.style.color = mc;
+  const ms = sigMtp();
+  const mlabels = {BUY:'🟢 Kaufen – günstiger Eintritt',HOLD:'🟡 Halten',CASH:'🟠 Kein Neukauf',SELL:'🔴 Teilverkauf'};
+  const mcc = {BUY:'buy',HOLD:'hold',CASH:'cash',SELL:'sell'};
+  document.getElementById('mnavChips').innerHTML = mn ? `
+    <div class="mnav-chip" style="background:var(--${mcc[ms]}-bg);color:var(--${mcc[ms]});border-color:var(--${mcc[ms]}-b)">${mlabels[ms]}</div>
+    <div class="mnav-chip" style="color:var(--dim);border-color:var(--line);background:var(--card2)">BTC-NAV: $${(MTPLF_HOLD*D.btc/1e9).toFixed(2)}B</div>
+  ` : '<div class="mnav-chip" style="color:var(--dim);border-color:var(--line)">Warte auf BTC-Preis...</div>';
+
+  // Cards
+  const open = [...document.querySelectorAll('.acb.open')].map(e=>e.id);
+  document.getElementById('cards').innerHTML = makeAssets().map(a => {
+    const act = a.acts[a.sig];
+    const aiBlock = a.aiSummary && !a.aiSummary.includes('Ausstehend') ? `
+      <div class="ai-card">
+        <div class="ai-card-hdr">&#x2728; KI-Analyse</div>
+        <div class="ai-card-text">${a.aiSummary}</div>
+      </div>` : '';
+    return `
+    <div class="ac ${a.sig}">
+      <div class="act" onclick="tog('cb-${a.id}')">
+        <div class="ai" style="background:${a.ib};color:${a.ic}">${a.icon}</div>
+        <div><div class="an">${a.name} <span style="font-size:11px;font-weight:400;color:var(--dim);font-family:'DM Mono',monospace">${a.ticker}</span></div></div>
+        <div class="ar">
+          <div class="sb ${a.sig}">${SL[a.sig]}</div>
+          <div class="ap">${a.price}</div>
+          ${a.chg?`<div class="ach" style="color:${a.cc}">${a.chg}</div>`:''}
+        </div>
+      </div>
+      <div class="acb${open.includes('cb-'+a.id)?' open':''}" id="cb-${a.id}">
+        <div class="abox ${a.sig}">
+          <div class="abox-ico">${act.e}</div>
+          <div><div class="abox-what">${act.w}</div><div class="abox-why">${act.y}</div></div>
+        </div>
+        ${aiBlock}
+        <div class="mets">${a.mets.map(m=>`<div class="mb"><div class="ml">${m.l}</div><div class="mv ${m.c}">${m.v}</div></div>`).join('')}</div>
+        <div class="zones">${a.zones.map(z=>`<div class="zone"><div class="zl">${z.l}</div><div class="zv ${z.c}">${z.v}</div></div>`).join('')}</div>
+        <a class="detail-link" href="${a.detailUrl}">&#x1F50D; Detail-Analyse &rarr;</a>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Indicators
+  const inds = [
+    {n:'Fear & Greed',pct:D.fg||0,fill:D.fg<25?'var(--buy)':D.fg<55?'var(--hold)':'var(--sell)',v:D.fg!==null?D.fg+'/100':'—',vc:D.fg<25?'var(--buy)':D.fg<55?'var(--hold)':'var(--sell)',s:D.fg<20?'🟢 Extrem Fear':D.fg<30?'🟢 Kaufzone':D.fg<55?'🟡 Neutral':D.fg<75?'🟠 Gier':'🔴 Extrem Gier',sc:D.fg<30?'var(--buy)':D.fg<55?'var(--hold)':'var(--sell)'},
+    {n:'BTC vom ATH',pct:D.btc?Math.max(0,100+((D.btc-BTC_ATH)/BTC_ATH*100)):50,fill:D.btc&&((D.btc-BTC_ATH)/BTC_ATH*100)<-40?'var(--buy)':'var(--hold)',v:D.btc?((D.btc-BTC_ATH)/BTC_ATH*100).toFixed(1)+'%':'—',vc:D.btc&&((D.btc-BTC_ATH)/BTC_ATH*100)<-40?'var(--buy)':'var(--hold)',s:D.btc?((D.btc-BTC_ATH)/BTC_ATH*100)<-45?'🟢 Kaufzone':((D.btc-BTC_ATH)/BTC_ATH*100)<-20?'🟡 Akkumulieren':'🟡 Halten':'—',sc:D.btc&&((D.btc-BTC_ATH)/BTC_ATH*100)<-40?'var(--buy)':'var(--hold)'},
+    {n:'BTC 30-Tage',pct:D.p30!==null?Math.max(0,Math.min(100,50+D.p30*0.4)):50,fill:D.p30<-15?'var(--buy)':D.p30<30?'var(--hold)':'var(--sell)',v:D.p30!==null?(D.p30>0?'+':'')+D.p30.toFixed(1)+'%':'—',vc:D.p30<-15?'var(--buy)':D.p30<30?'var(--hold)':'var(--sell)',s:D.p30<-15?'🟢 Kaufzone':D.p30<30?'🟡 Normal':'🟠 Vorsicht',sc:D.p30<-15?'var(--buy)':D.p30<30?'var(--hold)':'var(--cash)'},
+    {n:'MTPLF mNAV',pct:D.mnav?Math.max(0,Math.min(100,(D.mnav/3)*100)):0,fill:D.mnav<1.0?'var(--buy)':D.mnav<1.5?'var(--hold)':'var(--cash)',v:D.mnav?D.mnav.toFixed(3)+'x':'—',vc:D.mnav<1.1?'var(--buy)':D.mnav<1.8?'var(--hold)':'var(--cash)',s:D.mnav?D.mnav<1.1?'🟢 Kaufen':D.mnav<1.8?'🟡 Halten':D.mnav<2.5?'🟠 Cash':'🔴 Sichern':'Berechne...',sc:D.mnav&&D.mnav<1.1?'var(--buy)':D.mnav&&D.mnav<1.8?'var(--hold)':'var(--cash)'},
+    {n:'SOL vom ATH',pct:D.sol?Math.max(0,100+((D.sol-SOL_ATH)/SOL_ATH*100)):50,fill:D.sol&&((D.sol-SOL_ATH)/SOL_ATH*100)<-50?'var(--buy)':'var(--hold)',v:D.sol?((D.sol-SOL_ATH)/SOL_ATH*100).toFixed(1)+'%':'—',vc:D.sol&&((D.sol-SOL_ATH)/SOL_ATH*100)<-50?'var(--buy)':'var(--hold)',s:D.sol?((D.sol-SOL_ATH)/SOL_ATH*100)<-55?'🟢 Kaufzone':'🟡 Halten':'—',sc:D.sol&&((D.sol-SOL_ATH)/SOL_ATH*100)<-55?'var(--buy)':'var(--hold)'},
+    {n:'TAO Market Cap',pct:D.tao?Math.max(0,Math.min(100,(D.tao*TAO_CIRC/1e9/50)*100)):0,fill:D.tao&&D.tao*TAO_CIRC<3e9?'var(--buy)':D.tao&&D.tao*TAO_CIRC<8e9?'var(--hold)':'var(--cash)',v:D.tao?'$'+(D.tao*TAO_CIRC/1e9).toFixed(1)+'B':'—',vc:D.tao&&D.tao*TAO_CIRC<3e9?'var(--buy)':'var(--hold)',s:D.tao?D.tao*TAO_CIRC<3e9?'🟢 Kaufzone':D.tao*TAO_CIRC<8e9?'🟡 Halten':'🟠 Vorsicht':'—',sc:D.tao&&D.tao*TAO_CIRC<3e9?'var(--buy)':'var(--hold)'}
+  ];
+  document.getElementById('inds').innerHTML = inds.map(i=>`
+    <div class="ind">
+      <div class="in">${i.n}</div>
+      <div class="it"><div class="if" style="width:${i.pct}%;background:${i.fill}"></div></div>
+      <div class="iv" style="color:${i.vc}">${i.v}</div>
+      <div class="is" style="color:${i.sc}">${i.s}</div>
+    </div>`).join('');
+
+  // Sources
+  document.getElementById('srcBtc').textContent = D.btc?'$'+D.btc.toLocaleString('de-DE'):'Lädt...';
+  document.getElementById('srcFg').textContent = D.fg!==null?D.fg+'/100':'Lädt...';
+  document.getElementById('srcMnav').textContent = D.mnav?D.mnav.toFixed(3)+'x':'Berechne...';
+  const aiTs = AI.portfolio.last_updated ? new Date(AI.portfolio.last_updated).toLocaleDateString('de-DE') : '—';
+  document.getElementById('srcAi').textContent = aiTs;
+
+  // Time
+  const n = new Date();
+  document.getElementById('ts').textContent = n.toLocaleTimeString('de-DE')+' · +5 Min';
+}
+
+// ── TOGGLE ──
+function tog(id) { const e=document.getElementById(id); if(e)e.classList.toggle('open'); }
+function togS(id) {
+  const b=document.getElementById(id), a=document.getElementById('arr-'+id);
+  if(!b||!a)return;
+  b.classList.toggle('open');
+  a.classList.toggle('open');
+}
+
+// ── FETCH LIVE ──
+async function fetchFG()    { try{const r=await fetch('https://api.alternative.me/fng/?limit=1');const d=await r.json();return parseInt(d.data[0].value);}catch{return null;} }
+async function fetchPrices(){ try{const r=await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,solana,bittensor&vs_currencies=usd');return await r.json();}catch{return null;} }
+async function fetch30d()   { try{const r=await fetch('https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=30&interval=daily');const d=await r.json();if(d.prices?.length>1){const f=d.prices[0][1],l=d.prices[d.prices.length-1][1];return((l-f)/f)*100;}return null;}catch{return null;} }
+
+// ── FETCH AI DATA ──
+async function fetchAIData() {
+  const files = ['portfolio','btc','mtplf','nvda','sol','tao'];
+  const results = await Promise.allSettled(files.map(f => fetch(`data/${f}.json`).then(r=>r.json())));
+  results.forEach((r,i) => { if(r.status==='fulfilled') AI[files[i]] = r.value; });
+}
+
+async function loadAll() {
+  const [fg, prices, p30] = await Promise.all([fetchFG(), fetchPrices(), fetch30d()]);
+  D.fg=fg; D.p30=p30;
+  if(prices){D.btc=prices.bitcoin?.usd||null;D.sol=prices.solana?.usd||null;D.tao=prices.bittensor?.usd||null;}
+  D.mnav=calcMnav(D.btc);
+  render();
+}
+
+// Init: load AI data first (fast, local), then live prices
+fetchAIData().then(() => {
+  loadAll();
+  setInterval(loadAll, 300000);
+  setTimeout(()=>tog('cb-btc'),500);
+});
+</script>
+</body>
+</html>

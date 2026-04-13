@@ -1,0 +1,38 @@
+{
+  "asset": "Nvidia",
+  "ticker": "NVDA",
+  "allocation_pct": 15,
+  "icon": "⬡",
+  "color": "#76b900",
+  "signal": "HOLD",
+  "price_usd": null,
+  "price_52w_high_usd": null,
+  "price_52w_low_usd": null,
+  "pe_ratio": null,
+  "revenue_growth_yoy_pct": null,
+  "next_earnings": "Mai 2026",
+  "zones": {
+    "buy":  { "label": "-25% vom 52W-Hoch",   "note": "Nach Earnings-Dip" },
+    "hold": { "label": "KGV 30–60x",           "note": "KI-Capex wächst" },
+    "sell": { "label": "KGV > 70x",            "note": "Bei stagnierendem Wachstum" }
+  },
+  "ai_analysis": {
+    "summary": "Ausstehend – wird am Freitag automatisch aktualisiert.",
+    "bull_case": "Ausstehend.",
+    "bear_case": "Ausstehend.",
+    "key_catalysts": [],
+    "news_headlines": [],
+    "earnings_preview": null,
+    "ai_capex_trend": "Wachsend",
+    "confidence": null,
+    "updated": "2026-04-13"
+  },
+  "quarterly_review": {
+    "last_quarter": "Q4 FY2026",
+    "revenue_usd_billions": null,
+    "eps_actual": null,
+    "eps_estimate": null,
+    "guidance_note": null
+  },
+  "strategy_note": "Stabilitätsanker. KI-Infrastruktur ist unvermeidlich – NVDA ist der einzige Profiteur ohne echte Konkurrenz."
+}

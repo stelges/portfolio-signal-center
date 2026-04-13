@@ -1,0 +1,25 @@
+# Secrets & Environment
+.env
+*.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+
+# Temp
+*.tmp
+*.log.bak

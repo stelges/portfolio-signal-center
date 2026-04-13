@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solana · Portfolio Signal Center</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+:root{--bg:#05050d;--card:#0d0d1a;--card2:#111120;--line:#1a1a2e;--line2:#222238;--buy:#00f5a0;--buy-bg:rgba(0,245,160,.07);--buy-b:rgba(0,245,160,.2);--hold:#f5c000;--hold-bg:rgba(245,192,0,.07);--hold-b:rgba(245,192,0,.2);--cash:#ff7b00;--cash-bg:rgba(255,123,0,.07);--cash-b:rgba(255,123,0,.2);--sell:#ff2d55;--sell-bg:rgba(255,45,85,.07);--sell-b:rgba(255,45,85,.2);--txt:#d4d4f0;--hi:#9090b8;--dim:#505068;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--txt);font-family:'Outfit',sans-serif;min-height:100vh;background-image:radial-gradient(ellipse 80% 50% at 50% -20%,rgba(153,69,255,.04),transparent),radial-gradient(circle,rgba(255,255,255,.018) 1px,transparent 1px);background-size:100% 100%,30px 30px;}
+.wrap{max-width:840px;margin:0 auto;padding:28px 16px 100px;}
+.back{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;color:var(--dim);text-decoration:none;margin-bottom:20px;padding:6px 12px;border:1px solid var(--line2);border-radius:8px;transition:all .2s;}
+.back:hover{color:var(--txt);background:var(--card);}
+.hero{display:flex;align-items:center;gap:18px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line2);}
+.hero-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;background:rgba(153,69,255,.1);color:#9945ff;font-family:'DM Mono',monospace;flex-shrink:0;}
+.hero-name{font-size:clamp(28px,5vw,40px);font-weight:800;color:#fff;line-height:1;}
+.hero-ticker{font-family:'DM Mono',monospace;font-size:12px;color:var(--dim);margin-top:4px;}
+.hero-right{margin-left:auto;text-align:right;}
+.hero-price{font-family:'DM Mono',monospace;font-size:26px;font-weight:700;color:#fff;}
+.hero-signal{display:inline-block;font-family:'DM Mono',monospace;font-size:11px;padding:5px 14px;border-radius:20px;margin-top:6px;}
+.hero-signal.BUY{color:var(--buy);background:var(--buy-bg);border:1px solid var(--buy-b);}
+.hero-signal.HOLD{color:var(--hold);background:var(--hold-bg);border:1px solid var(--hold-b);}
+.hero-signal.SELL{color:var(--sell);background:var(--sell-bg);border:1px solid var(--sell-b);}
+.slabel{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin:22px 0 10px;display:flex;align-items:center;gap:10px;}
+.slabel::after{content:'';flex:1;height:1px;background:var(--line);}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+@media(max-width:500px){.grid3{grid-template-columns:1fr 1fr;}}
+.card{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:16px;}
+.card-label{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;}
+.card-val{font-family:'DM Mono',monospace;font-size:20px;font-weight:700;}
+.card-val.g{color:var(--buy);}.card-val.y{color:var(--hold);}.card-val.o{color:var(--cash);}.card-val.r{color:var(--sell);}.card-val.n{color:var(--txt);}
+.ai-block{background:var(--card);border:1px solid rgba(138,43,226,.2);border-radius:12px;padding:18px;}
+.ai-hdr{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.ai-hdr-title{font-size:16px;font-weight:700;color:#fff;}
+.ai-hdr-ts{font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);margin-left:auto;}
+.ai-summary{font-size:13px;color:var(--hi);line-height:1.7;margin-bottom:14px;}
+.ai-cases{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
+@media(max-width:500px){.ai-cases{grid-template-columns:1fr;}}
+.ai-case{border-radius:8px;padding:12px;}
+.ai-case.bull{background:var(--buy-bg);border:1px solid var(--buy-b);}
+.ai-case.bear{background:var(--sell-bg);border:1px solid var(--sell-b);}
+.ai-case-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;}
+.ai-case.bull .ai-case-label{color:var(--buy);}
+.ai-case.bear .ai-case-label{color:var(--sell);}
+.ai-case-text{font-size:12px;color:var(--hi);line-height:1.6;}
+.news-list{list-style:none;}
+.news-item{padding:8px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--hi);}
+.news-item:last-child{border-bottom:none;}
+.news-item::before{content:'→ ';color:var(--dim);}
+.zones-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.zone{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;text-align:center;}
+.zone-label{font-size:10px;color:var(--dim);margin-bottom:4px;}
+.zone-val{font-family:'DM Mono',monospace;font-size:12px;font-weight:600;}
+.zone-val.g{color:var(--buy);}.zone-val.y{color:var(--hold);}.zone-val.r{color:var(--sell);}
+.strategy-note{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:12px;color:var(--hi);line-height:1.6;}
+.strategy-note strong{color:var(--txt);}
+.footer{text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);line-height:2.2;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">&#x2190; Dashboard</a>
+  <div class="hero">
+    <div class="hero-icon">&#x25CE;</div>
+    <div>
+      <div class="hero-name">Solana</div>
+      <div class="hero-ticker">SOL · 14% Portfolio-Allokation</div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-price" id="heroPrice">Lädt...</div>
+      <div class="hero-signal HOLD" id="heroSignal">● HOLD</div>
+    </div>
+  </div>
+  <div class="slabel">Live-Metriken</div>
+  <div class="grid3">
+    <div class="card"><div class="card-label">Preis</div><div class="card-val n" id="mPrice">—</div></div>
+    <div class="card"><div class="card-label">ATH-Distanz</div><div class="card-val" id="mAth">—</div><div style="font-size:10px;color:var(--dim);margin-top:4px;font-family:'DM Mono',monospace;">ATH: $294</div></div>
+    <div class="card"><div class="card-label">Network Revenue</div><div class="card-val g" style="font-size:14px;">$2.85B/Jahr</div></div>
+    <div class="card"><div class="card-label">ETF Status</div><div class="card-val y" style="font-size:14px;">In Prüfung</div></div>
+    <div class="card"><div class="card-label">Firedancer</div><div class="card-val y" style="font-size:14px;">2026 ↗</div></div>
+    <div class="card"><div class="card-label">1. Verkauf bei</div><div class="card-val n" style="font-size:14px;">$400</div></div>
+  </div>
+  <div class="slabel">Signal-Zonen</div>
+  <div class="zones-row">
+    <div class="zone"><div class="zone-label">&#x1F7E2; Kaufen</div><div class="zone-val g">-50% vom ATH<br><span style="font-size:10px;color:var(--dim)">~$147</span></div></div>
+    <div class="zone"><div class="zone-label">&#x1F7E1; Halten</div><div class="zone-val y">-20% bis -50%<br><span style="font-size:10px;color:var(--dim)">$147–$235</span></div></div>
+    <div class="zone"><div class="zone-label">&#x1F534; Sichern</div><div class="zone-val r">SOL &gt; $400<br><span style="font-size:10px;color:var(--dim)">25% verkaufen</span></div></div>
+  </div>
+  <div class="slabel">KI-Wochenanalyse (Claude AI)</div>
+  <div class="ai-block">
+    <div class="ai-hdr"><div style="font-size:18px;">&#x2728;</div><div class="ai-hdr-title">Solana · KI-Analyse</div><div class="ai-hdr-ts" id="aiTs">—</div></div>
+    <div class="ai-summary" id="aiSummary">Wird am nächsten Freitag automatisch aktualisiert.</div>
+    <div class="ai-cases">
+      <div class="ai-case bull"><div class="ai-case-label">&#x1F7E2; Bull Case</div><div class="ai-case-text" id="aiBull">Ausstehend.</div></div>
+      <div class="ai-case bear"><div class="ai-case-label">&#x1F534; Bear Case</div><div class="ai-case-text" id="aiBear">Ausstehend.</div></div>
+    </div>
+    <div class="card-label" style="margin-bottom:8px;">News-Katalysatoren</div>
+    <ul class="news-list" id="newsList"><li class="news-item" style="color:var(--dim);">Update erfolgt freitags automatisch.</li></ul>
+  </div>
+  <div class="slabel">Strategie-Kontext</div>
+  <div class="strategy-note">
+    <strong>L1 Wachstumswert (14% Allokation).</strong> 2,85B$/Jahr echtes Netzwerk-Revenue – kein reines Narrativ. ETH-Konkurrent mit besserem Speed-Profil. Firedancer-Upgrade 2026.<br><br>
+    <strong>Verkauf-Stufen:</strong> SOL &gt; $400 → 25% · SOL &gt; $700 → weitere 25%. Nie mehr als 50% der SOL-Position.
+  </div>
+  <div class="footer">Solana · Portfolio Signal Center · 7-Jahres-Plan 2026–2033<br>Live: CoinGecko · KI-Analyse: Claude AI (freitags) · &#x26A0;&#xFE0F; Kein Anlageberatung</div>
+</div>
+<script>
+const SOL_ATH = 294;
+async function load() {
+  try {
+    const priceRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd').then(r=>r.json());
+    const sol = priceRes?.solana?.usd;
+    if (sol) {
+      document.getElementById('heroPrice').textContent = '$'+sol.toFixed(1);
+      document.getElementById('mPrice').textContent = '$'+sol.toFixed(1);
+      const athDist = ((sol-SOL_ATH)/SOL_ATH*100);
+      const athEl = document.getElementById('mAth');
+      athEl.textContent = athDist.toFixed(1)+'%';
+      athEl.className = 'card-val '+(athDist<-50?'g':athDist<-25?'y':'r');
+      const sig = athDist<-55?'BUY':sol>400?'SELL':'HOLD';
+      const sigTxt={BUY:'● Kaufen',HOLD:'● Halten',SELL:'● Sichern'};
+      const sigEl=document.getElementById('heroSignal');
+      sigEl.textContent=sigTxt[sig]; sigEl.className='hero-signal '+sig;
+    }
+  } catch(e) { console.warn('Live error:',e); }
+  try {
+    const ai = await fetch('../data/sol.json').then(r=>r.json());
+    if (ai.ai_analysis) {
+      const a=ai.ai_analysis;
+      if (a.summary&&!a.summary.includes('Ausstehend')) document.getElementById('aiSummary').textContent=a.summary;
+      if (a.bull_case&&!a.bull_case.includes('Ausstehend')) document.getElementById('aiBull').textContent=a.bull_case;
+      if (a.bear_case&&!a.bear_case.includes('Ausstehend')) document.getElementById('aiBear').textContent=a.bear_case;
+      if (a.updated) document.getElementById('aiTs').textContent='Update: '+a.updated;
+      if (a.news_headlines?.length>0) document.getElementById('newsList').innerHTML=a.news_headlines.map(h=>`<li class="news-item">${h}</li>`).join('');
+    }
+  } catch(e) { console.warn('AI error:',e); }
+}
+load();
+</script>
+</body>
+</html>

@@ -488,8 +488,10 @@ Antworte NUR mit diesem JSON (kein Markdown, keine Erklärungen außerhalb):
   "price_targets": {{
     "buy_zone": ZAHL,
     "buy_aggressiv": ZAHL,
-    "take_profit_1": {{"price": ZAHL, "action": "X% verkaufen"}},
-    "take_profit_2": {{"price": ZAHL, "action": "X% verkaufen"}},
+    "take_profit_1_price": ZAHL,
+    "take_profit_1_action": "z.B. 20% verkaufen",
+    "take_profit_2_price": ZAHL,
+    "take_profit_2_action": "z.B. 50% verkaufen",
     "concern_below": ZAHL
   }},
   "bull_case": "Max 2 Sätze.",
@@ -591,8 +593,10 @@ Antworte NUR mit diesem JSON:
   "price_targets": {{
     "buy_zone_mnav": ZAHL,
     "buy_aggressiv_mnav": ZAHL,
-    "take_profit_1": {{"mnav": ZAHL, "action": "X% verkaufen"}},
-    "take_profit_2": {{"mnav": ZAHL, "action": "X% verkaufen"}},
+    "take_profit_1_mnav": ZAHL,
+    "take_profit_1_action": "z.B. 20% verkaufen",
+    "take_profit_2_mnav": ZAHL,
+    "take_profit_2_action": "z.B. 50% verkaufen",
     "concern_mnav": ZAHL
   }},
   "bull_case": "Max 2 Sätze.",
@@ -677,8 +681,10 @@ Antworte NUR mit diesem JSON:
   "price_targets": {{
     "buy_zone": ZAHL,
     "buy_aggressiv": ZAHL,
-    "take_profit_1": {{"price": ZAHL, "action": "X% verkaufen"}},
-    "take_profit_2": {{"price": ZAHL, "action": "X% verkaufen"}},
+    "take_profit_1_price": ZAHL,
+    "take_profit_1_action": "z.B. 20% verkaufen",
+    "take_profit_2_price": ZAHL,
+    "take_profit_2_action": "z.B. 50% verkaufen",
     "concern_below": ZAHL
   }},
   "bull_case": "Max 2 Sätze.",
@@ -769,8 +775,10 @@ Antworte NUR mit diesem JSON:
   "price_targets": {{
     "buy_zone": ZAHL,
     "buy_aggressiv": ZAHL,
-    "take_profit_1": {{"price": ZAHL, "action": "X% verkaufen"}},
-    "take_profit_2": {{"price": ZAHL, "action": "X% verkaufen"}},
+    "take_profit_1_price": ZAHL,
+    "take_profit_1_action": "z.B. 25% verkaufen",
+    "take_profit_2_price": ZAHL,
+    "take_profit_2_action": "z.B. 50% verkaufen",
     "concern_below": ZAHL
   }},
   "bull_case": "Max 2 Sätze.",
@@ -865,8 +873,10 @@ Antworte NUR mit diesem JSON:
   "price_targets": {{
     "buy_zone": ZAHL,
     "buy_aggressiv": ZAHL,
-    "take_profit_1": {{"price": ZAHL, "mcap_b": ZAHL, "action": "X% verkaufen"}},
-    "take_profit_2": {{"price": ZAHL, "mcap_b": ZAHL, "action": "X% verkaufen"}},
+    "take_profit_1_price": ZAHL,
+    "take_profit_1_action": "z.B. 30% verkaufen",
+    "take_profit_2_price": ZAHL,
+    "take_profit_2_action": "z.B. 50% verkaufen",
     "concern_below": ZAHL
   }},
   "bull_case": "Max 2 Sätze.",

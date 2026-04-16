@@ -770,14 +770,17 @@ function makeTargetsHtml(pt, isMnav) {
   const fmt = isMnav ? fmtMnav : (v => fmtPrice(v));
   const buyZone   = pt.buy_zone    || pt.buy_zone_mnav;
   const buyAgg    = pt.buy_aggressiv || pt.buy_aggressiv_mnav;
-  const tp1       = pt.take_profit_1;
-  const tp2       = pt.take_profit_2;
+  // Support both flat keys (new) and nested objects (legacy fallback)
+  const tp1val    = pt.take_profit_1_price || pt.take_profit_1_mnav || (pt.take_profit_1 && (pt.take_profit_1.price || pt.take_profit_1.mnav));
+  const tp1act    = pt.take_profit_1_action || (pt.take_profit_1 && pt.take_profit_1.action);
+  const tp2val    = pt.take_profit_2_price || pt.take_profit_2_mnav || (pt.take_profit_2 && (pt.take_profit_2.price || pt.take_profit_2.mnav));
+  const tp2act    = pt.take_profit_2_action || (pt.take_profit_2 && pt.take_profit_2.action);
   const concern   = pt.concern_below || pt.concern_mnav;
   let items = '';
   if (buyZone)  items += `<div class="ai-target-item buy"><div class="ai-target-label">Kaufzone</div><div class="ai-target-val">${fmt(buyZone)}</div><div class="ai-target-action">Normales DCA</div></div>`;
   if (buyAgg)   items += `<div class="ai-target-item buy"><div class="ai-target-label">Aggressiv kaufen</div><div class="ai-target-val">${fmt(buyAgg)}</div><div class="ai-target-action">Sparrate verdoppeln</div></div>`;
-  if (tp1)      items += `<div class="ai-target-item sell"><div class="ai-target-label">Gewinnmitnahme 1</div><div class="ai-target-val">${fmt(tp1.price||tp1.mnav)}</div><div class="ai-target-action">${tp1.action||'—'}</div></div>`;
-  if (tp2)      items += `<div class="ai-target-item sell"><div class="ai-target-label">Gewinnmitnahme 2</div><div class="ai-target-val">${fmt(tp2.price||tp2.mnav)}</div><div class="ai-target-action">${tp2.action||'—'}</div></div>`;
+  if (tp1val)   items += `<div class="ai-target-item sell"><div class="ai-target-label">Gewinnmitnahme 1</div><div class="ai-target-val">${fmt(tp1val)}</div><div class="ai-target-action">${tp1act||'—'}</div></div>`;
+  if (tp2val)   items += `<div class="ai-target-item sell"><div class="ai-target-label">Gewinnmitnahme 2</div><div class="ai-target-val">${fmt(tp2val)}</div><div class="ai-target-action">${tp2act||'—'}</div></div>`;
   if (concern)  items += `<div class="ai-target-item warn" style="grid-column:1/-1"><div class="ai-target-label">Vorsicht unter</div><div class="ai-target-val">${fmt(concern)}</div><div class="ai-target-action">Signal könnte kippen</div></div>`;
   if (!items) return '';
   return `<div class="ai-targets"><div class="ai-targets-hdr">&#x1F3AF; KI-Preisziele (dynamisch)</div><div class="ai-targets-grid">${items}</div></div>`;

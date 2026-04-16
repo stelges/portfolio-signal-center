@@ -85,6 +85,27 @@ def pct_change(old: float, new: float) -> float:
     return 0.0
 
 
+def call_claude(client: anthropic.Anthropic, model: str, max_tokens: int, prompt: str,
+                retries: int = 2, delay: int = 8) -> str:
+    """Claude API Call mit automatischem Retry bei leerer/fehlerhafter Antwort."""
+    for attempt in range(retries + 1):
+        try:
+            response = client.messages.create(
+                model=model,
+                max_tokens=max_tokens,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            text = response.content[0].text if response.content else ""
+            if text.strip():
+                return text
+            log.warning(f"Claude ({model}) leere Antwort – Versuch {attempt+1}/{retries+1}")
+        except Exception as e:
+            log.warning(f"Claude ({model}) Fehler Versuch {attempt+1}/{retries+1}: {e}")
+        if attempt < retries:
+            time.sleep(delay)
+    return ""
+
+
 def parse_ai_json(raw: str) -> dict:
     """Parst Claude-Antwort zu JSON – robust gegen häufige Formatfehler."""
     import re
@@ -500,12 +521,8 @@ Antworte NUR mit diesem JSON (kein Markdown, keine Erklärungen außerhalb):
 }}"""
 
     try:
-        response = client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=900,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        result = parse_ai_json(response.content[0].text)
+        raw = call_claude(client, "claude-sonnet-4-6", 900, prompt)
+        result = parse_ai_json(raw)
         if result:
             log.info(f"BTC Signal: {result.get('signal')} | Regime: {result.get('macro_regime','—')[:50]}")
             old_signal = load_json("btc.json").get("signal", "HOLD")
@@ -605,12 +622,8 @@ Antworte NUR mit diesem JSON:
 }}"""
 
     try:
-        response = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=1000,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        result = parse_ai_json(response.content[0].text)
+        raw = call_claude(client, "claude-haiku-4-5-20251001", 1000, prompt)
+        result = parse_ai_json(raw)
         if result:
             log.info(f"MTPLF Signal: {result.get('signal')} | mNAV: {mnav:.3f}x")
             return result
@@ -693,12 +706,8 @@ Antworte NUR mit diesem JSON:
 }}"""
 
     try:
-        response = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=1000,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        result = parse_ai_json(response.content[0].text)
+        raw = call_claude(client, "claude-haiku-4-5-20251001", 1000, prompt)
+        result = parse_ai_json(raw)
         if result:
             log.info(f"NVDA Signal: {result.get('signal')} | ${price} ({dist_from_high:+.1f}% vom 52W-Hoch)")
             return result
@@ -787,12 +796,8 @@ Antworte NUR mit diesem JSON:
 }}"""
 
     try:
-        response = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=1000,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        result = parse_ai_json(response.content[0].text)
+        raw = call_claude(client, "claude-haiku-4-5-20251001", 1000, prompt)
+        result = parse_ai_json(raw)
         if result:
             log.info(f"SOL Signal: {result.get('signal')} | ${sol:.2f} ({ath_dist:+.1f}% ATH)")
             return result
@@ -885,12 +890,8 @@ Antworte NUR mit diesem JSON:
 }}"""
 
     try:
-        response = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=1000,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        result = parse_ai_json(response.content[0].text)
+        raw = call_claude(client, "claude-haiku-4-5-20251001", 1000, prompt)
+        result = parse_ai_json(raw)
         if result:
             log.info(f"TAO Signal: {result.get('signal')} | ${tao:.0f} MCap=${tao_mcap:.2f}B")
             return result
@@ -926,12 +927,7 @@ Antworte als JSON (kein Markdown):
 Sprache: Deutsch. Klar, direkt."""
 
     try:
-        response = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=350,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        raw = response.content[0].text.strip()
+        raw = call_claude(client, "claude-haiku-4-5-20251001", 350, prompt)
         result = parse_ai_json(raw)
         if result:
             return result

@@ -5,7 +5,7 @@
   "icon": "τ",
   "color": "#00d4ff",
   "signal": "BUY",
-  "price_usd": 241.4,
+  "price_usd": 243.65,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -29,13 +29,25 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit KI-Narrativ-Tailwind; BTC-Signal BUY, sinkende BTC-Dominanz (57%), Fear & Greed 23 (Angst) = kontrahierend, aber KI-Infrastruktur-Thesis intakt",
-    "summary": "TAO befindet sich in optimaler Konstellation: Post-Halving-Deflation, Grayscale-ETF-Katalysator (erste dezentrale KI ETP), BTC-Signal BUY mit sinkender Dominanz. Fear & Greed bei 23 signalisiert noch unreife Altcoin-Rallye – TAO sollte noch früh in diesem Zyklus sein. Execution-Risiko bleibt hoch (dezentrale KI Nische), aber asymmetrische Auszahlungsstruktur rechtfertigt Position bei BTC-Bestätigung.",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit KI-Narrativ-Katalysator. BTC-Signal BUY, BTC-Dominanz rückläufig (57%), Fear & Greed niedrig (23) = Einstiegsfenster für asymmetrische Altcoin-Wetten.",
     "active_indicators": [
-      "Grayscale-ETF-Filing als Katalysator: Institutionalisierung dezentraler KI (historisch: SOL, BTC-ETFs = 2–4x Preisimpuls innerhalb 6–12 Monate)",
-      "Post-Halving-Deflation (Dezember 2025 abgeschlossen): Supply-Halbierung = Emissionsdruck sinkt, ceteris paribus positiv für Angebot/Nachfrage-Dynamik",
-      "BTC-Dominanz-Rückgang (57%) bei BTC BUY-Signal: Klassisches Altcoin-Pumpsignal; TAO mit kleinster MCap ($2.6B) = höchste prozentuale Gewinnmarge in Altcoin-Rally"
+      "BTC-Signal (BUY) – primärer Gate für TAO-Aggression im 7J-Plan",
+      "BTC-Dominanz-Rückgang (57%) – Altcoin-Rotationssignal aktiv",
+      "Fear & Greed Index 23 – Kapitulation-Phase = opportuner Einstiegszeitpunkt für High-Beta-Assets"
     ],
+    "summary": "TAO befindet sich in früher Netzwerk-Phase nach Halving (Dez 2025) mit strukturellem Emissionsrückgang. Grayscale-ETF-Filing ist Institutional-Validierungssignal; dezentralisierte KI adressiert Multi-Billionen-Markt. Makro-Umfeld (BTC-BUY + Altcoin-Rotation + Angst-Niveau) erlaubt Einstieg im 8%-Portfolio-Slot.",
+    "price_targets": {
+      "buy_zone": 235,
+      "buy_aggressiv": 220,
+      "take_profit_1_price": 380,
+      "take_profit_1_action": "30% Position (sichert Gewinn, hält Upside)",
+      "take_profit_2_price": 580,
+      "take_profit_2_action": "50% Position (monetarisiert Midcycle-Bewegung)",
+      "concern_below": 180
+    },
+    "bull_case": "Grayscale-ETF-Filing = Institutional-Kanal ähnlich SOL/BTC-Narrative; dezentralisierte KI-Infrastruktur adressiert $500B+ TAM mit aktueller $2.6B MCap. Post-Halving-Deflation + wachsende Subnets = strukturelles Knappheitsnarrativ bis 2030.",
+    "bear_case": "Dezentralisierte KI bleibt Nische vs. OpenAI/Anthropic-Hyperscaler; Subnet-Zentralisierungsrisiko (großes Kapital dominiert Mining). ETF-Ablehnung oder regulatorische Headwinds könnten Momentum brechen.",
+    "signal_changer": "BTC-Signal zu HOLD/SELL kippen, oder BTC-Dominanz >62% steigen (Altcoin-Rotation beendet), oder Fear & Greed >70 (Euphorie = Verteilungsphase). Grayscale-ETF-Ablehnung = Risiko-Reduktion auf HOLD.",
     "news_headlines": [
       "The Stack - Grayscale",
       "Grayscale bets on ‘decentralized AI’ with first-ever Bittensor ETF filing - AMBCrypto",
@@ -45,5 +57,5 @@
     "updated": "2026-04-16"
   },
   "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
-  "market_cap_usd_billions": 2.6
+  "market_cap_usd_billions": 2.62
 }

@@ -1,33 +1,33 @@
 {
-  "last_updated": "2026-04-16T19:21:51.870063Z",
+  "last_updated": "2026-04-16T19:55:47.417287Z",
   "updated_by": "update_intelligence.py v3 (GitHub Actions)",
   "global_signal": "BUY",
   "global_summary": "Akkumulieren – günstige Phase aktiv",
   "fear_greed": 23,
-  "btc_price_usd": 74919,
-  "btc_ath_dist_pct": -31.3,
-  "btc_30d_change_pct": 3.08,
+  "btc_price_usd": 75352,
+  "btc_ath_dist_pct": -30.9,
+  "btc_30d_change_pct": 3.67,
   "next_update": "2026-04-23T18:00:00Z",
   "ai_weekly_briefing": {
-    "title": "Alle Positionen im Kaufsignal",
-    "status": "Portfolio zeigt durchgehend grüne Signale; Makroumfeld stabil mit moderater Volatilität.",
-    "insight": "BTC unter 75k mit Fear & Greed bei 23 deutet auf Akkumulationsphase hin. Metaplanet mit 1.14x NAV-Premium bleibt attraktiv für Bitcoin-Exposure. Alle fünf Core-Positionen geben gleichzeitig BUY-Signale – untypische Konstellation, die Disziplin erfordert.",
-    "action": "Planmäßiges monatliches DCA wie geplant durchführen; nicht erhöhen trotz Signale – 7-Jahres-Plan und 5% Cash-Reserve dienen als Puffer für größere Drawdowns."
+    "title": "Breite Kaufsignale bei moderater Bewertung",
+    "status": "Alle fünf Positionen zeigen Kaufsignale; Portfolio ist vollständig investiert und bereit für monatliches DCA.",
+    "insight": "BTC unter 76k mit Fear & Greed bei 23 weist auf Unterbewertung hin, während Metaplanet mit 1.13x mNAV Discount einen Einstiegspunkt bietet. Der stabile Makro-Mix (DXY 98, 10Y 4.31%) unterstützt längerfristige Positionen ohne Überheizung.",
+    "action": "Planmäßiges DCA durchführen; 5% Cash-Reserve für potenzielle Schwankungen halten und nicht antizyklisch einsetzen."
   },
   "market_regime": "fearful",
   "btc_dominance_pct": 57.0,
   "macro": {
-    "sp500": 7033.56,
+    "sp500": 7040.0,
     "dxy": 98.19,
-    "gold": 4812.3,
+    "gold": 4819.2,
     "us10y": 4.31,
-    "usdjpy": 159.18
+    "usdjpy": 159.15
   },
   "next_halving": {
-    "next_halving_estimated_utc": "2028-04-12T09:01:58Z",
+    "next_halving_estimated_utc": "2028-04-12T08:55:54Z",
     "next_halving_block": 1050000,
-    "blocks_remaining": 104626,
-    "current_block_height": 945374,
+    "blocks_remaining": 104622,
+    "current_block_height": 945378,
     "halving_source": "blockchain_calculated"
   }
 }

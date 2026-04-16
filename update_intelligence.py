@@ -251,29 +251,39 @@ def fetch_macro_data() -> dict:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def fetch_funding_rate() -> float | None:
-    """BTC Perpetual Funding Rate (Binance). Positiv = Markt Long-lastig."""
+    """
+    BTC Funding Rate via Bybit (funktioniert auf GitHub Actions).
+    Positiv = Markt Long-lastig (überhitzt), Negativ = Short-Druck.
+    """
     data = safe_get(
-        "https://fapi.binance.com/fapi/v1/fundingRate",
-        params={"symbol": "BTCUSDT", "limit": 1}
+        "https://api.bybit.com/v5/market/funding/history",
+        params={"category": "linear", "symbol": "BTCUSDT", "limit": 1}
     )
-    if data and isinstance(data, list) and len(data) > 0:
-        rate = float(data[0].get("fundingRate", 0)) * 100
-        log.info(f"Funding Rate: {rate:.4f}%")
+    try:
+        rate = float(data["result"]["list"][0]["fundingRate"]) * 100
+        log.info(f"Funding Rate (Bybit): {rate:.4f}%")
         return round(rate, 4)
-    return None
+    except Exception:
+        log.warning("Funding Rate nicht verfügbar")
+        return None
 
 
 def fetch_long_short_ratio() -> float | None:
-    """BTC Long/Short Ratio (Binance). Über 1 = mehr Longs."""
+    """
+    BTC Long/Short Ratio via Bybit.
+    Über 1.0 = mehr Longs im Markt.
+    """
     data = safe_get(
-        "https://fapi.binance.com/futures/data/globalLongShortAccountRatio",
-        params={"symbol": "BTCUSDT", "period": "1d", "limit": 1}
+        "https://api.bybit.com/v5/market/account-ratio",
+        params={"category": "linear", "symbol": "BTCUSDT", "period": "1d", "limit": 1}
     )
-    if data and isinstance(data, list) and len(data) > 0:
-        ratio = float(data[0].get("longShortRatio", 1))
-        log.info(f"Long/Short Ratio: {ratio:.2f}")
+    try:
+        ratio = float(data["result"]["list"][0]["buyRatio"]) / float(data["result"]["list"][0]["sellRatio"])
+        log.info(f"Long/Short Ratio (Bybit): {ratio:.2f}")
         return round(ratio, 2)
-    return None
+    except Exception:
+        log.warning("Long/Short Ratio nicht verfügbar")
+        return None
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -392,7 +402,7 @@ Signal-Definitionen für diesen Plan:
 
     try:
         response = client.messages.create(
-            model="claude-3-5-sonnet-20241022",  # Sonnet für BTC – komplexere Analyse
+            model="claude-sonnet-4-6",  # Sonnet für BTC – komplexere Analyse
             max_tokens=800,
             messages=[{"role": "user", "content": context}]
         )
@@ -417,7 +427,7 @@ Signal-Definitionen für diesen Plan:
         return _fallback_analysis()
 
 
-def analyze_asset(client: anthropic.Anthropic, asset_name: str, context_str: str, model: str = "claude-3-5-haiku-20241022") -> dict:
+def analyze_asset(client: anthropic.Anthropic, asset_name: str, context_str: str, model: str = "claude-haiku-4-5-20251001") -> dict:
     """Generische Analyse für MTPLF, NVDA, SOL, TAO."""
     prompt = f"""Du bist Finanzanalyst für einen 7-Jahres-Investitionsplan (DCA, kein Trading).
 Heute ist {TODAY}. Antworte auf Deutsch. NUR JSON, kein Markdown.
@@ -483,7 +493,7 @@ Was ist diese Woche die wichtigste Erkenntnis für diesen Plan?"""
 
     try:
         response = client.messages.create(
-            model="claude-3-5-haiku-20241022",
+            model="claude-haiku-4-5-20251001",
             max_tokens=200,
             messages=[{"role": "user", "content": prompt}]
         )

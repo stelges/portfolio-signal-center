@@ -4,10 +4,10 @@
   "allocation_pct": 14,
   "icon": "◎",
   "color": "#9945ff",
-  "signal": "HOLD",
-  "price_usd": 88.9,
+  "signal": "BUY",
+  "price_usd": 88.95,
   "ath_usd": 294,
-  "ath_dist_pct": -69.8,
+  "ath_dist_pct": -69.7,
   "network_revenue_annual_usd_billions": 2.85,
   "etf_status": "In Prüfung",
   "firedancer_status": "Coming 2026",
@@ -26,23 +26,39 @@
     }
   },
   "ai_analysis": {
-    "signal": "HOLD",
-    "confidence": "niedrig",
-    "macro_regime": "Unbekannt – Analyse nicht verfügbar",
-    "active_indicators": [],
-    "summary": "Analyse temporär nicht verfügbar.",
-    "price_targets": {},
-    "bull_case": "—",
-    "bear_case": "—",
-    "signal_changer": "—",
+    "signal": "BUY",
+    "confidence": "hoch",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit BTC-Führung; Altcoin-Rotation nach HTF-BUY-Signal; sinkende BTC-Dominanz (57%) triggert L1-Hebel.",
+    "active_indicators": [
+      "BTC-Signal (KI: BUY) – SOL folgt mit 2-3x Hebel in Altcoin-Phasen",
+      "BTC-Dominanz-Rückgang (57% Übergang) – klassischer Altcoin-Katalysator",
+      "Firedancer Mainnet 2026 + Standard Chartered $250-Target – fundamentale Upgrade + institutionelles Vorzeige-Narrativ"
+    ],
+    "summary": "SOL befindet sich in optimaler Einstiegszone: BTC-Signal ist BUY, BTC-Dominanz fällt, Firedancer steht vor Mainnet-Launch und Standard Chartered setzt $250-Ziel. Mit 14% Portfolio-Gewicht und 7-Jahres-Horizon ist dies eine akkumulationsfreundliche Phase vor der Altcoin-Season.",
+    "price_targets": {
+      "buy_zone": 85,
+      "buy_aggressiv": 78,
+      "take_profit_1": {
+        "price": 145,
+        "action": "20% (Firedancer-Hype-Spitze, +63% Gewinn)"
+      },
+      "take_profit_2": {
+        "price": 210,
+        "action": "30% (Standard Chartered-Target-Zone, +137% Gewinn, vor Euphorie)"
+      },
+      "concern_below": 72
+    },
+    "bull_case": "Firedancer Mainnet 2026 ist echte Tech-Upgrade (1M TPS vs. 5k), nicht nur Narrativ; $2.85B echte Network Revenue + ETF-Genehmigung = institutionelles Momentum. BTC-Dominanz-Rückgang + BTC-BUY-Signal = klassischer 2-3x Hebel für SOL.",
+    "bear_case": "Fear & Greed bei nur 23/100 signalisiert mangelnde Retail-FOMO; Firedancer-Verzögerungen oder Tech-Probleme könnten Hype zerstören. Makro-Zinserhöhungen (10Y: 4.31%) bremsen Risk-on weiter.",
+    "signal_changer": "BTC-Signal kippt auf SELL oder BTC-Dominanz steigt über 60% → sofort auf HOLD/CASH. Firedancer-Launch-Verzögerung oder kritische Bug-Reports → Verkauf von 50% Position. Fear & Greed bleibt unter 15 für 2+ Wochen → Neu-Bewertung nötig.",
     "news_headlines": [
       "Solana (SOL) Price Prediction: Standard Chartered Sets $250 Target as Firedancer Hits Mainnet in 2026 - openPR.com",
-      "Solana Names New COO as ETF Sees Withdrawals and Firedancer Achieves Key Progress - Bitget",
       "7 Altcoins Set to Outperform Bitcoin by Q4 2026 — Here’s What the Data Says - FinanceFeeds",
-      "Solana (SOL) Price Prediction: Analyst Forecasts and Future Outlook - MEXC"
+      "Solana (SOL) Price Prediction: Analyst Forecasts and Future Outlook - MEXC",
+      "Solana Price Prediction 2026, 2027 and 2030: Will SOL Recover from This Crypto Winter? - Bitget"
     ],
     "updated": "2026-04-16"
   },
   "strategy_note": "L1 Wachstumswert mit echtem Revenue. 2.85B$/Jahr Netzwerk-Revenue – kein reines Narrativ.",
-  "eth_price_usd": 2337.35
+  "eth_price_usd": 2340.93
 }

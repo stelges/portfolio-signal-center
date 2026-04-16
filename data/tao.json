@@ -4,8 +4,8 @@
   "allocation_pct": 8,
   "icon": "τ",
   "color": "#00d4ff",
-  "signal": "HOLD",
-  "price_usd": 241.1,
+  "signal": "BUY",
+  "price_usd": 241.4,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -27,15 +27,15 @@
     }
   },
   "ai_analysis": {
-    "signal": "HOLD",
-    "confidence": "niedrig",
-    "macro_regime": "Unbekannt – Analyse nicht verfügbar",
-    "active_indicators": [],
-    "summary": "Analyse temporär nicht verfügbar.",
-    "price_targets": {},
-    "bull_case": "—",
-    "bear_case": "—",
-    "signal_changer": "—",
+    "signal": "BUY",
+    "confidence": "mittel",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit KI-Narrativ-Tailwind; BTC-Signal BUY, sinkende BTC-Dominanz (57%), Fear & Greed 23 (Angst) = kontrahierend, aber KI-Infrastruktur-Thesis intakt",
+    "summary": "TAO befindet sich in optimaler Konstellation: Post-Halving-Deflation, Grayscale-ETF-Katalysator (erste dezentrale KI ETP), BTC-Signal BUY mit sinkender Dominanz. Fear & Greed bei 23 signalisiert noch unreife Altcoin-Rallye – TAO sollte noch früh in diesem Zyklus sein. Execution-Risiko bleibt hoch (dezentrale KI Nische), aber asymmetrische Auszahlungsstruktur rechtfertigt Position bei BTC-Bestätigung.",
+    "active_indicators": [
+      "Grayscale-ETF-Filing als Katalysator: Institutionalisierung dezentraler KI (historisch: SOL, BTC-ETFs = 2–4x Preisimpuls innerhalb 6–12 Monate)",
+      "Post-Halving-Deflation (Dezember 2025 abgeschlossen): Supply-Halbierung = Emissionsdruck sinkt, ceteris paribus positiv für Angebot/Nachfrage-Dynamik",
+      "BTC-Dominanz-Rückgang (57%) bei BTC BUY-Signal: Klassisches Altcoin-Pumpsignal; TAO mit kleinster MCap ($2.6B) = höchste prozentuale Gewinnmarge in Altcoin-Rally"
+    ],
     "news_headlines": [
       "The Stack - Grayscale",
       "Grayscale bets on ‘decentralized AI’ with first-ever Bittensor ETF filing - AMBCrypto",
@@ -45,5 +45,5 @@
     "updated": "2026-04-16"
   },
   "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
-  "market_cap_usd_billions": 2.59
+  "market_cap_usd_billions": 2.6
 }

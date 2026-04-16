@@ -4,8 +4,8 @@
   "allocation_pct": 15,
   "icon": "⬡",
   "color": "#76b900",
-  "signal": "HOLD",
-  "price_usd": 198.25,
+  "signal": "BUY",
+  "price_usd": 198.24,
   "price_52w_high_usd": 212.19,
   "price_52w_low_usd": 95.04,
   "pe_ratio": null,
@@ -26,21 +26,37 @@
     }
   },
   "ai_analysis": {
-    "signal": "HOLD",
-    "confidence": "niedrig",
-    "macro_regime": "Unbekannt – Analyse nicht verfügbar",
-    "active_indicators": [],
-    "summary": "Analyse temporär nicht verfügbar.",
-    "price_targets": {},
-    "bull_case": "—",
-    "bear_case": "—",
-    "signal_changer": "—",
+    "signal": "BUY",
+    "confidence": "hoch",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit moderater Zinslage; KI-Capex-Superzyklus dominiert Halbleiter-Narrative; Fear & Greed Index (23) signalisiert Unterbewertung trotz starker Fundamentals",
+    "active_indicators": [
+      "KI-Capex-Zyklus-Beschleunigung: >$300B kombinierte Data-Center-Ausgaben 2026 = direkter NVDA-Umsatztreiber (80%+ Marktanteil)",
+      "CUDA-Monopol-Moat: Softwareökosystem schafft 3–5 Jahre Wettbewerbsvorteil; AMD/Intel spielen Aufholspiel, nicht Angreifer-Rolle",
+      "Bewertungs-Sentiment-Divergenz: KGV ~40–45x bei 50%+ YoY-Wachstum + Blackwell-Ramp-Beschleunigung = unter historischem Halbleiter-Premium"
+    ],
+    "summary": "NVDA notiert 6.6% unter 52W-Hoch bei Rekordhoch der Capex-Ausgaben durch hyperscaler – klassische Kaufgelegenheit im Bullenmarkt. Fear & Greed Index (23) suggeriert emotionale Übertreibung nach Korrektionen; Fundamentals (Blackwell-Ramp, CUDA-Lock-in) intakt. Als 7-Jahre-DCA-Anker ideal positioniert für Q2/Q3 2026 Earnings-Katalysten.",
+    "price_targets": {
+      "buy_zone": 185,
+      "buy_aggressiv": 175,
+      "take_profit_1": {
+        "price": 245,
+        "action": "25% rebalancieren (ATH break + 15% Puffer)"
+      },
+      "take_profit_2": {
+        "price": 310,
+        "action": "35% rebalancieren (2031-Konsensus target; KGV-Normalisierung)"
+      },
+      "concern_below": 160
+    },
+    "bull_case": "Blackwell-Ramp beschleunigt sich Q2 2026; $300B+ Capex-Zyklus liefert 3+ Jahre Visibility. CUDA-Ökosystem unersetzbar – AMD braucht 18–24 Monate für Softwarelatching, Intel ist >2 Jahre entfernt.",
+    "bear_case": "Export-Restriktionen (China-Sanktionen) könnten $5–8B Umsatz treffen; KGV >70x triggert Bewertungsreset bei Makro-Volatilität oder Capex-Pause. Aktuelle Kurse bewerten 2027er-Gewinne aggressiv ein.",
+    "signal_changer": "VERKAUFEN bei: (1) China-Embargo-Eskalation mit >15% Umsatzverlust-Guidance; (2) AMD/Intel zeigen produktive GPU-Parity + Kundenmigrationen (>20% Share-Loss Indikation); (3) KGV >75x bei sinkenden Wachstumsguidances; (4) S&P 500 -20% + 10Y-Rendite >5.5% (Rezessionsangst-Szenario).",
     "news_headlines": [
       "NVIDIA Announces Financial Results for First Quarter Fiscal 2026 - NVIDIA Newsroom",
       "Nvidia Could Hit $340 by 2031 and the AI Buildout Is Just Getting Started - 24/7 Wall St.",
-      "NVIDIA Corporation (NVDA): Powering the AI Revolution and Beyond – A Deep Dive - FinancialContent",
       "Nvidia (NVDA) vs AMD: Which AI Chip Stock Deserves Your Investment in 2026? - MEXC",
-      "Nvidia (NVDA) vs AMD: Who’s Winning the AI Chip Race in 2026? - MEXC"
+      "Nvidia (NVDA) vs AMD: Who’s Winning the AI Chip Race in 2026? - MEXC",
+      "How Much Data Center Revenue Do AI Companies Bring In? - The Motley Fool"
     ],
     "updated": "2026-04-16"
   },

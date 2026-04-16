@@ -9,7 +9,7 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 1.1391,
+  "mnav": 1.1388,
   "btc_nav_usd_billions": 3.01,
   "zones": {
     "buy": {
@@ -44,7 +44,7 @@
     "updated": "2026-04-16"
   },
   "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien.",
-  "stock_price_usd": 2.1545,
+  "stock_price_usd": 2.1548,
   "stock_price_jpy": 343.0,
-  "usdjpy": 159.2
+  "usdjpy": 159.18
 }

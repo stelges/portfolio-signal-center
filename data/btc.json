@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "HOLD",
-  "price_usd": 74800,
+  "signal": "BUY",
+  "price_usd": 74830,
   "ath_usd": 109000,
-  "ath_dist_pct": -31.4,
-  "change_30d_pct": 2.91,
+  "ath_dist_pct": -31.3,
+  "change_30d_pct": 2.98,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,15 +25,31 @@
     }
   },
   "ai_analysis": {
-    "signal": "HOLD",
-    "confidence": "niedrig",
-    "macro_regime": "Unbekannt – Analyse nicht verfügbar",
-    "active_indicators": [],
-    "summary": "Analyse temporär nicht verfügbar.",
-    "price_targets": {},
-    "bull_case": "—",
-    "bear_case": "—",
-    "signal_changer": "—",
+    "signal": "BUY",
+    "confidence": "mittel",
+    "macro_regime": "Risk-off mit Dollar-Schwäche – selektiver Liquiditätszyklus: Kapitalrotation aus USD in Hard Assets (Gold, BTC) bei erhöhten Renditen und geopolitischer Unsicherheit",
+    "active_indicators": [
+      "DXY (98.21, fallend) – schwacher Dollar historisch stärkster Korrelationstreiber für BTC in Risk-off-Phasen; reduziert Opportunitätskosten von Non-USD-Assets",
+      "Fear & Greed Index (23 – Extremangst) – historisch zuverlässigster Kontraindikator für mittelfristige BTC-Entries; Akkumulationszonen lagen oft bei <25",
+      "200-Tage MA ($87,157) – BTC darunter signalisiert strukturellen Bärendruck, gleichzeitig definiert dieser Level den kritischen Widerstand für eine Trendwende"
+    ],
+    "summary": "BTC befindet sich in einer klassischen Post-Hype-Akkumulationsphase: 31% unter ATH, unterhalb des 200d-MA, aber mit extremem Pessimismus-Sentiment und strukturellem Rückenwind durch Dollar-Schwäche und wachsende institutionelle Nachfrage (ETFs, Strategy). Der Markt preist derzeit ein schlechteres Makro-Szenario ein als die Fundamentaldaten rechtfertigen. Pre-Halving-Dynamik (104k Blöcke bis 2028) spricht für strategische Akkumulation, nicht für Timing-Versuche.",
+    "price_targets": {
+      "buy_zone": 72000,
+      "buy_aggressiv": 62000,
+      "take_profit_1": {
+        "price": 88000,
+        "action": "15% verkaufen – Rückeroberung 200d-MA bestätigt"
+      },
+      "take_profit_2": {
+        "price": 109000,
+        "action": "25% verkaufen – ATH-Retest mit Momentum-Prüfung"
+      },
+      "concern_below": 58000
+    },
+    "bull_case": "Dollar-Schwäche hält an, ETF-Zuflüsse beschleunigen sich und BTC schließt den 200d-MA-Gap bis Q3 2026 – klassischer Halving-Vorlauf-Zyklus mit Ziel $130k–$150k bis 2027. Extremangst-Sentiment schlägt erfahrungsgemäß binnen 3–6 Monaten in Gier um.",
+    "bear_case": "Rezession materialisiert sich stärker als erwartet, Risk-off-Selling erfasst auch BTC trotz Dollar-Schwäche (wie März 2020) – Unterschreiten von $58k würde Marktstruktur nachhaltig beschädigen und das nächste Support-Cluster bei $45k–$48k aktivieren.",
+    "signal_changer": "Signal kippt auf CASH bei: nachhaltigem Schlusskurs unter $58.000 (Makro-Kapitulation bestätigt) ODER DXY-Reversal über 102 mit steigenden Renditen (echte Liquiditätskrise). Signal kippt auf SELL bei: parabolischem Anstieg über $115k mit Greed-Index >85 und negativen Funding Rates.",
     "news_headlines": [
       "Strategy Nears 1M BTC Milestone - Investing News Network",
       "IMF's global debt warning underscores bitcoin's (BTC) role in investor portfolios - CoinDesk",
@@ -45,7 +61,7 @@
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
   "ma200": 87157.0,
-  "ma50": 69828.0,
+  "ma50": 69829.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

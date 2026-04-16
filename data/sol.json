@@ -5,9 +5,9 @@
   "icon": "◎",
   "color": "#9945ff",
   "signal": "HOLD",
-  "price_usd": 88.94,
+  "price_usd": 88.9,
   "ath_usd": 294,
-  "ath_dist_pct": -69.7,
+  "ath_dist_pct": -69.8,
   "network_revenue_annual_usd_billions": 2.85,
   "etf_status": "In Prüfung",
   "firedancer_status": "Coming 2026",
@@ -44,5 +44,5 @@
     "updated": "2026-04-16"
   },
   "strategy_note": "L1 Wachstumswert mit echtem Revenue. 2.85B$/Jahr Netzwerk-Revenue – kein reines Narrativ.",
-  "eth_price_usd": 2337.07
+  "eth_price_usd": 2337.35
 }

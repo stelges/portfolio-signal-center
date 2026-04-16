@@ -284,6 +284,9 @@ body{
 .strat-body{padding:0;}
 .strat-section{border-bottom:1px solid var(--line);}
 .strat-section:last-child{border-bottom:none;}
+.ptab{background:var(--card2);border:1px solid var(--line);border-radius:6px;padding:5px 12px;font-size:11px;color:var(--dim);cursor:pointer;font-family:'DM Mono',monospace;transition:all .2s;}
+.ptab:hover{color:var(--hi);border-color:rgba(255,255,255,.15);}
+.ptab.active{background:rgba(0,245,160,.12);border-color:rgba(0,245,160,.35);color:var(--buy);}
 .ss-hdr{display:flex;align-items:center;gap:12px;padding:14px 20px;cursor:pointer;user-select:none;}
 .ss-hdr:hover{background:rgba(255,255,255,.02);}
 .ss-num{font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:var(--buy);line-height:1;width:32px;flex-shrink:0;}
@@ -592,39 +595,93 @@ body{
       </div>
     </div>
 
-    <!-- 4: Die Indikatoren -->
+    <!-- 4: Wie die KI entscheidet -->
     <div class="strat-section">
       <div class="ss-hdr" onclick="togS('s4')">
         <div class="ss-num">04</div>
         <div class="ss-info">
-          <div class="ss-name">Die 3 Kern-Indikatoren</div>
-          <div class="ss-tag">Was du wöchentlich checkst – in 5 Minuten</div>
+          <div class="ss-name">Wie die KI entscheidet</div>
+          <div class="ss-tag">3-Schritt-Prozess · Makro-Regime → Indikatoren → Preisziele</div>
         </div>
         <div class="ss-arr" id="arr-s4">▼</div>
       </div>
       <div class="ss-body" id="s4">
+        <p style="font-size:13px;color:var(--hi);line-height:1.7;margin-bottom:16px;">
+          Jeden Freitag analysiert <strong style="color:#fff">Claude AI</strong> alle 5 Assets vollständig neu. Dabei gibt es keine hardcodierten Schwellenwerte – die KI beurteilt den Kontext und entscheidet selbst, welche Indikatoren gerade relevant sind.
+        </p>
+
+        <!-- 3 Schritte -->
+        <div class="ss-grid" style="grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;">
+          <div class="ss-card" style="background:rgba(0,245,160,.06);border-color:rgba(0,245,160,.2);">
+            <div class="ss-card-label" style="color:var(--buy);">Schritt 1 – Makro-Regime</div>
+            <div class="ss-card-text">
+              Die KI identifiziert zuerst das aktuelle Makroumfeld: z.B. <em>„Risk-off + starker Dollar"</em>, <em>„Stagflation"</em> oder <em>„Risk-on + Liquiditätszyklus"</em>. Das Regime bestimmt alles danach.
+            </div>
+          </div>
+          <div class="ss-card hold">
+            <div class="ss-card-label">Schritt 2 – Indikatoren gewichten</div>
+            <div class="ss-card-text">
+              Je nach Regime bewertet die KI, welche 2–3 Indikatoren für dieses Asset <em>gerade</em> am aussagekräftigsten sind. Im Risk-off dominiert DXY und Gold, in Akkumulationsphasen dominiert Fear & Greed und MA200.
+            </div>
+          </div>
+          <div class="ss-card sell">
+            <div class="ss-card-label">Schritt 3 – Signal + Preisziele</div>
+            <div class="ss-card-text">
+              Aus dem Gesamtbild leitet die KI ein Signal ab (BUY / HOLD / CASH / SELL) und konkrete, aktuelle Preisziele: Kaufzonen, aggressive Einstiegspunkte und gestaffelte Verkaufsziele.
+            </div>
+          </div>
+        </div>
+
+        <!-- Datenbasis -->
+        <div style="font-size:12px;color:var(--dim);margin-bottom:8px;font-weight:600;letter-spacing:.05em;">DATENBASIS PRO ANALYSE-RUN</div>
+        <div class="ss-grid" style="grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:16px;">
+          <div style="background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--hi);line-height:1.8;">
+            <strong style="color:#fff;display:block;margin-bottom:4px;">Krypto-Marktdaten</strong>
+            BTC, ETH, SOL, TAO · Preise in USD<br>
+            BTC 200-Tage-MA + 50-Tage-MA<br>
+            BTC 30-Tage-Performance<br>
+            Fear &amp; Greed Index (0–100)<br>
+            BTC-Dominanz + ETH-Dominanz<br>
+            Gesamt-Crypto-Marktcap<br>
+            BTC Funding Rate (Bybit)<br>
+            BTC Long/Short Ratio
+          </div>
+          <div style="background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--hi);line-height:1.8;">
+            <strong style="color:#fff;display:block;margin-bottom:4px;">Makro-Daten (Yahoo Finance)</strong>
+            S&amp;P 500 inkl. 52W-High/Low<br>
+            DXY Dollar-Index<br>
+            Gold-Preis<br>
+            10Y US-Staatsanleihe-Rendite<br>
+            USD/JPY Wechselkurs<br>
+            Metaplanet-Aktie (3350.T, Tokyo)<br>
+            NVDA Aktienkurs + 52W-Hochs/Tiefs
+          </div>
+          <div style="background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--hi);line-height:1.8;">
+            <strong style="color:#fff;display:block;margin-bottom:4px;">Kontext-Daten</strong>
+            Nächstes BTC-Halving (Block-countdown)<br>
+            Metaplanet mNAV (eigene Berechnung)<br>
+            Metaplanet BTC-Holdings (40.177 BTC)<br>
+            TAO Market Cap + Zirkulationsangebot<br>
+            Portfolio-Allokation + Zeithorizont
+          </div>
+          <div style="background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--hi);line-height:1.8;">
+            <strong style="color:#fff;display:block;margin-bottom:4px;">Aktuelle News (Google RSS)</strong>
+            5 aktuelle Headlines pro Asset<br>
+            Bitcoin: Makro + institutionell<br>
+            Metaplanet: Japan + Treasury<br>
+            NVDA: Earnings + AI-Capex<br>
+            SOL: ETF + Firedancer + DeFi<br>
+            TAO: Grayscale + dezentrale KI
+          </div>
+        </div>
+
+        <!-- Signal-Definitionen -->
+        <div style="font-size:12px;color:var(--dim);margin-bottom:8px;font-weight:600;letter-spacing:.05em;">SIGNAL-DEFINITIONEN (was jedes Signal bedeutet)</div>
         <div class="ss-rules">
-          <div class="ss-rule">
-            <div class="ss-rule-num">&#x2460;</div>
-            <div class="ss-rule-txt">
-              <strong style="color:#fff">Fear & Greed Index (alternative.me)</strong><br>
-              Misst die emotionale Stimmung des Marktes. Unter 25 = alle haben Angst = Kaufzone. Über 75 = alle sind gierig = aufpassen. Der Counter-Intuitivste aber mächtigste Indikator.
-            </div>
-          </div>
-          <div class="ss-rule">
-            <div class="ss-rule-num">&#x2461;</div>
-            <div class="ss-rule-txt">
-              <strong style="color:#fff">MVRV Z-Score (bitcoinmagazinepro.com)</strong><br>
-              Vergleicht Marktwert mit realisiertem Wert aller Bitcoin. Im grünen Bereich (unter 1) = historisch bester Kaufzeitpunkt. Im roten Bereich (über 7) = historische Top-Signale. Hat alle Hochs auf 2 Wochen genau vorhergesagt.
-            </div>
-          </div>
-          <div class="ss-rule">
-            <div class="ss-rule-num">&#x2462;</div>
-            <div class="ss-rule-txt">
-              <strong style="color:#fff">Metaplanet mNAV (dieses Dashboard)</strong><br>
-              Vergleicht den Unternehmenswert mit dem Wert der Bitcoin-Holdings. Unter 1.0x = du kaufst Bitcoin mit Rabatt durch die Aktie. Das ist das schärfste Signal für Metaplanet-Käufe.
-            </div>
-          </div>
+          <div class="ss-rule"><div class="ss-rule-num" style="color:var(--buy);font-size:13px;">BUY</div><div class="ss-rule-txt">Sparrate 1,5–2× erhöhen + verfügbare Cash-Reserve einsetzen. Alle Indikatoren deuten auf günstige Akkumulationsphase.</div></div>
+          <div class="ss-rule"><div class="ss-rule-num" style="color:var(--hold);font-size:13px;">HOLD</div><div class="ss-rule-txt">Normales monatliches DCA fortführen. Kein besonderes Signal – neutraler Markt, Plan läuft weiter.</div></div>
+          <div class="ss-rule"><div class="ss-rule-num" style="color:var(--cash);font-size:13px;">CASH</div><div class="ss-rule-txt">Sparrate halbieren, keine Neukäufe. Markt überhitzt oder Makrorisiko erhöht – Pulver trocken halten.</div></div>
+          <div class="ss-rule"><div class="ss-rule-num" style="color:var(--sell);font-size:13px;">SELL</div><div class="ss-rule-txt">Teilgewinne sichern (gestaffelt nach Verkaufszielen). Nur bei extremen Überbewertungssignalen.</div></div>
         </div>
       </div>
     </div>
@@ -719,6 +776,336 @@ body{
           <div class="ss-rule"><div class="ss-rule-num" style="color:var(--sell)">&#x25B8;</div><div class="ss-rule-txt"><strong style="color:#fff">Phase 4 – Gewinnmitnahme (2029–2030):</strong> Schrittweise sichern wenn Verkaufsziele erreicht (BTC 300k+, SOL 400+, TAO MCap 20B+). Nie alles auf einmal. 30% in stabile ETFs umschichten.</div></div>
           <div class="ss-rule"><div class="ss-rule-num" style="color:#fff">&#x25B8;</div><div class="ss-rule-txt"><strong style="color:#fff">Phase 5 – Entnahme (ab Ziel-Vermögen):</strong> Strategie-Shift. Großteil in dividendenstarke ETFs (MSCI World, S&P 500). 4% Entnahmerate deckt laufende Kosten aus Kapitalerträgen. Ziel erreicht.</div></div>
         </div>
+      </div>
+    </div>
+
+    <!-- 8: KI-Transparenz -->
+    <div class="strat-section">
+      <div class="ss-hdr" onclick="togS('s8')">
+        <div class="ss-num">08</div>
+        <div class="ss-info">
+          <div class="ss-name">KI-Transparenz: Die vollständigen Prompts</div>
+          <div class="ss-tag">Exakt so wird Claude AI jede Woche instruiert</div>
+        </div>
+        <div class="ss-arr" id="arr-s8">▼</div>
+      </div>
+      <div class="ss-body" id="s8">
+        <p style="font-size:13px;color:var(--hi);line-height:1.7;margin-bottom:16px;">
+          Volle Transparenz: Diese Instruktionen erhält Claude AI jede Woche mit den aktuellen Marktdaten. Die KI antwortet mit einem strukturierten JSON, das das Dashboard direkt ausliest. Es gibt keine manuellen Eingriffe.
+        </p>
+
+        <!-- Kern-Instruktion -->
+        <div style="font-size:12px;color:var(--dim);margin-bottom:8px;font-weight:600;letter-spacing:.05em;">KERN-INSTRUKTION (für alle 5 Assets identisch)</div>
+        <pre style="background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:11px;color:#a0c0ff;line-height:1.7;white-space:pre-wrap;margin-bottom:16px;font-family:'DM Mono',monospace;">SCHRITT 1 – MAKRO-REGIME:
+Identifiziere das aktuelle Makro-Regime (z.B. "Risk-off + starker Dollar",
+"Stagflation", "Risk-on + Liquiditätszyklus", "Rezessionsangst + Flucht in
+Sicherheit", etc.). Welche 2-3 Indikatoren sind in DIESEM Regime für dieses
+Asset historisch am aussagekräftigsten?
+
+SCHRITT 2 – ANALYSE:
+Bewerte das Asset mit Fokus auf die in Schritt 1 identifizierten Indikatoren.
+Berücksichtige alle Daten, aber gewichte sie entsprechend dem Regime.
+
+SCHRITT 3 – PREISZIELE:
+Leite konkrete, aktuelle Preisziele ab – keine fixen Regeln, sondern basierend auf:
+- Aktuellem Preisniveau und Momentum
+- Technischen Zonen (MA200, ATH-Abständen, Unterstützungen)
+- Makro-Kontext und Sentiment
+- Zyklusphase (vor/nach Halving, Zinszyklus, etc.)</pre>
+
+        <!-- Asset Prompts als Tabs -->
+        <div style="font-size:12px;color:var(--dim);margin-bottom:8px;font-weight:600;letter-spacing:.05em;">ASSET-SPEZIFISCHE PROMPTS</div>
+        <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;" id="promptTabs">
+          <button class="ptab active" onclick="showPrompt('btc',this)">₿ Bitcoin</button>
+          <button class="ptab" onclick="showPrompt('mtp',this)">⬡ Metaplanet</button>
+          <button class="ptab" onclick="showPrompt('nvda',this)">🟩 Nvidia</button>
+          <button class="ptab" onclick="showPrompt('sol',this)">◎ Solana</button>
+          <button class="ptab" onclick="showPrompt('tao',this)">τ Bittensor</button>
+        </div>
+
+        <div id="prompt-btc" class="prompt-block">
+<pre style="background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:11px;color:#e0e8ff;line-height:1.7;white-space:pre-wrap;font-family:'DM Mono',monospace;"><span style="color:var(--dim)">// Modell: claude-sonnet-4-6 · max_tokens: 900</span>
+Du bist ein unabhängiger Makro- und Krypto-Analyst mit 20 Jahren Erfahrung.
+Kontext: 7-Jahres-Investitionsplan, monatliches DCA, Sparrate 1.000–4.000€/Monat.
+
+[KERN-INSTRUKTION s.o.]
+
+=== BITCOIN – VOLLSTÄNDIGE DATENLAGE ===
+
+PREISSTRUKTUR:
+  Aktueller Preis:  [live BTC-Preis]
+  ATH ($109k):      [% Abstand zum ATH]
+  30d-Performance:  [% 30-Tage-Rendite]
+  200-Tage MA:      [MA200] → BTC darüber/darunter
+  50-Tage MA:       [MA50]
+
+SENTIMENT &amp; DERIVATE:
+  Fear &amp; Greed:     [0–100] (Extremangst / Neutral / Extreme Gier)
+  Funding Rate:     [%] (Negativ / Neutral / Positiv hoch)
+  Long/Short Ratio: [Wert]
+
+MARKTSTRUKTUR:
+  BTC-Dominanz:     [%]
+  ETH-Dominanz:     [%]
+  Total Crypto MC:  [$T]
+
+MAKRO-UMFELD:
+  S&amp;P 500:          [Kurs] (30d %) | 52W-Range
+  DXY (Dollar):     [Kurs] → Gegenwind / Rückenwind für BTC
+  Gold:             [Kurs] – Risikoindikator
+  10Y US-Rendite:   [%] – Kapitalkosten
+
+ZYKLUSKONTEXT:
+  Nächstes Halving: Block 1.050.000 (~[Datum]) – noch [N] Blöcke
+  Halving-Logik:    Historisch steigt BTC 12–18 Monate nach Halving auf neue ATHs.
+
+AKTUELLE HEADLINES: [5 aktuelle Google-News-Headlines]
+
+=== ERWARTETES OUTPUT-FORMAT (JSON) ===
+{
+  "signal": "BUY|HOLD|CASH|SELL",
+  "confidence": "hoch|mittel|niedrig",
+  "macro_regime": "Kurze Beschreibung des dominanten Regimes",
+  "active_indicators": ["Indikator 1 (warum jetzt relevant)", "Indikator 2", "Indikator 3"],
+  "summary": "2-3 Sätze zur aktuellen Phase.",
+  "price_targets": {
+    "buy_zone": ZAHL,
+    "buy_aggressiv": ZAHL,
+    "take_profit_1_price": ZAHL,
+    "take_profit_1_action": "z.B. 20% verkaufen",
+    "take_profit_2_price": ZAHL,
+    "take_profit_2_action": "z.B. 50% verkaufen",
+    "concern_below": ZAHL
+  },
+  "bull_case": "Max 2 Sätze.",
+  "bear_case": "Max 2 Sätze.",
+  "signal_changer": "Was müsste sich ändern damit das Signal kippt?"
+}</pre>
+        </div>
+
+        <div id="prompt-mtp" class="prompt-block" style="display:none">
+<pre style="background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:11px;color:#e0e8ff;line-height:1.7;white-space:pre-wrap;font-family:'DM Mono',monospace;"><span style="color:var(--dim)">// Modell: claude-haiku-4-5 · max_tokens: 1000</span>
+Du bist ein unabhängiger Analyst spezialisiert auf BTC-Treasury-Companies und Japan-Aktien.
+Kontext: 7-Jahres-Plan, monatliches DCA.
+
+[KERN-INSTRUKTION s.o.]
+
+=== METAPLANET (MTPLF / 3350.T) – VOLLSTÄNDIGE DATENLAGE ===
+
+KERN-INDIKATOR mNAV:
+  Aktueller mNAV:   [Wert]x
+  Formel:           Enterprise Value ÷ BTC-NAV
+  EV:               [EV in $B] (MarketCap + Schulden)
+  BTC-NAV:          [NAV in $B] (40.177 BTC × BTC-Preis)
+  Schulden:         $280M USD | Aktien: 1.459M
+  mNAV-Interpretation:
+    &lt; 0.9x = Bitcoin mit starkem Rabatt (sehr selten, aggressiver Kauf)
+    0.9–1.2x = Kaufzone
+    1.2–1.8x = Fair bewertet, normales DCA
+    1.8–2.5x = Aufpreis, keine Neukäufe
+    &gt; 2.5x = Signifikanter Aufpreis, Teilverkauf erwägen
+    &gt; 4.0x = Starke Überbewertung, 50% Verkauf
+
+AKTIE &amp; MARKT:
+  Aktienkurs (USD): [live Kurs] | 52W-Range
+  USD/JPY:          [Kurs] → Auswirkung auf USD-Assets an TSE
+  BTC-Signal (KI):  [BUY/HOLD/CASH/SELL vom BTC-Analyse-Schritt]
+
+MAKRO: Fear &amp; Greed, BTC-Dominanz, S&amp;P 500, DXY
+AKTUELLE HEADLINES: [4 Metaplanet-spezifische Headlines]
+
+STRATEGIE-KONTEXT:
+  Wenn BTC 5x macht, macht MTPLF potenziell 10–20x.
+  Primäres Kaufkriterium: mNAV, nicht Chartmuster.
+
+=== ERWARTETES OUTPUT-FORMAT (JSON) ===
+{
+  "signal": "BUY|HOLD|CASH|SELL",
+  "confidence": "hoch|mittel|niedrig",
+  "macro_regime": "...",
+  "active_indicators": ["...", "...", "..."],
+  "summary": "2-3 Sätze.",
+  "price_targets": {
+    "buy_zone_mnav": ZAHL,
+    "buy_aggressiv_mnav": ZAHL,
+    "take_profit_1_mnav": ZAHL,
+    "take_profit_1_action": "z.B. 20% verkaufen",
+    "take_profit_2_mnav": ZAHL,
+    "take_profit_2_action": "z.B. 50% verkaufen",
+    "concern_mnav": ZAHL
+  },
+  "bull_case": "...",
+  "bear_case": "...",
+  "signal_changer": "..."
+}</pre>
+        </div>
+
+        <div id="prompt-nvda" class="prompt-block" style="display:none">
+<pre style="background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:11px;color:#e0e8ff;line-height:1.7;white-space:pre-wrap;font-family:'DM Mono',monospace;"><span style="color:var(--dim)">// Modell: claude-haiku-4-5 · max_tokens: 1000</span>
+Du bist ein erfahrener Tech-Analyst spezialisiert auf Halbleiter und KI-Infrastruktur.
+Kontext: 7-Jahres-Plan, monatliches DCA, kein Trading.
+
+[KERN-INSTRUKTION s.o.]
+
+=== NVIDIA (NVDA) – VOLLSTÄNDIGE DATENLAGE ===
+
+PREISSTRUKTUR:
+  Aktueller Preis:     [live Kurs]
+  52W-Hoch:            [Hoch] (aktuell X% davon)
+  52W-Tief:            [Tief] (aktuell X% davon)
+
+FUNDAMENTALE TREIBER:
+  KI-Capex-Zyklus:     Microsoft, Google, Amazon, Meta → kombiniert &gt;$300B/Jahr
+  Marktstellung:       CUDA-Ökosystem = faktisches Monopol auf KI-Training
+  Nächste Earnings:    Mai 2026 (Blackwell-Ramp im Fokus)
+  Risiken:             Export-Beschränkungen (China), AMD/Intel, Bewertung
+
+MAKRO-UMFELD:
+  S&amp;P 500, 10Y US-Rendite, DXY, Fear &amp; Greed [live Werte]
+
+AKTUELLE HEADLINES: [5 NVDA-spezifische Headlines]
+
+PORTFOLIO-KONTEXT:
+  NVDA = "Stabilitätsanker" – läuft auch wenn Crypto schläft.
+  KGV 30–60x = akzeptabel bei diesem Wachstum. Über 70x erhöhte Vorsicht.
+
+=== ERWARTETES OUTPUT-FORMAT (JSON) ===
+{
+  "signal": "BUY|HOLD|CASH|SELL",
+  "confidence": "hoch|mittel|niedrig",
+  "macro_regime": "...",
+  "active_indicators": ["...", "...", "..."],
+  "summary": "2-3 Sätze.",
+  "price_targets": {
+    "buy_zone": ZAHL,
+    "buy_aggressiv": ZAHL,
+    "take_profit_1_price": ZAHL,
+    "take_profit_1_action": "z.B. 20% verkaufen",
+    "take_profit_2_price": ZAHL,
+    "take_profit_2_action": "z.B. 50% verkaufen",
+    "concern_below": ZAHL
+  },
+  "bull_case": "...",
+  "bear_case": "...",
+  "signal_changer": "..."
+}</pre>
+        </div>
+
+        <div id="prompt-sol" class="prompt-block" style="display:none">
+<pre style="background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:11px;color:#e0e8ff;line-height:1.7;white-space:pre-wrap;font-family:'DM Mono',monospace;"><span style="color:var(--dim)">// Modell: claude-haiku-4-5 · max_tokens: 1000</span>
+Du bist ein Layer-1-Blockchain-Analyst mit Fokus auf fundamentale Netzwerkwerte.
+Kontext: 7-Jahres-Plan, Solana = 14% Portfolio, kein Trading.
+
+[KERN-INSTRUKTION s.o.]
+
+=== SOLANA (SOL) – VOLLSTÄNDIGE DATENLAGE ===
+
+PREISSTRUKTUR:
+  Aktueller Preis:    [live SOL-Preis]
+  ATH ($294):         [% Abstand]
+  ETH-Preis:          [live] | SOL/ETH-Ratio [Wert]
+
+FUNDAMENTALDATEN:
+  Network Revenue:    ~$2.85B/Jahr (echte Gebühreneinnahmen)
+  Firedancer:         2026-Upgrade → Ziel 1M TPS (aktuell ~5.000)
+  DeFi TVL:           Marktführer bei DEX-Volumen
+  ETF-Status:         SOL-ETF Antrag bei SEC (21Shares, Bitwise)
+  Staking-Yield:      ~6-7% APY
+
+ALTCOIN-ZYKLUS-KONTEXT:
+  BTC-Dominanz [%] · ETH-Dominanz [%]
+  BTC-Signal (KI): [BUY/HOLD/CASH/SELL] – Altcoins folgen BTC mit Hebel
+  Fear &amp; Greed: [Wert]/100
+
+AKTUELLE HEADLINES: [4 SOL-spezifische Headlines]
+
+PORTFOLIO-KONTEXT:
+  SOL = "L1-Wachstumswert" mit realem Netzwerk-Revenue.
+  Kaufziel: Wenn BTC BUY und BTC-Dominanz fällt = doppelter Rückenwind.
+
+=== ERWARTETES OUTPUT-FORMAT (JSON) ===
+{
+  "signal": "BUY|HOLD|CASH|SELL",
+  "confidence": "hoch|mittel|niedrig",
+  "macro_regime": "...",
+  "active_indicators": ["...", "...", "..."],
+  "summary": "2-3 Sätze.",
+  "price_targets": {
+    "buy_zone": ZAHL,
+    "buy_aggressiv": ZAHL,
+    "take_profit_1_price": ZAHL,
+    "take_profit_1_action": "z.B. 25% verkaufen",
+    "take_profit_2_price": ZAHL,
+    "take_profit_2_action": "z.B. 50% verkaufen",
+    "concern_below": ZAHL
+  },
+  "bull_case": "...",
+  "bear_case": "...",
+  "signal_changer": "..."
+}</pre>
+        </div>
+
+        <div id="prompt-tao" class="prompt-block" style="display:none">
+<pre style="background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:11px;color:#e0e8ff;line-height:1.7;white-space:pre-wrap;font-family:'DM Mono',monospace;"><span style="color:var(--dim)">// Modell: claude-haiku-4-5 · max_tokens: 1000</span>
+Du bist ein Analyst spezialisiert auf KI-Krypto-Tokens und dezentrale Infrastruktur.
+Kontext: 7-Jahres-Plan, TAO = 8% Portfolio (höchstes Risiko/Reward), kein Trading.
+
+[KERN-INSTRUKTION s.o.]
+
+=== BITTENSOR (TAO) – VOLLSTÄNDIGE DATENLAGE ===
+
+PREISSTRUKTUR:
+  Aktueller Preis:    [live TAO-Preis]
+  Market Cap:         [$B]
+  Zirkulierend:       ~10.75M TAO von 21M Max-Supply
+  TAO-Halving:        Dezember 2025 (abgeschlossen) – Emission halbiert
+
+EINORDNUNG MARKTKAPITALISIERUNG:
+  Vergleich: Chainlink ~$8B · Render ~$3B · Fetch.ai ~$1B
+  TAO adressiert dezentrale KI-Infrastruktur – potenziell größter Markt.
+
+FUNDAMENTALDATEN:
+  Subnets:            60+ aktive Subnets
+  Use Case:           Dezentrales KI-Training + Inferenz-Marktplatz
+  Grayscale-ETF:      Antrag eingereicht
+  Bitcoin-Mechanik:   21M Supply Cap + Halving → deflationär
+
+KI-NARRATIV-KONTEXT:
+  Nvidia-Capex wächst → steigert Bewusstsein für KI-Infrastruktur
+  ChatGPT/Claude-Boom → Nachfrage nach dezentraler KI-Alternative
+
+ALTCOIN-KONTEXT:
+  BTC-Signal (KI): [BUY/HOLD/CASH/SELL]
+  BTC-Dominanz: [%] · Fear &amp; Greed: [Wert]/100
+
+AKTUELLE HEADLINES: [4 TAO-spezifische Headlines]
+
+PORTFOLIO-KONTEXT:
+  TAO = "asymmetrische Wette" – kleinster MCap = größtes Upside-Potenzial.
+  Nur kaufen wenn BTC-Signal BUY oder HOLD, nie in Risk-off aggressiv.
+
+=== ERWARTETES OUTPUT-FORMAT (JSON) ===
+{
+  "signal": "BUY|HOLD|CASH|SELL",
+  "confidence": "hoch|mittel|niedrig",
+  "macro_regime": "...",
+  "active_indicators": ["...", "...", "..."],
+  "summary": "2-3 Sätze.",
+  "price_targets": {
+    "buy_zone": ZAHL,
+    "buy_aggressiv": ZAHL,
+    "take_profit_1_price": ZAHL,
+    "take_profit_1_action": "z.B. 30% verkaufen",
+    "take_profit_2_price": ZAHL,
+    "take_profit_2_action": "z.B. 50% verkaufen",
+    "concern_below": ZAHL
+  },
+  "bull_case": "...",
+  "bear_case": "...",
+  "signal_changer": "..."
+}</pre>
+        </div>
+
       </div>
     </div>
 
@@ -968,6 +1355,14 @@ function togS(id) {
   if(!b||!a)return;
   b.classList.toggle('open');
   a.classList.toggle('open');
+}
+function showPrompt(asset, btn) {
+  ['btc','mtp','nvda','sol','tao'].forEach(a => {
+    const el = document.getElementById('prompt-'+a);
+    if(el) el.style.display = a===asset ? '' : 'none';
+  });
+  document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
 }
 
 // ── FETCH LIVE ──

@@ -236,6 +236,20 @@ body{
 .ai-card{background:rgba(138,43,226,.05);border:1px solid rgba(138,43,226,.15);border-radius:8px;padding:10px 12px;margin-bottom:9px;}
 .ai-card-hdr{font-family:'DM Mono',monospace;font-size:9px;color:#b06aff;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;}
 .ai-card-text{font-size:12px;color:var(--hi);line-height:1.6;}
+.ai-regime{font-family:'DM Mono',monospace;font-size:10px;color:var(--hold);background:rgba(255,184,0,.07);border:1px solid rgba(255,184,0,.15);border-radius:6px;padding:4px 8px;margin-bottom:8px;margin-top:4px;}
+.ai-indicators{display:flex;flex-direction:column;gap:3px;margin-bottom:8px;}
+.ai-indicator{font-size:11px;color:var(--dim);padding-left:8px;border-left:2px solid rgba(138,43,226,.3);}
+.ai-targets{background:var(--card2);border:1px solid var(--line2);border-radius:8px;padding:10px 12px;margin-bottom:9px;}
+.ai-targets-hdr{font-family:'DM Mono',monospace;font-size:9px;color:var(--buy);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;}
+.ai-targets-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.ai-target-item{padding:6px 8px;border-radius:6px;border:1px solid;}
+.ai-target-item.buy{background:var(--buy-bg);border-color:var(--buy-b);}
+.ai-target-item.sell{background:rgba(255,59,59,.06);border-color:rgba(255,59,59,.2);}
+.ai-target-item.warn{background:var(--cash-bg);border-color:var(--cash-b);}
+.ai-target-label{font-family:'DM Mono',monospace;font-size:8px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px;}
+.ai-target-val{font-size:13px;font-weight:700;color:var(--txt);}
+.ai-target-action{font-size:10px;color:var(--dim);margin-top:1px;}
+.ai-card-text{font-size:12px;color:var(--hi);line-height:1.6;}
 .ai-card-text strong{color:var(--txt);}
 .detail-link{display:inline-flex;align-items:center;gap:4px;font-family:'DM Mono',monospace;font-size:10px;color:#b06aff;text-decoration:none;background:rgba(138,43,226,.08);border:1px solid rgba(138,43,226,.2);padding:4px 10px;border-radius:6px;margin-top:6px;transition:background .2s;}
 .detail-link:hover{background:rgba(138,43,226,.15);}
@@ -735,26 +749,47 @@ function calcMnav(p) {
   return (MTPLF_SHARES_M*1e6*MTPLF_USD + MTPLF_DEBT_M*1e6) / (MTPLF_HOLD * p);
 }
 
-// ── SIGNALS ──
-const sigBtc  = () => { const f=D.fg, p=D.btc, a=p?((p-BTC_ATH)/BTC_ATH)*100:-35; return f<20||a<-55?'BUY':f>78||D.p30>70?'CASH':p>280000?'SELL':'HOLD'; };
-const sigMtp  = () => { const m=D.mnav; return !m?'HOLD':m<1.1?'BUY':m<1.8?'HOLD':m<2.5?'CASH':'SELL'; };
-const sigSol  = () => { const p=D.sol; if(!p)return'HOLD'; const a=((p-SOL_ATH)/SOL_ATH)*100; return a<-55?'BUY':a<-20?'HOLD':p>400?'SELL':'HOLD'; };
-const sigTao  = () => { const p=D.tao; if(!p)return'HOLD'; const m=p*TAO_CIRC; return m<2.5e9?'BUY':m<8e9?'HOLD':m>20e9?'SELL':'HOLD'; };
-const sigGlob = () => { const f=D.fg, p=D.btc, a=p?((p-BTC_ATH)/BTC_ATH)*100:-35; return(f!==null&&f<25)||a<-50?'BUY':f>75?'CASH':'HOLD'; };
-const sigNvda = () => AI.nvda.signal || 'HOLD';
+// ── SIGNALS – KI-Signal hat Vorrang, Fallback auf regelbasiert ──
+const sigBtc  = () => AI.btc?.ai_analysis?.signal  || (()=>{ const f=D.fg,p=D.btc,a=p?((p-BTC_ATH)/BTC_ATH)*100:-35; return f<20||a<-55?'BUY':f>78||D.p30>70?'CASH':p>280000?'SELL':'HOLD'; })();
+const sigMtp  = () => AI.mtplf?.ai_analysis?.signal || (()=>{ const m=D.mnav; return !m?'HOLD':m<1.1?'BUY':m<1.8?'HOLD':m<2.5?'CASH':'SELL'; })();
+const sigSol  = () => AI.sol?.ai_analysis?.signal   || (()=>{ const p=D.sol; if(!p)return'HOLD'; const a=((p-SOL_ATH)/SOL_ATH)*100; return a<-55?'BUY':a<-20?'HOLD':p>400?'SELL':'HOLD'; })();
+const sigTao  = () => AI.tao?.ai_analysis?.signal   || (()=>{ const p=D.tao; if(!p)return'HOLD'; const m=p*TAO_CIRC; return m<2.5e9?'BUY':m<8e9?'HOLD':m>20e9?'SELL':'HOLD'; })();
+const sigGlob = () => AI.btc?.ai_analysis?.signal   || (()=>{ const f=D.fg,p=D.btc,a=p?((p-BTC_ATH)/BTC_ATH)*100:-35; return(f!==null&&f<25)||a<-50?'BUY':f>75?'CASH':'HOLD'; })();
+const sigNvda = () => AI.nvda?.ai_analysis?.signal  || AI.nvda?.signal || 'HOLD';
 
 const SL={BUY:'● Kaufen',HOLD:'● Halten',CASH:'● Cash sammeln',SELL:'● Sichern'};
 const GS={BUY:'🟢 Akkumulieren – günstige Phase aktiv',HOLD:'🟡 Normal – DCA fortführen',CASH:'🟠 Vorsicht – Cash aufbauen'};
 const SC={BUY:'var(--buy)',HOLD:'var(--hold)',CASH:'var(--cash)',SELL:'var(--sell)'};
 
 // ── ASSET DEFS ──
+function fmtPrice(v, prefix='$') { if(!v) return '—'; return prefix + Number(v).toLocaleString('de-DE'); }
+function fmtMnav(v) { if(!v) return '—'; return Number(v).toFixed(2)+'x'; }
+
+function makeTargetsHtml(pt, isMnav) {
+  if (!pt || Object.keys(pt).length === 0) return '';
+  const fmt = isMnav ? fmtMnav : (v => fmtPrice(v));
+  const buyZone   = pt.buy_zone    || pt.buy_zone_mnav;
+  const buyAgg    = pt.buy_aggressiv || pt.buy_aggressiv_mnav;
+  const tp1       = pt.take_profit_1;
+  const tp2       = pt.take_profit_2;
+  const concern   = pt.concern_below || pt.concern_mnav;
+  let items = '';
+  if (buyZone)  items += `<div class="ai-target-item buy"><div class="ai-target-label">Kaufzone</div><div class="ai-target-val">${fmt(buyZone)}</div><div class="ai-target-action">Normales DCA</div></div>`;
+  if (buyAgg)   items += `<div class="ai-target-item buy"><div class="ai-target-label">Aggressiv kaufen</div><div class="ai-target-val">${fmt(buyAgg)}</div><div class="ai-target-action">Sparrate verdoppeln</div></div>`;
+  if (tp1)      items += `<div class="ai-target-item sell"><div class="ai-target-label">Gewinnmitnahme 1</div><div class="ai-target-val">${fmt(tp1.price||tp1.mnav)}</div><div class="ai-target-action">${tp1.action||'—'}</div></div>`;
+  if (tp2)      items += `<div class="ai-target-item sell"><div class="ai-target-label">Gewinnmitnahme 2</div><div class="ai-target-val">${fmt(tp2.price||tp2.mnav)}</div><div class="ai-target-action">${tp2.action||'—'}</div></div>`;
+  if (concern)  items += `<div class="ai-target-item warn" style="grid-column:1/-1"><div class="ai-target-label">Vorsicht unter</div><div class="ai-target-val">${fmt(concern)}</div><div class="ai-target-action">Signal könnte kippen</div></div>`;
+  if (!items) return '';
+  return `<div class="ai-targets"><div class="ai-targets-hdr">&#x1F3AF; KI-Preisziele (dynamisch)</div><div class="ai-targets-grid">${items}</div></div>`;
+}
+
 function makeAssets() {
   const ba=((D.btc-BTC_ATH)/BTC_ATH*100)||0, sa=((D.sol-SOL_ATH)/SOL_ATH*100)||0;
-  const nvdaAi = AI.nvda.ai_analysis || {};
-  const btcAi  = AI.btc.ai_analysis  || {};
-  const mtpAi  = AI.mtplf.ai_analysis || {};
-  const solAi  = AI.sol.ai_analysis  || {};
-  const taoAi  = AI.tao.ai_analysis  || {};
+  const nvdaAi = AI.nvda?.ai_analysis || {};
+  const btcAi  = AI.btc?.ai_analysis  || {};
+  const mtpAi  = AI.mtplf?.ai_analysis || {};
+  const solAi  = AI.sol?.ai_analysis  || {};
+  const taoAi  = AI.tao?.ai_analysis  || {};
 
   return [
     { id:'btc', name:'Bitcoin', ticker:'BTC·38%', icon:'₿', ib:'#f7931a18', ic:'#f7931a', sig:sigBtc(),
@@ -762,7 +797,10 @@ function makeAssets() {
       chg:D.p30!==null?(D.p30>0?'+':'')+D.p30.toFixed(1)+'% (30d)':null, cc:D.p30<0?'var(--buy)':'var(--hold)',
       detailUrl:'assets/btc.html',
       aiSummary: btcAi.summary || null,
-      acts:{BUY:{e:'🔥',w:'Sparrate 1.5–2× erhöhen',y:'Fear<30 oder BTC -40% vom ATH – Institutionen kaufen jetzt.'},HOLD:{e:'⚖️',w:'Normales DCA fortführen',y:'Neutrale Marktphase. Sparplan läuft – kein Handlungsbedarf.'},CASH:{e:'💰',w:'Sparrate halbieren',y:'Fear>75 oder BTC +100% in 90 Tagen – überhitzt.'},SELL:{e:'🎯',w:'10–15% Teilverkauf',y:'BTC über 300.000$ – schrittweise Gewinne sichern.'}},
+      macroRegime: btcAi.macro_regime || null,
+      activeIndicators: btcAi.active_indicators || [],
+      priceTargets: makeTargetsHtml(btcAi.price_targets, false),
+      acts:{BUY:{e:'🔥',w:'Sparrate 1.5–2× erhöhen',y:btcAi.summary||'Fear<30 oder BTC -40% vom ATH – Institutionen kaufen jetzt.'},HOLD:{e:'⚖️',w:'Normales DCA fortführen',y:btcAi.summary||'Neutrale Marktphase. Sparplan läuft.'},CASH:{e:'💰',w:'Sparrate halbieren',y:btcAi.summary||'Markt überhitzt – Pulver trocken halten.'},SELL:{e:'🎯',w:'Teilgewinne sichern',y:btcAi.summary||'Extreme Überbewertung – schrittweise sichern.'}},
       mets:[
         {l:'Fear & Greed',v:D.fg!==null?D.fg+'/100':'—',c:D.fg<30?'g':D.fg<55?'y':'r'},
         {l:'Vom ATH',v:D.btc?ba.toFixed(1)+'%':'—',c:ba<-45?'g':ba<-25?'y':'r'},
@@ -778,7 +816,10 @@ function makeAssets() {
       chg:'BTC-Hebel · 40.177 BTC', cc:'var(--dim)',
       detailUrl:'assets/mtplf.html',
       aiSummary: mtpAi.summary || null,
-      acts:{BUY:{e:'🔥',w:'Sparrate 2× – jetzt!',y:'mNAV unter 1.1x: Bitcoin mit Rabatt kaufen. Seltener Einstiegspunkt.'},HOLD:{e:'⚖️',w:'Normales DCA',y:'mNAV 1.1–1.8x: faire Bewertung, Flywheel intakt.'},CASH:{e:'💰',w:'Keine Neukäufe',y:'mNAV über 1.8x: deutlicher Aufpreis auf Bitcoin. Warten.'},SELL:{e:'🎯',w:'20–50% verkaufen',y:'mNAV über 2.5x: Markt zahlt doppelten BTC-Preis. Teilgewinne.'}},
+      macroRegime: mtpAi.macro_regime || null,
+      activeIndicators: mtpAi.active_indicators || [],
+      priceTargets: makeTargetsHtml(mtpAi.price_targets, true),
+      acts:{BUY:{e:'🔥',w:'Sparrate 2× – jetzt!',y:mtpAi.summary||'mNAV unter 1.1x: Bitcoin mit Rabatt kaufen.'},HOLD:{e:'⚖️',w:'Normales DCA',y:mtpAi.summary||'mNAV 1.1–1.8x: faire Bewertung, Flywheel intakt.'},CASH:{e:'💰',w:'Keine Neukäufe',y:mtpAi.summary||'mNAV über 1.8x: deutlicher Aufpreis auf Bitcoin.'},SELL:{e:'🎯',w:'20–50% verkaufen',y:mtpAi.summary||'mNAV über 2.5x: Markt zahlt doppelten BTC-Preis.'}},
       mets:[{l:'mNAV (berechnet)',v:D.mnav?D.mnav.toFixed(3)+'x':'—',c:D.mnav<1.0?'g':D.mnav<1.3?'y':D.mnav<2.5?'o':'r'},{l:'BTC Holdings',v:'40.177 BTC',c:'n'},{l:'BTC-NAV',v:D.btc?'$'+(MTPLF_HOLD*D.btc/1e9).toFixed(2)+'B':'—',c:'n'},{l:'Schulden',v:'~$280M',c:'n'},{l:'Kaufzone',v:'mNAV < 1.1x',c:'n'},{l:'Verkaufzone',v:'mNAV > 2.5x',c:'n'}],
       zones:[{l:'🟢 Kaufen',v:'mNAV < 1.1x',c:'g'},{l:'🟡 Halten',v:'1.1x – 1.8x',c:'y'},{l:'🔴 Sichern',v:'mNAV > 2.5x',c:'r'}]
     },
@@ -787,7 +828,10 @@ function makeAssets() {
       chg:'Quartals-Check genügt', cc:'var(--dim)',
       detailUrl:'assets/nvda.html',
       aiSummary: nvdaAi.summary || null,
-      acts:{BUY:{e:'🔥',w:'Sparrate 1.5× erhöhen',y:'Nach Earnings-Dip oder -25% vom Hoch.'},HOLD:{e:'⚖️',w:'Quartalsweise DCA',y:'KI-Capex der Hyperscaler wächst – Nvidia unvermeidlich.'},CASH:{e:'💰',w:'Sparrate pausieren',y:'+80% in 6 Mon. oder KGV > 60x.'},SELL:{e:'🎯',w:'Überprüfen',y:'KGV > 70x bei stagnierendem Wachstum.'}},
+      macroRegime: nvdaAi.macro_regime || null,
+      activeIndicators: nvdaAi.active_indicators || [],
+      priceTargets: makeTargetsHtml(nvdaAi.price_targets, false),
+      acts:{BUY:{e:'🔥',w:'Sparrate 1.5× erhöhen',y:nvdaAi.summary||'Nach Earnings-Dip oder -25% vom Hoch.'},HOLD:{e:'⚖️',w:'Quartalsweise DCA',y:nvdaAi.summary||'KI-Capex der Hyperscaler wächst.'},CASH:{e:'💰',w:'Sparrate pausieren',y:nvdaAi.summary||'+80% in 6 Mon. oder Bewertung zu hoch.'},SELL:{e:'🎯',w:'Überprüfen',y:nvdaAi.summary||'Bewertung bei stagnierendem Wachstum.'}},
       mets:[{l:'Check-Frequenz',v:'Quartalsweise',c:'n'},{l:'KI-Capex Trend',v:'Wachsend ↑',c:'g'},{l:'Nächste Earnings',v: AI.nvda.next_earnings || 'Mai 2026',c:'y'},{l:'P/E Ratio',v: AI.nvda.pe_ratio ? AI.nvda.pe_ratio+'x' : '—',c:'n'},{l:'Kaufzone',v:'-25% vom High',c:'n'},{l:'Strategie',v:'DCA halten',c:'n'}],
       zones:[{l:'🟢 Kaufen',v:'-25% vom High',c:'g'},{l:'🟡 Halten',v:'KGV 30–60x',c:'y'},{l:'🔴 Prüfen',v:'KGV > 70x',c:'r'}]
     },
@@ -796,7 +840,10 @@ function makeAssets() {
       chg:D.sol?sa.toFixed(1)+'% vom ATH (294$)':'L1 · 2.85B$/Jahr', cc:sa<-50?'var(--buy)':'var(--dim)',
       detailUrl:'assets/sol.html',
       aiSummary: solAi.summary || null,
-      acts:{BUY:{e:'🔥',w:'Sparrate 2× erhöhen',y:'SOL über 50% unter ATH – solide Basis, echtes Revenue.'},HOLD:{e:'⚖️',w:'Normales DCA',y:'SOL 20–50% unter ATH. Firedancer-Upgrade kommt.'},CASH:{e:'💰',w:'Sparrate halbieren',y:'+150% in 90 Tagen – zu schnell gestiegen.'},SELL:{e:'🎯',w:'25% Teilverkauf',y:'SOL über 400$ – erstes Ziel. Schrittweise sichern.'}},
+      macroRegime: solAi.macro_regime || null,
+      activeIndicators: solAi.active_indicators || [],
+      priceTargets: makeTargetsHtml(solAi.price_targets, false),
+      acts:{BUY:{e:'🔥',w:'Sparrate 2× erhöhen',y:solAi.summary||'SOL über 50% unter ATH – solide Basis, echtes Revenue.'},HOLD:{e:'⚖️',w:'Normales DCA',y:solAi.summary||'SOL 20–50% unter ATH. Firedancer-Upgrade kommt.'},CASH:{e:'💰',w:'Sparrate halbieren',y:solAi.summary||'Zu schnell gestiegen – warten.'},SELL:{e:'🎯',w:'Teilverkauf',y:solAi.summary||'Erstes Gewinnziel erreicht – schrittweise sichern.'}},
       mets:[{l:'Vom ATH (294$)',v:D.sol?sa.toFixed(1)+'%':'—',c:sa<-50?'g':sa<-25?'y':'r'},{l:'Network Revenue',v:'2.85B$/Jahr',c:'g'},{l:'ETF Status',v:'In Prüfung',c:'y'},{l:'Firedancer',v:'Coming 2026',c:'y'},{l:'1. Verkauf',v:'SOL > 400$',c:'n'},{l:'Verkauf Aktion',v:'25%',c:'n'}],
       zones:[{l:'🟢 Kaufen',v:'SOL -50% ATH',c:'g'},{l:'🟡 Halten',v:'-20% bis -50%',c:'y'},{l:'🔴 Sichern',v:'SOL > 400$',c:'r'}]
     },
@@ -805,7 +852,10 @@ function makeAssets() {
       chg:D.tao?'MCap: $'+(D.tao*TAO_CIRC/1e9).toFixed(1)+'B':'KI+BTC Mechanik · 21M', cc:D.tao&&D.tao*TAO_CIRC<3e9?'var(--buy)':'var(--dim)',
       detailUrl:'assets/tao.html',
       aiSummary: taoAi.summary || null,
-      acts:{BUY:{e:'🔥',w:'2× Sparrate + Nachkauf',y:'MCap unter 3B$ – kleinstes Cap, größtes Upside.'},HOLD:{e:'⚖️',w:'Monatliches DCA',y:'MCap 3–8B$. Grayscale ETF beantragt.'},CASH:{e:'💰',w:'Sparrate stoppen',y:'+200% in 90 Tagen – halten was da ist.'},SELL:{e:'🎯',w:'30% Teilverkauf',y:'MCap über 20B$ (~8–10x) – erstes Gewinnziel.'}},
+      macroRegime: taoAi.macro_regime || null,
+      activeIndicators: taoAi.active_indicators || [],
+      priceTargets: makeTargetsHtml(taoAi.price_targets, false),
+      acts:{BUY:{e:'🔥',w:'2× Sparrate + Nachkauf',y:taoAi.summary||'MCap unter 3B$ – kleinstes Cap, größtes Upside.'},HOLD:{e:'⚖️',w:'Monatliches DCA',y:taoAi.summary||'MCap 3–8B$. Grayscale ETF beantragt.'},CASH:{e:'💰',w:'Sparrate stoppen',y:taoAi.summary||'+200% in 90 Tagen – halten was da ist.'},SELL:{e:'🎯',w:'30% Teilverkauf',y:taoAi.summary||'MCap über 20B$ – erstes Gewinnziel.'}},
       mets:[{l:'Market Cap',v:D.tao?'$'+(D.tao*TAO_CIRC/1e9).toFixed(1)+'B':'—',c:D.tao&&D.tao*TAO_CIRC<3e9?'g':D.tao&&D.tao*TAO_CIRC<8e9?'y':'o'},{l:'Max Supply',v:'21M TAO',c:'n'},{l:'Halving',v:'Dez 2025 ✓',c:'g'},{l:'Grayscale ETF',v:'Beantragt',c:'y'},{l:'1. Verkauf',v:'MCap > 20B$',c:'n'},{l:'Aktion',v:'30% sichern',c:'n'}],
       zones:[{l:'🟢 Kaufen',v:'MCap < 3B$',c:'g'},{l:'🟡 Halten',v:'3B$ – 8B$',c:'y'},{l:'🔴 Sichern',v:'MCap > 20B$',c:'r'}]
     }
@@ -844,11 +894,17 @@ function render() {
   const open = [...document.querySelectorAll('.acb.open')].map(e=>e.id);
   document.getElementById('cards').innerHTML = makeAssets().map(a => {
     const act = a.acts[a.sig];
-    const aiBlock = a.aiSummary && !a.aiSummary.includes('Ausstehend') ? `
+    const hasAi = a.aiSummary && !a.aiSummary.includes('temporär nicht verfügbar');
+    const regimeHtml = a.macroRegime ? `<div class="ai-regime">📊 Regime: ${a.macroRegime}</div>` : '';
+    const indicHtml  = a.activeIndicators?.length ? `<div class="ai-indicators">${a.activeIndicators.map(i=>`<div class="ai-indicator">${i}</div>`).join('')}</div>` : '';
+    const aiBlock = hasAi ? `
       <div class="ai-card">
         <div class="ai-card-hdr">&#x2728; KI-Analyse</div>
+        ${regimeHtml}
         <div class="ai-card-text">${a.aiSummary}</div>
-      </div>` : '';
+        ${indicHtml}
+      </div>
+      ${a.priceTargets || ''}` : '';
     return `
     <div class="ac ${a.sig}">
       <div class="act" onclick="tog('cb-${a.id}')">

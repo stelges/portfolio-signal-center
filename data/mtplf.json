@@ -5,26 +5,42 @@
   "icon": "⬡",
   "color": "#ff4a68",
   "signal": "HOLD",
-  "price_usd": 1.90,
+  "price_usd": 1.9,
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": null,
-  "btc_nav_usd_billions": null,
+  "mnav": 1.0226,
+  "btc_nav_usd_billions": 2.98,
   "zones": {
-    "buy":  { "label": "mNAV < 1.1x",  "threshold": 1.1 },
-    "hold": { "label": "1.1x – 1.8x",  "range": "1.1-1.8" },
-    "sell": { "label": "mNAV > 2.5x",  "threshold": 2.5 }
+    "buy": {
+      "label": "mNAV < 1.1x",
+      "threshold": 1.1
+    },
+    "hold": {
+      "label": "1.1x – 1.8x",
+      "range": "1.1-1.8"
+    },
+    "sell": {
+      "label": "mNAV > 2.5x",
+      "threshold": 2.5
+    }
   },
   "ai_analysis": {
-    "summary": "Ausstehend – wird am Freitag automatisch aktualisiert.",
-    "bull_case": "Ausstehend.",
-    "bear_case": "Ausstehend.",
-    "key_catalysts": [],
-    "news_headlines": [],
-    "mnav_assessment": null,
-    "confidence": null,
-    "updated": "2026-04-13"
+    "signal": "HOLD",
+    "confidence": "niedrig",
+    "summary": "Analyse temporär nicht verfügbar.",
+    "bull_case": "—",
+    "bear_case": "—",
+    "key_drivers": [],
+    "signal_changer": "—",
+    "mnav_assessment": "Kaufzone: Bitcoin mit Rabatt",
+    "news_headlines": [
+      "Metaplanet Forms Bitcoin-Focused Subsidiaries in Japan and the U.S. - CoinDesk",
+      "MetaPlanet Becomes One of Japan’s Most Widely Held Stocks as It Eyes U.S. Market - Bitcoinsensus",
+      "Metaplanet: Japan's Bitcoin Miracle Is Only Getting Started (OTCMKTS:MTPLF) - Seeking Alpha",
+      "Metaplanet (3350.T) Stock: Soars as Bitcoin Strategy Boosts Operating Profit by 1,694% in FY2025 - CoinCentral"
+    ],
+    "updated": "2026-04-16"
   },
   "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien."
 }

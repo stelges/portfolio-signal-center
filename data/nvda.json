@@ -5,27 +5,43 @@
   "icon": "⬡",
   "color": "#76b900",
   "signal": "HOLD",
-  "price_usd": null,
-  "price_52w_high_usd": null,
-  "price_52w_low_usd": null,
+  "price_usd": 198.13,
+  "price_52w_high_usd": 212.19,
+  "price_52w_low_usd": 95.04,
   "pe_ratio": null,
   "revenue_growth_yoy_pct": null,
   "next_earnings": "Mai 2026",
   "zones": {
-    "buy":  { "label": "-25% vom 52W-Hoch",   "note": "Nach Earnings-Dip" },
-    "hold": { "label": "KGV 30–60x",           "note": "KI-Capex wächst" },
-    "sell": { "label": "KGV > 70x",            "note": "Bei stagnierendem Wachstum" }
+    "buy": {
+      "label": "-25% vom 52W-Hoch",
+      "note": "Nach Earnings-Dip"
+    },
+    "hold": {
+      "label": "KGV 30–60x",
+      "note": "KI-Capex wächst"
+    },
+    "sell": {
+      "label": "KGV > 70x",
+      "note": "Bei stagnierendem Wachstum"
+    }
   },
   "ai_analysis": {
-    "summary": "Ausstehend – wird am Freitag automatisch aktualisiert.",
-    "bull_case": "Ausstehend.",
-    "bear_case": "Ausstehend.",
-    "key_catalysts": [],
-    "news_headlines": [],
-    "earnings_preview": null,
+    "signal": "HOLD",
+    "confidence": "niedrig",
+    "summary": "Analyse temporär nicht verfügbar.",
+    "bull_case": "—",
+    "bear_case": "—",
+    "key_drivers": [],
+    "signal_changer": "—",
     "ai_capex_trend": "Wachsend",
-    "confidence": null,
-    "updated": "2026-04-13"
+    "news_headlines": [
+      "NVIDIA Ising Quantum AI Launch Tests Long Term Data Center Story - simplywall.st",
+      "AMD Gains 6% Ahead of May Earnings: Is the AI Chip Challenger Finally Ready to Rival NVIDIA? - 24/7 Wall St.",
+      "NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026 - NVIDIA Newsroom",
+      "Nvidia reports earnings and guidance beat as AI boom pushes data center revenue up 75% - CNBC",
+      "Nvidia’s Quarterly Profit Hits $43 Billion on Strong A.I. Chip Sales - The New York Times"
+    ],
+    "updated": "2026-04-16"
   },
   "quarterly_review": {
     "last_quarter": "Q4 FY2026",
@@ -34,5 +50,6 @@
     "eps_estimate": null,
     "guidance_note": null
   },
-  "strategy_note": "Stabilitätsanker. KI-Infrastruktur ist unvermeidlich – NVDA ist der einzige Profiteur ohne echte Konkurrenz."
+  "strategy_note": "Stabilitätsanker. KI-Infrastruktur ist unvermeidlich – NVDA ist der einzige Profiteur ohne echte Konkurrenz.",
+  "dist_from_52w_high_pct": -6.6
 }

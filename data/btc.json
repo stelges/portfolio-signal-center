@@ -5,24 +5,45 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "HOLD",
-  "price_usd": null,
+  "price_usd": 74284,
   "ath_usd": 109000,
-  "ath_dist_pct": null,
-  "change_30d_pct": null,
+  "ath_dist_pct": -31.8,
+  "change_30d_pct": 2.2,
   "next_halving": "April 2028",
   "zones": {
-    "buy":  { "label": "F&G<30 / -40% vom ATH", "threshold_usd": 65400 },
-    "hold": { "label": "-20% bis -40% vom ATH",  "range_usd": "65400-87200" },
-    "sell": { "label": "BTC > $300.000",          "threshold_usd": 300000 }
+    "buy": {
+      "label": "F&G<30 / -40% vom ATH",
+      "threshold_usd": 65400
+    },
+    "hold": {
+      "label": "-20% bis -40% vom ATH",
+      "range_usd": "65400-87200"
+    },
+    "sell": {
+      "label": "BTC > $300.000",
+      "threshold_usd": 300000
+    }
   },
   "ai_analysis": {
-    "summary": "Ausstehend – wird am Freitag automatisch aktualisiert.",
-    "bull_case": "Ausstehend.",
-    "bear_case": "Ausstehend.",
-    "key_catalysts": [],
-    "news_headlines": [],
-    "confidence": null,
-    "updated": "2026-04-13"
+    "signal": "HOLD",
+    "confidence": "niedrig",
+    "summary": "Analyse temporär nicht verfügbar.",
+    "bull_case": "—",
+    "bear_case": "—",
+    "key_drivers": [],
+    "signal_changer": "—",
+    "news_headlines": [
+      "Strategy Nears 1M BTC Milestone - Investing News Network",
+      "Bitcoin Price Prediction 2026-2031: Is $73K Next After 4% Gain? - CoinDCX",
+      "Bitcoin slips below $69,000 as oil rebounds on fading Middle East peace hopes - CoinDesk",
+      "Bitcoin (BTC) Price Prediction 2026 2027 2028 – 2030 - InvestingHaven"
+    ],
+    "updated": "2026-04-16"
   },
-  "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios."
+  "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
+  "ma200": 87154.0,
+  "ma50": 69818.0,
+  "above_200ma": false,
+  "funding_rate": null,
+  "long_short_ratio": null
 }

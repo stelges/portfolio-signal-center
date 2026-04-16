@@ -5,25 +5,41 @@
   "icon": "◎",
   "color": "#9945ff",
   "signal": "HOLD",
-  "price_usd": null,
+  "price_usd": 86.61,
   "ath_usd": 294,
-  "ath_dist_pct": null,
+  "ath_dist_pct": -70.5,
   "network_revenue_annual_usd_billions": 2.85,
   "etf_status": "In Prüfung",
   "firedancer_status": "Coming 2026",
   "zones": {
-    "buy":  { "label": "SOL -50% vom ATH", "threshold_usd": 147 },
-    "hold": { "label": "-20% bis -50%",     "range_usd": "147-235" },
-    "sell": { "label": "SOL > $400",        "threshold_usd": 400 }
+    "buy": {
+      "label": "SOL -50% vom ATH",
+      "threshold_usd": 147
+    },
+    "hold": {
+      "label": "-20% bis -50%",
+      "range_usd": "147-235"
+    },
+    "sell": {
+      "label": "SOL > $400",
+      "threshold_usd": 400
+    }
   },
   "ai_analysis": {
-    "summary": "Ausstehend – wird am Freitag automatisch aktualisiert.",
-    "bull_case": "Ausstehend.",
-    "bear_case": "Ausstehend.",
-    "key_catalysts": [],
-    "news_headlines": [],
-    "confidence": null,
-    "updated": "2026-04-13"
+    "signal": "HOLD",
+    "confidence": "niedrig",
+    "summary": "Analyse temporär nicht verfügbar.",
+    "bull_case": "—",
+    "bear_case": "—",
+    "key_drivers": [],
+    "signal_changer": "—",
+    "news_headlines": [
+      "Solana Price Prediction Points to $500 While Pepeto Offers 100x SOL Cannot Match From $83.95 - Bitget",
+      "Solana (SOL) Price Prediction: Firedancer Upgrade Hits 5,500 TPS as Network Crosses 167M Wallets - openPR.com",
+      "Solana (SOL) Price Prediction: Analyst Forecasts and Future Outlook - MEXC",
+      "Solana’s $2.85B Revenue Explosion: Why It Could Outperform Ethereum in 2026 - 24/7 Wall St."
+    ],
+    "updated": "2026-04-16"
   },
   "strategy_note": "L1 Wachstumswert mit echtem Revenue. 2.85B$/Jahr Netzwerk-Revenue – kein reines Narrativ."
 }

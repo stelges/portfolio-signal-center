@@ -5,7 +5,7 @@
   "icon": "τ",
   "color": "#00d4ff",
   "signal": "HOLD",
-  "price_usd": null,
+  "price_usd": 237.47,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -13,18 +13,35 @@
   "halving_done": true,
   "grayscale_etf": "Beantragt",
   "zones": {
-    "buy":  { "label": "MCap < $3B",    "threshold_usd_billions": 3 },
-    "hold": { "label": "$3B – $8B",     "range_usd_billions": "3-8" },
-    "sell": { "label": "MCap > $20B",   "threshold_usd_billions": 20 }
+    "buy": {
+      "label": "MCap < $3B",
+      "threshold_usd_billions": 3
+    },
+    "hold": {
+      "label": "$3B – $8B",
+      "range_usd_billions": "3-8"
+    },
+    "sell": {
+      "label": "MCap > $20B",
+      "threshold_usd_billions": 20
+    }
   },
   "ai_analysis": {
-    "summary": "Ausstehend – wird am Freitag automatisch aktualisiert.",
-    "bull_case": "Ausstehend.",
-    "bear_case": "Ausstehend.",
-    "key_catalysts": [],
-    "news_headlines": [],
-    "confidence": null,
-    "updated": "2026-04-13"
+    "signal": "HOLD",
+    "confidence": "niedrig",
+    "summary": "Analyse temporär nicht verfügbar.",
+    "bull_case": "—",
+    "bear_case": "—",
+    "key_drivers": [],
+    "signal_changer": "—",
+    "news_headlines": [
+      "The Stack - Grayscale",
+      "Grayscale files for Bittensor ETF, bringing AI-focused crypto to institutional investors - AMBCrypto",
+      "Next Crypto to Explode: Why Pepeto Leads as Buyers Choose Presales Over Chainlink and Bittensor for Bigger Returns - MEXC",
+      "Grayscale seeks U.S. listing for Bittensor ETP in first institutional bet on decentralized AI - CoinDesk"
+    ],
+    "updated": "2026-04-16"
   },
-  "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside."
+  "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
+  "market_cap_usd_billions": 2.55
 }

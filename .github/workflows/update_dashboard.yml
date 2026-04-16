@@ -55,6 +55,7 @@ jobs:
             echo "Keine Änderungen – kein Commit nötig."
           else
             git commit -m "chore: weekly AI intelligence update $(date -u +%Y-%m-%d)"
+            git pull --rebase
             git push
           fi
 

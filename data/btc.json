@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "HOLD",
-  "price_usd": 74284,
+  "price_usd": 74421,
   "ath_usd": 109000,
-  "ath_dist_pct": -31.8,
-  "change_30d_pct": 2.2,
+  "ath_dist_pct": -31.7,
+  "change_30d_pct": 2.39,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -41,8 +41,8 @@
     "updated": "2026-04-16"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 87154.0,
-  "ma50": 69818.0,
+  "ma200": 87155.0,
+  "ma50": 69820.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

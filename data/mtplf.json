@@ -9,8 +9,8 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 1.0226,
-  "btc_nav_usd_billions": 2.98,
+  "mnav": 1.0208,
+  "btc_nav_usd_billions": 2.99,
   "zones": {
     "buy": {
       "label": "mNAV < 1.1x",

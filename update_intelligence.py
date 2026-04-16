@@ -120,7 +120,30 @@ def parse_ai_json(raw: str) -> dict:
         return json.loads(text)
     except json.JSONDecodeError as e:
         log.warning(f"JSON-Parse fehlgeschlagen ({e}). Raw[:300]: {text[:300]}")
-        return {}
+        # Partial-Extraktion: zumindest Signal, Confidence, Summary, Regime retten
+        import re as _re
+        partial = {}
+        for field, pattern in [
+            ("signal",       r'"signal"\s*:\s*"(BUY|HOLD|CASH|SELL)"'),
+            ("confidence",   r'"confidence"\s*:\s*"([^"]+)"'),
+            ("macro_regime", r'"macro_regime"\s*:\s*"([^"]+)"'),
+            ("summary",      r'"summary"\s*:\s*"([^"]+)"'),
+            ("bull_case",    r'"bull_case"\s*:\s*"([^"]+)"'),
+            ("bear_case",    r'"bear_case"\s*:\s*"([^"]+)"'),
+            ("signal_changer", r'"signal_changer"\s*:\s*"([^"]+)"'),
+        ]:
+            m = _re.search(pattern, text)
+            if m:
+                partial[field] = m.group(1)
+        # active_indicators als Array extrahieren
+        ai_m = _re.search(r'"active_indicators"\s*:\s*\[(.*?)\]', text, _re.DOTALL)
+        if ai_m:
+            indicators = _re.findall(r'"([^"]+)"', ai_m.group(1))
+            if indicators:
+                partial["active_indicators"] = indicators
+        if partial.get("signal"):
+            log.info(f"Partial-Extraktion erfolgreich: signal={partial['signal']}")
+        return partial
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -580,7 +603,7 @@ Antworte NUR mit diesem JSON:
     try:
         response = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=700,
+            max_tokens=1000,
             messages=[{"role": "user", "content": prompt}]
         )
         result = parse_ai_json(response.content[0].text)
@@ -666,7 +689,7 @@ Antworte NUR mit diesem JSON:
     try:
         response = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=700,
+            max_tokens=1000,
             messages=[{"role": "user", "content": prompt}]
         )
         result = parse_ai_json(response.content[0].text)
@@ -758,7 +781,7 @@ Antworte NUR mit diesem JSON:
     try:
         response = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=700,
+            max_tokens=1000,
             messages=[{"role": "user", "content": prompt}]
         )
         result = parse_ai_json(response.content[0].text)
@@ -854,7 +877,7 @@ Antworte NUR mit diesem JSON:
     try:
         response = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=700,
+            max_tokens=1000,
             messages=[{"role": "user", "content": prompt}]
         )
         result = parse_ai_json(response.content[0].text)

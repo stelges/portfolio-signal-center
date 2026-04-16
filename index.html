@@ -734,7 +734,14 @@ function makeAssets() {
       detailUrl:'assets/btc.html',
       aiSummary: btcAi.summary || null,
       acts:{BUY:{e:'🔥',w:'Sparrate 1.5–2× erhöhen',y:'Fear<30 oder BTC -40% vom ATH – Institutionen kaufen jetzt.'},HOLD:{e:'⚖️',w:'Normales DCA fortführen',y:'Neutrale Marktphase. Sparplan läuft – kein Handlungsbedarf.'},CASH:{e:'💰',w:'Sparrate halbieren',y:'Fear>75 oder BTC +100% in 90 Tagen – überhitzt.'},SELL:{e:'🎯',w:'10–15% Teilverkauf',y:'BTC über 300.000$ – schrittweise Gewinne sichern.'}},
-      mets:[{l:'Fear & Greed',v:D.fg!==null?D.fg+'/100':'—',c:D.fg<30?'g':D.fg<55?'y':'r'},{l:'Vom ATH',v:D.btc?ba.toFixed(1)+'%':'—',c:ba<-45?'g':ba<-25?'y':'r'},{l:'30d Perf',v:D.p30!==null?(D.p30>0?'+':'')+D.p30.toFixed(1)+'%':'—',c:D.p30<-15?'g':D.p30<30?'y':'o'},{l:'Nächstes Halving',v:'Apr 2028',c:'n'},{l:'Kaufzone',v:'-40% vom ATH',c:'n'},{l:'1. Verkauf',v:'> 300.000$',c:'n'}],
+      mets:[
+        {l:'Fear & Greed',v:D.fg!==null?D.fg+'/100':'—',c:D.fg<30?'g':D.fg<55?'y':'r'},
+        {l:'Vom ATH',v:D.btc?ba.toFixed(1)+'%':'—',c:ba<-45?'g':ba<-25?'y':'r'},
+        {l:'30d Perf',v:D.p30!==null?(D.p30>0?'+':'')+D.p30.toFixed(1)+'%':'—',c:D.p30<-15?'g':D.p30<30?'y':'o'},
+        {l:'200d MA',v:AI.btc.ma200?'$'+AI.btc.ma200.toLocaleString('de-DE'):'—',c:AI.btc.above_200ma===true?'g':AI.btc.above_200ma===false?'r':'n'},
+        {l:'Funding Rate',v:AI.btc.funding_rate!==null&&AI.btc.funding_rate!==undefined?AI.btc.funding_rate.toFixed(4)+'%':'—',c:AI.btc.funding_rate<0?'g':AI.btc.funding_rate>0.05?'r':'y'},
+        {l:'Nächstes Halving',v:'Apr 2028',c:'n'}
+      ],
       zones:[{l:'🟢 Kaufen',v:'F&G<30 / -40%',c:'g'},{l:'🟡 Halten',v:'-20% bis -40%',c:'y'},{l:'🔴 Sichern',v:'BTC > 300k$',c:'r'}]
     },
     { id:'mtp', name:'Metaplanet', ticker:'MTPLF·20%', icon:'⬡', ib:'#ff4a6818', ic:'#ff4a68', sig:sigMtp(),

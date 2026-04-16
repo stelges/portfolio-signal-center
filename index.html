@@ -814,13 +814,6 @@ function makeAssets() {
 
 // ── RENDER ──
 function render() {
-  const gs = sigGlob();
-  document.getElementById('gbanner').className = 'global ' + gs;
-  const gl = document.getElementById('gsig');
-  gl.textContent = GS[gs]; gl.className = 'g-sig ' + gs;
-  document.getElementById('tfg').textContent = D.fg !== null ? D.fg+'/100' : '—';
-  document.getElementById('tbtc').textContent = D.btc ? '$'+D.btc.toLocaleString('de-DE') : '—';
-  document.getElementById('tath').textContent = D.btc ? ((D.btc-BTC_ATH)/BTC_ATH*100).toFixed(1)+'%' : '—';
 
   // KI Briefing
   const briefing = AI.portfolio;
@@ -846,20 +839,6 @@ function render() {
       document.getElementById('aiBriefingTs').textContent = d.toLocaleDateString('de-DE') + ' · KI-Update';
     }
   }
-
-  // mNAV
-  const mn = D.mnav;
-  const mEl = document.getElementById('mnavNum');
-  mEl.textContent = mn ? mn.toFixed(3)+'x' : '—';
-  const mc = mn<1.0?'var(--buy)':mn<1.3?'var(--hold)':mn<2.5?'var(--cash)':'var(--sell)';
-  mEl.style.color = mc;
-  const ms = sigMtp();
-  const mlabels = {BUY:'🟢 Kaufen – günstiger Eintritt',HOLD:'🟡 Halten',CASH:'🟠 Kein Neukauf',SELL:'🔴 Teilverkauf'};
-  const mcc = {BUY:'buy',HOLD:'hold',CASH:'cash',SELL:'sell'};
-  document.getElementById('mnavChips').innerHTML = mn ? `
-    <div class="mnav-chip" style="background:var(--${mcc[ms]}-bg);color:var(--${mcc[ms]});border-color:var(--${mcc[ms]}-b)">${mlabels[ms]}</div>
-    <div class="mnav-chip" style="color:var(--dim);border-color:var(--line);background:var(--card2)">BTC-NAV: $${(MTPLF_HOLD*D.btc/1e9).toFixed(2)}B</div>
-  ` : '<div class="mnav-chip" style="color:var(--dim);border-color:var(--line)">Warte auf BTC-Preis...</div>';
 
   // Cards
   const open = [...document.querySelectorAll('.acb.open')].map(e=>e.id);

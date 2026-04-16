@@ -154,6 +154,54 @@ def fetch_fear_greed() -> int | None:
     return None
 
 
+def fetch_halving_data() -> dict:
+    """
+    Berechnet das nächste Halving-Datum blockchain-basiert.
+    Blockhöhe via mempool.space (Fallback: blockchain.info).
+    Nächstes Halving: Block 1.050.000 (nach dem 4. Halving bei Block 840.000, April 2024)
+    """
+    NEXT_HALVING_BLOCK = 1_050_000
+    AVG_BLOCK_SECONDS  = 600  # 10 Minuten
+
+    # Aktuelle Blockhöhe abrufen
+    height = None
+    try:
+        r = requests.get("https://mempool.space/api/blocks/tip/height", timeout=10)
+        r.raise_for_status()
+        height = int(r.text.strip())
+        log.info(f"Aktuelle Blockhöhe (mempool.space): {height:,}")
+    except Exception:
+        # Fallback
+        try:
+            r = requests.get("https://blockchain.info/q/getblockcount", timeout=10)
+            r.raise_for_status()
+            height = int(r.text.strip())
+            log.info(f"Aktuelle Blockhöhe (blockchain.info): {height:,}")
+        except Exception as e:
+            log.warning(f"Blockhöhe nicht abrufbar: {e}")
+
+    if height is None:
+        return {"next_halving_estimated_utc": "2028-04-01T00:00:00Z",
+                "next_halving_block": NEXT_HALVING_BLOCK,
+                "blocks_remaining": None,
+                "halving_source": "fallback_fixed"}
+
+    blocks_remaining = NEXT_HALVING_BLOCK - height
+    seconds_remaining = blocks_remaining * AVG_BLOCK_SECONDS
+    estimated_dt = datetime.datetime.utcnow() + datetime.timedelta(seconds=seconds_remaining)
+    estimated_iso = estimated_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    log.info(f"Halving: {blocks_remaining:,} Blöcke verbleibend → ~{estimated_dt.strftime('%Y-%m-%d')}")
+
+    return {
+        "next_halving_estimated_utc": estimated_iso,
+        "next_halving_block": NEXT_HALVING_BLOCK,
+        "blocks_remaining": blocks_remaining,
+        "current_block_height": height,
+        "halving_source": "blockchain_calculated"
+    }
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # 2. MAKRO-DATEN (Yahoo Finance)
 # ─────────────────────────────────────────────────────────────────────────────
@@ -465,6 +513,7 @@ def main():
     prices = fetch_crypto_prices();           time.sleep(2)
     global_market = fetch_global_market();    time.sleep(2)
     fg = fetch_fear_greed();                  time.sleep(2)
+    halving = fetch_halving_data();           time.sleep(2)
     p30 = fetch_btc_30d_change();             time.sleep(3)
 
     # 200d + 50d MA aus Preishistorie berechnen
@@ -622,6 +671,7 @@ Portfolio-Regel: BUY bei MCap < $3B. HOLD $3-8B. Verkauf ab MCap > $20B (30% sic
             "gold": macro.get("gold", {}).get("price"),
             "us10y": macro.get("us10y", {}).get("price"),
         },
+        "next_halving": halving,
         "next_update": (datetime.date.today() + datetime.timedelta(days=7)).isoformat() + "T18:00:00Z",
         "ai_weekly_briefing": briefing,
         "market_regime": (

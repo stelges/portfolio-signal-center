@@ -304,6 +304,17 @@ body{
 .ao-bar{height:3px;border-radius:2px;margin-top:7px;}
 
 .footer{text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);line-height:2.2;}
+
+/* ── HALVING COUNTDOWN ── */
+.halving-bar{background:var(--card);border:1px solid rgba(247,147,26,.2);border-radius:12px;padding:14px 18px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.halving-tag{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px;}
+.halving-date{font-size:13px;font-weight:600;color:#f7931a;}
+.halving-countdown{display:flex;align-items:center;gap:6px;}
+.hc-unit{text-align:center;}
+.hc-val{font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:#fff;min-width:38px;text-align:center;background:var(--card2);border:1px solid rgba(247,147,26,.15);border-radius:6px;padding:4px 6px;line-height:1;}
+.hc-label{font-family:'DM Mono',monospace;font-size:8px;color:var(--dim);text-align:center;margin-top:3px;letter-spacing:.1em;text-transform:uppercase;}
+.hc-sep{font-family:'DM Mono',monospace;font-size:20px;color:rgba(247,147,26,.4);font-weight:700;margin-bottom:14px;}
+.halving-blocks{font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);text-align:right;}
 </style>
 </head>
 <body>
@@ -322,6 +333,24 @@ body{
       <div class="ts" id="ts">Initialisiere...</div>
     </div>
   </div>
+</div>
+
+<!-- HALVING COUNTDOWN -->
+<div class="halving-bar" id="halvingBar">
+  <div class="halving-l">
+    <div class="halving-tag">Next Bitcoin Halving · Block 1.050.000</div>
+    <div class="halving-date" id="halvingDate">April 2028</div>
+  </div>
+  <div class="halving-countdown" id="halvingCountdown">
+    <div class="hc-unit"><div class="hc-val" id="hcDays">—</div><div class="hc-label">Tage</div></div>
+    <div class="hc-sep">:</div>
+    <div class="hc-unit"><div class="hc-val" id="hcHours">—</div><div class="hc-label">Std</div></div>
+    <div class="hc-sep">:</div>
+    <div class="hc-unit"><div class="hc-val" id="hcMins">—</div><div class="hc-label">Min</div></div>
+    <div class="hc-sep">:</div>
+    <div class="hc-unit"><div class="hc-val" id="hcSecs">—</div><div class="hc-label">Sek</div></div>
+  </div>
+  <div class="halving-blocks" id="halvingBlocks"></div>
 </div>
 
 <!-- GLOBAL SIGNAL -->
@@ -909,9 +938,55 @@ async function loadAll() {
   render();
 }
 
+// ── HALVING COUNTDOWN ──
+let halvingTarget = null;
+
+function initHalving() {
+  // Aus portfolio.json laden falls verfügbar, sonst Fallback
+  const halvingData = AI.portfolio?.next_halving;
+  if (halvingData?.next_halving_estimated_utc) {
+    halvingTarget = new Date(halvingData.next_halving_estimated_utc);
+    // Datum formatieren
+    const opts = { year:'numeric', month:'long', day:'numeric' };
+    document.getElementById('halvingDate').textContent =
+      halvingTarget.toLocaleDateString('de-DE', opts) + ' (geschätzt)';
+    // Blöcke verbleibend
+    if (halvingData.blocks_remaining) {
+      document.getElementById('halvingBlocks').textContent =
+        halvingData.blocks_remaining.toLocaleString('de-DE') + ' Blöcke verbleibend';
+    }
+  } else {
+    // Fallback: April 20, 2028 00:00 UTC
+    halvingTarget = new Date('2028-04-20T00:00:00Z');
+  }
+  tickCountdown();
+  setInterval(tickCountdown, 1000);
+}
+
+function tickCountdown() {
+  if (!halvingTarget) return;
+  const now  = new Date();
+  const diff = halvingTarget - now;
+  if (diff <= 0) {
+    document.getElementById('halvingCountdown').innerHTML =
+      '<span style="font-family:\'DM Mono\',monospace;color:var(--buy);font-size:16px;">🎉 Halving erreicht!</span>';
+    return;
+  }
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000)  / 60000);
+  const s = Math.floor((diff % 60000)    / 1000);
+  const pad = n => String(n).padStart(2,'0');
+  document.getElementById('hcDays').textContent  = d;
+  document.getElementById('hcHours').textContent = pad(h);
+  document.getElementById('hcMins').textContent  = pad(m);
+  document.getElementById('hcSecs').textContent  = pad(s);
+}
+
 // Init: load AI data first (fast, local), then live prices
 fetchAIData().then(() => {
   loadAll();
+  initHalving();
   setInterval(loadAll, 300000);
   setTimeout(()=>tog('cb-btc'),500);
 });

@@ -5,7 +5,7 @@
   "icon": "⬡",
   "color": "#76b900",
   "signal": "HOLD",
-  "price_usd": 197.9,
+  "price_usd": 197.79,
   "price_52w_high_usd": 212.19,
   "price_52w_low_usd": 95.04,
   "pe_ratio": null,
@@ -51,5 +51,5 @@
     "guidance_note": null
   },
   "strategy_note": "Stabilitätsanker. KI-Infrastruktur ist unvermeidlich – NVDA ist der einzige Profiteur ohne echte Konkurrenz.",
-  "dist_from_52w_high_pct": -6.7
+  "dist_from_52w_high_pct": -6.8
 }

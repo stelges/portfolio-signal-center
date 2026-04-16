@@ -5,7 +5,7 @@
   "icon": "τ",
   "color": "#00d4ff",
   "signal": "HOLD",
-  "price_usd": 241.65,
+  "price_usd": 240.89,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -29,19 +29,21 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "niedrig",
+    "macro_regime": "Unbekannt – Analyse nicht verfügbar",
+    "active_indicators": [],
     "summary": "Analyse temporär nicht verfügbar.",
+    "price_targets": {},
     "bull_case": "—",
     "bear_case": "—",
-    "key_drivers": [],
     "signal_changer": "—",
     "news_headlines": [
       "The Stack - Grayscale",
-      "Grayscale files for Bittensor ETF, bringing AI-focused crypto to institutional investors - AMBCrypto",
-      "Next Crypto to Explode: Why Pepeto Leads as Buyers Choose Presales Over Chainlink and Bittensor for Bigger Returns - MEXC",
-      "Grayscale seeks U.S. listing for Bittensor ETP in first institutional bet on decentralized AI - CoinDesk"
+      "Grayscale bets on ‘decentralized AI’ with first-ever Bittensor ETF filing - AMBCrypto",
+      "Grayscale files for first U.S. Bittensor ETP as decentralized AI gains momentum - Yahoo! Finance Canada",
+      "Grayscale Boosts Bittensor Allocation to 43% After ETF Filing - Cryptonews.net"
     ],
     "updated": "2026-04-16"
   },
   "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
-  "market_cap_usd_billions": 2.6
+  "market_cap_usd_billions": 2.59
 }

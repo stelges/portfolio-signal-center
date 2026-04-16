@@ -5,7 +5,7 @@
   "icon": "⬡",
   "color": "#76b900",
   "signal": "HOLD",
-  "price_usd": 198.25,
+  "price_usd": 198.23,
   "price_52w_high_usd": 212.19,
   "price_52w_low_usd": 95.04,
   "pe_ratio": null,
@@ -28,18 +28,19 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "niedrig",
+    "macro_regime": "Unbekannt – Analyse nicht verfügbar",
+    "active_indicators": [],
     "summary": "Analyse temporär nicht verfügbar.",
+    "price_targets": {},
     "bull_case": "—",
     "bear_case": "—",
-    "key_drivers": [],
     "signal_changer": "—",
-    "ai_capex_trend": "Wachsend",
     "news_headlines": [
-      "NVIDIA Ising Quantum AI Launch Tests Long Term Data Center Story - simplywall.st",
-      "AMD Gains 6% Ahead of May Earnings: Is the AI Chip Challenger Finally Ready to Rival NVIDIA? - 24/7 Wall St.",
-      "NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026 - NVIDIA Newsroom",
-      "Nvidia reports earnings and guidance beat as AI boom pushes data center revenue up 75% - CNBC",
-      "Nvidia’s Quarterly Profit Hits $43 Billion on Strong A.I. Chip Sales - The New York Times"
+      "NVIDIA Announces Financial Results for First Quarter Fiscal 2026 - NVIDIA Newsroom",
+      "Nvidia Could Hit $340 by 2031 and the AI Buildout Is Just Getting Started - 24/7 Wall St.",
+      "NVIDIA Corporation (NVDA): Powering the AI Revolution and Beyond – A Deep Dive - FinancialContent",
+      "Nvidia (NVDA) vs AMD: Which AI Chip Stock Deserves Your Investment in 2026? - MEXC",
+      "Nvidia (NVDA) vs AMD: Who’s Winning the AI Chip Race in 2026? - MEXC"
     ],
     "updated": "2026-04-16"
   },

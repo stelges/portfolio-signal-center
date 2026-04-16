@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "BUY",
-  "price_usd": 74734,
+  "signal": "HOLD",
+  "price_usd": 74800,
   "ath_usd": 109000,
   "ath_dist_pct": -31.4,
-  "change_30d_pct": 2.86,
+  "change_30d_pct": 2.91,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,29 +25,27 @@
     }
   },
   "ai_analysis": {
-    "signal": "BUY",
-    "confidence": "mittel",
-    "summary": "Bitcoin befindet sich in einer klassischen Akkumulationszone: -31% vom ATH, Fear & Greed bei 23 (Extremangst) und ein schwacher Dollar schaffen historisch günstige Einstiegsbedingungen für langfristige DCA-Investoren. Der Kurs liegt zwar unter dem 200-Tage-MA, was kurzfristig bearish ist, aber der 50-Tage-MA bei ~$69.8k wirkt als Unterstützung. Für einen 7-Jahres-Plan mit Halving-Horizont 2028 ist diese Phase strukturell attraktiv zur Akkumulation.",
-    "bull_case": "Extremangst (F&G 23) kombiniert mit -31% vom ATH entspricht historisch einer der stärksten Akkumulationszonen im BTC-Zyklus, oft 12–18 Monate vor dem nächsten Halving. Schwacher DXY (98) und institutionelle Akkumulation (Strategy nähert sich 1M BTC) signalisieren strukturelle Nachfrage.",
-    "bear_case": "BTC unter dem 200-Tage-MA ist ein klares mittelfristiges Warnsignal – ein weiterer Rückgang auf $60k–$65k (-40% vom ATH) ist realistisch und würde noch bessere Kaufpreise bieten. Makrorisiken wie steigende Rezessionsangst, geopolitische Eskalation oder ein stärkerer Dollar könnten den Druck erhöhen.",
-    "key_drivers": [
-      "Fear & Greed Index bei 23 – historische Extremangst-Kaufzone aktiv",
-      "BTC unter 200-Tage-MA ($87k) – mittelfristiger Trend noch bearish",
-      "Schwacher Dollar (DXY 98) und Gold auf ATH – Risk-on für Hard Assets"
-    ],
-    "signal_changer": "Signal kippt auf HOLD oder CASH wenn BTC nachhaltig unter $65k fällt und der Dollar (DXY) wieder über 102 steigt – oder wenn makroökonomische Daten eine tiefe Rezession mit Liquiditätsentzug bestätigen. BUY-Signal verstärkt sich zu 'Maximalkauf' bei Unterschreiten von $60k.",
-    "buy_zone_note": "Aktuell 1.5× der normalen Sparrate empfehlenswert (z.B. €1.500–2.500/Monat). Optimale Kernkaufzone liegt bei $60k–$68k (-38% bis -45% vom ATH). Kapital gestaffelt einsetzen: 50% jetzt, 50% als Limit-Orders zwischen $63k–$67k. Keine Cash-Reserve komplett einsetzen – Puffer für mögliche weitere Schwäche behalten.",
+    "signal": "HOLD",
+    "confidence": "niedrig",
+    "macro_regime": "Unbekannt – Analyse nicht verfügbar",
+    "active_indicators": [],
+    "summary": "Analyse temporär nicht verfügbar.",
+    "price_targets": {},
+    "bull_case": "—",
+    "bear_case": "—",
+    "signal_changer": "—",
     "news_headlines": [
       "Strategy Nears 1M BTC Milestone - Investing News Network",
+      "IMF's global debt warning underscores bitcoin's (BTC) role in investor portfolios - CoinDesk",
       "Bitcoin Price Prediction 2026-2031: Is $73K Next After 4% Gain? - CoinDCX",
-      "Bitcoin slips below $69,000 as oil rebounds on fading Middle East peace hopes - CoinDesk",
-      "Bitcoin (BTC) Price Prediction 2026 2027 2028 – 2030 - InvestingHaven"
+      "The road ahead for crypto markets in 2026 - Kraken Blog",
+      "Here’s how high bitcoin (BTC) can rally as ETFs, Coinbase premium, and macro conditions turn more supportive - CoinDesk"
     ],
     "updated": "2026-04-16"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
   "ma200": 87157.0,
-  "ma50": 69827.0,
+  "ma50": 69828.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

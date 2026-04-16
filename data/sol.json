@@ -5,9 +5,9 @@
   "icon": "◎",
   "color": "#9945ff",
   "signal": "HOLD",
-  "price_usd": 88.5,
+  "price_usd": 88.94,
   "ath_usd": 294,
-  "ath_dist_pct": -69.9,
+  "ath_dist_pct": -69.7,
   "network_revenue_annual_usd_billions": 2.85,
   "etf_status": "In Prüfung",
   "firedancer_status": "Coming 2026",
@@ -28,18 +28,21 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "niedrig",
+    "macro_regime": "Unbekannt – Analyse nicht verfügbar",
+    "active_indicators": [],
     "summary": "Analyse temporär nicht verfügbar.",
+    "price_targets": {},
     "bull_case": "—",
     "bear_case": "—",
-    "key_drivers": [],
     "signal_changer": "—",
     "news_headlines": [
-      "Solana Price Prediction Points to $500 While Pepeto Offers 100x SOL Cannot Match From $83.95 - Bitget",
-      "Solana (SOL) Price Prediction: Firedancer Upgrade Hits 5,500 TPS as Network Crosses 167M Wallets - openPR.com",
-      "Solana Price Prediction 2026, 2027 and 2030: Will SOL Recover from This Crypto Winter? - MEXC",
-      "Solana’s $2.85B Revenue Explosion: Why It Could Outperform Ethereum in 2026 - 24/7 Wall St."
+      "Solana (SOL) Price Prediction: Standard Chartered Sets $250 Target as Firedancer Hits Mainnet in 2026 - openPR.com",
+      "Solana Names New COO as ETF Sees Withdrawals and Firedancer Achieves Key Progress - Bitget",
+      "7 Altcoins Set to Outperform Bitcoin by Q4 2026 — Here’s What the Data Says - FinanceFeeds",
+      "Solana (SOL) Price Prediction: Analyst Forecasts and Future Outlook - MEXC"
     ],
     "updated": "2026-04-16"
   },
-  "strategy_note": "L1 Wachstumswert mit echtem Revenue. 2.85B$/Jahr Netzwerk-Revenue – kein reines Narrativ."
+  "strategy_note": "L1 Wachstumswert mit echtem Revenue. 2.85B$/Jahr Netzwerk-Revenue – kein reines Narrativ.",
+  "eth_price_usd": 2337.07
 }

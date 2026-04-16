@@ -9,8 +9,8 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 1.0165,
-  "btc_nav_usd_billions": 3.0,
+  "mnav": 1.1391,
+  "btc_nav_usd_billions": 3.01,
   "zones": {
     "buy": {
       "label": "mNAV < 1.1x",
@@ -28,19 +28,23 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "niedrig",
+    "macro_regime": "Unbekannt – Analyse nicht verfügbar",
+    "active_indicators": [],
     "summary": "Analyse temporär nicht verfügbar.",
+    "price_targets": {},
     "bull_case": "—",
     "bear_case": "—",
-    "key_drivers": [],
     "signal_changer": "—",
-    "mnav_assessment": "Kaufzone: Bitcoin mit Rabatt",
     "news_headlines": [
-      "Metaplanet Forms Bitcoin-Focused Subsidiaries in Japan and the U.S. - CoinDesk",
-      "MetaPlanet Becomes One of Japan’s Most Widely Held Stocks as It Eyes U.S. Market - Bitcoinsensus",
-      "Metaplanet: Japan's Bitcoin Miracle Is Only Getting Started (OTCMKTS:MTPLF) - Seeking Alpha",
-      "Metaplanet (3350.T) Stock: Soars as Bitcoin Strategy Boosts Operating Profit by 1,694% in FY2025 - CoinCentral"
+      "Metaplanet acquires 5,075 BTC, jumps to third largest bitcoin treasury company - CoinDesk",
+      "Japanese Bitcoin treasury Metaplanet surges on $620 mln buy - Investing.com",
+      "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst - TradingView — Track All Markets",
+      "Eric Trump takes stage in Japan as bitcoin firm Metaplanet votes on capital plan - Reuters"
     ],
     "updated": "2026-04-16"
   },
-  "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien."
+  "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien.",
+  "stock_price_usd": 2.1545,
+  "stock_price_jpy": 343.0,
+  "usdjpy": 159.2
 }

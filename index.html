@@ -162,11 +162,15 @@ body{
 
 /* ── AI BRIEFING ── */
 .ai-briefing{background:var(--card);border:1px solid rgba(138,43,226,.2);border-radius:12px;padding:14px 18px;margin-bottom:14px;}
-.ai-briefing-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.ai-briefing-hdr{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
 .ai-briefing-icon{font-size:16px;}
 .ai-briefing-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;color:#b06aff;text-transform:uppercase;}
 .ai-briefing-ts{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);margin-left:auto;}
-.ai-briefing-text{font-size:13px;color:var(--hi);line-height:1.65;}
+.ai-briefing-week{font-size:15px;font-weight:600;color:#b06aff;margin-bottom:10px;}
+.ai-briefing-row{margin-bottom:8px;font-size:13px;line-height:1.65;}
+.ai-briefing-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#b06aff;margin-bottom:2px;}
+.ai-briefing-value{color:var(--hi);}
+.ai-briefing-action{background:rgba(138,43,226,.08);border-left:2px solid #b06aff;padding:6px 10px;border-radius:0 6px 6px 0;font-size:13px;color:var(--hi);margin-top:4px;}
 
 /* ── mNAV ── */
 .mnav-bar{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:14px 18px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
@@ -393,7 +397,8 @@ body{
     <div class="ai-briefing-title">KI-Wochenbriefing</div>
     <div class="ai-briefing-ts" id="aiBriefingTs">—</div>
   </div>
-  <div class="ai-briefing-text" id="aiBriefingText">Wird geladen...</div>
+  <div class="ai-briefing-week" id="aiBriefingWeek"></div>
+  <div id="aiBriefingText"></div>
 </div>
 
 <!-- mNAV -->
@@ -844,9 +849,23 @@ function render() {
 
   // KI Briefing
   const briefing = AI.portfolio;
-  if (briefing && briefing.ai_weekly_briefing && briefing.ai_weekly_briefing !== 'Initialisierung. Erster automatischer Update erfolgt am nächsten Freitag um 18:00 UTC.') {
-    document.getElementById('aiBriefing').style.display = 'block';
-    document.getElementById('aiBriefingText').textContent = briefing.ai_weekly_briefing;
+  if (briefing && briefing.ai_weekly_briefing) {
+    const b = briefing.ai_weekly_briefing;
+    const isObj = typeof b === 'object';
+    const status  = isObj ? b.status  : b;
+    const insight = isObj ? b.insight : '';
+    const action  = isObj ? b.action  : '';
+    const title   = isObj ? b.title   : '';
+    const isEmpty = !status || status === 'Wochenbriefing temporär nicht verfügbar.' || status === 'Initialisierung. Erster automatischer Update erfolgt am nächsten Freitag um 18:00 UTC.';
+    if (!isEmpty) {
+      document.getElementById('aiBriefing').style.display = 'block';
+      if (title) document.getElementById('aiBriefingWeek').textContent = title;
+      let html = '';
+      if (status)  html += `<div class="ai-briefing-row"><div class="ai-briefing-label">Portfolio-Status</div><div class="ai-briefing-value">${status}</div></div>`;
+      if (insight) html += `<div class="ai-briefing-row"><div class="ai-briefing-label">Kernaussage</div><div class="ai-briefing-value">${insight}</div></div>`;
+      if (action)  html += `<div class="ai-briefing-label" style="margin-top:8px;">Aktion</div><div class="ai-briefing-action">${action}</div>`;
+      document.getElementById('aiBriefingText').innerHTML = html;
+    }
     if (briefing.last_updated) {
       const d = new Date(briefing.last_updated);
       document.getElementById('aiBriefingTs').textContent = d.toLocaleDateString('de-DE') + ' · KI-Update';

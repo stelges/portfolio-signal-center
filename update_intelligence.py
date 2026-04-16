@@ -488,19 +488,30 @@ Aktuelle Signale:
 
 Makro: DXY={market.get('dxy_price', '—')} | S&P={market.get('sp500_price', '—')} | F&G={market.get('fg', '—')}/100
 
-Schreibe 2-3 Sätze auf Deutsch. Klar, direkt, keine Floskeln.
-Was ist diese Woche die wichtigste Erkenntnis für diesen Plan?"""
+Antworte als JSON (kein Markdown, keine Sternchen, keine Rauten):
+{{
+  "title": "Kurzer Titel der Woche (max 6 Wörter)",
+  "status": "Ein Satz zum Portfolio-Status.",
+  "insight": "Die wichtigste Erkenntnis dieser Woche (1-2 Sätze).",
+  "action": "Was konkret tun? (1 Satz)"
+}}
+Sprache: Deutsch. Klar, direkt, keine Floskeln."""
 
     try:
         response = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=200,
+            max_tokens=350,
             messages=[{"role": "user", "content": prompt}]
         )
-        return response.content[0].text.strip()
+        raw = response.content[0].text.strip()
+        # JSON parsen – Fallback auf Plain-Text wenn kein valides JSON
+        try:
+            return json.loads(raw)
+        except json.JSONDecodeError:
+            return {"title": "Wochenbriefing", "status": raw, "insight": "", "action": ""}
     except Exception as e:
         log.error(f"Briefing Fehler: {e}")
-        return "Wochenbriefing temporär nicht verfügbar."
+        return {"title": "Briefing", "status": "Wochenbriefing temporär nicht verfügbar.", "insight": "", "action": ""}
 
 
 # ─────────────────────────────────────────────────────────────────────────────

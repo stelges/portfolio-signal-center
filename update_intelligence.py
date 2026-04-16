@@ -86,18 +86,40 @@ def pct_change(old: float, new: float) -> float:
 
 
 def parse_ai_json(raw: str) -> dict:
-    """Parst Claude-Antwort zu JSON – strippt Markdown-Codeblöcke."""
+    """Parst Claude-Antwort zu JSON – robust gegen häufige Formatfehler."""
+    import re
     text = raw.strip()
-    if text.startswith("```"):
+
+    # Markdown-Codeblöcke entfernen
+    if "```" in text:
         parts = text.split("```")
-        text = parts[1] if len(parts) > 1 else text
-        if text.startswith("json"):
-            text = text[4:]
-        text = text.strip()
+        for part in parts:
+            candidate = part.strip()
+            if candidate.startswith("json"):
+                candidate = candidate[4:].strip()
+            if candidate.startswith("{"):
+                text = candidate
+                break
+
+    # Ersten { bis letzten } extrahieren
+    start = text.find("{")
+    end   = text.rfind("}")
+    if start != -1 and end != -1 and end > start:
+        text = text[start:end+1]
+
+    # Häufige Fehler bereinigen
+    text = text.replace("\n", " ")
+    # Zahlen mit Tausender-Komma in JSON-Strings fixen (z.B. "74,800" → 74800)
+    text = re.sub(r'"(\d{1,3}(?:,\d{3})+)"', lambda m: '"' + m.group(1).replace(",","") + '"', text)
+    # Zahlen mit Komma als reine Zahlen (nicht in Strings)
+    text = re.sub(r':\s*(\d{1,3}(?:,\d{3})+)([,}\s])', lambda m: ': ' + m.group(1).replace(",","") + m.group(2), text)
+    # Trailing commas vor } oder ]
+    text = re.sub(r',\s*([}\]])', r'\1', text)
+
     try:
         return json.loads(text)
-    except json.JSONDecodeError:
-        log.warning(f"JSON-Parse fehlgeschlagen. Raw: {text[:200]}")
+    except json.JSONDecodeError as e:
+        log.warning(f"JSON-Parse fehlgeschlagen ({e}). Raw[:300]: {text[:300]}")
         return {}
 
 

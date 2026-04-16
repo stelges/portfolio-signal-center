@@ -1,27 +1,32 @@
 {
-  "last_updated": "2026-04-16T18:41:34.365470Z",
+  "last_updated": "2026-04-16T18:48:28.082323Z",
   "updated_by": "update_intelligence.py v2 (GitHub Actions)",
   "global_signal": "BUY",
   "global_summary": "Akkumulieren – günstige Phase aktiv",
   "fear_greed": 23,
-  "btc_price_usd": 74546,
-  "btc_ath_dist_pct": -31.6,
-  "btc_30d_change_pct": 2.57,
+  "btc_price_usd": 74715,
+  "btc_ath_dist_pct": -31.5,
+  "btc_30d_change_pct": 2.84,
   "next_update": "2026-04-23T18:00:00Z",
-  "ai_weekly_briefing": "# Wochenbriefing KW 16/2026\n\n**Portfolio-Status:** BTC-Signal bestätigt bullish, Metaplanet mit solidem NAV-Premium, Rest im Holding-Modus.\n\n**Kernaussage:** Der DXY bei 98.23 bleibt moderat—keine deflationäre Headwind für Risk Assets. BTC-Kaufsignal passt zum 7-Jahres-Ansatz; beim monatlichen DCA einfach weitermachen statt auf Perfektion zu warten. Fear&Greed bei 23 zeigt noch Luft nach oben, aber das ist kein Timing-Werkzeug für diesen Plan—es bestätigt nur, dass die Akkumulation noch nicht überverkauft ist.\n\n**Aktion:** Nächster D",
+  "ai_weekly_briefing": {
+    "title": "Wochenbriefing",
+    "status": "```json\n{\n  \"title\": \"BTC Kaufsignal bei starkem Dollar\",\n  \"status\": \"Portfolio stabil, alle Positionen halten, BTC zeigt Einstiegschance.\",\n  \"insight\": \"Der DXY bei 98.22 signalisiert Dollarstärke, während BTC ein BUY-Signal gibt. Dies ist typisch für Akkumulationsphasen in Kryptomärkten, wenn traditionelle Märkte (S&P 7031) seitwärts laufen und Fear & Greed niedrig bleibt.\",\n  \"action\": \"Diese Woche reguläres DCA wie geplant durchführen; BTC-Übergewichtung des Signals beachten, aber Portfolio-Struktur (38%) nicht durchbrechen.\"\n}\n```",
+    "insight": "",
+    "action": ""
+  },
   "market_regime": "fearful",
-  "btc_dominance_pct": 56.9,
+  "btc_dominance_pct": null,
   "macro": {
-    "sp500": 7031.71,
-    "dxy": 98.23,
-    "gold": 4809.5,
+    "sp500": 7031.17,
+    "dxy": 98.22,
+    "gold": 4809.1,
     "us10y": 4.31
   },
   "next_halving": {
-    "next_halving_estimated_utc": "2028-04-12T08:51:41Z",
+    "next_halving_estimated_utc": "2028-04-12T08:48:35Z",
     "next_halving_block": 1050000,
-    "blocks_remaining": 104629,
-    "current_block_height": 945371,
+    "blocks_remaining": 104628,
+    "current_block_height": 945372,
     "halving_source": "blockchain_calculated"
   }
 }

@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "BUY",
-  "price_usd": 74546,
+  "price_usd": 74715,
   "ath_usd": 109000,
-  "ath_dist_pct": -31.6,
-  "change_30d_pct": 2.57,
+  "ath_dist_pct": -31.5,
+  "change_30d_pct": 2.84,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,16 +27,16 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "summary": "Bitcoin befindet sich in einer klassischen Akkumulationszone: -31.6% vom ATH, Fear & Greed bei 23 (Extremangst) und der Kurs liegt über dem 50-Tage-MA, aber noch unter dem 200-Tage-MA. Das Makroumfeld ist gemischt – schwacher Dollar und institutionelle Akkumulation (Strategy near 1M BTC) sind bullish, während die Underperformance gegenüber Gold und erhöhte Marktunsicherheit vorsichtig stimmen.",
-    "bull_case": "Extremangst-Niveau unter 30 war historisch eine der stärksten DCA-Kaufzonen im Bitcoin-Zyklus, kombiniert mit einem schwachen Dollar (DXY 98) und dem nächsten Halving April 2028 als strukturellen Rückenwind. Institutionelle Akkumulation durch Strategy und steigende BTC-Dominanz deuten auf einen Risk-off-Shift zu Bitcoin als digitalem Basiswert hin.",
-    "bear_case": "BTC notiert deutlich unter dem 200-Tage-MA ($87,156), was technisch ein anhaltend bärisches Trendumfeld signalisiert und weitere Schwäche bis in die $60k–$65k-Zone möglich macht. Makrorisiken wie persistente Inflation, hohe US-Renditen (4.31%) und geopolitische Spannungen könnten Risk-Assets generell unter Druck halten.",
+    "summary": "Bitcoin befindet sich in einer klassischen Akkumulationszone: -31.5% vom ATH, Fear & Greed bei 23 (Extremangst) und ein schwacher Dollar schaffen historisch günstige Einstiegsbedingungen für langfristige DCA-Investoren. Der Kurs liegt zwar unter dem 200-Tage-MA (bearish strukturell), aber der 50-Tage-MA bei ~$69.8k wirkt als dynamische Unterstützung. Für einen 7-Jahres-Plan mit Halving 2028 als nächstem Katalysator ist die aktuelle Phase strategisch attraktiv.",
+    "bull_case": "Extremangst-Niveaus (F&G 23) markierten historisch starke Akkumulationsphasen vor mittelfristigen Erholungen, und der schwache DXY (~98) begünstigt risikobehaftete Assets wie BTC strukturell. Das nahende Halving April 2028 gibt dem Akkumulationsfenster eine klare zeitliche Logik – wer 2026 kauft, sitzt historisch gut.",
+    "bear_case": "Der Kurs unterhalb des 200-Tage-MA signalisiert weiterhin einen intakten Abwärtstrend, und makroökonomische Risiken (10Y-Rendite 4.31%, geopolitische Spannungen laut Headlines) könnten einen weiteren Drawdown in die -40% bis -60%-Zone ($65k–$44k) auslösen. Fehlende Daten zu Dominanz, Funding Rate und Market Cap erhöhen die Unsicherheit im kurzfristigen Bild.",
     "key_drivers": [
-      "Fear & Greed Index bei 23 – historische Extremangst-Kaufzone für DCA-Investoren",
-      "BTC unter 200-Tage-MA ($87,156) – mittelfristiger Abwärtstrend technisch noch intakt",
-      "Schwacher Dollar (DXY 98) + institutionelle Akkumulation als strukturelle Nachfrageunterstützung"
+      "Fear & Greed Index bei 23 – historische Kaufzone für DCA-Akkumulation",
+      "Schwacher Dollar (DXY 98.22) – strukturell positiv für BTC und Hard Assets",
+      "Nächstes Halving April 2028 – 24-Monate-Akkumulationsfenster läuft"
     ],
-    "signal_changer": "Ein Rückfall unter $65,000 mit weiter fallendem F&G unter 15 würde in ein STRONG BUY eskalieren (Sparrate maximal erhöhen); ein nachhaltiger Bruch über den 200-Tage-MA ($87,156) mit F&G über 50 würde das Signal auf HOLD zurücksetzen. Ein makroökonomischer Schock (US-Rezession, Kreditereignis) könnte kurzfristig CASH auslösen.",
-    "buy_zone_note": "Aktuelle Zone ($70k–$78k) entspricht -29% bis -36% vom ATH und liegt im unteren Bereich der historischen Akkumulationszone (-40% bis -60%). Empfehlung: Sparrate auf 1.5× erhöhen (z.B. €1.500–€2.000/Monat). Sollte BTC auf $65k–$60k fallen (F&G weiter unter 20), Sparrate auf das 2×-Maximum erhöhen und verfügbare Cash-Reserve schrittweise einsetzen.",
+    "signal_changer": "Signal kippt auf HOLD wenn BTC den 200-Tage-MA ($87k) nachhaltig zurückerobert (bullish flip) oder auf CASH/warten wenn BTC unter $60k fällt ohne Stabilisierung und F&G weiter sinkt – dann wäre die optimale Kernkaufzone ($55k–$45k) noch nicht erreicht.",
+    "buy_zone_note": "Aktuell befindet sich BTC bei -31.5% vom ATH – innerhalb, aber am oberen Rand der historischen DCA-Kaufzone (-40% bis -60%). Empfehlung: Sparrate auf 1.5× erhöhen (z.B. €1.500–€3.000/Monat) und 30-40% der Cash-Reserve gestaffelt einsetzen. Sollte BTC in die $60k–$50k-Zone fallen, auf 2× Sparrate erhöhen und restliche Cash-Reserve aggressiv allokieren.",
     "news_headlines": [
       "Strategy Nears 1M BTC Milestone - Investing News Network",
       "Bitcoin Price Prediction 2026-2031: Is $73K Next After 4% Gain? - CoinDCX",
@@ -46,8 +46,8 @@
     "updated": "2026-04-16"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 87156.0,
-  "ma50": 69823.0,
+  "ma200": 87157.0,
+  "ma50": 69827.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

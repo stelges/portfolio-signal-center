@@ -504,7 +504,12 @@ Sprache: Deutsch. Klar, direkt, keine Floskeln."""
             messages=[{"role": "user", "content": prompt}]
         )
         raw = response.content[0].text.strip()
-        # JSON parsen – Fallback auf Plain-Text wenn kein valides JSON
+        # Markdown-Codeblöcke entfernen (```json ... ``` oder ``` ... ```)
+        if raw.startswith("```"):
+            raw = raw.split("```")[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+            raw = raw.strip()
         try:
             return json.loads(raw)
         except json.JSONDecodeError:

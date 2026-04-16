@@ -1,27 +1,27 @@
 {
-  "last_updated": "2026-04-16T18:22:45.301555Z",
+  "last_updated": "2026-04-16T18:31:58.757484Z",
   "updated_by": "update_intelligence.py v2 (GitHub Actions)",
   "global_signal": "HOLD",
   "global_summary": "Normales DCA fortführen",
   "fear_greed": 23,
-  "btc_price_usd": 74471,
+  "btc_price_usd": 74411,
   "btc_ath_dist_pct": -31.7,
-  "btc_30d_change_pct": 2.46,
+  "btc_30d_change_pct": 2.38,
   "next_update": "2026-04-23T18:00:00Z",
   "ai_weekly_briefing": "Wochenbriefing temporär nicht verfügbar.",
   "market_regime": "fearful",
   "btc_dominance_pct": 57.0,
   "macro": {
-    "sp500": 7025.35,
-    "dxy": 98.25,
-    "gold": 4810.1,
+    "sp500": 7026.27,
+    "dxy": 98.23,
+    "gold": 4812.6,
     "us10y": 4.31
   },
   "next_halving": {
-    "next_halving_estimated_utc": "2028-04-12T08:42:52Z",
+    "next_halving_estimated_utc": "2028-04-12T08:42:05Z",
     "next_halving_block": 1050000,
-    "blocks_remaining": 104630,
-    "current_block_height": 945370,
+    "blocks_remaining": 104629,
+    "current_block_height": 945371,
     "halving_source": "blockchain_calculated"
   }
 }

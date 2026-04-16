@@ -305,6 +305,17 @@ body{
 
 .footer{text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-family:'DM Mono',monospace;font-size:10px;color:var(--dim);line-height:2.2;}
 
+/* ── MAKRO ── */
+.macro-bar{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:14px 18px;margin-bottom:14px;}
+.macro-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.macro-title{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.15em;}
+.macro-ts{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);}
+.macro-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;}
+.macro-item{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;}
+.macro-label{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px;}
+.macro-val{font-family:'DM Mono',monospace;font-size:16px;font-weight:600;color:#fff;}
+.macro-sub{font-family:'DM Mono',monospace;font-size:10px;margin-top:3px;}
+
 /* ── HALVING COUNTDOWN ── */
 .halving-bar{background:var(--card);border:1px solid rgba(247,147,26,.2);border-radius:12px;padding:14px 18px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
 .halving-tag{font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px;}
@@ -351,6 +362,15 @@ body{
     <div class="hc-unit"><div class="hc-val" id="hcSecs">—</div><div class="hc-label">Sek</div></div>
   </div>
   <div class="halving-blocks" id="halvingBlocks"></div>
+</div>
+
+<!-- MAKRO INDIKATOREN -->
+<div class="macro-bar" id="macroBar" style="display:none;">
+  <div class="macro-hdr">
+    <div class="macro-title">Makro-Umfeld</div>
+    <div class="macro-ts" id="macroTs">—</div>
+  </div>
+  <div class="macro-grid" id="macroGrid"></div>
 </div>
 
 <!-- GLOBAL SIGNAL -->
@@ -938,6 +958,70 @@ async function loadAll() {
   render();
 }
 
+// ── MAKRO SEKTION ──
+function renderMacro() {
+  const m = AI.portfolio?.macro;
+  if (!m) return;
+
+  const btcDom = AI.portfolio?.btc_dominance_pct;
+  const totalMc = AI.portfolio?.total_market_cap_usd_trillions;
+
+  const items = [
+    {
+      label: 'S&P 500',
+      val: m.sp500 ? m.sp500.toLocaleString('en-US') : '—',
+      sub: m.sp500 ? (m.sp500 > 5000 ? '↑ Risk-on' : '↓ Risk-off') : '',
+      color: m.sp500 > 5000 ? 'var(--buy)' : 'var(--cash)'
+    },
+    {
+      label: 'DXY (Dollar)',
+      val: m.dxy ? m.dxy.toFixed(1) : '—',
+      sub: m.dxy ? (m.dxy > 104 ? '↑ Stark – negativ BTC' : '↓ Schwach – positiv BTC') : '',
+      color: m.dxy > 104 ? 'var(--sell)' : 'var(--buy)'
+    },
+    {
+      label: 'Gold',
+      val: m.gold ? '$' + m.gold.toLocaleString('en-US') : '—',
+      sub: m.gold > 2500 ? '↑ Flucht in Sicherheit' : '↓ Risikobereitschaft',
+      color: m.gold > 2500 ? 'var(--hold)' : 'var(--buy)'
+    },
+    {
+      label: '10Y US-Rendite',
+      val: m.us10y ? m.us10y.toFixed(2) + '%' : '—',
+      sub: m.us10y > 4.5 ? '↑ Teures Kapital' : '↓ Günstig für Risk-Assets',
+      color: m.us10y > 4.5 ? 'var(--sell)' : 'var(--buy)'
+    },
+    {
+      label: 'BTC-Dominanz',
+      val: btcDom ? btcDom + '%' : '—',
+      sub: btcDom > 55 ? '↑ Altcoins schwach' : '↓ Altcoin-Season',
+      color: btcDom > 55 ? 'var(--hold)' : 'var(--buy)'
+    },
+    {
+      label: 'Crypto Market Cap',
+      val: totalMc ? '$' + totalMc + 'T' : '—',
+      sub: totalMc > 2.5 ? '↑ Bullish' : '↓ Bearish',
+      color: totalMc > 2.5 ? 'var(--buy)' : 'var(--hold)'
+    },
+  ];
+
+  document.getElementById('macroGrid').innerHTML = items.map(i => `
+    <div class="macro-item">
+      <div class="macro-label">${i.label}</div>
+      <div class="macro-val">${i.val}</div>
+      <div class="macro-sub" style="color:${i.color}">${i.sub}</div>
+    </div>`).join('');
+
+  const ts = AI.portfolio?.last_updated;
+  if (ts) {
+    const d = new Date(ts);
+    document.getElementById('macroTs').textContent =
+      'Stand: ' + d.toLocaleDateString('de-DE') + ' · freitags aktualisiert';
+  }
+
+  document.getElementById('macroBar').style.display = 'block';
+}
+
 // ── HALVING COUNTDOWN ──
 let halvingTarget = null;
 
@@ -987,6 +1071,7 @@ function tickCountdown() {
 fetchAIData().then(() => {
   loadAll();
   initHalving();
+  renderMacro();
   setInterval(loadAll, 300000);
   setTimeout(()=>tog('cb-btc'),500);
 });

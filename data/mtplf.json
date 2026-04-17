@@ -9,8 +9,8 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 1.1311,
-  "btc_nav_usd_billions": 3.03,
+  "mnav": 1.113,
+  "btc_nav_usd_billions": 3.11,
   "zones": {
     "buy": {
       "label": "mNAV < 1.1x",
@@ -28,35 +28,35 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-off + Fear-Driven Capitulation (Fear & Greed 23/100) + BTC Akkumulation Phase vor nächstem Zyklus",
+    "macro_regime": "Risk-off + Liquiditätszyklus in Early-Stage Bitcoin Adoption; Fear & Greed 21 = Kapitulationsphase; BTC -29% vom ATH = Akkumulationszone für institutionelle Treasury Companies.",
     "active_indicators": [
-      "mNAV 1.1311x (innerhalb idealer Kaufzone 0.9–1.2x, BTC durch MTPLF günstiger als Direktkauf)",
-      "BTC-Momentum: KI-Signal BUY + 40,177 BTC Holdings (3. größtes Treasury) = strukturelle Hebelwirkung auf BTC-Rallye",
-      "JPY-Schwäche (USD/JPY 159.15) = Tailwind für USD-basierte BTC-Aktiva + japanisches Sentiment-Tailwind (Eric Trump Besuch, politisches Momentum)"
+      "mNAV 1.1130x (im idealen Kaufzone 0.9–1.2x; BTC über Aktie günstiger)",
+      "BTC-KI-Signal BUY + BTC-Dominanz 57.3% (Altcoin-Blutung = institutionelle Rotation zu Core Assets)",
+      "Recent $620M Akquisition (5,075 BTC) = Signal von Insider-Confidence auf BTC-Bottom; schwacher JPY (158.32 USD/JPY) = Vorteil für USD-Aktiva-Halter"
     ],
-    "summary": "Metaplanet notiert auf attraktiver mNAV (1.13x) in einer BTC-Akkumulationsphase mit Fear-Sentiment am Markt. Die massive BTC-Position (40k+) und schwacher Yen bieten asymmetrisches Aufwärtspotenzial. Ideales Timing für monatliches DCA in diesem Zyklus-Stadium.",
+    "summary": "Metaplanet ist aktuell mit mNAV 1.1130x im klassischen Kauffenster – BTC ist günstiger via Aktie als direkt zu kaufen. Die Kapitulation im Markt (Fear & Greed 21), kombiniert mit dem jüngsten $620M Treasury-Buy und der dritten Position unter Bitcoin-Treasury-Companies, signalisiert institutionelle Akkumulation auf einem technischen Bottom. Für einen 7-Jahres-DCA ist dies eine ideale Entry-Zone.",
     "price_targets": {
-      "buy_zone_mnav": 1.2,
-      "buy_aggressiv_mnav": 1.05,
+      "buy_zone_mnav": 1.15,
+      "buy_aggressiv_mnav": 0.95,
       "take_profit_1_mnav": 1.5,
-      "take_profit_1_action": "10% Position reduzieren (Gewinnmitnahme bei früher Expansion)",
+      "take_profit_1_action": "10% Position verkaufen (Lock-in bei +35% mNAV-Expansion)",
       "take_profit_2_mnav": 2.0,
-      "take_profit_2_action": "30% Position reduzieren (Mitte des Bull-Zyklus)",
+      "take_profit_2_action": "30% Position verkaufen (Lock-in bei +80% mNAV-Expansion; BTC typischerweise 3–5x in 2–3 Jahren Post-Halving)",
       "concern_mnav": 2.5
     },
-    "bull_case": "BTC steht am Anfang eines neuen Zyklus (Fear-Sentiment, KI-Signal BUY); Metaplanet mit 1.13x mNAV bietet Hebel auf BTC-Aufwertung + JPY-Schwäche als zusätzlicher Tailwind. Bei BTC-Verdopplung auf $150k könnte MTPLF auf 1.8–2.2x mNAV expandieren = 60–95% Gewinn.",
-    "bear_case": "USD-Stärke (DXY 98.19) und anhaltende Risk-off könnten Liquiditätsabflüsse aus Japan auslösen; wenn BTC unter $70k fällt, wird mNAV schnell zu >1.2x (Verkaufsdruck). Schulden ($280M) sind in Makro-Krise ein Risiko.",
-    "signal_changer": "mNAV > 1.80x (Reduktion auf 30%) | mNAV > 2.50x (Stop, 50% Verkauf) | BTC < $60k + Fear & Greed < 15 (Liquiditätspanik) | JPY > 150 (Dollar-Rally bricht)",
+    "bull_case": "Bitcoin befindet sich in klassischer Akkumulationsphase 6–12 Monate Post-Halving; Metaplanet's Treasury-Buy auf $620M ist kontra-zyklisch und signalisiert Management-Confidence. Bei BTC 150–200k (in 3–5 Jahren realistic), expandiert mNAV auf 1.8–2.5x + Aktie selbst profitiert = 15–25x Potenzial.",
+    "bear_case": "Fear & Greed 21 könnte noch tiefer gehen (BTC könnte zu $50–60k crashen); USD/JPY könnte bei BOJ-Intervention schwächer werden, was USD-Aktiva-Haltern schadet. Schuldenquote ($280M) ist bei BTC-Crash relevant.",
+    "signal_changer": "mNAV > 2.5x (reduziere auf HOLD, teilweise verkaufen); BTC < $60k ohne neuen Akkumulations-News (reassess); BOJ-Intervention + JPY +5% stark (USD-Vorteil erodiert → HOLD statt BUY); Fear & Greed fällt unter 10 UND mNAV > 1.5x (zu viel Optimismus eingepreist).",
     "news_headlines": [
       "Metaplanet acquires 5,075 BTC, jumps to third largest bitcoin treasury company - CoinDesk",
+      "3350.T Stock Surges 5.5% in After-Hours Trading on JPX - Meyka",
       "Japanese Bitcoin treasury Metaplanet surges on $620 mln buy - Investing.com",
-      "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst - TradingView — Track All Markets",
-      "Eric Trump takes stage in Japan as bitcoin firm Metaplanet votes on capital plan - Reuters"
+      "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst - TradingView — Track All Markets"
     ],
-    "updated": "2026-04-16"
+    "updated": "2026-04-17"
   },
   "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien.",
-  "stock_price_usd": 2.1552,
-  "stock_price_jpy": 343.0,
-  "usdjpy": 159.15
+  "stock_price_usd": 2.1791,
+  "stock_price_jpy": 345.0,
+  "usdjpy": 158.32
 }

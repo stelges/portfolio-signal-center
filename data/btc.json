@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "BUY",
-  "price_usd": 75352,
+  "price_usd": 77362,
   "ath_usd": 109000,
-  "ath_dist_pct": -30.9,
-  "change_30d_pct": 3.67,
+  "ath_dist_pct": -29.0,
+  "change_30d_pct": 3.34,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,25 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-off mit Dollar-Schwäche und fiskalischer Dominanz – stagflationäres Übergangsszenario mit selektiver Flucht in harte Assets",
-    "summary": "BTC befindet sich in einer klassischen Post-Halving-Akkumulationsphase mit extremem Angst-Sentiment, strukturell fallendem Dollar und institutioneller Nachfrage (ETF-Flows, Strategy-Akkumulation). Der 200-MA-Bruch ist besorgniserregend, wird aber durch makrostrukturelle Rückenwinde (DXY-Schwäche, IMF-Schuldenwarnung, Gold auf ATH) kompensiert. Der Markt preist aktuell Rezessionsrisiken ein, nicht die 12-18-Monats-Halving-Logik.",
+    "macro_regime": "Risk-off mit schwachem Dollar + Stagflationsangst – BTC als digitales Gold mit Akkumulationsdruck",
+    "summary": "BTC befindet sich in einer Pre-Halving-Akkumulationsphase (~24 Monate vor nächstem Halving) mit extremem Angst-Sentiment und einem schwachen Dollar – klassisches Setup für erhöhtes DCA. Der Kurs liegt unter dem 200-Tage-MA ($86.974), was technisch bärisch ist, aber gleichzeitig als mittelfristige Rückkehrzielzone fungiert. Dominierendes Thema ist die Kombination aus Makro-Unsicherheit (IMF-Schuldenwarnung, erhöhte Renditen) und institutioneller Akkumulation (Strategy nähert sich 1M BTC), die Extremangst-Phasen historisch als Einstiegsfenster qualifiziert.",
     "active_indicators": [
-      "DXY (98.19, fallend) – Schwacher Dollar ist historisch der stärkste Einzelindikator für BTC-Rallys; strukturelle Dollar-Schwäche durch Fiskalexpansion und Fed-Druck erhöht BTC-Nachfrage als Wertspeicher",
-      "Fear & Greed Index (23 – Extremangst) – Historisch zuverlässiges Kontraindikator-Signal; die letzten 5 Zyklen zeigten, dass Akkumulation bei Werten unter 25 in 12-Monats-Fenstern durchgängig positiv war",
-      "Abstand zum 200-Tage-MA ($87.160) – BTC handelt 13.5% darunter; historisch in Post-Halving-Akkumulationsphasen (2016, 2020) war dies eine valide Einstiegszone vor der parabolischen Phase"
+      "DXY (97.99, schwach) – Historisch stärkster Rückenwind für BTC: schwacher Dollar treibt Kapital in harte Assets, aktuell klar bullish",
+      "Fear & Greed Index (21 – Extremangst) – Historisch zuverlässigster Kontraindikator: Werte unter 20-25 markierten in 2019, 2022 und 2023 mittelfristige Tiefpunkte, DCA-Akkumulation lohnt sich statistisch",
+      "BTC-Dominanz (57.3%) + Gold-Anstieg ($4887) – Flucht in Qualität innerhalb Crypto + paralleler Gold-Anstieg signalisiert Stagflationsregime, in dem BTC als Store-of-Value historisch outperformt"
     ],
     "news_headlines": [
+      "Will Bitcoin Soar Past $75K? Bulls and Bears Face Off - Phemex",
       "Strategy Nears 1M BTC Milestone - Investing News Network",
+      "Crypto Strategist Warns Bitcoin Mirroring 2014 Bear Market With Recent Rally, Details Short-Term Price Ceiling for BTC - The Daily Hodl",
       "IMF's global debt warning underscores bitcoin's (BTC) role in investor portfolios - CoinDesk",
-      "Bitcoin Price Prediction 2026-2031: Is $73K Next After 4% Gain? - CoinDCX",
-      "The road ahead for crypto markets in 2026 - Kraken Blog",
-      "Here’s how high bitcoin (BTC) can rally as ETFs, Coinbase premium, and macro conditions turn more supportive - CoinDesk"
+      "Bitcoin Price Prediction 2026-2031: Is $73K Next After 4% Gain? - CoinDCX"
     ],
-    "updated": "2026-04-16"
+    "updated": "2026-04-17"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 87160.0,
-  "ma50": 69839.0,
+  "ma200": 86974.0,
+  "ma50": 70033.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

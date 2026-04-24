@@ -5,9 +5,9 @@
   "icon": "⬡",
   "color": "#76b900",
   "signal": "BUY",
-  "price_usd": 200.89,
+  "price_usd": 208.31,
   "price_52w_high_usd": 212.19,
-  "price_52w_low_usd": 95.04,
+  "price_52w_low_usd": 104.08,
   "pe_ratio": null,
   "revenue_growth_yoy_pct": null,
   "next_earnings": "Mai 2026",
@@ -28,33 +28,33 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit moderater Zinsstabilität; KI-Capex-Superzyklus in voller Entfaltung; niedriges Markt-Sentiment schafft Kaufgelegenheit für Quality-Namen.",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit strukturellem KI-Capex-Superzyklus. Moderate Zinsen (4.31%), neutraler Dollar, aber niedriges Markt-Sentiment (39/100) schafft Einstiegsgelegenheit für systematische Käufer.",
     "active_indicators": [
-      "KI-Capex-Zyklus: >$300B kombinierte 2026-Ausgaben der Hyperscaler + 80%+ Nvidia-Abhängigkeit = Umsatzmotor (DIESEM Regime = primärer Indikator)",
-      "Bewertungs-Dislokation: KGV ~45–55x vs. 40%+ jährliches Daten-Center-Umsatzwachstum = rechtfertigt Premium, nicht überbewertet",
-      "Fear & Greed bei 21/100 + starke technische Struktur (nur -5.3% vom 52W-Hoch) = Sentiment-Kauf im Kontext von Fundamentals-Stärke"
+      "KI-Capex-Zyklus: $300B+ kombinierte Data-Center-Ausgaben 2026 mit 80%+ Nvidia-Abhängigkeit – directer Demand-Proof für nächste 18-24 Monate",
+      "CUDA-Moat + Monopolposition: Keine technische Alternative für Large-Scale Training – Switching-Kosten und Ökosystem-Lock-in sind Strukturschutz",
+      "Earnings-Momentum: Q1 FY2026 schlägt Erwartungen, Data-Center +73% YoY – nächster Catalyst Mai 2026 mit Blackwell-Ramp-Details"
     ],
-    "summary": "Nvidia bleibt der ultimative KI-Infrastructure-Play in einem Regime, in dem Hyperscaler Rekordbudgets für KI-Training ausgeben. Bei $200.89 mit positiven Earnings (Mai 2026) und Ex-China-Risiko-Abbau (neue Export-Regelungen) bietet sich ein günstiger Einstiegspunkt für DCA-Anleger an. Das niedrige Markt-Sentiment widerspricht der Fundamental-Stärke.",
+    "summary": "NVIDIA sitzt auf strukturellem Tailwind eines mehrjährigen KI-Capex-Zyklus mit faktischem Monopol auf Training-Hardware. Bei $208.31 (-1.8% vom 52W-Hoch) und depressivem Markt-Sentiment (Fear & Greed 39) bietet sich DCA-Einstieg für 7-Jahres-Horizont an. Export-Risiken und Bewertung (KGV 30-60x) sind bekannt, aber fundamentale Nachfrage-Struktur bleibt intakt.",
     "price_targets": {
       "buy_zone": 195,
-      "buy_aggressiv": 185,
+      "buy_aggressiv": 180,
       "take_profit_1_price": 240,
-      "take_profit_1_action": "20% verkaufen / Gewinn-Mitnahme auf Base-Position",
+      "take_profit_1_action": "Rebalancing-Trigger (20% der Position reduzieren wenn >70x KGV)",
       "take_profit_2_price": 280,
-      "take_profit_2_action": "50% der verbliebenen Position reduzieren",
-      "concern_below": 160
+      "take_profit_2_action": "Teilgewinnmitnahme (30% Position bei Euphorie-Phase, z.B. Fear & Greed >80)",
+      "concern_below": 150
     },
-    "bull_case": "KI-Capex-Zyklus beschleunigt sich 2026–2027; Blackwell-Ramp startet Q2 2026 mit höheren Margen. Nvidia ist unverzichtbar und praktisch alternativlos für Hyperscaler-Training – KGV von 45–55x ist am unteren Ende des gerechtfertigten Range.",
-    "bear_case": "KGV >70x bleibt Bewertungs-Risiko, falls Capex-Zyklus enttäuscht. Geopolitische Risiken (China-Sanktionen verschärfung, Retorsion) könnten kurzfristig Druck erzeugen.",
-    "signal_changer": "1) KGV >70x ohne entsprechende Guidance-Erhöhung → HOLD. 2) Hyperscaler-Capex-Guides 2026 <$280B → SELL. 3) Technische Bruch unter $160 (200-Tage-MA-Rückgang) → CASH/reduzieren. 4) Neuerliche aggressive China-Export-Sanktionen → taktisches Underweight.",
+    "bull_case": "KI-Capex-Zyklus ist strukturell, nicht zyklisch – Microsoft, Google, Amazon committen Rekordsummen für Data-Center-Cluster, die 5-10 Jahre laufen. CUDA-Ökosystem ist nicht in 2-3 Jahren zu replizieren, AMD/Intel sind mittelfristig keine Gefahr für Nvidia's Margin-Struktur.",
+    "bear_case": "China-Export-Bans können kapazitätsgewichtig 15-25% der Nachfrage treffen. KGV >70x würde Bewertungsreset rechtfertigen. Wenn eine der Hyperscaler ihre Capex-Pläne 2H26 revidiert, kollabiert Demand-Narrative.",
+    "signal_changer": "VERKAUFEN wenn: (1) Earnings-Call Mai 2026 zeigt schwächere Blackwell-Guidance oder Hyperscaler-Capex-Revision, (2) KGV persistent >80x ohne Wachstums-Acceleration, (3) neue China-Sanktionen reduzieren addressable Market um >20%, oder (4) Markt-Sentiment bleibt <20/100 während Fundamentale bestätigt werden (Sell-off würde technische Unterstützung bei $150 gefährden).",
     "news_headlines": [
       "NVIDIA Announces Financial Results for First Quarter Fiscal 2026 - NVIDIA Newsroom",
+      "Nvidia Stock (NVDA): $1 Trillion Order Backlog, Vera - techi.com",
       "Government Drops Sweeping AI Chip Export Rules: Can Nvidia Start Growing Again? - 24/7 Wall St.",
-      "NVIDIA Corporation (NVDA): Powering the AI Revolution and Beyond – A Deep Dive - FinancialContent",
-      "Nvidia (NVDA) vs AMD: Which AI Chip Stock Deserves Your Investment in 2026? - MEXC",
-      "Nvidia (NVDA) vs AMD: Who’s Winning the AI Chip Race in 2026? - MEXC"
+      "Why is Nvidia stock falling today? - TradingView",
+      "Nvidia beats on earnings and revenue as data center sales jump 73% - CNBC"
     ],
-    "updated": "2026-04-17"
+    "updated": "2026-04-24"
   },
   "quarterly_review": {
     "last_quarter": "Q4 FY2026",
@@ -64,5 +64,5 @@
     "guidance_note": null
   },
   "strategy_note": "Stabilitätsanker. KI-Infrastruktur ist unvermeidlich – NVDA ist der einzige Profiteur ohne echte Konkurrenz.",
-  "dist_from_52w_high_pct": -5.3
+  "dist_from_52w_high_pct": -1.8
 }

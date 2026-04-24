@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "BUY",
-  "price_usd": 77362,
+  "price_usd": 77599,
   "ath_usd": 109000,
-  "ath_dist_pct": -29.0,
-  "change_30d_pct": 3.34,
+  "ath_dist_pct": -28.8,
+  "change_30d_pct": 9.46,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,25 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-off mit schwachem Dollar + Stagflationsangst – BTC als digitales Gold mit Akkumulationsdruck",
-    "summary": "BTC befindet sich in einer Pre-Halving-Akkumulationsphase (~24 Monate vor nächstem Halving) mit extremem Angst-Sentiment und einem schwachen Dollar – klassisches Setup für erhöhtes DCA. Der Kurs liegt unter dem 200-Tage-MA ($86.974), was technisch bärisch ist, aber gleichzeitig als mittelfristige Rückkehrzielzone fungiert. Dominierendes Thema ist die Kombination aus Makro-Unsicherheit (IMF-Schuldenwarnung, erhöhte Renditen) und institutioneller Akkumulation (Strategy nähert sich 1M BTC), die Extremangst-Phasen historisch als Einstiegsfenster qualifiziert.",
+    "macro_regime": "Risk-off mit Dollarswäche + Liquiditäts-Übergangsphase: Goldstärke signalisiert Flucht aus Fiat, schwacher DXY gibt BTC Rückenwind, aber erhöhte Renditen und Rezessionsangst dämpfen Risk-on-Euphorie. BTC agiert zunehmend als digitales Gold, nicht als Risk-Asset.",
+    "summary": "BTC befindet sich in einer klassischen Akkumulationsphase zwischen den Moving Averages: über dem 50MA, unter dem 200MA. Der makroökonomische Kontext ist gemischt – schwacher Dollar und steigendes Gold sprechen für BTC als Wertaufbewahrungsmittel, während erhöhte Renditen und Fear&Greed bei 39 kurzfristigen Druck ausüben. Für einen 7-Jahres-DCA-Investor ist dies historisch eine attraktive Einstiegszone im Pre-Halving-Fenster (Halving ~April 2028, ca. 24 Monate voraus).",
     "active_indicators": [
-      "DXY (97.99, schwach) – Historisch stärkster Rückenwind für BTC: schwacher Dollar treibt Kapital in harte Assets, aktuell klar bullish",
-      "Fear & Greed Index (21 – Extremangst) – Historisch zuverlässigster Kontraindikator: Werte unter 20-25 markierten in 2019, 2022 und 2023 mittelfristige Tiefpunkte, DCA-Akkumulation lohnt sich statistisch",
-      "BTC-Dominanz (57.3%) + Gold-Anstieg ($4887) – Flucht in Qualität innerhalb Crypto + paralleler Gold-Anstieg signalisiert Stagflationsregime, in dem BTC als Store-of-Value historisch outperformt"
+      "DXY (98.56, fallend) – In diesem Regime historisch stärkster Kontraindikator für BTC: schwacher Dollar erhöht globale Liquidität und macht BTC als Dollar-Alternative attraktiver. Aktuell klarer Rückenwind.",
+      "Gold/BTC-Ratio & Goldsignal ($4735, steigend) – Goldstärke in Risk-off-Phasen läuft BTC häufig 4–8 Wochen voraus. Historisch folgt BTC der Goldperformance mit Verzögerung in Phasen, in denen BTC-Dominanz >55% liegt.",
+      "BTC-Dominanz (58.1%) + 200MA-Position – Hohe Dominanz zeigt defensive Rotation innerhalb Crypto (Kapital flieht nicht aus Crypto, sondern in BTC). Preislage unter 200MA ($85.4k) signalisiert noch keinen Bullenmarkt-Bestätigung, aber 50MA ($71.2k) hält als Unterstützung."
     ],
     "news_headlines": [
-      "Will Bitcoin Soar Past $75K? Bulls and Bears Face Off - Phemex",
-      "Strategy Nears 1M BTC Milestone - Investing News Network",
-      "Crypto Strategist Warns Bitcoin Mirroring 2014 Bear Market With Recent Rally, Details Short-Term Price Ceiling for BTC - The Daily Hodl",
-      "IMF's global debt warning underscores bitcoin's (BTC) role in investor portfolios - CoinDesk",
-      "Bitcoin Price Prediction 2026-2031: Is $73K Next After 4% Gain? - CoinDCX"
+      "Bitcoin Price Prediction 2026-2031: Is $80K Next? - CoinDCX",
+      "Bitcoin price news: BTC tops $79,000 as crypto rally accelerates; MSTR, COIN, CRCL jump - CoinDesk",
+      "Bitcoin Price Prediction as BTC Hits $78K Again: Can It Clear $80K? - 24/7 Wall St.",
+      "The road ahead for crypto markets in 2026 - Kraken Blog",
+      "Bitcoin faces near-term pressure as liquidity tightens, Hilbert Group CIO says - CoinDesk"
     ],
-    "updated": "2026-04-17"
+    "updated": "2026-04-24"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 86974.0,
-  "ma50": 70033.0,
+  "ma200": 85422.0,
+  "ma50": 71159.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

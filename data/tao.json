@@ -5,7 +5,7 @@
   "icon": "τ",
   "color": "#00d4ff",
   "signal": "HOLD",
-  "price_usd": 248.51,
+  "price_usd": 273.82,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -29,33 +29,33 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on-Ansätze (Grayscale-Katalysator, KI-Narrative) vs. BTC-Dominanz-Gegenwind (58.1%) + moderate Fear & Greed (39/100) – fragile Balance im post-Halving-Zyklus.",
+    "macro_regime": "Risk-on mit BTC-Leadership + hoher BTC-Dominanz (58.5%) = Ungünstig für High-Beta Altcoins; Fear & Greed 26/100 signalisiert noch Angst trotz BTC-Buy-Signal",
     "active_indicators": [
-      "BTC-Dominanz 58.1% (strukturelles Headwind für High-Beta Altcoins wie TAO – sollte <55% fallen für aggressives Altseason-Setup)",
-      "Grayscale-ETF-Antrag (Katalysator für institutionelle Liquidität – Approval-Wahrscheinlichkeit Schlüsselfaktor)",
-      "Post-Halving-Emission (Dezember 2025 abgeschlossen – deflationärer Druck positiv, aber Effekt erst mid-cycle priced in)"
+      "BTC-Dominanz 58.5% (Kritisch: Starker BTC zieht Liquidität von Altcoins ab – TAO unterperformt in diesem Regime)",
+      "Fear & Greed Index 26/100 (Zu niedrig für aggressive TAO-Käufe; erst ab 35+ defensiv erhöhen)",
+      "Grayscale-ETF-Katalysator (Langfristig bullish, aber approval ungewiss; Q3-Q4 2026 frühestens real)"
     ],
-    "summary": "TAO befindet sich an kritischer Weggabelung: Grayscale-ETF-Genehmigung könnte asymmetrisches Upside-Szenario eröffnen; gleichzeitig hemmt hohe BTC-Dominanz und gedämpftes Sentiment (39/100 Fear & Greed) Risk-on-Moves. HOLD ist korrekt bis BTC-Dominanz nachgibt ODER Grayscale-Approval signalisiert wird – dann aggressives Aufstocken.",
+    "summary": "TAO befindet sich in klassischer Altcoin-Squeeze-Phase: BTC signalisiert BUY, aber hohe Dominanz + niedriges Sentiment halten Altcoins gedrückt. Grayscale-ETF-Antrag ist Langfrist-Catalyst, rechtfertigt aber noch keinen aggressiven Einstieg bei Fear 26.",
     "price_targets": {
-      "buy_zone": 220,
-      "buy_aggressiv": 185,
+      "buy_zone": 240,
+      "buy_aggressiv": 200,
       "take_profit_1_price": 380,
-      "take_profit_1_action": "30% Position reduzieren – erste Euphorie-Phase",
-      "take_profit_2_price": 550,
-      "take_profit_2_action": "weitere 40% verkaufen – Grayscale-Effekt kapitalisiert",
-      "concern_below": 195
+      "take_profit_1_action": "30% Position reduzieren (Zyklus-Gewinn sichern)",
+      "take_profit_2_price": 520,
+      "take_profit_2_action": "50% Position verkaufen (Altcoin-Rally-Peak hedgen)",
+      "concern_below": 180
     },
-    "bull_case": "Grayscale-ETF-Genehmigung katalysiert institutionelle Kapitalzuflüsse und validiert dezentrale KI als strategische Assetklasse; TAO als Marktführer in dezentraler Inference/Training hat 15–20x MCap-Aufholpotenzial zu LINK oder RNDR (2–3J Horizont). Post-Halving-Emissionshalbierung + 21M Supply-Cap wirken deflationär wie BTC, echter Seltenheitsmechanismus.",
-    "bear_case": "Dezentrale KI bleibt Nische – zentralisierte Hyperscaler (OpenAI, Anthropic, Google) dominieren Markt; BTC-Dominanz steigt auf 65%+ → Altseason ausgebremst. TAO ist frühe Technologie mit unerwiesener Skalierbarkeit und regulatorischen Unsicherheiten.",
-    "signal_changer": "🟢 BUY → Grayscale-ETF offiziell genehmigt ODER BTC-Dominanz fällt <52% + Fear & Greed >50. 🔴 CASH → BTC-Dominanz >62% + makroökonomische Rezessionsangst verstärkt sich (Arbeitslosenquote spike, Fed-Straffung unvermeidlich). TAO-spezifisch: Massive Subnet-Ausfälle oder Regulatory-FUD würden Grundthese untergraben.",
+    "bull_case": "Grayscale-ETF-Genehmigung würde institutionelle Liquidität anziehen (Präzedenzfall: SOL +300% nach Spot-ETF). Halving (Dez 2025) reduziert Inflation; 60+ Subnets + steigende KI-Nachfrage rechtfertigen mittelfristig 2–3x Kurs.",
+    "bear_case": "BTC-Dominanz 58.5% signalisiert, dass Altcoins noch nicht rotieren; Fear & Greed 26 = Markt noch zu pessimistisch für High-Risk-Assets. Dezentrales KI bleibt Nische vs. Hyperscaler; Ausführungsrisiko (Subnet-Adoption, Validator-Zentralisierung) hoch.",
+    "signal_changer": "KAUFEN → wenn (1) Fear & Greed >40 ODER (2) BTC-Dominanz <55% ODER (3) Grayscale-ETF-Genehmigung bestätigt. VERKAUFEN → wenn BTC-Signal SELL oder Subnet-Wachstum stagniert / Validator-Zentralisierung offensichtlich wird.",
     "news_headlines": [
       "The Stack - Grayscale",
       "Grayscale bets on ‘decentralized AI’ with first-ever Bittensor ETF filing - AMBCrypto",
       "Grayscale files for first U.S. Bittensor ETP as decentralized AI gains momentum - Yahoo! Finance Canada",
-      "Grayscale Files Amended S-1 for Bittensor TAO Trust - Cryptonews.net"
+      "Grayscale Investments Focuses On Decentralized AI With Bittensor Trust ETF Filing - Crowdfund Insider"
     ],
-    "updated": "2026-04-24"
+    "updated": "2026-05-01"
   },
   "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
-  "market_cap_usd_billions": 2.67
+  "market_cap_usd_billions": 2.94
 }

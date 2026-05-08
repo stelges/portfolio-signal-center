@@ -5,7 +5,7 @@
   "icon": "τ",
   "color": "#00d4ff",
   "signal": "HOLD",
-  "price_usd": 273.82,
+  "price_usd": 314.14,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -29,33 +29,21 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on mit BTC-Leadership + hoher BTC-Dominanz (58.5%) = Ungünstig für High-Beta Altcoins; Fear & Greed 26/100 signalisiert noch Angst trotz BTC-Buy-Signal",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit BTC-Leadership, aber hohe BTC-Dominanz (58.2%) bremst High-Beta-Altcoins. Dezentrales KI-Narrativ wächst, aber noch Nische.",
+    "summary": "TAO sitzt in einem klassischen Limbo: Das fundamentale Narrativ (dezentrales KI + Grayscale-ETF-Filing) ist bullish und längerfristig stark, aber die kurzfristige Makro-Dynamik (BTC-Dominanz über 58%, Fear & Greed unter 40, S&P-Koppelung) belastet High-Beta-Altcoins. Der Halving-Druck fällt weg (Dezember 2025), aber neue Katalysatoren (ETF-Approval, Subnet-Wachstum) brauchen Zeit. HOLD, keine neuen Positionen bis BTC-Dominanz unter 56% oder Fear & Greed > 50.",
     "active_indicators": [
-      "BTC-Dominanz 58.5% (Kritisch: Starker BTC zieht Liquidität von Altcoins ab – TAO unterperformt in diesem Regime)",
-      "Fear & Greed Index 26/100 (Zu niedrig für aggressive TAO-Käufe; erst ab 35+ defensiv erhöhen)",
-      "Grayscale-ETF-Katalysator (Langfristig bullish, aber approval ungewiss; Q3-Q4 2026 frühestens real)"
+      "BTC-Signal (BUY) – positive Basis, aber TAO folgt BTC mit Lag und Volatilität",
+      "BTC-Dominanz 58.2% – strukturell ungünstig für High-Beta-Assets wie TAO; Rotation in Altcoins erst bei <55% wahrscheinlich",
+      "Fear & Greed 38/100 – neutral-pessimistisch; zu niedrig für aggressive Altcoin-Akkumulation, zu hoch für panische Sell-offs"
     ],
-    "summary": "TAO befindet sich in klassischer Altcoin-Squeeze-Phase: BTC signalisiert BUY, aber hohe Dominanz + niedriges Sentiment halten Altcoins gedrückt. Grayscale-ETF-Antrag ist Langfrist-Catalyst, rechtfertigt aber noch keinen aggressiven Einstieg bei Fear 26.",
-    "price_targets": {
-      "buy_zone": 240,
-      "buy_aggressiv": 200,
-      "take_profit_1_price": 380,
-      "take_profit_1_action": "30% Position reduzieren (Zyklus-Gewinn sichern)",
-      "take_profit_2_price": 520,
-      "take_profit_2_action": "50% Position verkaufen (Altcoin-Rally-Peak hedgen)",
-      "concern_below": 180
-    },
-    "bull_case": "Grayscale-ETF-Genehmigung würde institutionelle Liquidität anziehen (Präzedenzfall: SOL +300% nach Spot-ETF). Halving (Dez 2025) reduziert Inflation; 60+ Subnets + steigende KI-Nachfrage rechtfertigen mittelfristig 2–3x Kurs.",
-    "bear_case": "BTC-Dominanz 58.5% signalisiert, dass Altcoins noch nicht rotieren; Fear & Greed 26 = Markt noch zu pessimistisch für High-Risk-Assets. Dezentrales KI bleibt Nische vs. Hyperscaler; Ausführungsrisiko (Subnet-Adoption, Validator-Zentralisierung) hoch.",
-    "signal_changer": "KAUFEN → wenn (1) Fear & Greed >40 ODER (2) BTC-Dominanz <55% ODER (3) Grayscale-ETF-Genehmigung bestätigt. VERKAUFEN → wenn BTC-Signal SELL oder Subnet-Wachstum stagniert / Validator-Zentralisierung offensichtlich wird.",
     "news_headlines": [
       "The Stack - Grayscale",
-      "Grayscale bets on ‘decentralized AI’ with first-ever Bittensor ETF filing - AMBCrypto",
       "Grayscale files for first U.S. Bittensor ETP as decentralized AI gains momentum - Yahoo! Finance Canada",
-      "Grayscale Investments Focuses On Decentralized AI With Bittensor Trust ETF Filing - Crowdfund Insider"
+      "Grayscale bets on ‘decentralized AI’ with first-ever Bittensor ETF filing - AMBCrypto",
+      "AI Blockchain Momentum: Grayscale Launches Bittensor TAO Trust, BitTensor Value Outlook - KuCoin"
     ],
-    "updated": "2026-05-01"
+    "updated": "2026-05-08"
   },
   "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
-  "market_cap_usd_billions": 2.94
+  "market_cap_usd_billions": 3.38
 }

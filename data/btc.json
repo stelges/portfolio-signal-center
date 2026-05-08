@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "BUY",
-  "price_usd": 78398,
+  "price_usd": 80015,
   "ath_usd": 109000,
-  "ath_dist_pct": -28.1,
-  "change_30d_pct": 17.51,
+  "ath_dist_pct": -26.6,
+  "change_30d_pct": 16.2,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,37 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-off mit schwachem Dollar + Liquiditätserwartung – BTC in Akkumulationsphase post-Halving-Zyklus",
-    "summary": "Bitcoin befindet sich in einer technisch schwachen Zone (unter MA200, wiederholte Ablehnung bei $80K), aber das Makro-Setup liefert ungewöhnlich starke Rückenwind-Signale: schwacher Dollar, steigendes Gold als Liquiditätsproxy, und der Markt ist 23 Monate nach dem April-2024-Halving – historisch die Phase, in der Institutionen akkumulieren bevor der Retail-FOMO einsetzt. Das dominante Muster ist Angst-getriebener Verkauf in einer strukturell bullischen Zyklusphase.",
+    "macro_regime": "Risk-on Transition + schwacher Dollar + institutionelle Akkumulation bei erhöhter Makro-Unsicherheit",
     "active_indicators": [
-      "DXY (98.16, schwach) – historisch starker inverser Korrelator: schwacher Dollar = Rückenwind für BTC und harte Assets",
-      "200-Tage MA ($84.018) – BTC darunter ist bearish strukturell, aber pre-Halving-Akkumulation unter MA200 war historisch (2019, 2023) eine Premium-Einstiegszone",
-      "Fear & Greed Index (26 – Angst) – Contrarian-Indikator: extreme Angst in Bullmarkt-Zyklusmitte korreliert historisch mit mittelfristigem Boden-Bereich"
+      "DXY (97.9, schwach) – historisch stärkster Rückenwind für BTC; ein fallender Dollar erhöht globale Liquidität und macht Hard-Assets attraktiver",
+      "BTC-Dominanz (58.2%) – zeigt klare Risk-off-Rotation innerhalb Crypto; Kapital flieht in BTC statt Altcoins, klassisches Akkumulationsmuster vor Bull-Run",
+      "200-Tage MA ($82,990) – BTC knapp darunter ist der kritischste technische Schwellenwert; Rückeroberung wäre starkes Trendkonfirmationssignal"
     ],
+    "summary": "BTC befindet sich in einer späten Akkumulationsphase ca. 12–13 Monate nach dem April-2024-Halving – historisch exakt das Fenster vor der parabolischen Phase. Der schwache Dollar, steigende Goldpreise und die institutionelle Nachfrage (ETF-Flows) stützen den Preis trotz Fear & Greed bei 38. Das Sentiment ist negativ genug für attraktive Einstiegskurse, während die Struktur (höhere Tiefs seit Jan 2025) bullish bleibt.",
+    "price_targets": {
+      "buy_zone": 78000,
+      "buy_aggressiv": 70000,
+      "take_profit_1_price": 109000,
+      "take_profit_1_action": "15–20% Position reduzieren – ATH-Retest mit Widerstand",
+      "take_profit_2_price": 145000,
+      "take_profit_2_action": "weitere 30–40% verkaufen – Zyklushoch-Zone 2025/2026",
+      "concern_below": 68000
+    },
+    "bull_case": "Schwacher Dollar + Post-Halving-Momentum + ETF-Zuflüsse katapultieren BTC in Q3/Q4 2026 auf neue ATHs zwischen 130k–160k. Institutionelle Entkopplung vom S&P 500 verleiht BTC Rohstoff-Status als digitales Gold.",
+    "bear_case": "Scheitert BTC daran, den 200-MA ($83k) zurückzuerobern, und dreht der DXY wieder über 101, droht ein Rückfall auf $65k–$68k mit Liquidation kaskadenartiger Positionen. Rezessionsszenario USA würde Risk-Assets trotz schwachem Dollar belasten.",
+    "signal_changer": "HOLD-Umstieg: Wenn BTC 3 Wochen unter $68k bleibt UND DXY über 101 steigt. SELL-Signal: BTC über $130k bei Fear & Greed >85 (Extreme Gier) kombiniert mit invertierter Zinskurve und rückläufigen ETF-Flows.",
     "news_headlines": [
-      "Bitcoin (BTC) price retreat deepens after repeated rejection at $80,000: Crypto Markets Today - CoinDesk",
-      "Bitcoin Opens May Above $78K As Monthly Candle Tests Key Price Range - Yellow.com",
-      "Bitcoin Price Prediction 2026-2031: Is $80K Next? - CoinDCX",
-      "Bitcoin Price Prediction May 2026: Can BTC Break The 200-Day EMA In May? - CryptoRank",
-      "Bitcoin (BTC) price analysis: Crash risk rises as bond yields surge - CoinDesk"
+      "Bitcoin (BTC) defies inflation playbook, rallies 19%. Here's what has changed - CoinDesk",
+      "Bitcoin Price Prediction: We Asked ChatGPT About Bitcoin’s Realistic Price by Year-End - 24/7 Wall St.",
+      "Bitcoin decouples from S&P 500 as oil, yields, and dollar pressure stocks - CryptoSlate",
+      "Bitcoin’s Bull Case Hinges on Macro Conditions, Wintermute Says - Bitcoin News",
+      "Bitcoin Rises As Institutional Demand And Macro Backdrop Support Prices - Seeking Alpha"
     ],
-    "updated": "2026-05-01"
+    "updated": "2026-05-08"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 84018.0,
-  "ma50": 72353.0,
+  "ma200": 82990.0,
+  "ma50": 73441.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

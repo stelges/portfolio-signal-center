@@ -1,33 +1,33 @@
 {
-  "last_updated": "2026-05-01T18:57:40.016281Z",
+  "last_updated": "2026-05-08T19:04:04.626712Z",
   "updated_by": "update_intelligence.py v3 (GitHub Actions)",
   "global_signal": "BUY",
   "global_summary": "Akkumulieren – günstige Phase aktiv",
-  "fear_greed": 26,
-  "btc_price_usd": 78398,
-  "btc_ath_dist_pct": -28.1,
-  "btc_30d_change_pct": 17.51,
-  "next_update": "2026-05-08T18:00:00Z",
+  "fear_greed": 38,
+  "btc_price_usd": 80015,
+  "btc_ath_dist_pct": -26.6,
+  "btc_30d_change_pct": 16.2,
+  "next_update": "2026-05-15T18:00:00Z",
   "ai_weekly_briefing": {
     "title": "Breite Kaufsignale bei stabilen Makros",
-    "status": "Portfolio zeigt grüne Signale across all major positions bei moderater Marktvolatilität.",
-    "insight": "BTC unter $80k und SOL unter $85 bieten attraktive DCA-Einstiegspunkte; Metaplanet bleibt mit 1.0478x mNAV fundamental unterbewertet. Der stabile DXY und 10Y-Yield von 4.37% unterstützen Risk-On-Stimmung.",
-    "action": "Planmäßiges monatliches DCA durchführen und Cash-Reserve nicht erhöhen—alle Positionen befinden sich in Buy-Zonen des 7-Jahres-Plans."
+    "status": "Portfolio zeigt Kaufsignale über alle Major-Positionen, Makroumfeld bleibt konstruktiv.",
+    "insight": "BTC unter 80k mit moderatem Fear & Greed (38) signalisiert rationale Einstiegschance; DXY-Stabilität und S&P-Festigkeit unterstützen Risk-On-Szenario.",
+    "action": "Planmäßiges DCA-Rebalancing diese Woche ausführen; Cash-Reserve für taktische Nachkäufe bei weiteren 5-10% Drawdown halten."
   },
-  "market_regime": "fearful",
-  "btc_dominance_pct": 58.5,
+  "market_regime": "neutral",
+  "btc_dominance_pct": 58.2,
   "macro": {
-    "sp500": 7233.95,
-    "dxy": 98.16,
-    "gold": 4634.6,
-    "us10y": 4.37,
-    "usdjpy": 156.99
+    "sp500": 7389.07,
+    "dxy": 97.9,
+    "gold": 4733.3,
+    "us10y": 4.36,
+    "usdjpy": 156.69
   },
   "next_halving": {
-    "next_halving_estimated_utc": "2028-04-12T19:37:47Z",
+    "next_halving_estimated_utc": "2028-04-12T16:24:11Z",
     "next_halving_block": 1050000,
-    "blocks_remaining": 102532,
-    "current_block_height": 947468,
+    "blocks_remaining": 101504,
+    "current_block_height": 948496,
     "halving_source": "blockchain_calculated"
   }
 }

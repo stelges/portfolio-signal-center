@@ -5,7 +5,7 @@
   "icon": "τ",
   "color": "#00d4ff",
   "signal": "HOLD",
-  "price_usd": 314.14,
+  "price_usd": 287.57,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -29,21 +29,33 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit BTC-Leadership, aber hohe BTC-Dominanz (58.2%) bremst High-Beta-Altcoins. Dezentrales KI-Narrativ wächst, aber noch Nische.",
-    "summary": "TAO sitzt in einem klassischen Limbo: Das fundamentale Narrativ (dezentrales KI + Grayscale-ETF-Filing) ist bullish und längerfristig stark, aber die kurzfristige Makro-Dynamik (BTC-Dominanz über 58%, Fear & Greed unter 40, S&P-Koppelung) belastet High-Beta-Altcoins. Der Halving-Druck fällt weg (Dezember 2025), aber neue Katalysatoren (ETF-Approval, Subnet-Wachstum) brauchen Zeit. HOLD, keine neuen Positionen bis BTC-Dominanz unter 56% oder Fear & Greed > 50.",
+    "macro_regime": "Risk-on mit Liquiditätszyklus + Altcoin-Headwind (BTC-Dominanz 58,2%) | KI-Narrativ stark, aber Marktzyklus eingetrübt",
     "active_indicators": [
-      "BTC-Signal (BUY) – positive Basis, aber TAO folgt BTC mit Lag und Volatilität",
-      "BTC-Dominanz 58.2% – strukturell ungünstig für High-Beta-Assets wie TAO; Rotation in Altcoins erst bei <55% wahrscheinlich",
-      "Fear & Greed 38/100 – neutral-pessimistisch; zu niedrig für aggressive Altcoin-Akkumulation, zu hoch für panische Sell-offs"
+      "BTC-Dominanz 58,2% (NEGATIV für High-Beta wie TAO – historisch: <55% = beste Altcoin-Phase)",
+      "Grayscale-ETF-Antrag (BULLISCH mittelfristig – Insti-Kapitalfluss, aber noch nicht genehmigt)",
+      "Fear & Greed 43/100 (NEUTRAL – unter Euphorie, aber über extremer Angst – kein klares Signal)"
     ],
+    "summary": "TAO befindet sich in strukturell bullischer Position (Halving abgeschlossen, Grayscale-Katalysator, dezentrale KI-Narrative), wird aber durch hohe BTC-Dominanz und moderates Markt-Sentiment gebremst. HOLD ist optimal für 7-Jahres-Plan: Position halten, nicht FOMO-nachkaufen, auf BTC-Dominanz <55% oder ETF-Genehmigung warten.",
+    "price_targets": {
+      "buy_zone": 265,
+      "buy_aggressiv": 245,
+      "take_profit_1_price": 425,
+      "take_profit_1_action": "25% verkaufen (Grayscale-Genehmigung / 50% Gewinn)",
+      "take_profit_2_price": 650,
+      "take_profit_2_action": "50% der Restposition verkaufen (126% Gewinn ab aktuellem Preis)",
+      "concern_below": 220
+    },
+    "bull_case": "Halving-Deflation + Grayscale-ETF-Pipeline + 60+ aktive Subnets = strukturelles Wachstum über 2–3 Jahre. TAO adressiert größeren potenziellen Markt als LINK/RNDR (dezentrales KI-Training), ideal für asymmetrische 7J-Wette.",
+    "bear_case": "BTC-Dominanz zu hoch (Altcoin-Kapital gebunden) – technische Schwäche droht, wenn BTC nicht führt. Dezentrales KI bleibt Nische vs. Hyperscaler-Zentralisierung; Ausführungsrisiko auf Subnet-Adoption bleibt hoch.",
+    "signal_changer": "KAUF-TRIGGER: BTC-Dominanz fällt unter 55% ODER Grayscale-ETF genehmigt. VERKAUFS-TRIGGER: TAO unterschreitet $220 (Halt-Signal = SELL bei technischem Bruch), oder BTC-Signal dreht zu SELL + Risk-off-Phase.",
     "news_headlines": [
       "The Stack - Grayscale",
-      "Grayscale files for first U.S. Bittensor ETP as decentralized AI gains momentum - Yahoo! Finance Canada",
       "Grayscale bets on ‘decentralized AI’ with first-ever Bittensor ETF filing - AMBCrypto",
-      "AI Blockchain Momentum: Grayscale Launches Bittensor TAO Trust, BitTensor Value Outlook - KuCoin"
+      "Grayscale files for first U.S. Bittensor ETP as decentralized AI gains momentum - Yahoo! Finance Canada",
+      "Grayscale Investments Focuses On Decentralized AI With Bittensor Trust ETF Filing - Crowdfund Insider"
     ],
-    "updated": "2026-05-08"
+    "updated": "2026-05-15"
   },
   "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
-  "market_cap_usd_billions": 3.38
+  "market_cap_usd_billions": 3.09
 }

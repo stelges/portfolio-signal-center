@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "BUY",
-  "price_usd": 80015,
+  "signal": "HOLD",
+  "price_usd": 79056,
   "ath_usd": 109000,
-  "ath_dist_pct": -26.6,
-  "change_30d_pct": 16.2,
+  "ath_dist_pct": -27.5,
+  "change_30d_pct": 6.1,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,39 +25,27 @@
     }
   },
   "ai_analysis": {
-    "signal": "BUY",
+    "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on Transition + schwacher Dollar + institutionelle Akkumulation bei erhöhter Makro-Unsicherheit",
+    "macro_regime": "Risk-on Transition mit strukturellen Gegenwind – schwacher Dollar trifft auf hohe Realrenditen und nachlassende Risk-Asset-Überzeugung",
+    "summary": "BTC befindet sich in einer technisch schwachen aber fundamental interessanten Akkumulationszone: unterhalb des 200-MA, mit neutralem Sentiment und hoher BTC-Dominanz als Zeichen selektiver institutioneller Nachfrage. Der schwache Dollar und 7 Wochen ETF-Zuflüsse stützen, während hohe Anleiherenditen und fehlendes Momentum eine explosive Aufwärtsbewegung verhindern. Die Zykluslogik (Pre-Halving-Akkumulation, ~23 Monate bis Halving) spricht für geduldiges DCA ohne aggressive Aufstockung.",
     "active_indicators": [
-      "DXY (97.9, schwach) – historisch stärkster Rückenwind für BTC; ein fallender Dollar erhöht globale Liquidität und macht Hard-Assets attraktiver",
-      "BTC-Dominanz (58.2%) – zeigt klare Risk-off-Rotation innerhalb Crypto; Kapital flieht in BTC statt Altcoins, klassisches Akkumulationsmuster vor Bull-Run",
-      "200-Tage MA ($82,990) – BTC knapp darunter ist der kritischste technische Schwellenwert; Rückeroberung wäre starkes Trendkonfirmationssignal"
+      "DXY (99.28, schwach) – Historisch stärkster positiver Korrelationsbruch für BTC; schwacher Dollar erhöht globale Liquidität und macht BTC als Hartwährungs-Substitut attraktiver",
+      "200-Tage MA ($81,926) – BTC handelt darunter, was in vergangenen Zyklen oft eine Konsolidierungs- oder Korrekturphase signalisierte; kein bestätigter Bullenmarkt solange kein nachhaltiger Schlusskurs darüber",
+      "10Y US-Rendite (4.59%) – Hohe Nominalrenditen erhöhen Opportunitätskosten für unproduktive Assets wie BTC und dämpfen institutionelle Risikobereitschaft trotz ETF-Zuflüssen"
     ],
-    "summary": "BTC befindet sich in einer späten Akkumulationsphase ca. 12–13 Monate nach dem April-2024-Halving – historisch exakt das Fenster vor der parabolischen Phase. Der schwache Dollar, steigende Goldpreise und die institutionelle Nachfrage (ETF-Flows) stützen den Preis trotz Fear & Greed bei 38. Das Sentiment ist negativ genug für attraktive Einstiegskurse, während die Struktur (höhere Tiefs seit Jan 2025) bullish bleibt.",
-    "price_targets": {
-      "buy_zone": 78000,
-      "buy_aggressiv": 70000,
-      "take_profit_1_price": 109000,
-      "take_profit_1_action": "15–20% Position reduzieren – ATH-Retest mit Widerstand",
-      "take_profit_2_price": 145000,
-      "take_profit_2_action": "weitere 30–40% verkaufen – Zyklushoch-Zone 2025/2026",
-      "concern_below": 68000
-    },
-    "bull_case": "Schwacher Dollar + Post-Halving-Momentum + ETF-Zuflüsse katapultieren BTC in Q3/Q4 2026 auf neue ATHs zwischen 130k–160k. Institutionelle Entkopplung vom S&P 500 verleiht BTC Rohstoff-Status als digitales Gold.",
-    "bear_case": "Scheitert BTC daran, den 200-MA ($83k) zurückzuerobern, und dreht der DXY wieder über 101, droht ein Rückfall auf $65k–$68k mit Liquidation kaskadenartiger Positionen. Rezessionsszenario USA würde Risk-Assets trotz schwachem Dollar belasten.",
-    "signal_changer": "HOLD-Umstieg: Wenn BTC 3 Wochen unter $68k bleibt UND DXY über 101 steigt. SELL-Signal: BTC über $130k bei Fear & Greed >85 (Extreme Gier) kombiniert mit invertierter Zinskurve und rückläufigen ETF-Flows.",
     "news_headlines": [
-      "Bitcoin (BTC) defies inflation playbook, rallies 19%. Here's what has changed - CoinDesk",
-      "Bitcoin Price Prediction: We Asked ChatGPT About Bitcoin’s Realistic Price by Year-End - 24/7 Wall St.",
-      "Bitcoin decouples from S&P 500 as oil, yields, and dollar pressure stocks - CryptoSlate",
-      "Bitcoin’s Bull Case Hinges on Macro Conditions, Wintermute Says - Bitcoin News",
-      "Bitcoin Rises As Institutional Demand And Macro Backdrop Support Prices - Seeking Alpha"
+      "Five Macro Catalysts This Week That Could Decide Bitcoin's Next 10 Percent Move - Phemex",
+      "Bitcoin (BTC) Price Prediction 2026, 2027 – 2030: How High Will BTC Price Go? - Coinpedia",
+      "Bitcoin (BTC) ETFs See 7 Weeks of Inflows: Is the Institutional Bid Back? - 24/7 Wall St.",
+      "Bitcoin price analysis: BTC rally showing lack of conviction, says analyst - CoinDesk",
+      "The road ahead for crypto markets in 2026 - Kraken Blog"
     ],
-    "updated": "2026-05-08"
+    "updated": "2026-05-15"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 82990.0,
-  "ma50": 73441.0,
+  "ma200": 81926.0,
+  "ma50": 74960.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

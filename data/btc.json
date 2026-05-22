@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "HOLD",
-  "price_usd": 79056,
+  "signal": "BUY",
+  "price_usd": 76275,
   "ath_usd": 109000,
-  "ath_dist_pct": -27.5,
-  "change_30d_pct": 6.1,
+  "ath_dist_pct": -30.0,
+  "change_30d_pct": 0.53,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,27 +25,39 @@
     }
   },
   "ai_analysis": {
-    "signal": "HOLD",
+    "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-on Transition mit strukturellen Gegenwind – schwacher Dollar trifft auf hohe Realrenditen und nachlassende Risk-Asset-Überzeugung",
-    "summary": "BTC befindet sich in einer technisch schwachen aber fundamental interessanten Akkumulationszone: unterhalb des 200-MA, mit neutralem Sentiment und hoher BTC-Dominanz als Zeichen selektiver institutioneller Nachfrage. Der schwache Dollar und 7 Wochen ETF-Zuflüsse stützen, während hohe Anleiherenditen und fehlendes Momentum eine explosive Aufwärtsbewegung verhindern. Die Zykluslogik (Pre-Halving-Akkumulation, ~23 Monate bis Halving) spricht für geduldiges DCA ohne aggressive Aufstockung.",
+    "macro_regime": "Risk-off Übergang zu vorsichtigem Risk-on – schwacher Dollar trifft hohe Realzinsen, BTC in Akkumulationsphase zwischen zwei Halvings",
     "active_indicators": [
-      "DXY (99.28, schwach) – Historisch stärkster positiver Korrelationsbruch für BTC; schwacher Dollar erhöht globale Liquidität und macht BTC als Hartwährungs-Substitut attraktiver",
-      "200-Tage MA ($81,926) – BTC handelt darunter, was in vergangenen Zyklen oft eine Konsolidierungs- oder Korrekturphase signalisierte; kein bestätigter Bullenmarkt solange kein nachhaltiger Schlusskurs darüber",
-      "10Y US-Rendite (4.59%) – Hohe Nominalrenditen erhöhen Opportunitätskosten für unproduktive Assets wie BTC und dämpfen institutionelle Risikobereitschaft trotz ETF-Zuflüssen"
+      "DXY (99.26, schwach) – historisch stärkster Korrelationspartner für BTC-Rallyes; fallender Dollar erhöht globale USD-Liquidität und Nachfrage nach harten Assets",
+      "200-Tage MA ($80,789) – BTC notiert darunter, was strukturell bearish ist; ein nachhaltiger Rebreak über diese Zone wäre das wichtigste technische Bestätigungssignal",
+      "Fear & Greed (28/100) – extreme Angstphasen waren historisch in Halving-Akkumulationszyklen optimale DCA-Einstiegszonen (vgl. Sommer 2022, Q1 2023)"
     ],
+    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationszone mit komprimierter Volatilität, gedrücktem Sentiment und knapp unter dem 200MA – historisch ein attraktives DCA-Fenster. Der schwache Dollar gibt makroseitigen Rückenwind, wird jedoch durch hohe 10Y-Renditen (4.56%) und teueres Kapitalumfeld teilweise neutralisiert. Die hohe BTC-Dominanz (58.1%) zeigt, dass der Markt defensiv in BTC positioniert ist – kein breiter Risk-on, aber institutionelle Stabilisierung.",
+    "price_targets": {
+      "buy_zone": 75000,
+      "buy_aggressiv": 65000,
+      "take_profit_1_price": 95000,
+      "take_profit_1_action": "20% der Position verkaufen, Gewinne teilweise realisieren",
+      "take_profit_2_price": 120000,
+      "take_profit_2_action": "weitere 40% verkaufen, nur Kern-DCA-Position halten",
+      "concern_below": 62000
+    },
+    "bull_case": "Schwacher Dollar + Post-Halving-Momentum (ab H2 2027) könnten BTC in Richtung $130k–$150k treiben, wenn die Fed in den Zinssenkungszyklus eintritt und ETF-Zuflüsse institutionell skalieren. Fear & Greed auf 28 markiert historisch häufig das Ende der Kapitulationsphase vor dem nächsten Leg-up.",
+    "bear_case": "Bleiben 10Y-Renditen über 4.5% und dreht der DXY wieder hoch (>102), droht BTC ein erneuter Test der $62k–$65k-Zone, da Risk-Assets unter Liquiditätsdruck geraten. Ein Bruch unter $62k würde die Halving-Akkumulationsthese strukturell beschädigen.",
+    "signal_changer": "Signal wechselt zu HOLD wenn BTC den 200MA ($80,789) nachhaltig zurückerobert und Funding Rates deutlich positiv drehen (Überhitzungsgefahr). Signal wechselt zu CASH wenn DXY über 103 steigt, 10Y-Renditen auf 5%+ anziehen oder BTC unter $62,000 schließt.",
     "news_headlines": [
-      "Five Macro Catalysts This Week That Could Decide Bitcoin's Next 10 Percent Move - Phemex",
-      "Bitcoin (BTC) Price Prediction 2026, 2027 – 2030: How High Will BTC Price Go? - Coinpedia",
-      "Bitcoin (BTC) ETFs See 7 Weeks of Inflows: Is the Institutional Bid Back? - 24/7 Wall St.",
-      "Bitcoin price analysis: BTC rally showing lack of conviction, says analyst - CoinDesk",
-      "The road ahead for crypto markets in 2026 - Kraken Blog"
+      "Bitcoin volatility hits 7 month low as institutional demand steadies markets - CoinDesk",
+      "Bitcoin vs. Ethereum: Why BTC is Winning the Crypto Market in May 2026 - TradingView",
+      "Is the 2-Year Treasury at 4.09% Why Bitcoin (BTC) Can’t Break Out? - 24/7 Wall St.",
+      "BTC price tops $77,000. Analysts weigh in on whether the bounce has legs.: Crypto Daily - CoinDesk",
+      "Bitcoin Price Prediction for April: Can BTC Match Its 69% April Win Rate in 2026? - Yahoo Finance"
     ],
-    "updated": "2026-05-15"
+    "updated": "2026-05-22"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 81926.0,
-  "ma50": 74960.0,
+  "ma200": 80789.0,
+  "ma50": 76402.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

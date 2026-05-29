@@ -1,33 +1,33 @@
 {
-  "last_updated": "2026-05-22T19:23:00.447159Z",
+  "last_updated": "2026-05-29T20:08:15.971320Z",
   "updated_by": "update_intelligence.py v3 (GitHub Actions)",
   "global_signal": "BUY",
   "global_summary": "Akkumulieren – günstige Phase aktiv",
-  "fear_greed": 28,
-  "btc_price_usd": 76275,
-  "btc_ath_dist_pct": -30.0,
-  "btc_30d_change_pct": 0.53,
-  "next_update": "2026-05-29T18:00:00Z",
+  "fear_greed": 23,
+  "btc_price_usd": 73499,
+  "btc_ath_dist_pct": -32.6,
+  "btc_30d_change_pct": -4.99,
+  "next_update": "2026-06-05T18:00:00Z",
   "ai_weekly_briefing": {
-    "title": "Breites Kaufsignal bei stabiler Makro",
-    "status": "Portfolio in Kaufzone: vier von fünf Assets zeigen grüne Signale bei moderatem DXY und stabilen Zinsen.",
-    "insight": "BTC unter 76k und alle Major-Positionen im Buy-Setup deuten auf Akkumulationsphase hin. Metaplanet-Discount (1.06x mNAV) bietet attraktive Einstiegschance im Bitcoin-Proxy.",
-    "action": "Planmäßiges DCA ausführen, Cash-Reserve bei starker Schwäche (BTC <75k) bereithalten, TAO monitorieren bis klares Signal kommt."
+    "title": "Akkumulation bei moderater Marktlage",
+    "status": "Portfolio zeigt grüne Signale bei BTC, Metaplanet und NVDA; SOL und TAO halten Position.",
+    "insight": "BTC unter psychologischer Marke mit Fear & Greed bei 23/100 – klassisches Akkumulationssignal. Metaplanet deutlich unter NAV bietet Discount-Einstieg.",
+    "action": "Monatliches DCA wie geplant durchführen; Cash-Reserve bei weiteren Korrekturen bereithalten."
   },
   "market_regime": "fearful",
-  "btc_dominance_pct": 58.1,
+  "btc_dominance_pct": 57.6,
   "macro": {
-    "sp500": 7479.4,
-    "dxy": 99.26,
-    "gold": 4511.1,
-    "us10y": 4.56,
-    "usdjpy": 159.12
+    "sp500": 7580.06,
+    "dxy": 98.9,
+    "gold": 4575.3,
+    "us10y": 4.45,
+    "usdjpy": 159.25
   },
   "next_halving": {
-    "next_halving_estimated_utc": "2028-04-12T09:33:07Z",
+    "next_halving_estimated_utc": "2028-04-12T02:48:23Z",
     "next_halving_block": 1050000,
-    "blocks_remaining": 99445,
-    "current_block_height": 950555,
+    "blocks_remaining": 98392,
+    "current_block_height": 951608,
     "halving_source": "blockchain_calculated"
   }
 }

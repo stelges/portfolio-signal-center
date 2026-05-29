@@ -9,8 +9,8 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 1.0578,
-  "btc_nav_usd_billions": 3.06,
+  "mnav": 0.9977,
+  "btc_nav_usd_billions": 2.95,
   "zones": {
     "buy": {
       "label": "mNAV < 1.1x",
@@ -28,35 +28,35 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-off + Liquiditätskrise (Fear & Greed 28) mit BTC-Akkumulations-Signal; starker Yen-Schwäche bietet Tailwind für JPY-Unternehmen mit USD-Aktiva",
+    "macro_regime": "Risk-off + Liquiditätskrise → Bitcoin-Flucht in Sicherheit + Japan-Structural-Play (schwacher Yen, Carry-Unwinding-Schutz). BTC -32.6% vom ATH, Fear-Index 23/100 = Panik-Boden-Territory.",
     "active_indicators": [
-      "mNAV 1.0578x (im optimalen Kaufzone 0.9–1.2x; BTC günstiger via Aktie als direkt)",
-      "BTC-KI-Signal BUY + BTC -30% vom ATH = klassische Akkumulationsphase vor Zyklus-Umkehr",
-      "USD/JPY 159.12 (schwacher Yen verstärkt USD-denominierten Vermögensvorteil; 40.177 BTC-Stack profitiert)"
+      "mNAV 0.9977x (KRITISCH: Bitcoin mit 0.23% Rabatt via MTPLF – praktisch nie günstiger zum direkten Kauf)",
+      "BTC-Signal KI = BUY + BTC-Dominanz 57.6% (Altseason-Abbau, Fokus auf Store-of-Value)",
+      "USD/JPY 159.25 (schwacher Yen = japanische USD-Holdings überproportional wertvoll; Metaplanet profitiert doppelt: BTC-Anstieg + FX-Tailwind)"
     ],
-    "summary": "Metaplanet ist aktuell exakt im sweet-spot: mNAV unter 1.1x bedeutet du bekommst Bitcoin mit 5–8% Rabatt plus japanischem Hebeleffekt. Mit monatlichem DCA über 7 Jahre in diesem Regime (Fear-Markt + Akkumulation) maximiert man Dollar-Cost-Averaging und Leverage-Expansion bei Zyklusumkehr. BTC-Signal ist BUY, mNAV ist günstig – beide Faktoren alignen.",
+    "summary": "Metaplanet bei mNAV <1.0x kombiniert mit massivem Makro-Tailwind: BTC im Panik-Verkauf, KI-Signal BUY, Japan-Yen im Carry-Trade-Stress. Die 5.075 BTC-Akquisition (3. größte Treasury weltweit) signalisiert Vertrauen des Managements. Für 7-Jahres-DCA: Optimales Einstiegsfenster.",
     "price_targets": {
       "buy_zone_mnav": 1.15,
       "buy_aggressiv_mnav": 0.95,
       "take_profit_1_mnav": 1.5,
-      "take_profit_1_action": "Erste 15–20% des Stacks bei mNAV 1.50 realisieren (Aufpreis-Marge sichern)",
+      "take_profit_1_action": "20% Position verkaufen (Fair-Value-Expansion, BTC +20-30%)",
       "take_profit_2_mnav": 2.2,
-      "take_profit_2_action": "50% des Gesamtstacks bei mNAV 2.20+ verkaufen (starker Aufpreis = BTC relativ teuer via Aktie)",
-      "concern_mnav": 2.5
+      "take_profit_2_action": "50% Remaining verkaufen (Aufpreis-Regime, BTC +60-80% vom aktuellen Level)",
+      "concern_mnav": 2.8
     },
-    "bull_case": "mNAV unter 1.1x + BTC-KI-Signal BUY + 40k+ BTC-Stack in Früh-/Mid-Phase eines Bullenmarkts = potenzielle 8–15x Rückgänge über 7 Jahre, wenn BTC zu $200–300k rallyt und mNAV auf 1.5–2.0x normalisiert. Yen-Schwäche verstärkt USD-Vermögensboost zusätzlich.",
-    "bear_case": "BTC bricht unter $60k nachhaltig oder mNAV expands >2.5x rapide (Signal zu warten/reduzieren); verschärfte Regulierung gegen BTC-Treasury-Companies in Japan könnte Wertvernichtung triggern.",
-    "signal_changer": "mNAV >2.5x, BTC-KI-Signal SELL, oder BTC-Preis fällt unter $60k ohne Stabilisierung → Signal auf HOLD/CASH; falls mNAV <0.90x → signal verstärkt zu aggressivem BUY",
+    "bull_case": "mNAV <1.0x ist historisch extrem selten und wird durch BTC-Recovery schnell aufgelöst; gleichzeitig schwacher Yen = FX-Hedge für USD-Schulden, während BTC-Vermögen in JPY überproportional wertvoll wird. Bei BTC $120k+ und normalisiertem mNAV (1.3–1.5x) liegt MTPLF im $4–6 Range (+120–230%).",
+    "bear_case": "Wenn BTC unter $60k fällt oder Makro-Angst in echte Deflation kippt (DXY >102), könnte mNAV kurzzeitig <0.85x tauchen, was Verkaufsdruck triggert. Schulden ($280M) und Aktien-Verwässerung (Finanzierung durch Kapitalerhöhung) sind Gegenwind.",
+    "signal_changer": "1) BTC bricht <$60k UND Fear-Index >75 → Downside-Risiko verdoppelt sich. 2) mNAV >1.8x ohne entsprechende BTC-Rally (+50%+) → Aufpreis-Euphorie, dann HOLD/TAKE-PROFIT. 3) Japanisches Notenbankintervention gegen Yen-Schwäche (Zinserhöhung) → FX-Tailwind neutralisiert, mNAV unter Druck.",
     "news_headlines": [
-      "Metaplanet Capital Raise Deepens Bitcoin Treasury Focus And US Expansion - Yahoo Finance",
       "Metaplanet (3350) acquires 5,075 BTC, jumps to third largest BTC treasury company - CoinDesk",
-      "Japan's Metaplanet Posts $725M Q1 Loss as Bitcoin Stack Reaches 40,177 BTC - Bitcoin News",
+      "Metaplanet Capital Raise Deepens Bitcoin Treasury Focus And US Expansion - Yahoo Finance",
+      "Earn Bitcoin Rewards on Every Purchase in Japan—Feel the Future! - Phemex",
       "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst - TradingView"
     ],
-    "updated": "2026-05-22"
+    "updated": "2026-05-29"
   },
   "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien.",
-  "stock_price_usd": 2.0299,
-  "stock_price_jpy": 323.0,
-  "usdjpy": 159.12
+  "stock_price_usd": 1.8273,
+  "stock_price_jpy": 291.0,
+  "usdjpy": 159.25
 }

@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "BUY",
-  "price_usd": 59764,
+  "price_usd": 63608,
   "ath_usd": 109000,
-  "ath_dist_pct": -45.2,
-  "change_30d_pct": -25.16,
+  "ath_dist_pct": -41.6,
+  "change_30d_pct": -22.17,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,25 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-off mit selektivem Deleveraging – erhöhte Zinsen belasten Risk-Assets, Dollar neutral, Extremangst schafft antizyklische Einstiegschancen",
-    "summary": "Bitcoin befindet sich in einer klassischen Pre-Halving-Akkumulationsphase mit extremem Sentiment-Pessimismus – ein Setup das historisch die besten DCA-Einstiegspunkte markiert. Der Preisrückgang von -45% vom ATH bei gleichzeitig stagnierendem Dollar deutet auf zyklischen Verkaufsdruck hin, nicht auf strukturellen Zusammenbruch. Hohe Realzinsen bleiben der primäre Gegenwind, doch ETF-Nachfrage und institutionelle Basisnachfrage stabilisieren die Marktstruktur.",
+    "macro_regime": "Risk-off mit schwachem Dollar – Übergangsphase: Institutionelle Akkumulation bei extremer Retail-Angst, schwacher DXY stützt Hard Assets, erhöhte Anleiherenditen bremsen Risikobereitschaft",
+    "summary": "Bitcoin befindet sich in einer scharfen Korrektur (-22% in 30 Tagen, -41% vom ATH) mit Extremangst-Sentiment, das historisch starke antizyklische Kaufsignale liefert. Der schwache Dollar und steigende Goldpreise bestätigen einen Kapitalfluss in knappe Assets, während institutionelle Nachfrage laut Headlines stabil bleibt. Das Hauptrisiko ist das Macro-Overlay: Erhöhte 10Y-Renditen (4.49%) und ein noch laufender Risk-off-Modus können den Boden zeitlich nach hinten verschieben.",
     "active_indicators": [
-      "Fear & Greed Index 12/100 (Extremangst) – historisch stärkster Kontraindikator für mittelfristige BTC-Renditen, Akkumulationszonen bei <15 haben in 80%+ der Fälle zu positiven 6-12M-Returns geführt",
-      "BTC unter 200-Tage-MA ($78,771) – kritischer Trendindikator; aktueller Abstand von ~24% signalisiert Überverkaufsbedingungen, historisch selten länger als 3-6 Monate unter diesem Niveau im Post-Halving-Zyklus",
-      "10Y US-Rendite 4.54% – teures Kapital limitiert Upside-Geschwindigkeit, aber neutraler DXY (100) verhindert das schlimmste Risk-off-Szenario; kein Liquiditätsengpass wie 2022"
+      "Fear & Greed Index bei 12/100 (Extremangst) – historisch zuverlässigster Kontraindikator für BTC-Akkumulationsphasen; jedes Mal unter 15 war mittelfristig ein signifikanter Einstiegspunkt",
+      "DXY bei 99.76 (schwacher Dollar) – negative Korrelation zu BTC und Gold; schwacher Dollar = Rückenwind für knappe Assets, Gold auf ATH bestätigt diesen Mechanismus aktuell",
+      "BTC unter 200-Tage-MA ($77.886) – kritischer Trendindikator; Preis darunter signalisiert bearishes Momentum, aber historisch in Pre-Halving-Phasen eine Kaufzone wenn Fundamentals intakt"
     ],
     "news_headlines": [
-      "Bitcoin Price Prediction: Can BTC Reach $100,000 in 2026? - WEEX",
-      "Bitcoin stalls near $76,500 as muted trading points to macro wait-and-see - CoinDesk",
-      "Bitcoin 2026 outlook: ETF gravity vs. Macro ceiling - 21Shares",
+      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com",
       "Bitcoin volatility hits 7 month low as institutional demand steadies markets - CoinDesk",
-      "Bitcoin rebounds above $77,000. Analysts weigh in on whether the bounce has legs. - CoinDesk"
+      "Can BTC Reach $100,000 in 2026? Bitcoin Price Prediction - WEEX",
+      "June 2026 Cryptocurrency Market Insights: Crypto ETFs Now Track Debt, Not Tech - The Cryptonomist",
+      "Bitcoin vs. Ethereum: Why BTC is Winning the Crypto Market in May 2026 - TradingView"
     ],
-    "updated": "2026-06-05"
+    "updated": "2026-06-12"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 78771.0,
-  "ma50": 76357.0,
+  "ma200": 77886.0,
+  "ma50": 74422.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

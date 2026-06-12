@@ -4,8 +4,8 @@
   "allocation_pct": 8,
   "icon": "τ",
   "color": "#00d4ff",
-  "signal": "HOLD",
-  "price_usd": 189.99,
+  "signal": "BUY",
+  "price_usd": 212.74,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -27,35 +27,35 @@
     }
   },
   "ai_analysis": {
-    "signal": "HOLD",
+    "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-on mit Liquiditätszyklus + KI-Narrativ-Momentum, aber Fear & Greed extrem niedrig (12/100) = Sentiment-Extreme signalisieren kurzfristigen Boden, noch keine Euphorie für aggressive Käufe",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit KI-Narrativ-Tailwinds; BTC-Signal BUY + sinkende BTC-Dominanz schaffen günstiges Altcoin-Umfeld trotz niedrigem Fear & Greed (12/100 = noch Accumulation-Phase)",
     "active_indicators": [
-      "Fear & Greed Index (12/100) – extremer Pessimismus = klassisches Kontra-Signal für Bottom-Picking, aber noch nicht bei Greed = kein FOMO-Einstieg",
-      "BTC-Dominanz 55.9% (fallend) – Altcoin-Rotationen beginnen; TAO sollte relativ profitieren, aber Timing unklar",
-      "Grayscale ETF-Filing + dezentrales KI-Narrativ – struktureller Tailwind für Kapitalzufluss, aber Genehmigung ungewiss (Timing-Risiko)"
+      "BTC-Signal BUY (primäre Gating-Bedingung erfüllt – keine Risk-off-Phase)",
+      "BTC-Dominanz 56.4% im Rückgang (Altcoin-Rotationsphase aktiviert)",
+      "Grayscale ETF-Genehmigung + 43%-Allokation (institutionelle Validierung + zukünftiger Inflow-Katalyst)"
     ],
-    "summary": "TAO befindet sich in einer klassischen Konsolidierungsphase nach Halving (Dez 2025) mit extremem negativem Sentiment – ideales HOLD-Szenario für 7-Jahres-Strategie. Der Grayscale-ETF-Antrag ist langfristiger Katalysator, aber kurzfristig (nächste 4-8 Wochen) fehlt der Auslöser für aggressive Käufe. Nur halten und auf tiefere Käufe warten.",
+    "summary": "TAO befindet sich in idealer Einstiegsposition: BTC-Signal ist grün, Fear & Greed deutet auf noch nicht vollständig euphorische Marktstimmung hin, und Grayscale-ETF-Filing bietet 6–12-Monate Genehmigungszyklus als Kurskatalyst. Die dezentrale KI-Narrative reitet auf Nvidia-Capex- und LLM-Momentum; TAO ist mit $2.3B MCap noch 3–4x kleiner als direkte Konkurrenten (LINK, RNDR) bei größerer technologischer Ambition.",
     "price_targets": {
-      "buy_zone": 165,
-      "buy_aggressiv": 145,
-      "take_profit_1_price": 280,
-      "take_profit_1_action": "25% position (Take erste Gewinne, halten Kern)",
-      "take_profit_2_price": 420,
-      "take_profit_2_action": "50% position (halbe Position verkaufen, Kernposition laufen lassen bis 2029+)",
-      "concern_below": 140
+      "buy_zone": 195,
+      "buy_aggressiv": 175,
+      "take_profit_1_price": 320,
+      "take_profit_1_action": "30% Gewinn-Mitnahme (Risiko reduzieren nach +50%)",
+      "take_profit_2_price": 520,
+      "take_profit_2_action": "weitere 40% verkaufen (Zielpreis nach +145%)",
+      "concern_below": 155
     },
-    "bull_case": "Dezentrales KI-Ökosystem ist noch 100x kleiner als zentralisierte Hyperscaler; Grayscale-ETF öffnet institutionelle Kapitalströme. TAO = direkteste Infrastruktur-Play auf KI-Trend mit Bitcoin-ähnlicher Deflationary-Mechanik (Halving abgeschlossen).",
-    "bear_case": "Fear & Greed 12/100 = Markt preist strukturelle Risiken ein (Execution, Konkurrenz durch OpenAI/Google, spätes zentralisiertes Rollout); dezentrale KI bleibt Nische. Grayscale-Genehmigung ist ungewiss – ohne ETF-Katalysator eher Range-Bewegung.",
-    "signal_changer": "BTC-Signal flippt zu SELL, oder Fear & Greed fällt unter 5 → Crash-Szenario (buy_aggressiv Zone). Alternativ: Grayscale-ETF-Genehmigung + BTC über $75k → flipped zu BUY (Euphorische Rotation). Unter $140 → möglicher SELL-Trigger für Portfolio-Reallokation.",
+    "bull_case": "Grayscale-ETF-Genehmigung (Q3–Q4 2026 realistisch) könnte institutionelle Kapitalströme in 8-stelligem USD-Bereich unleashen; TAO adressiert größten dezentralisierten KI-Markt mit Bitcoin-Halbierungs-Mechanik + wachsendem Subnet-Ökosystem. 7-Jahr-Horizont + asymmetrische Wette rechtfertigen Einstieg vor Katalyst.",
+    "bear_case": "Dezentrale KI bleibt Niche gegenüber Hyperscaler-Dominanz (OpenAI, Anthropic, Meta); technisches Ausführungsrisiko ist erheblich (Subnet-Adoption, validator decentralization); Makro-Risiko: Wenn BTC-Signal von BUY → HOLD/SELL kippt, verliert TAO Gating-Bedingung.",
+    "signal_changer": "Signal → HOLD/CASH wenn: (1) BTC-Signal dreht zu HOLD/SELL; (2) BTC-Dominanz steigt über 60% (Risk-off-Signal); (3) Grayscale-ETF-Antrag wird abgelehnt; (4) TAO fällt unter $155 (technische Unterstützung bricht) → dann auf Retest MA200 (~$130–140) warten.",
     "news_headlines": [
       "The Stack - Grayscale",
       "Grayscale files for first U.S. Bittensor ETP as decentralized AI gains momentum - Yahoo! Finance Canada",
-      "Grayscale bets on ‘decentralized AI’ with first-ever Bittensor ETF filing - AMBCrypto",
-      "Bitwise and Grayscale Files for Bittensor ETF With SEC: Is TAO Ready for Rebound? - TradingView"
+      "Grayscale Boosts Bittensor Allocation to 43% After ETF Filing - Cryptonews.net",
+      "Grayscale Bullish On Bittensor, Raises TAO Weight In AI Crypto Fund To 43% - Yellow.com"
     ],
-    "updated": "2026-06-05"
+    "updated": "2026-06-12"
   },
   "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
-  "market_cap_usd_billions": 2.04
+  "market_cap_usd_billions": 2.29
 }

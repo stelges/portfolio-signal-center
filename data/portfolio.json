@@ -1,33 +1,33 @@
 {
-  "last_updated": "2026-06-12T19:53:04.397174Z",
+  "last_updated": "2026-06-19T19:25:20.606829Z",
   "updated_by": "update_intelligence.py v3 (GitHub Actions)",
   "global_signal": "BUY",
   "global_summary": "Akkumulieren – günstige Phase aktiv",
-  "fear_greed": 12,
-  "btc_price_usd": 63608,
-  "btc_ath_dist_pct": -41.6,
-  "btc_30d_change_pct": -22.17,
-  "next_update": "2026-06-19T18:00:00Z",
+  "fear_greed": 14,
+  "btc_price_usd": 62948,
+  "btc_ath_dist_pct": -42.2,
+  "btc_30d_change_pct": -18.2,
+  "next_update": "2026-06-26T18:00:00Z",
   "ai_weekly_briefing": {
-    "title": "Breites Kaufsignal über alle Positionen",
-    "status": "Alle fünf Kernpositionen zeigen grüne Signale; Makro bleibt konstruktiv mit moderater USD-Stärke.",
-    "insight": "BTC unter 64K mit Fear & Greed 12/100 bietet seltene Einstiegsgelegenheit im Zyklus. Metaplanet mit 0.94x NAV bleibt strukturell attraktiv für BTC-Exposure.",
-    "action": "Geplante DCA-Raten wie vorgesehen ausführen; Cash-Reserve bei nächster Schwäche bereithalten."
+    "title": "Alle Signale grün – DCA fortsetzen",
+    "status": "Portfolio zeigt durchgehend Kaufsignale bei stabiler Makrolage; DXY stabil, Renditen moderat.",
+    "insight": "BTC unter Fear & Greed 15 und Metaplanet bei 0.95x mNAV bieten klassische Einstiegspunkte. Alle fünf Positionen signalisieren gleichzeitig – seltene Konstellation, kein Timing-Risiko nötig.",
+    "action": "Planmäßiges monatliches DCA nach Gewichtung ausführen; keine Abweichung vom 7-Jahres-Plan erforderlich."
   },
   "market_regime": "fearful",
-  "btc_dominance_pct": 56.4,
+  "btc_dominance_pct": 56.1,
   "macro": {
-    "sp500": 7422.74,
-    "dxy": 99.76,
-    "gold": 4228.0,
-    "us10y": 4.49,
-    "usdjpy": 160.22
+    "sp500": 7500.58,
+    "dxy": 100.72,
+    "gold": 4172.9,
+    "us10y": 4.45,
+    "usdjpy": 161.27
   },
   "next_halving": {
-    "next_halving_estimated_utc": "2028-04-13T14:13:11Z",
+    "next_halving_estimated_utc": "2028-04-13T10:15:27Z",
     "next_halving_block": 1050000,
-    "blocks_remaining": 96590,
-    "current_block_height": 953410,
+    "blocks_remaining": 95561,
+    "current_block_height": 954439,
     "halving_source": "blockchain_calculated"
   }
 }

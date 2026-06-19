@@ -5,9 +5,9 @@
   "icon": "⬡",
   "color": "#76b900",
   "signal": "BUY",
-  "price_usd": 204.48,
+  "price_usd": 210.69,
   "price_52w_high_usd": 236.54,
-  "price_52w_low_usd": 140.85,
+  "price_52w_low_usd": 142.03,
   "pe_ratio": null,
   "revenue_growth_yoy_pct": null,
   "next_earnings": "Mai 2026",
@@ -28,33 +28,33 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-on + Liquiditätszyklus bei moderater Zinspolitik. KI-Capex-Superzyklus läuft mit Rekordinvestitionen (>$300B combined), Fear & Greed extrem niedrig (12/100) = Überverkauf trotz starker Fundamentals.",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit moderater Zinslage; KI-Capex-Superzyklus intakt trotz Bewertungsvorsicht",
     "active_indicators": [
-      "KI-Capex-Zyklus & Kundenmultiplier: >80% Marktanteil, $300B+ combined Data-Center-Ausgaben 2026 = strukturelles Wachstum, nicht spekulativ",
-      "Sentiment-Diskrepanz: Fear & Greed 12/100 bei Monopol-Positionierung + Earnings-Catalyst → Undervaluation",
-      "Technische Positionierung: -13.6% vom 52W-High bei Aufwärts-Megatrend = Rebalancing-Gelegenheit, nicht Trendbruch"
+      "KI-Capex-Zyklus ($300B+ Data-Center-Budget 2026): direkter Umsatztreiber für NVIDIA; Blackwell-Ramp bestätigt Nachfragerobustheit",
+      "CUDA-Monopol + Exportregelungs-Klarheit: Regulatorische Entlastung (China-Deal bei 15% Revenue-Share) reduziert Tail-Risk; faktisches Duopol bleibt",
+      "Fear & Greed 14/100: Extreme Risiko-Aversion im Markt = Gegensignal für Quality-Akku; NVDA als defensiver KI-Play unterbewerte"
     ],
-    "summary": "NVIDIA bleibt der strukturelle Profiteur des KI-Capex-Zyklus mit faktischem Monopol und Earnings-Momentum vor May 2026 Guidance. Aktuelle Schwäche (-13.6% vom ATH) reflektiert China-Export-Unsicherheit und Profit-Taking, nicht fundamentale Verschlechterung. Bei 7-Jahres-DCA ist dies eine Kaufgelegenheit, zumal Sentiment extremst pessimistisch ist.",
+    "summary": "NVIDIA befindet sich in kritischer Akkumulationsphase: Der aktuelle Preis ($210.69, -10.9% von ATH) bietet attraktives DCA-Fenster bei intaktem Fundamental-Katalyst (Blackwell, $300B Capex-Zyklus 2026–2027). Fear & Greed bei 14 Points signalisiert überverkaufte Stimmung in Quality-Namen; für 7-Jahres-Plan ideal. Bewertung (impliziert KGV ~45–50x für nächstes Jahr) akzeptabel bei 20%+ EPS-CAGR.",
     "price_targets": {
-      "buy_zone": 195,
-      "buy_aggressiv": 185,
-      "take_profit_1_price": 230,
-      "take_profit_1_action": "20% bei Rückkehr zu 52W-High reduzieren (Gewinnmitnahme)",
-      "take_profit_2_price": 260,
-      "take_profit_2_action": "50% verkaufen (Blackwell-Euphorie Phase, KGV-Expansion erfasst)",
-      "concern_below": 170
+      "buy_zone": 205,
+      "buy_aggressiv": 195,
+      "take_profit_1_price": 245,
+      "take_profit_1_action": "20% realisieren (Rebalancing, kein Exit)",
+      "take_profit_2_price": 280,
+      "take_profit_2_action": "50% der Position realisieren bei extremem Sentiment-Swing",
+      "concern_below": 175
     },
-    "bull_case": "KI-Capex-Superzyklus ist erst im Inning 2/9 – $300B+ jährliche Investitionen durch MSFT/GOOG/AMZN/META sichern Umsatzwachstum für Jahre. China-Restrictions lockern (Signale aus Headlines), Export-Sorgen bullisch gelöst → Catalyst für Rückkehr zu $230+.",
-    "bear_case": "KGV 55–65x am Rand der Akzeptanz; regulatorisches Risiko (Antitrust, AI-Governance) könnte Capex-Zyklus bremsen. AMD/Intel-Konkurrenz (auch wenn Jahre entfernt) erhöht langfristiges Downside-Szenario.",
-    "signal_changer": "VERKAUFEN, wenn: (1) Q2/Q3-Guidance 2026 enttäuscht (<20% CCG-Wachstum), (2) China-Sanktionen drastisch verschärft werden oder (3) KGV über 75x steigt ohne Guidance-Anhebung. HOLD → CASH, wenn Fear & Greed über 70 springt und technische Zonen über 245 durchbrochen werden.",
+    "bull_case": "KI-Capex-Zyklus beschleunigt 2026–2027; Blackwell-Ramp validiert Nachfrage-Timing. CUDA-Ökosystem + Exportregelung-Clarity = Monopol-Moat bleibt unangetastet; 20–25% organisches Wachstum nächste 2 Jahre realistisch.",
+    "bear_case": "AMD/Intel nehmen Marktanteile (MI325X-Konkurrenz reel); China-Sanktionen könnten Exportmodell bedrohen. Bewertung bei >70x forward-KGV anfällig für Zinsschocks oder Capex-Enttäuschungen.",
+    "signal_changer": "FALLEND: Blackwell-Guidance-Miss oder China-Exportverbot über 15%-Deal hinaus. STEIGEND: Earnings-Beat + FY27-Guidance >25% YoY, oder M&A-Ankündigung (z.B. ARM-Integration). Technisches Schlüssel-Level: Bruch unter $175 (200er-MA broken, Strukturschadenrisiko).",
     "news_headlines": [
+      "Kazakhstan Launches $10 Billion AI Data Center Valley With Nvidia (NASDAQ: NVDA) Backing - foreignpolicyjournal.com",
       "NVIDIA Earnings Preview - Data Center, Rubin & Export Policy Outlook - tastylive",
-      "Nvidia Earnings: 3 Things to Watch as AI Capex Tested - Gotrade",
-      "NVDA Stock Slips After Hours As Warren Reportedly Calls Huang To Testify On China Chip Sales - TradingView",
       "Government Drops Sweeping AI Chip Export Rules: Can Nvidia Start Growing Again? - 24/7 Wall St.",
-      "NVIDIA (NVDA) Re-Entry Into China’s AI Chip Market: Products, Policy, Competition, and Investor Impact - AlphaStreet"
+      "NVIDIA Announces Financial Results for First Quarter Fiscal 2026 - NVIDIA Newsroom",
+      "Nvidia to Pay the U.S. Government 15% of China AI Chip Sales. How Will Its Revenue and Profits Be Impacted? - The Motley Fool"
     ],
-    "updated": "2026-06-12"
+    "updated": "2026-06-19"
   },
   "quarterly_review": {
     "last_quarter": "Q4 FY2026",
@@ -64,5 +64,5 @@
     "guidance_note": null
   },
   "strategy_note": "Stabilitätsanker. KI-Infrastruktur ist unvermeidlich – NVDA ist der einzige Profiteur ohne echte Konkurrenz.",
-  "dist_from_52w_high_pct": -13.6
+  "dist_from_52w_high_pct": -10.9
 }

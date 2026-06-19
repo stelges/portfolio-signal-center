@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "BUY",
-  "price_usd": 63608,
+  "price_usd": 62948,
   "ath_usd": 109000,
-  "ath_dist_pct": -41.6,
-  "change_30d_pct": -22.17,
+  "ath_dist_pct": -42.2,
+  "change_30d_pct": -18.2,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,25 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-off mit schwachem Dollar – Übergangsphase: Institutionelle Akkumulation bei extremer Retail-Angst, schwacher DXY stützt Hard Assets, erhöhte Anleiherenditen bremsen Risikobereitschaft",
-    "summary": "Bitcoin befindet sich in einer scharfen Korrektur (-22% in 30 Tagen, -41% vom ATH) mit Extremangst-Sentiment, das historisch starke antizyklische Kaufsignale liefert. Der schwache Dollar und steigende Goldpreise bestätigen einen Kapitalfluss in knappe Assets, während institutionelle Nachfrage laut Headlines stabil bleibt. Das Hauptrisiko ist das Macro-Overlay: Erhöhte 10Y-Renditen (4.49%) und ein noch laufender Risk-off-Modus können den Boden zeitlich nach hinten verschieben.",
+    "macro_regime": "Risk-off Übergang / Liquiditätszyklus-Pause – Dollar neutral, Zinsen erhöht, Sentiment in Extremangst, aber makro-Druck lässt leicht nach",
+    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Korrekturphase mit Extremangst-Sentiment, das historisch Akkumulationszonen markiert. Der Preis hat $60K als Unterstützung verteidigt, der Dollar ist neutral und der makro-Druck lässt marginal nach. Das bearishe Signal (unter 200MA) wird durch Zyklusposition und Sentiment-Kontraindikation überwogen – dies ist kein struktureller Bärenmarkt, sondern eine volatile Konsolidierungsphase 22 Monate vor dem nächsten Halving.",
     "active_indicators": [
-      "Fear & Greed Index bei 12/100 (Extremangst) – historisch zuverlässigster Kontraindikator für BTC-Akkumulationsphasen; jedes Mal unter 15 war mittelfristig ein signifikanter Einstiegspunkt",
-      "DXY bei 99.76 (schwacher Dollar) – negative Korrelation zu BTC und Gold; schwacher Dollar = Rückenwind für knappe Assets, Gold auf ATH bestätigt diesen Mechanismus aktuell",
-      "BTC unter 200-Tage-MA ($77.886) – kritischer Trendindikator; Preis darunter signalisiert bearishes Momentum, aber historisch in Pre-Halving-Phasen eine Kaufzone wenn Fundamentals intakt"
+      "Fear & Greed Index 14/100 (Extremangst): Historisch zuverlässigster Kontra-Indikator für BTC – Werte unter 20 markierten in >80% der Fälle mittelfristige Akkumulationszonen, nicht Crash-Beginn",
+      "BTC unter 200-Tage MA ($77,010): Bearishes Warnsignal, aber in Pre-Halving-Phasen (>18 Monate vor Halving) war dies historisch eine Einstiegschance, nicht ein Ausstiegssignal – Halving April 2028 gibt strukturellen Rückenwind",
+      "DXY 100.72 (neutral): Kein starker Dollar-Gegenwind mehr – bei DXY unter 101 historisch positiv für Risk-Assets inkl. BTC; Entspannung bei 10Y-Renditen wäre nächster Katalysator"
     ],
     "news_headlines": [
+      "Can BTC Reach $70000 in 2026? Bitcoin Price Prediction - WEEX",
+      "Bitcoin steadies above $63,000 as its worst week in months got a late macro rescue - CoinDesk",
       "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com",
-      "Bitcoin volatility hits 7 month low as institutional demand steadies markets - CoinDesk",
-      "Can BTC Reach $100,000 in 2026? Bitcoin Price Prediction - WEEX",
-      "June 2026 Cryptocurrency Market Insights: Crypto ETFs Now Track Debt, Not Tech - The Cryptonomist",
-      "Bitcoin vs. Ethereum: Why BTC is Winning the Crypto Market in May 2026 - TradingView"
+      "Bitcoin Price Holds Firm Above $63K Despite Sharp Decline to $59K Earlier, BTC Now Lifted by Easing Macro Pressures - Crowdfund Insider",
+      "Bitcoin rebounds from $60K lows on macro relief amid lingering consolidation - TMGM"
     ],
-    "updated": "2026-06-12"
+    "updated": "2026-06-19"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 77886.0,
-  "ma50": 74422.0,
+  "ma200": 77010.0,
+  "ma50": 72677.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

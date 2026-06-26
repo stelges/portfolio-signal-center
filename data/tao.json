@@ -5,7 +5,7 @@
   "icon": "τ",
   "color": "#00d4ff",
   "signal": "BUY",
-  "price_usd": 225.12,
+  "price_usd": 214.1,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -29,33 +29,33 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-on + Narrative-Shift (Dezentralisierung von KI); schwache Altcoin-Sentiment (Fear & Greed 14) bei steigendem BTC-Dominanz-Rückgang",
+    "macro_regime": "Risk-on + Narrative-Shift (dezentrale KI als Sicherheitsalternative) + Post-Halving-Deflation. BTC-Signal BUY, aber Fear & Greed extrem niedrig (13/100) = Capitulation-Phase mit hohem Upside-Potential für asymmetrische Wetten.",
     "active_indicators": [
-      "Narrative-Katalysator (Anthropic-Shutdown → dezentrale KI-Nachfrage real)",
-      "BTC-Signal = BUY (Gating-Bedingung erfüllt)",
-      "MCap-Ratio zu Peers (TAO $2.4B vs. LINK $8B, RNDR $3B → 30-50% Upside möglich ohne Markt-Übertreibung)"
+      "Grayscale-Narrativ-Katalysator: Anthropic-Shutdown legitimiert dezentrale KI als notwendige Infrastruktur – direkte Bullcase für TAO (einziger decentralized AI-Leader mit 21M Supply-Cap)",
+      "Post-Halving-Deflation (Dez 2025): Emission halbiert, MCap nur $2.3B vs. LINK $8B – niedrigste Bewertung im KI-Infra-Sektor mit höchstem technologischen Risiko/Reward-Verhältnis",
+      "BTC-Dominanz 55.6% fallend + Fear & Greed 13 = Marktboden-Signal: Altcoin-Rotation beginnt, TAO profitiert als höchstes-Risk asymmetrische Position"
     ],
-    "summary": "TAO bricht aus Fear-Greed-Tief aus mit starkem Narrativ-Rückenwind (Anthropic + Grayscale). BTC-Signal ist grün, Halving-Deflatation ist aktiv (seit Dez 2025), MCap-Verhältnis zu KI-Infrastruktur-Konkurrenten rechtfertigt bedeutende Reallokation. Risiko bleibt strukturell (Ausführung, Zentralisierungsdruck), aber asymmetrisches Reward-Profil für 7J-Horizon attraktiv.",
+    "summary": "TAO steht an der Schnittstelle von Grayscale-Legitimation (dezentrale KI-Narrative nach Anthropic-Shutdown), Post-Halving-Deflation und extremem Fear & Greed-Boden. Bei $214 ist TAO 70% unter ATH, aber mit 21M Bitcoin-ähnlicher Mechanic und nur $2.3B MCap – ideale Setup für 7-Jahres-Akkumulation als asymmetrische Wette.",
     "price_targets": {
       "buy_zone": 210,
       "buy_aggressiv": 195,
-      "take_profit_1_price": 320,
-      "take_profit_1_action": "30% Position (Gewinnsicherung, Gewinnmitnahme nach ~40% Anstieg)",
-      "take_profit_2_price": 520,
-      "take_profit_2_action": "50% verbleibend (mittelfristiges Ziel Mitte 2027, ~130% von Entry)",
-      "concern_below": 165
+      "take_profit_1_price": 350,
+      "take_profit_1_action": "30% verkaufen – erste Verdopplung bestätigt, Risiko reduzieren",
+      "take_profit_2_price": 600,
+      "take_profit_2_action": "50% der restlichen Position verkaufen – 3x ROI realisiert",
+      "concern_below": 160
     },
-    "bull_case": "Anthropic-Shutdown validiert Narrativ, dass dezentrale KI nicht-Luxus ist; Grayscale-Bestätigung + Halving-Mechanik + 60+ aktive Subnets mit Wachstum = strukturelle Fundamentals. TAO könnte wie SOL post-2020 ($0.80→$260) skalieren.",
-    "bear_case": "Dezentrale KI ist noch Nische; wenn zentrale Hyperscaler (OpenAI, Google) eigene Dezentralisierungsmodelle übernehmen, entschärft sich TAOs Unique Value Prop. Frühe Phase = hohes Ausführungsrisiko; Konkurrenz (Fetch.ai, Nunet) könnte Markt fragmentieren.",
-    "signal_changer": "BTC-Signal zu SELL oder HOLD wechseln; Fear & Greed unter 5 bleiben (echte Panik, nicht Konsolidierung); oder Grayscale-Antrag abgelehnt → sofort auf HOLD reduzieren und concern_below-Level monitoren.",
+    "bull_case": "Grayscale-ETF-Antrag wird genehmigt (wie SOL/BTC zuvor), TAO wird Flagship-Asset für dezentralisierte KI-Infrastruktur. Bei nur $2.3B MCap und 21M Supply-Cap ist 10–20x bis 2030 mathematisch möglich, wenn dezentrale KI-Nutzung exponentiell wächst.",
+    "bear_case": "Dezentrale KI bleibt Nische; zentralisierte Hyperscaler (OpenAI, Anthropic, Google) dominieren weiterhin. TAO-Subnets zeigen keine echte Produkttraction, technisches Risiko bei Proof-of-Work-ähnlichem Mining bleibt hoch.",
+    "signal_changer": "SELL-Signal triggert, wenn: (1) BTC-Signal auf SELL kippt + Fear & Greed unter 5 fällt (Panik-Dump); (2) Grayscale-ETF abgelehnt wird; (3) TAO unter $160 fällt und unter MA200 schliesst; (4) Subnet-Aktivität sinkt oder Exodus von Validatoren beginnt.",
     "news_headlines": [
-      "Anthropic, Bittensor, and the Rise of Decentralized AI - Grayscale",
+      "The Stack - Grayscale",
       "Grayscale Named Its Decentralized AI Pick — and Anthropic’s the Reason - BeInCrypto",
       "Anthropic shutdown makes a strong case for decentralized AI: Grayscale - TradingView",
-      "TAO Price Surges 30% in 12 Hours as Anthropic AI Suspension Highlights Demand for Decentralized AI - CCN.com"
+      "Grayscale Highlights Need for Decentralized AI After Anthropic Shutdown - CryptoRank"
     ],
-    "updated": "2026-06-19"
+    "updated": "2026-06-26"
   },
   "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
-  "market_cap_usd_billions": 2.42
+  "market_cap_usd_billions": 2.3
 }

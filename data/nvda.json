@@ -5,9 +5,9 @@
   "icon": "⬡",
   "color": "#76b900",
   "signal": "BUY",
-  "price_usd": 210.69,
+  "price_usd": 194.07,
   "price_52w_high_usd": 236.54,
-  "price_52w_low_usd": 142.03,
+  "price_52w_low_usd": 151.49,
   "pe_ratio": null,
   "revenue_growth_yoy_pct": null,
   "next_earnings": "Mai 2026",
@@ -28,33 +28,33 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit moderater Zinslage; KI-Capex-Superzyklus intakt trotz Bewertungsvorsicht",
+    "macro_regime": "Risk-on + Strukturelle KI-Liquidität: Trotz kurzfristig moderaten Sentiments ($FGI 13/100) bleibt der institutionelle Capex-Zyklus ($300B+ 2026) das dominierende Regime. Zinsumfeld neutral (4.37%), kein Rezessionsdruck → KI-Infrastruktur-Mega-Trend läuft strukturell weiter.",
     "active_indicators": [
-      "KI-Capex-Zyklus ($300B+ Data-Center-Budget 2026): direkter Umsatztreiber für NVIDIA; Blackwell-Ramp bestätigt Nachfragerobustheit",
-      "CUDA-Monopol + Exportregelungs-Klarheit: Regulatorische Entlastung (China-Deal bei 15% Revenue-Share) reduziert Tail-Risk; faktisches Duopol bleibt",
-      "Fear & Greed 14/100: Extreme Risiko-Aversion im Markt = Gegensignal für Quality-Akku; NVDA als defensiver KI-Play unterbewerte"
+      "Cloud-Capex-Momentum: $300B+ kombinierte Ausgaben 2026 (Microsoft, Google, Amazon, Meta) → stärkster Leading Indicator für NVDA Umsatzwachstum; Nvidia verarbeitet >80% dieser Investitionen",
+      "CUDA-Moat + Blackwell-Ramp: Monopolistische Stellung im KI-Training; Earnings Mai 2026 sollten Data-Center-Beschleunigung zeigen → Consensus-Anhebung wahrscheinlich",
+      "Bewertungs-Reversion nach Selloff: -18% vom 52W-Hoch, KGV derzeit im akzeptablen Bereich (nicht über 70x) → technischer Setup nach Sentiment-Pessimismus (FGI 13) historisch bullisch für Mega-Cap Growth"
     ],
-    "summary": "NVIDIA befindet sich in kritischer Akkumulationsphase: Der aktuelle Preis ($210.69, -10.9% von ATH) bietet attraktives DCA-Fenster bei intaktem Fundamental-Katalyst (Blackwell, $300B Capex-Zyklus 2026–2027). Fear & Greed bei 14 Points signalisiert überverkaufte Stimmung in Quality-Namen; für 7-Jahres-Plan ideal. Bewertung (impliziert KGV ~45–50x für nächstes Jahr) akzeptabel bei 20%+ EPS-CAGR.",
+    "summary": "NVDA notiert nach -18%-Pullback im strukturellen KI-Aufwärtstrend; Cloud-Capex-Zyklus läuft auf Rekordhöhe, Blackwell-Ramp sollte Q2-Guidance übertreffen. Warren-Hearing/China-Export-Risiken sind kurzfristige Noise, nicht strukturelle Bedrohung für 7-Jahres-DCA-Plan.",
     "price_targets": {
-      "buy_zone": 205,
-      "buy_aggressiv": 195,
-      "take_profit_1_price": 245,
-      "take_profit_1_action": "20% realisieren (Rebalancing, kein Exit)",
-      "take_profit_2_price": 280,
-      "take_profit_2_action": "50% der Position realisieren bei extremem Sentiment-Swing",
-      "concern_below": 175
+      "buy_zone": 185,
+      "buy_aggressiv": 175,
+      "take_profit_1_price": 220,
+      "take_profit_1_action": "20% bei $220 realisieren (Q2-Earnings-Bounce), Rest laufen lassen",
+      "take_profit_2_price": 250,
+      "take_profit_2_action": "50% Portfolio bei $250 (neues ATH-Retest) verkaufen, Rest für Long-Term-Trend",
+      "concern_below": 160
     },
-    "bull_case": "KI-Capex-Zyklus beschleunigt 2026–2027; Blackwell-Ramp validiert Nachfrage-Timing. CUDA-Ökosystem + Exportregelung-Clarity = Monopol-Moat bleibt unangetastet; 20–25% organisches Wachstum nächste 2 Jahre realistisch.",
-    "bear_case": "AMD/Intel nehmen Marktanteile (MI325X-Konkurrenz reel); China-Sanktionen könnten Exportmodell bedrohen. Bewertung bei >70x forward-KGV anfällig für Zinsschocks oder Capex-Enttäuschungen.",
-    "signal_changer": "FALLEND: Blackwell-Guidance-Miss oder China-Exportverbot über 15%-Deal hinaus. STEIGEND: Earnings-Beat + FY27-Guidance >25% YoY, oder M&A-Ankündigung (z.B. ARM-Integration). Technisches Schlüssel-Level: Bruch unter $175 (200er-MA broken, Strukturschadenrisiko).",
+    "bull_case": "Cloud-Provider verdoppeln KI-Capex 2026–2028; NVIDIA monopolisiert jeden Dollar via CUDA-Lock-in. Blackwell-Produktzyklus liefert 2–3 Jahre Super-Cycle-Wachstum bei sinkenden Margins auf hohem Niveau.",
+    "bear_case": "China-Export-Bans (Warren-Hearing) könnten 15–20% Umsatz treffen; AMD/Intel könnten 2027+ Marktanteile eroden wenn sie bei Performance aufschließen. Bewertung über 70x KGV (bei Normalisierung des Wachstums) ist Crash-Risiko.",
+    "signal_changer": "1) Earnings Mai 2026 enttäuschen (Data-Center-Guidance unter +40% YoY) → SELL-Signal. 2) China-Export-Ban wird konkret (>25% Umsatzrisiko explizit). 3) Kurs fällt unter $160 ohne Konjunktur-Schock → Trendbruch, dann HOLD/CASH bis $150er-Retest.",
     "news_headlines": [
-      "Kazakhstan Launches $10 Billion AI Data Center Valley With Nvidia (NASDAQ: NVDA) Backing - foreignpolicyjournal.com",
       "NVIDIA Earnings Preview - Data Center, Rubin & Export Policy Outlook - tastylive",
-      "Government Drops Sweeping AI Chip Export Rules: Can Nvidia Start Growing Again? - 24/7 Wall St.",
-      "NVIDIA Announces Financial Results for First Quarter Fiscal 2026 - NVIDIA Newsroom",
-      "Nvidia to Pay the U.S. Government 15% of China AI Chip Sales. How Will Its Revenue and Profits Be Impacted? - The Motley Fool"
+      "Kazakhstan Launches $10 Billion AI Data Center Valley With Nvidia (NASDAQ: NVDA) Backing - foreignpolicyjournal.com",
+      "NVDA Stock Slips After Hours As Warren Reportedly Calls Huang To Testify On China Chip Sales - TradingView",
+      "Buy Nvidia Under $250 on Trump’s China Visit and Warsh’s Dovish AI Signals - 24/7 Wall St.",
+      "Nvidia Earnings Preview May 20 2026: NVDA Stock Analysis - Intellectia AI"
     ],
-    "updated": "2026-06-19"
+    "updated": "2026-06-26"
   },
   "quarterly_review": {
     "last_quarter": "Q4 FY2026",
@@ -64,5 +64,5 @@
     "guidance_note": null
   },
   "strategy_note": "Stabilitätsanker. KI-Infrastruktur ist unvermeidlich – NVDA ist der einzige Profiteur ohne echte Konkurrenz.",
-  "dist_from_52w_high_pct": -10.9
+  "dist_from_52w_high_pct": -18.0
 }

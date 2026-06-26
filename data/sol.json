@@ -5,9 +5,9 @@
   "icon": "◎",
   "color": "#9945ff",
   "signal": "BUY",
-  "price_usd": 68.87,
+  "price_usd": 73.15,
   "ath_usd": 294,
-  "ath_dist_pct": -76.6,
+  "ath_dist_pct": -75.1,
   "network_revenue_annual_usd_billions": 2.85,
   "etf_status": "In Prüfung",
   "firedancer_status": "Coming 2026",
@@ -28,35 +28,33 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit BTC-Bodenbildung; Altcoin-Rotation pending bei sinkender BTC-Dominanz",
+    "macro_regime": "Risk-on + Altcoin-Rotation | BTC-Dominanz-Rückgang + BTC-KI-Signal = Doppelrückenwind für L1-Layer",
     "active_indicators": [
-      "BTC KI-Signal = BUY (Altcoins folgen mit Leverage-Effekt)",
-      "BTC-Dominanz 56.1% = Übergangszone (fallend = bullish für SOL)",
-      "Network Revenue $2.85B/Jahr = echte fundamentale Substanz (nicht nur Narrativ)",
-      "Firedancer 2026 = Katalyst für TPS-Skalierung (1M TPS-Ziel konkret)",
-      "Fear & Greed 14/100 = extreme Kapitulationsstimmung (historisch Einstiegssignal)"
+      "BTC-Signal (KI: BUY) – historisch führt BTC-Bullrun zu Altcoin-Hebel-Outperformance, besonders bei sinkender BTC-Dominanz (55.6% = Umbruchzone)",
+      "SOL/ETH-Ratio (0.0464) – über dem 2-Jahres-Median, signalisiert relative Stärke gegenüber ETH trotz 75%-Drawdown vom ATH",
+      "Firedancer + ETF-Katalysator – 2026-Upgrade (1M TPS-Ziel) + SEC-ETF-Antrag sind konkrete, zeitgebundene Katalysatoren in nächsten 6-12 Monaten"
     ],
-    "summary": "SOL befindet sich in Kapitulationszone mit echtem Netzwerk-Revenue und konkretem Upgrade-Katalyst (Firedancer 2026). BTC-Bodenbildung + fallende BTC-Dominanz = klassisches Altcoin-Rotation-Setup. Für 7-Jahres-Buy-and-Hold-Strategie attraktiv, aber taktischer Einstieg ist abhängig von BTC-Bestätigung.",
+    "summary": "Solana befindet sich im Übergang von Angst zu Rotation: BTC-KI-Signal ist bullish, BTC-Dominanz schrumpft (Altcoin-Saison-Setup), und echte Fundamentals (Network Revenue $2.85B/Jahr, Firedancer, ETF-Antrag) rechtfertigen Neuaufbau. 75%-Drawdown vom ATH ist bei 7-Jahres-Horizont und fehlendem technischen Crash-Signal kein Grund zur Flucht – eher Akkumulations-Window für L1-Wachstumswert.",
     "price_targets": {
-      "buy_zone": 62,
-      "buy_aggressiv": 55,
-      "take_profit_1_price": 120,
-      "take_profit_1_action": "Keine Aktion (Hold, da 7J-Horizont)",
-      "take_profit_2_price": 210,
-      "take_profit_2_action": "Keine Aktion (Hold, da 7J-Horizont)",
-      "concern_below": 48
+      "buy_zone": 70,
+      "buy_aggressiv": 62,
+      "take_profit_1_price": 115,
+      "take_profit_1_action": "25% verkaufen – erste Resistance nach Firedancer-Hype-Phase (57% Gewinn)",
+      "take_profit_2_price": 185,
+      "take_profit_2_action": "50% verbleibend verkaufen – historische Widerstände bei 0.618-Fib des ATH-Drawdowns (153% Gewinn)",
+      "concern_below": 52
     },
-    "bull_case": "Firedancer ist echter Tech-Katalyst mit measurable TPS-Steigerung; Network Revenue von $2.85B/Jahr (höher als viele L1s) beweist echte Adoption. BTC-KI-Signal + Dominanz-Falltrend + Fear-Index 14 = klassisches Altcoin-Kaufsignal mit Timing-Hebel.",
-    "bear_case": "Preis 76.6% unter ATH könnte weiteren Blutungen entsprechen, falls BTC-Support bei $60k bricht. Firedancer-Verzögerungen oder schwächere Adoption würden Narrative sofort kippen.",
-    "signal_changer": "BTC fällt unter $60k und bestätigt nicht → HOLD/CASH. BTC-Dominanz fällt unter 54% + SOL rallies über $100 → Signal zu AGGRESSIV-BUY upgraden. Firedancer verzögert sich in H2 2026 → HOLD reduzieren.",
+    "bull_case": "Firedancer ist echte technische Differenzierung (1M TPS vs. ETH ~15 TPS), ETF-Genehmigung würde institutiellen Kapitalfluss erzwingen, und $2.85B Network Revenue zeigt, dass SOL keine reine Spekulation ist – echte Nutzung. BTC-Bullrun + sinkende Dominanz = ideales Umfeld für L1-Outperformance wie 2021.",
+    "bear_case": "Fear & Greed bei 13/100 könnte weitere 6-12 Monate Seitwärts-Konsolidierung bedeuten, Firedancer-Hype könnte bereits eingepreist sein, und ETF-Genehmigung ist nicht garantiert – Verzögerung wäre Sentiment-Killer.",
+    "signal_changer": "HOLD→SELL: BTC-KI-Signal fällt zurück auf SELL oder BTC-Dominanz steigt >60% (Altcoin-Saison endet). BUY→HOLD: Unter $52 falls makro Rezessionsangst + Safe-Haven-Rally (USD/10Y >5%) eintritt. HOLD→BUY-AGGRESSIV: ETF-Genehmigung + Firedancer-Mainnet-Datum bestätigt (= Katalysator-Kompression).",
     "news_headlines": [
       "Solana’s Leap: Firedancer Ignites a New Era for SOL - Phemex",
+      "Solana price prediction 2026-2030: beyond the ETF paradox - crypto.news",
       "Is Solana a Good Investment in 2026? SOL Risks and Outlook - Coin Bureau",
-      "Solana vs. Ethereum: Market Cap Projections for 2026 - Coinfomania",
-      "How to Use ChatGPT to Predict Solana Price in 2026 - Memeburn"
+      "How Strong Will Solana Be in 2026? - Disruption Banking"
     ],
-    "updated": "2026-06-19"
+    "updated": "2026-06-26"
   },
   "strategy_note": "L1 Wachstumswert mit echtem Revenue. 2.85B$/Jahr Netzwerk-Revenue – kein reines Narrativ.",
-  "eth_price_usd": 1699.06
+  "eth_price_usd": 1576.73
 }

@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "BUY",
-  "price_usd": 62948,
+  "price_usd": 59848,
   "ath_usd": 109000,
-  "ath_dist_pct": -42.2,
-  "change_30d_pct": -18.2,
+  "ath_dist_pct": -45.1,
+  "change_30d_pct": -22.55,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,25 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-off Übergang / Liquiditätszyklus-Pause – Dollar neutral, Zinsen erhöht, Sentiment in Extremangst, aber makro-Druck lässt leicht nach",
-    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Korrekturphase mit Extremangst-Sentiment, das historisch Akkumulationszonen markiert. Der Preis hat $60K als Unterstützung verteidigt, der Dollar ist neutral und der makro-Druck lässt marginal nach. Das bearishe Signal (unter 200MA) wird durch Zyklusposition und Sentiment-Kontraindikation überwogen – dies ist kein struktureller Bärenmarkt, sondern eine volatile Konsolidierungsphase 22 Monate vor dem nächsten Halving.",
+    "macro_regime": "Risk-off mit selektiver Liquidität – Dollar neutral, Gold auf ATH, Krypto in Korrekturphase trotz stabiler Aktienmärkte",
+    "summary": "Bitcoin befindet sich in einer ausgeprägten Korrekturphase (-45% vom ATH, -22.6% in 30 Tagen) mit extremem Angst-Sentiment, befindet sich jedoch strukturell in der Pre-Halving-Akkumulationsphase (Halving ~April 2028, historisch startet Aufwärtsbewegung 12-18 Monate vorher). Der neutrale Dollar und stabile Aktienmärkte sprechen gegen eine systemische Krise – der Sell-off erscheint krypto-spezifisch und sentiment-getrieben. Für DCA-Investoren mit 7-Jahres-Horizont ist dies klassisches Akkumulationsterritorium, auch wenn kurzfristig weitere Schwäche bis $52k-55k möglich ist.",
     "active_indicators": [
-      "Fear & Greed Index 14/100 (Extremangst): Historisch zuverlässigster Kontra-Indikator für BTC – Werte unter 20 markierten in >80% der Fälle mittelfristige Akkumulationszonen, nicht Crash-Beginn",
-      "BTC unter 200-Tage MA ($77,010): Bearishes Warnsignal, aber in Pre-Halving-Phasen (>18 Monate vor Halving) war dies historisch eine Einstiegschance, nicht ein Ausstiegssignal – Halving April 2028 gibt strukturellen Rückenwind",
-      "DXY 100.72 (neutral): Kein starker Dollar-Gegenwind mehr – bei DXY unter 101 historisch positiv für Risk-Assets inkl. BTC; Entspannung bei 10Y-Renditen wäre nächster Katalysator"
+      "Fear & Greed Index bei 13 (Extremangst) – historisch einer der zuverlässigsten Konträr-Indikatoren für mittelfristige BTC-Akkumulation; Werte unter 15 markierten in vergangenen Zyklen oft lokale Böden",
+      "BTC unter dem 200-Tage-MA ($76.003) – kritischer Trendindikator; aktuelle Unterschreitung signalisiert strukturelle Schwäche, definiert aber gleichzeitig klare Rückkehr-Targets und historische Kaufzonen in Pre-Halving-Phasen",
+      "Gold auf $4.082 bei neutralem DXY ($101) – Kapitalrotation in Wertaufbewahrungsmittel läuft bereits; BTC folgt Gold in Risk-off-Phasen typischerweise mit 3-6 Monaten Verzögerung als 'digitales Gold'"
     ],
     "news_headlines": [
-      "Can BTC Reach $70000 in 2026? Bitcoin Price Prediction - WEEX",
-      "Bitcoin steadies above $63,000 as its worst week in months got a late macro rescue - CoinDesk",
-      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com",
-      "Bitcoin Price Holds Firm Above $63K Despite Sharp Decline to $59K Earlier, BTC Now Lifted by Easing Macro Pressures - Crowdfund Insider",
-      "Bitcoin rebounds from $60K lows on macro relief amid lingering consolidation - TMGM"
+      "Bitcoin could fall to $55,000 before finding a bottom, 10x Research says - CoinDesk",
+      "Bitcoin (BTC) Price Outlook 2026–2030: What Analysts Are Watching - CryptoRank",
+      "Bitcoin May Not Have Bottomed Yet. Here’s Where the Data Says it Could. - galaxy.com",
+      "Crypto Bull Run Outlook 2026: Key Signals to Watch Now - CoinDCX",
+      "Bitcoin just broke below the floor of its famous Rainbow Chart into the ‘BTC is dead’ zone - CoinDesk"
     ],
-    "updated": "2026-06-19"
+    "updated": "2026-06-26"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 77010.0,
-  "ma50": 72677.0,
+  "ma200": 76003.0,
+  "ma50": 70227.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

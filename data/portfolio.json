@@ -1,33 +1,33 @@
 {
-  "last_updated": "2026-06-26T19:27:39.235123Z",
+  "last_updated": "2026-07-03T19:01:39.424075Z",
   "updated_by": "update_intelligence.py v3 (GitHub Actions)",
   "global_signal": "BUY",
   "global_summary": "Akkumulieren – günstige Phase aktiv",
-  "fear_greed": 13,
-  "btc_price_usd": 59848,
-  "btc_ath_dist_pct": -45.1,
-  "btc_30d_change_pct": -22.55,
-  "next_update": "2026-07-03T18:00:00Z",
+  "fear_greed": 21,
+  "btc_price_usd": 62150,
+  "btc_ath_dist_pct": -43.0,
+  "btc_30d_change_pct": -12.91,
+  "next_update": "2026-07-10T18:00:00Z",
   "ai_weekly_briefing": {
     "title": "Alle Positionen im Kaufsignal",
-    "status": "Portfolio zeigt breite Kaufsignale bei stabiler makroökonomischer Lage.",
-    "insight": "BTC unter $60k mit niedriger Fear & Greed bietet günstigen DCA-Einstieg; Metaplanet deutlich unter NAV. Makro bleibt unterstützend: DXY stabil, 10Y-Renditen moderat.",
-    "action": "Diese Woche DCA-Investition wie geplant durchführen und Position halten – keine Abweichung vom 7-Jahres-Plan nötig."
+    "status": "Portfolio zeigt breite Kaufsignale across all holdings bei stabiler Makrolage.",
+    "insight": "BTC unter Fear & Greed 25er-Marke, Metaplanet mit 0.89x NAV-Discount und alle Tech-Positionen im grünen Bereich - ideale Bedingungen für planmäßiges DCA.",
+    "action": "Monatliches DCA wie geplant durchführen; keine Anpassungen nötig, 7-Jahres-Plan läuft optimal."
   },
   "market_regime": "fearful",
   "btc_dominance_pct": 55.6,
   "macro": {
-    "sp500": 7351.52,
-    "dxy": 101.36,
-    "gold": 4082.0,
-    "us10y": 4.37,
-    "usdjpy": 161.72
+    "sp500": 7483.24,
+    "dxy": 100.85,
+    "gold": 4187.3,
+    "us10y": 4.48,
+    "usdjpy": 161.35
   },
   "next_halving": {
-    "next_halving_estimated_utc": "2028-04-12T19:07:46Z",
+    "next_halving_estimated_utc": "2028-04-12T20:41:49Z",
     "next_halving_block": 1050000,
-    "blocks_remaining": 94462,
-    "current_block_height": 955538,
+    "blocks_remaining": 93466,
+    "current_block_height": 956534,
     "halving_source": "blockchain_calculated"
   }
 }

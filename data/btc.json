@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "BUY",
-  "price_usd": 59848,
+  "price_usd": 62150,
   "ath_usd": 109000,
-  "ath_dist_pct": -45.1,
-  "change_30d_pct": -22.55,
+  "ath_dist_pct": -43.0,
+  "change_30d_pct": -12.91,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,37 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-off mit selektiver Liquidität – Dollar neutral, Gold auf ATH, Krypto in Korrekturphase trotz stabiler Aktienmärkte",
-    "summary": "Bitcoin befindet sich in einer ausgeprägten Korrekturphase (-45% vom ATH, -22.6% in 30 Tagen) mit extremem Angst-Sentiment, befindet sich jedoch strukturell in der Pre-Halving-Akkumulationsphase (Halving ~April 2028, historisch startet Aufwärtsbewegung 12-18 Monate vorher). Der neutrale Dollar und stabile Aktienmärkte sprechen gegen eine systemische Krise – der Sell-off erscheint krypto-spezifisch und sentiment-getrieben. Für DCA-Investoren mit 7-Jahres-Horizont ist dies klassisches Akkumulationsterritorium, auch wenn kurzfristig weitere Schwäche bis $52k-55k möglich ist.",
+    "macro_regime": "Risk-off mit selektiver Liquidität – Stagflationsdruck, erhöhte Anleiherenditen, aber schwächelnder Dollar und steigendes Gold signalisieren Kapitalrotation weg vom USD, nicht klassische Rezession",
     "active_indicators": [
-      "Fear & Greed Index bei 13 (Extremangst) – historisch einer der zuverlässigsten Konträr-Indikatoren für mittelfristige BTC-Akkumulation; Werte unter 15 markierten in vergangenen Zyklen oft lokale Böden",
-      "BTC unter dem 200-Tage-MA ($76.003) – kritischer Trendindikator; aktuelle Unterschreitung signalisiert strukturelle Schwäche, definiert aber gleichzeitig klare Rückkehr-Targets und historische Kaufzonen in Pre-Halving-Phasen",
-      "Gold auf $4.082 bei neutralem DXY ($101) – Kapitalrotation in Wertaufbewahrungsmittel läuft bereits; BTC folgt Gold in Risk-off-Phasen typischerweise mit 3-6 Monaten Verzögerung als 'digitales Gold'"
+      "Fear & Greed Index (21/100 – Extremangst historisch stärkster antizyklischer Kaufindikator für BTC, Trefferquote >80% bei 6-Monats-Horizont)",
+      "BTC vs. 200-Tage-MA (Preis 17% unter MA200 – jede Phase darunter war historisch Post-Halving-Akkumulationsfenster, nicht Crash-Beginn)",
+      "Gold/BTC-Ratio (Gold auf ATH bei $4.187 vs. BTC bei $62k – historisch folgt BTC Gold mit 2-6 Monaten Verzögerung in Phasen realer Negativzinsen)"
     ],
+    "summary": "BTC befindet sich im klassischen Post-Halving-Akkumulationstal: Extremangst, Preis unter MA200, schwaches Sentiment – aber Makro-Rückenwind (schwacher Dollar, Gold-ATH) signalisiert keine strukturelle Trendumkehr, sondern Konsolidierung. Die Halving-Logik (April 2024) legt das zyklische Tiefpunkt-Fenster zwischen Q3–Q4 2026, was mit den Headlines über einen möglichen Oktober-Bottom übereinstimmt. DCA erhöhen ist hier rational, aber kein All-in – das Risiko weiterer Unterschreitung auf $52–55k besteht.",
+    "price_targets": {
+      "buy_zone": 58000,
+      "buy_aggressiv": 52000,
+      "take_profit_1_price": 89000,
+      "take_profit_1_action": "25% der Position reduzieren",
+      "take_profit_2_price": 115000,
+      "take_profit_2_action": "weitere 40% der Position reduzieren",
+      "concern_below": 48000
+    },
+    "bull_case": "Fed-Pivot oder Dollar-Schwäche beschleunigt Kapitalfluss in BTC als digitales Gold; Halving-Zyklus bringt wie 2020/2021 innerhalb von 12–18 Monaten neue ATHs jenseits $120k. Institutionelle Akkumulation bei Extremangst setzt klassisches Boden-Muster.",
+    "bear_case": "Anhaltend hohe US-Renditen (>4.5%) und globale Rezessionsängste drücken Risikoassets weiter; BTC bricht unter $52k und testet den MA200 des vorherigen Zyklus (~$42–45k) – Halving-Zyklus verlängert sich atypisch.",
+    "signal_changer": "CASH-Signal bei Schließen unter $48.000 auf Wochenbasis (Strukturbruch) oder bei DXY-Anstieg über 107 kombiniert mit S&P-Korrektur >10%; HOLD-Signal wenn Fear & Greed über 45 steigt ohne Preisanstieg über MA200 ($75k) – dann DCA normalisieren.",
     "news_headlines": [
-      "Bitcoin could fall to $55,000 before finding a bottom, 10x Research says - CoinDesk",
-      "Bitcoin (BTC) Price Outlook 2026–2030: What Analysts Are Watching - CryptoRank",
-      "Bitcoin May Not Have Bottomed Yet. Here’s Where the Data Says it Could. - galaxy.com",
-      "Crypto Bull Run Outlook 2026: Key Signals to Watch Now - CoinDCX",
-      "Bitcoin just broke below the floor of its famous Rainbow Chart into the ‘BTC is dead’ zone - CoinDesk"
+      "What's next for Bitcoin and stocks? Analysts see a volatile second half - CoinDesk",
+      "Bitcoin Cycle Timing: Could the Next BTC Bottom Arrive in October 2026? - CryptoPotato",
+      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com",
+      "History favors another weak Bitcoin H2 – Can liquidity rewrite BTC’s 2026 cycle? - Bitget",
+      "Solana Price Prediction 2026: Can SOL Overtake Bitcoin? - Bitcoin Foundation"
     ],
-    "updated": "2026-06-26"
+    "updated": "2026-07-03"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 76003.0,
-  "ma50": 70227.0,
+  "ma200": 74951.0,
+  "ma50": 67357.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

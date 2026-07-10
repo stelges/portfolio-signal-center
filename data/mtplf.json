@@ -9,8 +9,8 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 0.8871,
-  "btc_nav_usd_billions": 2.5,
+  "mnav": 0.9816,
+  "btc_nav_usd_billions": 2.56,
   "zones": {
     "buy": {
       "label": "mNAV < 1.1x",
@@ -28,35 +28,25 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-off + Angst-Phase (Fear & Greed 21) mit BTC-Akkumulation durch Institutionen; schwacher Yen begünstigt USD-Aktiva-Halter wie Metaplanet",
+    "macro_regime": "Risk-off + Liquiditätsflucht in Sicherheit; BTC als digitales Gold; schwacher Yen unterstützt japanische USD-Aktiva; Fear & Greed extrem niedrig (23) = Akkumulationsphase",
+    "summary": "Metaplanet notiert mit mNAV 0.9816x – unter Parität und damit im raren Rabatt-Bereich – während Fear & Greed bei extremer Angst (23) und BTC -41% vom ATH notiert. Dies ist klassischer 7-Jahres-DCA-Zeitpunkt: maximale psychologische Unattraktivität trifft auf fundamentale Bilanzstärke (40k+ BTC) und schwache Yen-Makro.",
     "active_indicators": [
-      "mNAV 0.8871x – Bitcoin mit extremem Rabatt, historisch seltene Akkumulationszone (<0.9x)",
-      "BTC -43% vom ATH + KI-BUY-Signal – Angst schafft Einstiegschance für 7-Jahres-DCA",
-      "USD/JPY 161.35 (hoher Yen-Schwäche-Tailwind) + aggressive Metaplanet-Kaufs (5.075 BTC aktuell) – Management lädt selbst nach"
+      "mNAV 0.9816x (im unteren Kaufzone-Bereich, <1.0x = Bitcoin mit Rabatt via Aktie)",
+      "Fear & Greed Index 23/100 (extreme Angst = historisch optimaler Einstiegspunkt für langfristige DCA)",
+      "USD/JPY 161.72 (starker Dollar begünstigt Metaplanets USD-Schulden-Management und BTC-NAV-Bewertung in JPY)",
+      "BTC-Signal KI: BUY + 40,177 BTC Treasury (transparente, wachsende Bitcoin-Exposition)",
+      "Jüngste Akquisition +$170M BTC (Management aktiv, bullish signaling)"
     ],
-    "summary": "Metaplanet handelt bei 0.8871x mNAV, dem besten Kaufpreis seit Listing – ein aggressiver Rabatt in einer Fear-Phase. Mit Fear & Greed 21 und BTC -43% vom ATH ist dies klassische DCA-Akkumulation für 7-Jahres-Plan. Managements fortgesetzte Milliarden-BTC-Käufe signalisieren Vertrauen.",
-    "price_targets": {
-      "buy_zone_mnav": 0.9,
-      "buy_aggressiv_mnav": 0.85,
-      "take_profit_1_mnav": 1.15,
-      "take_profit_1_action": "Trailing-Stop setzen, nicht verkaufen – DCA-Position halten",
-      "take_profit_2_mnav": 1.5,
-      "take_profit_2_action": "Nur bei extremem Risk-off 10–15% Gewinn sichern, sonst halten für Zyklus",
-      "concern_mnav": 1.8
-    },
-    "bull_case": "mNAV 0.8871x ist historischer Einstiegspunkt für gehebelte BTC-Exposure; wenn BTC aus Fear-Phase +200% macht, könnte MTPLF durch mNAV-Expansion + BTC-Gewinn 5–10x generieren. Yen-Schwäche + Management-Buying = strukturelle Tailwinds.",
-    "bear_case": "BTC könnte weiter fallen (30–40%), was mNAV kurzzeitig drückt; hohe Schuldenquote ($280M bei $2.5B NAV) bedeutet Zinskosten-Drag in Rally-Phase. Japanische Regulierung oder Yen-Rallye könnte Hebel abbauen.",
-    "signal_changer": "mNAV >1.50x erreicht UND BTC stabilisiert sich über $65k → Momentum-Phase, nur noch DCA-halten. mNAV <0.80x → Aggressives Nachkaufen erwägen. Fear & Greed >70 + BTC ATH-Nähe → Gewinnmitnahme erwägen.",
     "news_headlines": [
       "Metaplanet buys another $170 million of bitcoin expanding treasury to 43,000 BTC - CoinDesk",
+      "A Look At Metaplanet (TSE:3350) Valuation After Launching Bitcoin Focused Metaplanet Ventures Subsidiary - Yahoo Finance",
       "Earn Bitcoin Rewards on Every Purchase in Japan—Feel the Future! - Phemex",
-      "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst - TradingView",
-      "Metaplanet (3350) acquires 5,075 BTC, jumps to third largest BTC treasury company - CoinDesk"
+      "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst - TradingView"
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-10"
   },
   "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien.",
-  "stock_price_usd": 1.3263,
-  "stock_price_jpy": 214.0,
-  "usdjpy": 161.35
+  "stock_price_usd": 1.5335,
+  "stock_price_jpy": 248.0,
+  "usdjpy": 161.72
 }

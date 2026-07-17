@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "BUY",
-  "price_usd": 63830,
+  "price_usd": 64273,
   "ath_usd": 109000,
-  "ath_dist_pct": -41.4,
-  "change_30d_pct": 1.19,
+  "ath_dist_pct": -41.0,
+  "change_30d_pct": -3.07,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,25 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-on mit strukturellen Bremsen – Liquiditätszyklus early-stage, gebremst durch restriktive Realzinsen und japanische Zinsrisiken",
-    "summary": "BTC befindet sich 22 Monate vor dem nächsten Halving in einer klassischen Akkumulationsphase mit extremem Sentiment-Pessimismus – historisch eine der attraktivsten DCA-Zonen des Zyklus. Der Hauptgegenwind ist strukturell (hohe Realzinsen, japanische Zinsrisiken) und nicht fundamental-destruktiv, was den Zeitrahmen verlängert aber den Einstiegszeitpunkt nicht entkräftet. Für einen 7-Jahres-Plan überwiegt die asymmetrische Chance bei aktuellem Preisniveau und Zyklusposition klar die kurzfristigen Makrorisiken.",
+    "macro_regime": "Risk-on mit Vorbehalt: Liquiditätszyklus intakt, aber teures Kapital und Flucht in Sicherheits-Assets (Gold ATH) dämpfen Risk-Momentum",
+    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationsphase mit Fear-Sentiment (27/100) und Preis knapp über dem 50-MA ($63,719) – eine technisch fragile aber fundamental interessante Zone. Der dominante Konflikt: hohe US-Renditen (4,54%) und Gold auf ATH zeigen, dass institutionelles Kapital noch in Sicherheit rotiert, während der strukturelle Krypto-Bullenzyklus (Halving 2028) erst anläuft. DCA-Erhöhung ist hier historisch die stärkste Strategie.",
     "active_indicators": [
-      "Fear & Greed Index (23 – Extremangst): Historisch einer der verlässlichsten Kontraindikator-Signale für BTC; ähnliche Niveaus in Nov 2022, Jan 2023 und Aug 2024 markierten mittelfristige Tiefpunkte und boten asymmetrische Einstiegspunkte für DCA-Strategien",
-      "BTC vs. 200-Tage-MA ($74,105): BTC handelt 14% unterhalb des MA200 – in Post-Halving-Zyklen historisch eine Anomalie, die entweder Zyklusende (unwahrscheinlich bei 22 Monate vor nächstem Halving) oder günstige Akkumulationsphase signalisiert; Rückkehr über MA200 wäre starkes Bestätigungssignal",
-      "10Y US-Rendite (4.57%) + DXY (100.97): Realzinsumfeld bleibt restriktiv, verhindert explosive Risk-on-Bewegungen; DXY unter 101 jedoch neutral-bis-konstruktiv für BTC – kein aktiver Gegenwind durch Dollar-Stärke, was die Makrobremse auf 'moderat' begrenzt"
+      "200-Tage MA ($73,283): BTC handelt ~13% darunter – historisch in Post-Halving-Akkumulationsphasen ein starkes Einstiegssignal, da Rückkehr über MA200 oft den Bullenmarkt-Beginn markiert",
+      "Gold/BTC-Ratio (Gold auf ATH $4.013): Steigendes Gold bei schwächelndem BTC signalisiert Kapitalrotation in Sicherheit – historisch Vorläufer für späteren BTC-Aufholeffekt, sobald Risikobereitschaft zurückkehrt",
+      "Halving-Zyklus (Pre-Halving ~22 Monate vor April 2028): Historisch ist 18-24 Monate vor Halving die optimale DCA-Akkumulationsphase; Fear & Greed bei 27 verstärkt das antizyklische Kaufsignal"
     ],
     "news_headlines": [
-      "Bitcoin price news: BTC pulls back after run above $64,000 - CoinDesk",
       "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
+      "Bitcoin Price Outlook 2026–2030: Key Factors Shaping BTC’s Long-Term Trajectory - CryptoRank",
       "Bitcoin's recent macro relief faces a challenge from Japanese interest rates - CoinDesk",
-      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com",
-      "BTC price RSI prints key 2026 signal: Five things to know in Bitcoin this week - TradingView"
+      "Crypto Today: Bitcoin, Ethereum, XRP stall after US CPI-driven mild rally - TMGM trading",
+      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com"
     ],
-    "updated": "2026-07-10"
+    "updated": "2026-07-17"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 74105.0,
-  "ma50": 65364.0,
+  "ma200": 73283.0,
+  "ma50": 63719.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "BUY",
-  "price_usd": 64273,
+  "price_usd": 64092,
   "ath_usd": 109000,
-  "ath_dist_pct": -41.0,
-  "change_30d_pct": -3.07,
+  "ath_dist_pct": -41.2,
+  "change_30d_pct": 0.24,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,25 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-on mit Vorbehalt: Liquiditätszyklus intakt, aber teures Kapital und Flucht in Sicherheits-Assets (Gold ATH) dämpfen Risk-Momentum",
-    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationsphase mit Fear-Sentiment (27/100) und Preis knapp über dem 50-MA ($63,719) – eine technisch fragile aber fundamental interessante Zone. Der dominante Konflikt: hohe US-Renditen (4,54%) und Gold auf ATH zeigen, dass institutionelles Kapital noch in Sicherheit rotiert, während der strukturelle Krypto-Bullenzyklus (Halving 2028) erst anläuft. DCA-Erhöhung ist hier historisch die stärkste Strategie.",
+    "macro_regime": "Risk-on mit Einschränkungen: Liquiditätszyklus erholt sich, aber hohe Realzinsen und starkes Gold signalisieren latente Rezessionsangst bei gleichzeitig nachlassendem Dollar-Druck (DXY ~101)",
+    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationszone (~21 Monate vor dem nächsten Halving April 2028), die strukturell mit Q3/Q4 2022 vergleichbar ist. Der Markt zeigt Erschöpfung nach dem 13%-Juli-Recovery, Retail ist ängstlich (F&G 28), aber ETF-Flows erholen sich laut Headlines – institutionelle Akkumulation bei retailseitigem Verkaufsdruck ist historisch bullish. Dominantes Risiko bleibt der 10Y-Yield bei 4,68%, der Risk-Assets strukturell belastet und einen aggressiveren BUY-Impuls verhindert.",
     "active_indicators": [
-      "200-Tage MA ($73,283): BTC handelt ~13% darunter – historisch in Post-Halving-Akkumulationsphasen ein starkes Einstiegssignal, da Rückkehr über MA200 oft den Bullenmarkt-Beginn markiert",
-      "Gold/BTC-Ratio (Gold auf ATH $4.013): Steigendes Gold bei schwächelndem BTC signalisiert Kapitalrotation in Sicherheit – historisch Vorläufer für späteren BTC-Aufholeffekt, sobald Risikobereitschaft zurückkehrt",
-      "Halving-Zyklus (Pre-Halving ~22 Monate vor April 2028): Historisch ist 18-24 Monate vor Halving die optimale DCA-Akkumulationsphase; Fear & Greed bei 27 verstärkt das antizyklische Kaufsignal"
+      "200-Tage MA ($72,386): BTC handelt ~11% darunter – historisch in Post-Halving-Akkumulationsphasen eine der stärksten Kauf-Zonen, sofern kein struktureller Marktbruch vorliegt",
+      "Gold ($4,054): Historisches ATH signalisiert Kapitalflucht aus Fiat und Vertrauensverlust in Staatsanleihen – dieser Zyklus läuft typischerweise auch BTC zugute mit 3-6 Monaten Verzögerung",
+      "Fear & Greed 28 (Angst): Konträr-Indikator – historisch generieren Werte unter 30 in Pre-Halving-Phasen überdurchschnittliche 12-Monats-Renditen; Kapitulation retail, nicht institutional"
     ],
     "news_headlines": [
+      "Bitcoin consolidates below $66,000 as a 13% July recovery runs out of steam - CoinDesk",
       "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
-      "Bitcoin Price Outlook 2026–2030: Key Factors Shaping BTC’s Long-Term Trajectory - CryptoRank",
-      "Bitcoin's recent macro relief faces a challenge from Japanese interest rates - CoinDesk",
-      "Crypto Today: Bitcoin, Ethereum, XRP stall after US CPI-driven mild rally - TMGM trading",
-      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com"
+      "Bitcoin climbs above $65K as ETF flows recover despite rising macro risks - TMGM trading",
+      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com",
+      "Bitcoin Price Outlook 2026–2030: Key Factors Shaping BTC’s Long-Term Trajectory - CryptoRank"
     ],
-    "updated": "2026-07-17"
+    "updated": "2026-07-24"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 73283.0,
-  "ma50": 63719.0,
+  "ma200": 72386.0,
+  "ma50": 63109.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

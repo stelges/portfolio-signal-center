@@ -4,8 +4,8 @@
   "allocation_pct": 8,
   "icon": "τ",
   "color": "#00d4ff",
-  "signal": "BUY",
-  "price_usd": 194.03,
+  "signal": "HOLD",
+  "price_usd": 189.54,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -27,35 +27,35 @@
     }
   },
   "ai_analysis": {
-    "signal": "BUY",
+    "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit KI-Narrative-Katalysator; BTC-Signal BUY, niedrige Fear & Greed (27/100) = Akkumulationsphase; sinkende BTC-Dominanz begünstigt Altcoins",
+    "macro_regime": "Risk-on + Liquidity Revival mit Tempering (BTC bullish, aber Fear & Greed niedrig bei 28/100 → noch keine Euphorie; BTC-Dominanz fällt = Altcoin-Raum aktivierend)",
     "active_indicators": [
-      "BTC-Signal BUY (Gating-Bedingung erfüllt – erlaubt aggressive TAO-Allokation)",
-      "Fear & Greed 27/100 (historisch: unter 30 = Angst-Akkumulation, klassische Einstiegszone für asymmetrische Wetten)",
-      "BTC-Dominanz 56.5% rückläufig (strukturelle Umgewichtung in Altcoins, besonders KI-Infrastruktur-Narrative)"
+      "BTC-Signal (BUY) – notwendige Bedingung erfüllt, aber nicht hinreichend für aggressive TAO-Position",
+      "Fear & Greed Index (28/100) – deutet auf noch nicht vollständig gierig Markt hin; Raum für Akkumulation ohne Top-Gefahr",
+      "Grayscale-ETP-Antrag + Anthropic-Narrative – katalytisch, aber noch nicht genehmigt (regulatory overhang)"
     ],
-    "summary": "TAO profitiert von drei Katalysatoren: (1) abgeschlossenes Halving (Dezember 2025) = deflationäre Dynamik aktiviert, (2) Grayscale-ETP-Antrag schafft Mainstream-On-Ramp analog SOL/BTC-Playbook, (3) Anthropic-Shutdown-Narrative verstärkt dezentrale KI als Risiko-Hedge. Fear & Greed im Angst-Regime + BTC-Signal BUY = klassisches asymmetrisches Setup für 7-Jahres-Horizon.",
+    "summary": "TAO profitiert von BTC-Bullrun und dezentralem KI-Narrative, aber die niedrige Fear & Greed (28) signalisiert noch keine Euphorie-Phase – ideale Akkumulationszone für 7-Jahres-Plan. Grayscale-Genehmigung würde Game-Changer sein; ohne sie bleibt TAO hochvolatil und früh-zyklisch. HOLD statt aggressive BUY, weil Risiko/Reward optimal bei weiterer Schwäche (sub-$180) oder Grayscale-Katalysator.",
     "price_targets": {
-      "buy_zone": 185,
-      "buy_aggressiv": 170,
+      "buy_zone": 175,
+      "buy_aggressiv": 165,
       "take_profit_1_price": 280,
-      "take_profit_1_action": "30% Position (1 TAO-Tranche) verkaufen – Gewinnmitnahme nach +44% ggü. aktuellem Level",
+      "take_profit_1_action": "20% bei Euphorie (Fear & Greed > 70) oder BTC $35k+",
       "take_profit_2_price": 450,
-      "take_profit_2_action": "50% verbleibende Position (insgesamt 65% des Stacks) trimmen – Kern-Holding reduziert, Risiko kontrolliert",
+      "take_profit_2_action": "30% bei Grayscale-Genehmigung + 12-Monats-RSI Überkauf",
       "concern_below": 155
     },
-    "bull_case": "Dezentrale KI-Infrastruktur ist strukturell untergewichtet: TAO adressiert $1T+ Markt vs. aktuelle $2.1B MCap = >100x Upside-Potenzial; Grayscale-ETP-Genehmigung würde Institutional Bid triggern (SOL, BTC Playbook wiederholt sich). Post-Halving deflationäre Tokenomik + sinkende BTC-Dominanz + Anthropic-Governance-Debatte = Triple-Katalysator für 2026–2028.",
-    "bear_case": "Dezentrale KI bleibt Niche: Zentralisierte Hyperscaler (OpenAI, Anthropic, Google) dominieren Capex + R&D; TAO-Subnets zeigen noch keine konkreten Revenue/Adoption-Metriken (spekulativ). Regulierung könnte dezentrale KI-Trainings ächten; Technisches Risiko bei Subnet-Stabilität bleibt hoch.",
-    "signal_changer": "BTC-Signal wechselt zu HOLD oder SELL → TAO sofort auf HOLD trimmen oder CASH gehen. Preis fällt unter 155 ohne Bounce → Concern-Validierung, Position zu 50% reduzieren. Grayscale-ETP-Antrag wird abgelehnt → Mainstream-Katalysator entfällt, Signal zu HOLD downgraden. Chartale Breakout über 220 (MA200 + psychologische Zone) bestätigt bullish Scenario → Aggressivität erhöhen.",
+    "bull_case": "Dezentrale KI-Infrastruktur = Mega-Megatrend (größer als DeFi-Sommer 2020); TAO nur $2B MCap vs. Chainlink $8B = 4x Aufholpotenzial. Grayscale-ETP würde Institutions-Liquidität catalysieren (historisch: SOL +300% post-Grayscale).",
+    "bear_case": "Ausführungsrisiko massiv – Subnets könnten zentralisiert werden, konkurrieren mit OpenAI/Anthropic CapEx-Überlegenheit. Frühe Phase = längerer Zyklus möglich; ohne Grayscale könnte TAO 2026–2027 seitlichermarchen.",
+    "signal_changer": "BULLISH wenn: (1) Grayscale-ETP genehmigt → AGGRESSIVE BUY bis $220. (2) TAO bricht $220 mit BTC-Momentum > 35k. BEARISH wenn: (1) BTC unter $30k → CASH-Position. (2) Fear & Greed > 80 ohne Grayscale-News → TP1 realisieren.",
     "news_headlines": [
       "The Stack - Grayscale",
       "Grayscale files for first U.S. Bittensor ETP as decentralized AI gains momentum - Yahoo! Finance Canada",
       "Grayscale Named Its Decentralized AI Pick — and Anthropic’s the Reason - BeInCrypto",
       "Anthropic shutdown makes a strong case for decentralized AI: Grayscale - TradingView"
     ],
-    "updated": "2026-07-17"
+    "updated": "2026-07-24"
   },
   "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
-  "market_cap_usd_billions": 2.09
+  "market_cap_usd_billions": 2.04
 }

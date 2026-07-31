@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "BUY",
-  "price_usd": 64092,
+  "signal": "HOLD",
+  "price_usd": 62987,
   "ath_usd": 109000,
-  "ath_dist_pct": -41.2,
-  "change_30d_pct": 0.24,
+  "ath_dist_pct": -42.2,
+  "change_30d_pct": 4.72,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,27 +25,39 @@
     }
   },
   "ai_analysis": {
-    "signal": "BUY",
+    "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on mit Einschränkungen: Liquiditätszyklus erholt sich, aber hohe Realzinsen und starkes Gold signalisieren latente Rezessionsangst bei gleichzeitig nachlassendem Dollar-Druck (DXY ~101)",
-    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationszone (~21 Monate vor dem nächsten Halving April 2028), die strukturell mit Q3/Q4 2022 vergleichbar ist. Der Markt zeigt Erschöpfung nach dem 13%-Juli-Recovery, Retail ist ängstlich (F&G 28), aber ETF-Flows erholen sich laut Headlines – institutionelle Akkumulation bei retailseitigem Verkaufsdruck ist historisch bullish. Dominantes Risiko bleibt der 10Y-Yield bei 4,68%, der Risk-Assets strukturell belastet und einen aggressiveren BUY-Impuls verhindert.",
+    "macro_regime": "Risk-on mit Gegenwind: Schwacher Dollar trifft auf hohe Realzinsen – gespaltenes Liquiditätsregime",
     "active_indicators": [
-      "200-Tage MA ($72,386): BTC handelt ~11% darunter – historisch in Post-Halving-Akkumulationsphasen eine der stärksten Kauf-Zonen, sofern kein struktureller Marktbruch vorliegt",
-      "Gold ($4,054): Historisches ATH signalisiert Kapitalflucht aus Fiat und Vertrauensverlust in Staatsanleihen – dieser Zyklus läuft typischerweise auch BTC zugute mit 3-6 Monaten Verzögerung",
-      "Fear & Greed 28 (Angst): Konträr-Indikator – historisch generieren Werte unter 30 in Pre-Halving-Phasen überdurchschnittliche 12-Monats-Renditen; Kapitulation retail, nicht institutional"
+      "DXY (99.92, schwach): Historisch stärkster positiver Korrelator für BTC in Liquiditätszyklen – schwacher Dollar entlastet Risk-Assets strukturell",
+      "200-Tage MA ($71,568): BTC handelt 11% darunter – klares mittelfristiges Warnsignal, historisch bearish solange Preis darunter bleibt",
+      "10Y US-Rendite (4.74%): Hohes Zinsniveau erhöht Opportunitätskosten und drückt auf Risikobereitschaft institutioneller Kapitalflüsse"
     ],
+    "summary": "BTC befindet sich in einer klassischen Akkumulationskompression: Schwacher Dollar und Fear&Greed bei 25 signalisieren strukturelle Kaufgelegenheit, aber der Preis unter dem 200-MA und hohe Realzinsen verhindern einen klaren Ausbruch. Der Fed-Unsicherheitsfaktor (mögliche Zinserhöhung laut Citadel vs. Hold-Konsens) ist der kurzfristig dominante Katalysator. Pre-Halving-Phase 2026 ist historisch eine Akkumulationszone – kein Zeitpunkt für Exits, aber auch keiner für aggressives Deployment.",
+    "price_targets": {
+      "buy_zone": 58000,
+      "buy_aggressiv": 52000,
+      "take_profit_1_price": 78000,
+      "take_profit_1_action": "15% der Position verkaufen, Sparrate auf normal reduzieren",
+      "take_profit_2_price": 95000,
+      "take_profit_2_action": "30% der Position verkaufen, Restposition für Post-Halving-Zyklus halten",
+      "concern_below": 52000
+    },
+    "bull_case": "Fed hält Zinsen stabil oder signalisiert Senkungen – DXY fällt weiter unter 98, Bitcoin bricht über den 200-MA zurück und ETF-Zuflüsse beschleunigen den Preisanstieg in Richtung ATH bis Q1 2027. Pre-Halving-Akkumulation wiederholt historisches Muster aus 2019/2023.",
+    "bear_case": "Fed überrascht mit Zinserhöhung, 10Y steigt über 5%, Risk-off-Rotation trifft BTC unter $52k und invalidiert die technische Unterstützungsstruktur. Kapitalabflüsse aus Spot-ETFs könnten einen Sell-off auf $44k–$48k auslösen.",
+    "signal_changer": "BUY-Signal bei: Rückfall unter $55k mit intaktem Makro (DXY bleibt schwach, Fed pausiert) ODER Fed-Pivot-Signal mit BTC-Rückeroberung des 200-MA. CASH-Signal bei: Fed-Zinserhöhung + DXY-Anstieg über 103 + BTC-Bruch unter $52k mit hohem Volumen.",
     "news_headlines": [
-      "Bitcoin consolidates below $66,000 as a 13% July recovery runs out of steam - CoinDesk",
+      "Citadel Securities bets on a Fed rate hike Wednesday as bitcoin analysts call a hold. Someone will be wrong. - CoinDesk",
       "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
-      "Bitcoin climbs above $65K as ETF flows recover despite rising macro risks - TMGM trading",
+      "Crypto Trends 2026–2027: Why Bitcoin Is Becoming a High-Beta Macro Asset - quasa.io",
       "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com",
-      "Bitcoin Price Outlook 2026–2030: Key Factors Shaping BTC’s Long-Term Trajectory - CryptoRank"
+      "Bitcoin 2026 outlook: ETF gravity vs. Macro ceiling - 21Shares"
     ],
-    "updated": "2026-07-24"
+    "updated": "2026-07-31"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 72386.0,
-  "ma50": 63109.0,
+  "ma200": 71568.0,
+  "ma50": 63366.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

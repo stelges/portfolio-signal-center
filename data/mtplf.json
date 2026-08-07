@@ -9,8 +9,8 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 0.9991,
-  "btc_nav_usd_billions": 2.53,
+  "mnav": 0.8908,
+  "btc_nav_usd_billions": 2.6,
   "zones": {
     "buy": {
       "label": "mNAV < 1.1x",
@@ -28,35 +28,23 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-off + Liquiditätsabbau (Fear & Greed 25, BTC -42% vom ATH). Defensives Sentiment, aber Bitcoin-Akkumulation läuft durch institutionelle Treasuries weiter – Metaplanet positioniert sich aggressive.",
+    "macro_regime": "Risk-off + BTC-Akkumulation Phase: Schwacher Yen (157.57 USD/JPY) begünstigt japanische USD-Assets, Fear & Greed bei 29 signalisiert kapitulative Stimmung, BTC -40.6% vom ATH = historische Akkumulationszone für Langfristanleger.",
+    "summary": "Metaplanet notiert mit 0.8908x mNAV – eine der seltensten Bewertungen, bei der man BTC über die Aktie günstiger erwirbt als direkt. Combined mit schwachem Yen, kapitulative BTC-Stimmung und aggressiver Akkumulation durch Management ergibt dies ein High-Conviction-Setup für 7-Jahres-DCA. BTC-KI-Signal = BUY verstärkt das bullische Narrativ.",
     "active_indicators": [
-      "mNAV 0.9991x (im optimalen Kaufbereich 0.9–1.2x – Bitcoin effektiv unter Marktpreis erreichbar)",
-      "BTC-Dominanz 56.2% + Q4 2024 Expansion auf 43,000 BTC (institutionelle Akkumulation trotz Risk-off Signal)",
-      "USD/JPY 158.99 (schwacher Yen vorteilhaft für USD-Aktiva; Metaplanet-Hebel durch FX-Kurs verstärkt)"
+      "mNAV @ 0.8908x – KRITISCH BULLISH: BTC mit extremem Rabatt erwerbbar, unter 0.9x-Schwelle (sehr selten, statistisch aggressive Kauf-Gelegenheit)",
+      "USD/JPY @ 157.57 – Schwacher Yen = japanische Währungs-Tailwind für BTC-Positionen in USD; Metaplanet profitiert von FX-Leverage",
+      "BTC-Signal (KI) = BUY + BTC -40.6% vom ATH = Zyklische Akquisitionsbasis; Metaplanet's jüngste 5,075-BTC-Käufe (+$255M Kapitalerhöhung) zeigen Management-Conviction in dieser Preiszone"
     ],
-    "summary": "Metaplanet notiert mit mNAV 0.9991x – praktisch Pari – was in einem Risk-off-Regime selten vorkommt und eine klassische Akkumulationszone für DCA-Strategien darstellt. Die aggressive BTC-Akkumulation (43k BTC) trotz Marktangst signalisiert Management-Vertrauen auf längerfristige Bitcoin-Rallye. Bei 7-Jahres-Horizont ist dies der ideale Einstiegspunkt für monatliches DCA.",
-    "price_targets": {
-      "buy_zone_mnav": 1.15,
-      "buy_aggressiv_mnav": 0.95,
-      "take_profit_1_mnav": 1.5,
-      "take_profit_1_action": "10–15% realisieren (psychologische Marke, early profits im aufziehenden Zyklus)",
-      "take_profit_2_mnav": 2.2,
-      "take_profit_2_action": "30–40% realisieren (Übergang von Fair zu Aufpreis-Territory)",
-      "concern_mnav": 2.8
-    },
-    "bull_case": "mNAV unter Pari in Risk-off-Phase ist ein klassisches Hidden-Value-Signal; Metaplanet's 43k BTC-Position wird bei BTC-Rallye exponentiell hebeln (1 BTC +50% = Metaplanet potentiell +100–150% durch mNAV-Expansion). Yen-Schwäche (158.99 USD/JPY) zusätzlicher Tailwind für USD-Aktiva.",
-    "bear_case": "Fear & Greed 25 signalisiert mögliche weitere Marktkorrektur – MTPLF könnte kurzfristig unter $1.20 fallen, bevor mNAV-Vorteil realisiert wird. Schuldenquote ($280M auf $2.53B EV) ist akzeptabel, aber Zinsrisiko in unsicherem Makro besteht.",
-    "signal_changer": "BTC fällt unter $55k UND mNAV expandiert über 1.30x → HOLD wechseln. Oder: BTC-Dominanz fällt unter 50% + Altcoin-Panik → CASH-Position bis Klarheit. Positiv: BTC bricht ATH ($73k+) → Signal zu AGGRESSIV-BUY upgraden.",
     "news_headlines": [
-      "Metaplanet (3350) Q4 2024 earnings summary - Quartr",
-      "Metaplanet buys another $170 million of bitcoin expanding treasury to 43,000 BTC - CoinDesk",
+      "Metaplanet (3350) acquires 5,075 BTC, jumps to third largest BTC treasury company - CoinDesk",
+      "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst - TradingView",
       "Earn Bitcoin Rewards on Every Purchase in Japan—Feel the Future! - Phemex",
-      "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst - TradingView"
+      "Metaplanet (3350) raises $255 million in equity deal to accelerate BTC accumulation - CoinDesk"
     ],
-    "updated": "2026-07-31"
+    "updated": "2026-08-07"
   },
   "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien.",
-  "stock_price_usd": 1.541,
-  "stock_price_jpy": 245.0,
-  "usdjpy": 158.99
+  "stock_price_usd": 1.3962,
+  "stock_price_jpy": 220.0,
+  "usdjpy": 157.57
 }

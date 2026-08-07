@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "HOLD",
-  "price_usd": 62987,
+  "signal": "BUY",
+  "price_usd": 64743,
   "ath_usd": 109000,
-  "ath_dist_pct": -42.2,
-  "change_30d_pct": 4.72,
+  "ath_dist_pct": -40.6,
+  "change_30d_pct": 1.16,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,39 +25,27 @@
     }
   },
   "ai_analysis": {
-    "signal": "HOLD",
+    "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-on mit Gegenwind: Schwacher Dollar trifft auf hohe Realzinsen – gespaltenes Liquiditätsregime",
+    "macro_regime": "Risk-off mit schwachem Dollar – Stagflationsangst trifft auf Liquiditätshoffnung",
+    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationsphase (~20 Monate vor dem nächsten Halving April 2028), kombiniert mit einem schwachen Dollar und einem Goldpreis auf Allzeithoch – beides strukturelle Rückenwinde. Das Hauptrisiko ist die hohe 10Y-Rendite von 4.66%, die Risk-Assets unter Druck hält und verhindert, dass institutionelles Kapital aggressiv rotiert. Der Markt ist ängstlich, unterpositioniert und handelt unter dem MA200 – genau das Umfeld, das langfristige DCA-Investoren historisch belohnt hat.",
     "active_indicators": [
-      "DXY (99.92, schwach): Historisch stärkster positiver Korrelator für BTC in Liquiditätszyklen – schwacher Dollar entlastet Risk-Assets strukturell",
-      "200-Tage MA ($71,568): BTC handelt 11% darunter – klares mittelfristiges Warnsignal, historisch bearish solange Preis darunter bleibt",
-      "10Y US-Rendite (4.74%): Hohes Zinsniveau erhöht Opportunitätskosten und drückt auf Risikobereitschaft institutioneller Kapitalflüsse"
+      "DXY bei 99.56 (schwacher Dollar) – historisch starker Rückenwind für BTC, da Kapital aus USD-Assets rotiert und harte Assets wie BTC/Gold attraktiver werden",
+      "Gold auf ATH bei $4393 – klassisches Signal für systemisches Misstrauen gegenüber Fiat; BTC folgt Gold-Rallyes mit 4–8 Wochen Verzögerung in Risk-off-Zyklen",
+      "BTC unter 200-Tage-MA ($70.352) bei Fear & Greed 29 – historisch ist die Kombination aus technischer Schwäche und extremer Angst ein statistisch valider Akkumulationsbereich im Pre-Halving-Zyklus"
     ],
-    "summary": "BTC befindet sich in einer klassischen Akkumulationskompression: Schwacher Dollar und Fear&Greed bei 25 signalisieren strukturelle Kaufgelegenheit, aber der Preis unter dem 200-MA und hohe Realzinsen verhindern einen klaren Ausbruch. Der Fed-Unsicherheitsfaktor (mögliche Zinserhöhung laut Citadel vs. Hold-Konsens) ist der kurzfristig dominante Katalysator. Pre-Halving-Phase 2026 ist historisch eine Akkumulationszone – kein Zeitpunkt für Exits, aber auch keiner für aggressives Deployment.",
-    "price_targets": {
-      "buy_zone": 58000,
-      "buy_aggressiv": 52000,
-      "take_profit_1_price": 78000,
-      "take_profit_1_action": "15% der Position verkaufen, Sparrate auf normal reduzieren",
-      "take_profit_2_price": 95000,
-      "take_profit_2_action": "30% der Position verkaufen, Restposition für Post-Halving-Zyklus halten",
-      "concern_below": 52000
-    },
-    "bull_case": "Fed hält Zinsen stabil oder signalisiert Senkungen – DXY fällt weiter unter 98, Bitcoin bricht über den 200-MA zurück und ETF-Zuflüsse beschleunigen den Preisanstieg in Richtung ATH bis Q1 2027. Pre-Halving-Akkumulation wiederholt historisches Muster aus 2019/2023.",
-    "bear_case": "Fed überrascht mit Zinserhöhung, 10Y steigt über 5%, Risk-off-Rotation trifft BTC unter $52k und invalidiert die technische Unterstützungsstruktur. Kapitalabflüsse aus Spot-ETFs könnten einen Sell-off auf $44k–$48k auslösen.",
-    "signal_changer": "BUY-Signal bei: Rückfall unter $55k mit intaktem Makro (DXY bleibt schwach, Fed pausiert) ODER Fed-Pivot-Signal mit BTC-Rückeroberung des 200-MA. CASH-Signal bei: Fed-Zinserhöhung + DXY-Anstieg über 103 + BTC-Bruch unter $52k mit hohem Volumen.",
     "news_headlines": [
-      "Citadel Securities bets on a Fed rate hike Wednesday as bitcoin analysts call a hold. Someone will be wrong. - CoinDesk",
       "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
-      "Crypto Trends 2026–2027: Why Bitcoin Is Becoming a High-Beta Macro Asset - quasa.io",
+      "Three Monthly Signals Suggest Bitcoin's Macro Bottom in 2026 - KuCoin",
+      "Crypto Market Summary — May 18, 2026 1. Macro Market Sentime - OKX",
       "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com",
       "Bitcoin 2026 outlook: ETF gravity vs. Macro ceiling - 21Shares"
     ],
-    "updated": "2026-07-31"
+    "updated": "2026-08-07"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 71568.0,
-  "ma50": 63366.0,
+  "ma200": 70352.0,
+  "ma50": 63278.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

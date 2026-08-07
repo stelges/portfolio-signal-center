@@ -5,7 +5,7 @@
   "icon": "⬡",
   "color": "#76b900",
   "signal": "BUY",
-  "price_usd": 198.3,
+  "price_usd": 222.06,
   "price_52w_high_usd": 236.54,
   "price_52w_low_usd": 164.07,
   "pe_ratio": null,
@@ -28,33 +28,33 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit strukturellem KI-Capex-Superzyklus; taktische Schwäche durch Zinsdruck (4.74%) und politische Unsicherheit (China-Exporte), aber fundamentale Treiber dominant.",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit Zinsdruck auf Bewertungen. KI-Capex-Superzyklus offsettet makro Headwinds; Fear & Greed bei 29 = kapitulativ niedrig für einen Monopol-Infrastruktur-Play.",
     "active_indicators": [
-      "KI-Capex-Zyklus: $300B+ combined 2026 spend bei >80% Nvidia-Anteil = strukturelles Upsidedrivers (Regime-Kern)",
-      "Bewertung vs. Wachstum: KGV ~50–55x (angenommen bei $198) ist auf diesem Capex-Wachstum zumutbar, <70x ist Comfort-Zone (Momentum-Filter)",
-      "Technische Position: -16.2% vom ATH, +20.9% vom 52W-Tief = konstruktive Range, Pullback ist DCA-Gelegenheit, nicht Warnsignal (Mean-Reversion im Regime)"
+      "KI-Capex-Zyklus ($300B+ 2026, >80% NVIDIA-Anteil) – in diesem Regime ist Nachfragesichtbarkeit 18-36 Monate der primäre Kurs-Treiber",
+      "Fear & Greed 29/100 – extrem niedrig; historisch signal für kapitulative Verkäufe bei Quality-Werten mit strukturellem Wachstum",
+      "Bewertung & Momentum – aktuell 6.1% unter 52W-ATH bei 35.3% über 52W-Low = konstruktiver Pullback, nicht Trendbruch"
     ],
-    "summary": "Nvidia befindet sich in einer taktischen Schwächephase (Earnings-Unsicherheit, China-Testimony, Zinsruck) innerhalb eines intakten strukturellen Auftrends. Für einen 7-Jahres-Plan mit monatlichem DCA ist der aktuelle Kurs ($198) ein Akkumulationsfenster, nicht ein Ausstiegssignal – die KI-Infrastruktur-Boom ist faktisch erst 30–40% durch.",
+    "summary": "NVIDIA ist temporär unter Druck durch Export-Sorgen (Warren-Zeugnis, China) und Zinsrenditen auf Growth, aber der strukturelle Tailwind (Blackwell-Ramp, Record-Capex-Zugang Q2-Q3 2026) bleibt intakt. Bei Fear & Greed 29 und sichtbarer 18-36M-Nachfrage ist dieser Pullback eine typische DCA-Opportunity für einen 7Y-Horizont.",
     "price_targets": {
-      "buy_zone": 188,
-      "buy_aggressiv": 175,
-      "take_profit_1_price": 240,
-      "take_profit_1_action": "20% Rebalancing-Trim (bei KGV >65x)",
+      "buy_zone": 215,
+      "buy_aggressiv": 205,
+      "take_profit_1_price": 245,
+      "take_profit_1_action": "20% Position verkaufen (Rebalancing, kein Gewinnmitnahme-Zwang)",
       "take_profit_2_price": 280,
-      "take_profit_2_action": "50% Trim bei Regime-Shift (z.B. KI-Capex-Verzögerung, Zins-Spike >5.5%)",
-      "concern_below": 155
+      "take_profit_2_action": "weiteren 15% zu Rebalancing verkaufen, wenn KGV über 65x läuft",
+      "concern_below": 190
     },
-    "bull_case": "Blackwell-Ramp beschleunigt 2H2026, Rubin/H200-Nachfrage bleibt konstant, Microsoft/Google/Meta Data-Center-Budgets sind nicht verhandelbar. CUDA-Moat + 80% Marktanteil = faktischer Oligopol, nicht Wettbewerb.",
-    "bear_case": "China-Export-Beschränkungen könnten >15% Revenue kosten, AMD MI300-Konkurrenz gewinnt inkrementelle Anteile, 10Y-Rendite >5.0% führt zu taktischer Neubewertung von Wachstumsaktien (KGV-Kompression).",
-    "signal_changer": "(1) China-Exporte werden >20% Capex-Budget blockiert → HOLD/CASH; (2) KI-Capex-Verzögerung confirmed (Q3 2026 Guidance < $100B) → CASH; (3) 10Y-Rendite >5.3% + Tech-Rotation → HOLD bis Stabilisierung; (4) AMD/Intel teilen signifikant Marktanteile (>25% combined) → HOLD; (5) KGV >75x bei flacher Growth → TRIM 50%.",
+    "bull_case": "Blackwell-Ramp 2H26 trifft auf Record-Capex-Zyklus ($300B+); CUDA-Monopol + Export-Clarity post-Warren-Zeugnis könnte Re-Rating auf $260–$290 triggern. DCA über 7Y amortisiert temporäre Bewertungs-Zyklen.",
+    "bear_case": "Export-Restriktionen verschärfen sich → Umsatzrisiko; Konkurrenz (AMD MI300, Intel Gaudi) gewinnt Marktanteile langsamer als gedacht; Zinsumfeld bleibt bei 4.5%+ und drückt Growth-Multiple.",
+    "signal_changer": "Signal → HOLD/CASH bei: (1) KGV > 75x ohne neue Capex-Ankündigungen, (2) Ernst-hafte Export-Bans für 'Rubin'-Chips, (3) Fear & Greed fällt unter 10 = Kapitulation auch von Longs, (4) Earnings-Miss Q2 2026 bei Blackwell-Bookings.",
     "news_headlines": [
       "NVIDIA Earnings Preview - Data Center, Rubin & Export Policy Outlook - tastylive",
-      "NVDA Stock Slips After Hours As Warren Reportedly Calls Huang To Testify On China Chip Sales - TradingView",
       "NVIDIA Stock Pulls Back Before May 20 Earnings. Here’s What the $1 Trillion Demand Story Still Needs to Prove - TIKR.com",
+      "NVDA Stock Slips After Hours As Warren Reportedly Calls Huang To Testify On China Chip Sales - TradingView",
       "Kazakhstan Launches $10 Billion AI Data Center Valley With Nvidia (NASDAQ: NVDA) Backing - foreignpolicyjournal.com",
       "Nvidia Earnings Preview May 20 2026: NVDA Stock Analysis - Intellectia AI"
     ],
-    "updated": "2026-07-31"
+    "updated": "2026-08-07"
   },
   "quarterly_review": {
     "last_quarter": "Q4 FY2026",
@@ -64,5 +64,5 @@
     "guidance_note": null
   },
   "strategy_note": "Stabilitätsanker. KI-Infrastruktur ist unvermeidlich – NVDA ist der einzige Profiteur ohne echte Konkurrenz.",
-  "dist_from_52w_high_pct": -16.2
+  "dist_from_52w_high_pct": -6.1
 }

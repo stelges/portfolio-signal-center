@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "BUY",
-  "price_usd": 64743,
+  "signal": "HOLD",
+  "price_usd": 62919,
   "ath_usd": 109000,
-  "ath_dist_pct": -40.6,
-  "change_30d_pct": 1.16,
+  "ath_dist_pct": -42.3,
+  "change_30d_pct": 1.02,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,27 +25,39 @@
     }
   },
   "ai_analysis": {
-    "signal": "BUY",
+    "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-off mit schwachem Dollar – Stagflationsangst trifft auf Liquiditätshoffnung",
-    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationsphase (~20 Monate vor dem nächsten Halving April 2028), kombiniert mit einem schwachen Dollar und einem Goldpreis auf Allzeithoch – beides strukturelle Rückenwinde. Das Hauptrisiko ist die hohe 10Y-Rendite von 4.66%, die Risk-Assets unter Druck hält und verhindert, dass institutionelles Kapital aggressiv rotiert. Der Markt ist ängstlich, unterpositioniert und handelt unter dem MA200 – genau das Umfeld, das langfristige DCA-Investoren historisch belohnt hat.",
+    "macro_regime": "Stagflation-lite + Risk-off Übergang: Hohe Realzinsen belasten Risk-Assets, Gold als sicherer Hafen auf ATH, Dollar schwächer – gemischte Signale für BTC",
     "active_indicators": [
-      "DXY bei 99.56 (schwacher Dollar) – historisch starker Rückenwind für BTC, da Kapital aus USD-Assets rotiert und harte Assets wie BTC/Gold attraktiver werden",
-      "Gold auf ATH bei $4393 – klassisches Signal für systemisches Misstrauen gegenüber Fiat; BTC folgt Gold-Rallyes mit 4–8 Wochen Verzögerung in Risk-off-Zyklen",
-      "BTC unter 200-Tage-MA ($70.352) bei Fear & Greed 29 – historisch ist die Kombination aus technischer Schwäche und extremer Angst ein statistisch valider Akkumulationsbereich im Pre-Halving-Zyklus"
+      "10Y US-Rendite 4.7% (kritisch): Hohe Realzinsen erhöhen Opportunitätskosten für non-yielding Assets wie BTC – historisch stärkster Gegenwind in diesem Regime",
+      "BTC unter 200-Tage MA $69.483 (bearish): Makro-Trendindikator zeigt weiterhin übergeordnete Schwäche; Rally-Versuche wurden bisher abgeblockt",
+      "Gold auf ATH $4.436 bei schwachem DXY 99.66 (Dual-Signal): Schwacher Dollar ist Rückenwind für BTC, aber Gold-Stärke signalisiert Kapitalflucht in Sicherheit – kein echtes Risk-on"
     ],
+    "summary": "BTC befindet sich in einer klassischen Konsolidierungsphase zwischen Pre-Halving-Akkumulation und makroökonomischem Gegenwind durch hohe Zinsen. Der Markt ist weder bereit für einen aggressiven Ausbruch nach oben noch zeigt er akute Kapitulationssignale – Fear & Greed bei 29 deutet auf Angst hin, nicht auf Panik. Der schwache Dollar gibt leichten Rückenwind, kann aber die Zinslast nicht kompensieren.",
+    "price_targets": {
+      "buy_zone": 58000,
+      "buy_aggressiv": 52000,
+      "take_profit_1_price": 78000,
+      "take_profit_1_action": "25% der Position reduzieren / Sparrate auf 0.75x senken",
+      "take_profit_2_price": 95000,
+      "take_profit_2_action": "weitere 40% verkaufen, Gewinne sichern",
+      "concern_below": 54000
+    },
+    "bull_case": "Schwacher Dollar + Pre-Halving-Dynamik (Halving April 2028) schaffen strukturellen Akkumulationsdruck; erste Zinssenkungen der Fed könnten Liquiditätszyklus 2027 frühzeitig zünden und BTC in Richtung ATH treiben.",
+    "bear_case": "Zinsen bleiben länger hoch (higher-for-longer), Rezessionsangst löst Risk-off-Welle aus und BTC fällt nachhaltig unter $54k – 200-MA-Distanz vergrößert sich weiter und institutionelle Nachfrage trocknet aus.",
+    "signal_changer": "BUY-Signal wenn: BTC überzeugend über $69.500 (200-MA) mit Volumen schließt ODER Fear & Greed unter 15 bei gleichzeitigem DXY-Rückgang unter 97. CASH-Signal wenn: 10Y-Rendite über 5.2% steigt, BTC unter $54k fällt oder S&P 500 korrigiert über 10% – dann Sparrate halbieren und Pulver trocknen.",
     "news_headlines": [
       "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
-      "Three Monthly Signals Suggest Bitcoin's Macro Bottom in 2026 - KuCoin",
-      "Crypto Market Summary — May 18, 2026 1. Macro Market Sentime - OKX",
-      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com",
-      "Bitcoin 2026 outlook: ETF gravity vs. Macro ceiling - 21Shares"
+      "Bitcoin Bulls Wake Up At $77,500, Yet The Macro Math Looks Brutal - Yellow.com",
+      "Bitcoin consolidates below $66,000 as a 13% July recovery runs out of steam - CoinDesk",
+      "Top July 2026 Crypto Updates: Crypto Market at a Breaking Point — Is Another Crash Coming? - Bitcoin Foundation",
+      "Bitcoin (BTC) price's July gain survives hawkish Fed, AI meltdown and Coldcard fallout - CoinDesk"
     ],
-    "updated": "2026-08-07"
+    "updated": "2026-08-14"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 70352.0,
-  "ma50": 63278.0,
+  "ma200": 69483.0,
+  "ma50": 63454.0,
   "above_200ma": false,
   "funding_rate": null,
   "long_short_ratio": null

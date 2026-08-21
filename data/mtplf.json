@@ -9,8 +9,8 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 0.9111,
-  "btc_nav_usd_billions": 2.53,
+  "mnav": 0.9925,
+  "btc_nav_usd_billions": 3.11,
   "zones": {
     "buy": {
       "label": "mNAV < 1.1x",
@@ -28,35 +28,23 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-off + Deflation-Angst + BTC-Konsolidierung post-ATH (-42%). Fear&Greed bei 29 signalisiert kapitulative Stimmung; DXY stabil, starker Yen-Aufwind für japanische USD-Aktiven-Halter.",
+    "macro_regime": "Risk-on + BTC-Liquiditätszyklus mit Halving-Aufbau (Post-Halving 2024 → 2025er Bull-Phase); starker Dollar (DXY 98.8) stützt USD-Aktiva; Fear & Greed 72 = Greed-Phase ohne Euphorie",
+    "summary": "Metaplanet bei mNAV 0.9925x ist ein seltenes Kauf-Setup: Bitcoin-Rabatt trotz starken Yen und Fear & Greed im Greed-Modus. Das Superplanet-Projekt (US Treasury Company) bietet neuen Growth-Multiplikator für 7-Jahres-DCA-Plan; mNAV-Expansion (zur Fair-Value 1.1–1.3x) ist wahrscheinlicher als mNAV-Kontraktion in diesem Zyklus.",
     "active_indicators": [
-      "mNAV 0.9111x (KRITISCH: Bitcoin mit 8.9% Rabatt über Aktie – statistisch extreme Kaufzone, selten unter 0.9x)",
-      "Fear & Greed 29/100 (Extreme Fear = Accumulation-Phase für langfristige Investoren, historisch beste Entry-Punkte)",
-      "BTC-Dominanz 56.2% + BTC -42% vom ATH (Kapitulation-Signal; Altseason vorbei → Fokus auf reinen BTC-Proxy)"
+      "mNAV 0.9925x (KERN): Bitcoin via Metaplanet-Aktie ~0.75% günstiger als direkter Kauf – klassische Kaufzone 0.9–1.2x; Rabatt trotz starken USD-Yen (159) ungewöhnlich attraktiv",
+      "BTC-Signal KI 'BUY' + BTC-Dominanz 59.2% (stabil): Makro-Umfeld für Risk-Assets offen; BTC -29% vom ATH = Konsolidierungszone, kein Crash-Signal",
+      "Narrative-Katalysator (Superplanet USD-Treasury): $135M Nanocap-Deal + $1.3M BitBonds signalisieren aggressives US-Expansions-Play; Japanische Institutionen bauen BTC-Exposure über MTPLF strukturiert auf (Steuer-Effizienz)"
     ],
-    "summary": "Metaplanet bei mNAV 0.9111x ist statistisch extreme Kaufzone – Bitcoin kostet via Aktie günstiger als direkt, plus Hebeleffekt auf 7-Jahres-DCA. Fear-Index 29 unterstreicht kapitulative Marktphase, ideal für DCA in Tranchen. BitBonds-Initiative + $170M neue BTC-Käufe zeigen Insider-Vertrauen.",
-    "price_targets": {
-      "buy_zone_mnav": 0.95,
-      "buy_aggressiv_mnav": 0.85,
-      "take_profit_1_mnav": 1.3,
-      "take_profit_1_action": "15–20% Position bei mNAV 1.3x verkaufen (faire Bewertung erreicht)",
-      "take_profit_2_mnav": 1.8,
-      "take_profit_2_action": "Weitere 30% bei mNAV 1.8x oder höher verkaufen (Aufpreis-Zone)",
-      "concern_mnav": 2.2
-    },
-    "bull_case": "mNAV unter 0.91x ist statistische Anomalie – zeigt extreme Mispricing in Market-Panic-Phase. BTC-Konsolidierung + Fear-Index 29 + Japan-Momentum (USD/JPY 159.38) = optimale DCA-Entry für 7-Jahres-Strategie mit 10–20x Hebeleffekt auf BTC-Rally.",
-    "bear_case": "Schuldenquote ($280M) könnte bei BTC-Crash unter $40k problematisch werden; technischer Support für MTPLF unter $1.20 fragil. Wenn Fear&Greed nicht schnell steigt, könnte weitere Kapitulation mNAV unter 0.85x drücken.",
-    "signal_changer": "mNAV über 1.5x anhaltend → zu HOLD. BTC unter $45k UND Fear&Greed unter 20 UND Schulden-Restructuring-Ankündigung → zu CASH. BTC Rally über $80k + mNAV 1.2+ → zu HOLD (Gewinnmitnahmen priorisieren).",
     "news_headlines": [
-      "Bitcoin treasury company Metaplanet unveils BitBonds with $1.3 million private debt sale - CoinDesk",
-      "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst - TradingView",
-      "Metaplanet buys another $170 million of bitcoin expanding treasury to 43,000 BTC - CoinDesk",
-      "Earn Bitcoin Rewards on Every Purchase in Japan—Feel the Future! - Phemex"
+      "Japan's Metaplanet launching U.S. bitcoin treasury company through $135 million nanocap deal - CoinDesk",
+      "Metaplanet stakes $132M in bitcoin to build US treasury vehicle Superplanet - Dealroom",
+      "Is Metaplanet (TSE:3350) Undervalued Following Its Nasdaq Bitcoin Treasury Deal? - simplywall.st",
+      "Bitcoin treasury company Metaplanet unveils BitBonds with $1.3 million private debt sale - CoinDesk"
     ],
-    "updated": "2026-08-14"
+    "updated": "2026-08-21"
   },
   "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien.",
-  "stock_price_usd": 1.3866,
-  "stock_price_jpy": 221.0,
-  "usdjpy": 159.38
+  "stock_price_usd": 1.9242,
+  "stock_price_jpy": 306.0,
+  "usdjpy": 159.03
 }

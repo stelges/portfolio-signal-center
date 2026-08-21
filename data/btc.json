@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "HOLD",
-  "price_usd": 62919,
+  "signal": "BUY",
+  "price_usd": 77428,
   "ath_usd": 109000,
-  "ath_dist_pct": -42.3,
-  "change_30d_pct": 1.02,
+  "ath_dist_pct": -29.0,
+  "change_30d_pct": 18.72,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,40 +25,28 @@
     }
   },
   "ai_analysis": {
-    "signal": "HOLD",
+    "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Stagflation-lite + Risk-off Übergang: Hohe Realzinsen belasten Risk-Assets, Gold als sicherer Hafen auf ATH, Dollar schwächer – gemischte Signale für BTC",
+    "macro_regime": "Risk-on Erholung mit strukturellen Spannungen – schwacher Dollar trifft auf hohe Realzinsen, Liquidität kehrt vorsichtig zurück, BTC als digitales Gold mit Halving-Akkumulationslogik im Hintergrund",
+    "summary": "BTC befindet sich in einer Post-Short-Squeeze-Erholungsphase, rund 29% unter ATH, aber klar über dem 200-MA – eine klassische Pre-Halving-Akkumulationszone. Der schwache Dollar (DXY ~98.8) und steigendes Gold ($4.682) signalisieren eine Flucht aus Fiat-Assets, die BTC strukturell begünstigt. Die hohen 10Y-Renditen (4.74%) bleiben als Gegenwind relevant und begrenzen aggressives Risk-On, was erklärt warum BTC eher seitwärts-aufwärts läuft statt zu explodieren.",
     "active_indicators": [
-      "10Y US-Rendite 4.7% (kritisch): Hohe Realzinsen erhöhen Opportunitätskosten für non-yielding Assets wie BTC – historisch stärkster Gegenwind in diesem Regime",
-      "BTC unter 200-Tage MA $69.483 (bearish): Makro-Trendindikator zeigt weiterhin übergeordnete Schwäche; Rally-Versuche wurden bisher abgeblockt",
-      "Gold auf ATH $4.436 bei schwachem DXY 99.66 (Dual-Signal): Schwacher Dollar ist Rückenwind für BTC, aber Gold-Stärke signalisiert Kapitalflucht in Sicherheit – kein echtes Risk-on"
+      "DXY (98.8, schwach) – historisch stärkster negativer Korrelationspartner zu BTC; ein fallender Dollar erhöht Dollarpreise von Hard Assets direkt und signalisiert expansivere Geldpolitik",
+      "BTC über 200-Tage-MA ($68,951) – der zuverlässigste Langfrist-Trendfilter; Preis darüber = struktureller Bullenmarkt bestätigt, Rücksetzer sind Akkumulationsgelegenheiten",
+      "BTC-Dominanz (59.2%) – zeigt Risk-off innerhalb Crypto; Kapital parkt in BTC statt Altcoins, typisch für frühe Bull-Phasen vor der Altseason – BTC ist das bevorzugte Akkumulationsvehikel"
     ],
-    "summary": "BTC befindet sich in einer klassischen Konsolidierungsphase zwischen Pre-Halving-Akkumulation und makroökonomischem Gegenwind durch hohe Zinsen. Der Markt ist weder bereit für einen aggressiven Ausbruch nach oben noch zeigt er akute Kapitulationssignale – Fear & Greed bei 29 deutet auf Angst hin, nicht auf Panik. Der schwache Dollar gibt leichten Rückenwind, kann aber die Zinslast nicht kompensieren.",
-    "price_targets": {
-      "buy_zone": 58000,
-      "buy_aggressiv": 52000,
-      "take_profit_1_price": 78000,
-      "take_profit_1_action": "25% der Position reduzieren / Sparrate auf 0.75x senken",
-      "take_profit_2_price": 95000,
-      "take_profit_2_action": "weitere 40% verkaufen, Gewinne sichern",
-      "concern_below": 54000
-    },
-    "bull_case": "Schwacher Dollar + Pre-Halving-Dynamik (Halving April 2028) schaffen strukturellen Akkumulationsdruck; erste Zinssenkungen der Fed könnten Liquiditätszyklus 2027 frühzeitig zünden und BTC in Richtung ATH treiben.",
-    "bear_case": "Zinsen bleiben länger hoch (higher-for-longer), Rezessionsangst löst Risk-off-Welle aus und BTC fällt nachhaltig unter $54k – 200-MA-Distanz vergrößert sich weiter und institutionelle Nachfrage trocknet aus.",
-    "signal_changer": "BUY-Signal wenn: BTC überzeugend über $69.500 (200-MA) mit Volumen schließt ODER Fear & Greed unter 15 bei gleichzeitigem DXY-Rückgang unter 97. CASH-Signal wenn: 10Y-Rendite über 5.2% steigt, BTC unter $54k fällt oder S&P 500 korrigiert über 10% – dann Sparrate halbieren und Pulver trocknen.",
     "news_headlines": [
+      "Bitcoin rally triggers short squeeze as top analysts debate if the bottom is in - CoinDesk",
       "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
-      "Bitcoin Bulls Wake Up At $77,500, Yet The Macro Math Looks Brutal - Yellow.com",
-      "Bitcoin consolidates below $66,000 as a 13% July recovery runs out of steam - CoinDesk",
-      "Top July 2026 Crypto Updates: Crypto Market at a Breaking Point — Is Another Crash Coming? - Bitcoin Foundation",
-      "Bitcoin (BTC) price's July gain survives hawkish Fed, AI meltdown and Coldcard fallout - CoinDesk"
+      "Bitcoin Tops $70,000 Amid a Short Squeeze, but 3 Metrics Hold the Real Signal - BeInCrypto",
+      "Bitcoin (BTC) price analysis: $180,000 targeted on Treasury buybacks - CoinDesk",
+      "Bitcoin Halving Cycle: Where BTC Could Bottom - galaxy.com"
     ],
-    "updated": "2026-08-14"
+    "updated": "2026-08-21"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 69483.0,
-  "ma50": 63454.0,
-  "above_200ma": false,
+  "ma200": 68951.0,
+  "ma50": 64559.0,
+  "above_200ma": true,
   "funding_rate": null,
   "long_short_ratio": null
 }

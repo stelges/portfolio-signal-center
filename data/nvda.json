@@ -5,7 +5,7 @@
   "icon": "⬡",
   "color": "#76b900",
   "signal": "BUY",
-  "price_usd": 225.14,
+  "price_usd": 215.88,
   "price_52w_high_usd": 236.54,
   "price_52w_low_usd": 164.07,
   "pe_ratio": null,
@@ -28,25 +28,25 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-on + Liquiditätszyklus bei moderatem Zinsruck; KI-Capex-Superzyklus dominiert Fundamentals trotz Bewertungssorgen",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit strukturellem KI-Capex-Superzyklus; moderate Zinsdruck (4.74% 10Y) bremst aber nicht das Narrativ. Fear & Greed 72/100 = FOMO-Phase.",
     "active_indicators": [
-      "KI-Capex-Zyklus ($300B+ 2026, >80% über NVIDIA) – historisch stärkster Wachstumstreiber in diesem Regime",
-      "CUDA-Monopol + Netzwerkeffekte – persistenter Burggraben, schwer zu brechen trotz AMD-Versuche",
-      "Fear & Greed 29/100 + -4,8% zu 52W-High – emotionales Trough vor Earnings = typische DCA-Einstiegschance"
+      "KI-Capex-Zyklus: $300B+ kombinierte Hyperscaler-Ausgaben 2026 = Structural Tailwind (NVDA ~80% Marktanteil im Training)",
+      "CUDA-Monopol + Blackwell-Ramp: Mai 2026 Earnings Catalyst steht unmittelbar bevor – Wachstumsbeschleunigung erwartet",
+      "Relative Bewertung: KGV aktuell ~45–50x (historisch 30–60x akzeptabel bei diesem Wachstum); Margin-Expansion durch Rubin-Nachfrage noch nicht voll eingepreist"
     ],
-    "summary": "NVIDIA pullback von $236 vor May-Earnings bei intaktem KI-Capex-Superzyklus ist klassische DCA-Gelegenheit für 7-Jahres-Plan. Export-Unsicherheit (China-Hearing) und Zinsruck (4.7% 10Y) schaffen psychologische Einstiegszone; Fundamentals (Blackwell-Ramp, Data-Center-Wachstum, $300B-Capex-Katalyst) bleiben intact.",
+    "summary": "NVDA nach Rückgang 8.7% vom 52W-Hoch in attraktive Einstiegszone gefallen, während fundamentale Treiber (Data-Center-Capex, Blackwell-Ramp) intakt bleiben. Mai-Earnings bieten nächsten Katalyst; 7-Jahres-DCA-Ansatz profitiert von kurzfristigem Pullback bei strukturell starkem Trend.",
     "price_targets": {
-      "buy_zone": 215,
-      "buy_aggressiv": 200,
-      "take_profit_1_price": 260,
-      "take_profit_1_action": "20% (Rebalancing-Trigger) bei Übergewichtung >8% Portfolio",
-      "take_profit_2_price": 300,
-      "take_profit_2_action": "50% bei Übergewichtung >12% oder KGV >75x",
-      "concern_below": 190
+      "buy_zone": 210,
+      "buy_aggressiv": 195,
+      "take_profit_1_price": 245,
+      "take_profit_1_action": "20% Gewinn-Mitnahme (zur Rebalancing nutzen)",
+      "take_profit_2_price": 280,
+      "take_profit_2_action": "50% reduzieren (Profitnahme + Risikokontrolle)",
+      "concern_below": 180
     },
-    "bull_case": "KI-Capex-Zyklus 2026–2028 ist Multi-Jahr-Superzyklus (Microsoft, Google, Amazon, Meta $300B+), NVIDIA liefert >80% Chips mit ungebrochener CUDA-Dominanz. Blackwell-Ramp post-Earnings = Überraschungsupside.",
-    "bear_case": "KGV-Kompression (aktuell ~55–60x) bei steigenden Zinsen (4.7% 10Y) bleibt Risk; China-Export-Restriktionen (Warren-Hearing) könnten $10–15B-Revenue-Segment treffen. AMD/Intel-Konkurrenz schwächt langfristig Pricing-Power.",
-    "signal_changer": "KGV >75x ohne Earnings-Beat | Blackwell-Ausfall in Earnings | Zinsanstieg auf >5,2% 10Y | China-Export-Ban für alle Produkte | CUDA-Marktanteil-Verlust <70%",
+    "bull_case": "Blackwell-Ramp + $300B Hyperscaler-Capex schaffen 3–5 Jahre anhaltenden Demand-Zyklus; CUDA-Lock-in bleibt quasi-monopol. Bewertung korrigiert nach earnings upside – Kursziele 280–320 im 12M-Horizont realistisch.",
+    "bear_case": "Geopolitisches Risiko (China-Export-Restriktionen, Warren-Anhörung) könnte plötzlich eskalierende Regulierung bringen. Höhere Zinsen (4.74% noch steigend) drücken Terminal-Value von Wachstumswerten schneller, als Earnings wachsen.",
+    "signal_changer": "1) Earnings-Miss oder geringere FY2027 Guidance (< +40% YoY) → HOLD. 2) Regulatorisches Verbot für China-Exporte + AMD-Erfolg in Data-Center → CASH. 3) 10Y-Rendite > 5.2% + Breadth-Kollaps → SELL (Zinsumfeld kippt).",
     "news_headlines": [
       "NVIDIA Earnings Preview - Data Center, Rubin & Export Policy Outlook - tastylive",
       "NVIDIA Stock Pulls Back Before May 20 Earnings. Here’s What the $1 Trillion Demand Story Still Needs to Prove - TIKR.com",
@@ -54,7 +54,7 @@
       "NVIDIA (NVDA) Re-Entry Into China’s AI Chip Market: Products, Policy, Competition, and Investor Impact - AlphaStreet",
       "Kazakhstan Launches $10 Billion AI Data Center Valley With Nvidia (NASDAQ: NVDA) Backing - foreignpolicyjournal.com"
     ],
-    "updated": "2026-08-14"
+    "updated": "2026-08-21"
   },
   "quarterly_review": {
     "last_quarter": "Q4 FY2026",
@@ -64,5 +64,5 @@
     "guidance_note": null
   },
   "strategy_note": "Stabilitätsanker. KI-Infrastruktur ist unvermeidlich – NVDA ist der einzige Profiteur ohne echte Konkurrenz.",
-  "dist_from_52w_high_pct": -4.8
+  "dist_from_52w_high_pct": -8.7
 }

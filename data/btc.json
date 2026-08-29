@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "BUY",
-  "price_usd": 77428,
+  "signal": "HOLD",
+  "price_usd": 77647,
   "ath_usd": 109000,
-  "ath_dist_pct": -29.0,
-  "change_30d_pct": 18.72,
+  "ath_dist_pct": -28.8,
+  "change_30d_pct": 21.55,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,27 +25,27 @@
     }
   },
   "ai_analysis": {
-    "signal": "BUY",
+    "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on Erholung mit strukturellen Spannungen – schwacher Dollar trifft auf hohe Realzinsen, Liquidität kehrt vorsichtig zurück, BTC als digitales Gold mit Halving-Akkumulationslogik im Hintergrund",
-    "summary": "BTC befindet sich in einer Post-Short-Squeeze-Erholungsphase, rund 29% unter ATH, aber klar über dem 200-MA – eine klassische Pre-Halving-Akkumulationszone. Der schwache Dollar (DXY ~98.8) und steigendes Gold ($4.682) signalisieren eine Flucht aus Fiat-Assets, die BTC strukturell begünstigt. Die hohen 10Y-Renditen (4.74%) bleiben als Gegenwind relevant und begrenzen aggressives Risk-On, was erklärt warum BTC eher seitwärts-aufwärts läuft statt zu explodieren.",
+    "macro_regime": "Risk-on mit Gegenwind: Schwacher Dollar + hohe Realzinsen, selektive Risikobereitschaft bei BTC als 'digitalem Gold', Altcoin-Schwäche signalisiert noch keine breit laufende Euphorie",
+    "summary": "BTC erholt sich dynamisch (+21.6% in 30d) und handelt klar über beiden gleitenden Durchschnitten – technisch bullish. Das Regime ist jedoch gespalten: Der schwache Dollar und starke ETF-Flows (BlackRock IBIT-Rekordvolumen) stützen, während die hohen 10-Jahres-Renditen (4.72%) institutionelles Kapital teilweise in Anleihen halten. Mit $77.6k befinden wir uns in einer Zone zwischen technischer Stärke und dem Widerstandsband $82k–$90k, das noch keine nachhaltige Überwindung gezeigt hat.",
     "active_indicators": [
-      "DXY (98.8, schwach) – historisch stärkster negativer Korrelationspartner zu BTC; ein fallender Dollar erhöht Dollarpreise von Hard Assets direkt und signalisiert expansivere Geldpolitik",
-      "BTC über 200-Tage-MA ($68,951) – der zuverlässigste Langfrist-Trendfilter; Preis darüber = struktureller Bullenmarkt bestätigt, Rücksetzer sind Akkumulationsgelegenheiten",
-      "BTC-Dominanz (59.2%) – zeigt Risk-off innerhalb Crypto; Kapital parkt in BTC statt Altcoins, typisch für frühe Bull-Phasen vor der Altseason – BTC ist das bevorzugte Akkumulationsvehikel"
+      "DXY (99.68 – schwacher Dollar): Historisch stärkster kurzfristiger Korrelationsindikator für BTC-Rallyes; DXY unter 100 erzeugt Liquiditätsrückenwind und wertet BTC als Dollar-Alternative auf",
+      "10Y US-Rendite (4.72% – erhöht): Hohe Realzinsen erhöhen den Opportunitätskostendruck auf zinsloses BTC und dämpfen die Risikobereitschaft institutioneller Akteure trotz ETF-Flows",
+      "BTC-Dominanz (59%) + Halving-Zyklus: Dominanz auf Mehrjahreshoch zeigt institutionelles 'Flight-to-Quality' innerhalb Crypto; kombiniert mit Pre-Halving-Logik (noch ~19 Monate) historisch eine Akkumulationsphase, nicht euphorische Topbildung"
     ],
     "news_headlines": [
-      "Bitcoin rally triggers short squeeze as top analysts debate if the bottom is in - CoinDesk",
+      "BlackRock says macro case for BTC is strengthening after record 'up week' volume of 439 million shares in IBIT - CoinDesk",
+      "Bitcoin bear market ‘over’ as price metric copies 2023 recovery: CryptoQuant CEO - TradingView",
+      "Bitcoin Holds Above $81,000 As Macro Attention Returns - Yellow.com",
       "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
-      "Bitcoin Tops $70,000 Amid a Short Squeeze, but 3 Metrics Hold the Real Signal - BeInCrypto",
-      "Bitcoin (BTC) price analysis: $180,000 targeted on Treasury buybacks - CoinDesk",
-      "Bitcoin Halving Cycle: Where BTC Could Bottom - galaxy.com"
+      "Bitcoin (BTC) Price Prediction 2026: Will BTC Soar or Stall? - Phemex"
     ],
-    "updated": "2026-08-21"
+    "updated": "2026-08-29"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 68951.0,
-  "ma50": 64559.0,
+  "ma200": 69288.0,
+  "ma50": 66993.0,
   "above_200ma": true,
   "funding_rate": null,
   "long_short_ratio": null

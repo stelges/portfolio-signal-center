@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "HOLD",
-  "price_usd": 77647,
+  "price_usd": 79773,
   "ath_usd": 109000,
-  "ath_dist_pct": -28.8,
-  "change_30d_pct": 21.55,
+  "ath_dist_pct": -26.8,
+  "change_30d_pct": 25.7,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,25 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on mit Gegenwind: Schwacher Dollar + hohe Realzinsen, selektive Risikobereitschaft bei BTC als 'digitalem Gold', Altcoin-Schwäche signalisiert noch keine breit laufende Euphorie",
-    "summary": "BTC erholt sich dynamisch (+21.6% in 30d) und handelt klar über beiden gleitenden Durchschnitten – technisch bullish. Das Regime ist jedoch gespalten: Der schwache Dollar und starke ETF-Flows (BlackRock IBIT-Rekordvolumen) stützen, während die hohen 10-Jahres-Renditen (4.72%) institutionelles Kapital teilweise in Anleihen halten. Mit $77.6k befinden wir uns in einer Zone zwischen technischer Stärke und dem Widerstandsband $82k–$90k, das noch keine nachhaltige Überwindung gezeigt hat.",
+    "macro_regime": "Risk-on mit Gegenwind – Liquiditätserholung bei strukturell hohen Zinsen und schwachem Dollar",
+    "summary": "BTC befindet sich in einer Pre-Halving-Akkumulationsphase (~84k Blöcke bis April 2028) mit starkem institutionellem Rückenwind (BlackRock IBIT-Rekordvolumen) und einem strukturell schwachen Dollar als Treiber. Der +25.7% Move der letzten 30 Tage hat BTC deutlich über beide gleitende Durchschnitte (MA50 + MA200) katapultiert, was bullish ist – jedoch signalisiert der aktuelle Preis von ~$79.7k (noch -26.8% vom ATH) kein extremes Kaufsignal mehr. Die hohen 10Y-Renditen (4.78%) und ein noch neutrales Sentiment (F&G 74) mahnen zur Geduld; ein aggressiver Einstieg ist erst bei Pullbacks gerechtfertigt.",
     "active_indicators": [
-      "DXY (99.68 – schwacher Dollar): Historisch stärkster kurzfristiger Korrelationsindikator für BTC-Rallyes; DXY unter 100 erzeugt Liquiditätsrückenwind und wertet BTC als Dollar-Alternative auf",
-      "10Y US-Rendite (4.72% – erhöht): Hohe Realzinsen erhöhen den Opportunitätskostendruck auf zinsloses BTC und dämpfen die Risikobereitschaft institutioneller Akteure trotz ETF-Flows",
-      "BTC-Dominanz (59%) + Halving-Zyklus: Dominanz auf Mehrjahreshoch zeigt institutionelles 'Flight-to-Quality' innerhalb Crypto; kombiniert mit Pre-Halving-Logik (noch ~19 Monate) historisch eine Akkumulationsphase, nicht euphorische Topbildung"
+      "DXY (99.14, schwach) – historisch stärkster Einzelindikator für BTC-Rallyes; schwacher Dollar erhöht globale Dollarlikuidität und treibt harte Assets",
+      "10Y US-Rendite (4.78%) – hohe Realzinsen erhöhen Opportunitätskosten für Risk-Assets und bremsen institutionellen Kapitalzufluss, obwohl BTC zunehmend als 'digitales Gold' entkoppelt",
+      "BTC-Dominanz (59.2%) – zeigt Risk-off-Modus innerhalb Krypto; Kapital flieht in BTC statt Altcoins, typisch für frühe Erholungsphasen vor breiterem Risk-on"
     ],
     "news_headlines": [
+      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - bitcoinfoundation.org",
       "BlackRock says macro case for BTC is strengthening after record 'up week' volume of 439 million shares in IBIT - CoinDesk",
-      "Bitcoin bear market ‘over’ as price metric copies 2023 recovery: CryptoQuant CEO - TradingView",
+      "Bitcoin Halving Cycle: Where BTC Could Bottom - galaxy.com",
       "Bitcoin Holds Above $81,000 As Macro Attention Returns - Yellow.com",
-      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
-      "Bitcoin (BTC) Price Prediction 2026: Will BTC Soar or Stall? - Phemex"
+      "Market Pulse - Macro Ceiling, On-Chain Floor - Hex Trust"
     ],
-    "updated": "2026-08-29"
+    "updated": "2026-09-04"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 69288.0,
-  "ma50": 66993.0,
+  "ma200": 69602.0,
+  "ma50": 68778.0,
   "above_200ma": true,
   "funding_rate": null,
   "long_short_ratio": null

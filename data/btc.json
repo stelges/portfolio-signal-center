@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "HOLD",
-  "price_usd": 79773,
+  "signal": "BUY",
+  "price_usd": 77402,
   "ath_usd": 109000,
-  "ath_dist_pct": -26.8,
-  "change_30d_pct": 25.7,
+  "ath_dist_pct": -29.0,
+  "change_30d_pct": 21.1,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,27 +25,27 @@
     }
   },
   "ai_analysis": {
-    "signal": "HOLD",
+    "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-on mit Gegenwind – Liquiditätserholung bei strukturell hohen Zinsen und schwachem Dollar",
-    "summary": "BTC befindet sich in einer Pre-Halving-Akkumulationsphase (~84k Blöcke bis April 2028) mit starkem institutionellem Rückenwind (BlackRock IBIT-Rekordvolumen) und einem strukturell schwachen Dollar als Treiber. Der +25.7% Move der letzten 30 Tage hat BTC deutlich über beide gleitende Durchschnitte (MA50 + MA200) katapultiert, was bullish ist – jedoch signalisiert der aktuelle Preis von ~$79.7k (noch -26.8% vom ATH) kein extremes Kaufsignal mehr. Die hohen 10Y-Renditen (4.78%) und ein noch neutrales Sentiment (F&G 74) mahnen zur Geduld; ein aggressiver Einstieg ist erst bei Pullbacks gerechtfertigt.",
+    "macro_regime": "Risk-on Erholung + schwacher Dollar + spätzyklische Liquiditätshoffnung (Pre-Halving Akkumulation)",
+    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationsphase: über dem MA200, starke 30-Tage-Performance (+21%), neutrales Sentiment (kein Euphorie-Überschuss) und ein strukturell schwacher Dollar liefern ein solides Kaufumfeld. Die hohe BTC-Dominanz (58.2%) signalisiert institutionelle Kapitalrotation in den 'sicheren Hafen' der Krypto-Welt, nicht riskante Altcoin-Spekulation. Bremsfaktor bleibt die 10Y-Rendite bei 4.97%, die Kapitalkosten hoch hält und aggressive Risikonahme dämpft.",
     "active_indicators": [
-      "DXY (99.14, schwach) – historisch stärkster Einzelindikator für BTC-Rallyes; schwacher Dollar erhöht globale Dollarlikuidität und treibt harte Assets",
-      "10Y US-Rendite (4.78%) – hohe Realzinsen erhöhen Opportunitätskosten für Risk-Assets und bremsen institutionellen Kapitalzufluss, obwohl BTC zunehmend als 'digitales Gold' entkoppelt",
-      "BTC-Dominanz (59.2%) – zeigt Risk-off-Modus innerhalb Krypto; Kapital flieht in BTC statt Altcoins, typisch für frühe Erholungsphasen vor breiterem Risk-on"
+      "DXY (99.11, schwach): Historisch stärkster negativer Korrelator zu BTC – schwacher Dollar = Rückenwind für harte Assets und Risk-On",
+      "200-Tage MA ($70,017): BTC handelt klar darüber, klassisches Bullmarktsignal – Abstand ~+10%, gesund ohne Überhitzung",
+      "Halving-Zyklusposition: 83.448 Blöcke bis April 2028, historisch ist 18-24 Monate vor Halving eine der stärksten Akkumulationsphasen im Zyklus"
     ],
     "news_headlines": [
-      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - bitcoinfoundation.org",
-      "BlackRock says macro case for BTC is strengthening after record 'up week' volume of 439 million shares in IBIT - CoinDesk",
-      "Bitcoin Halving Cycle: Where BTC Could Bottom - galaxy.com",
+      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
       "Bitcoin Holds Above $81,000 As Macro Attention Returns - Yellow.com",
-      "Market Pulse - Macro Ceiling, On-Chain Floor - Hex Trust"
+      "BlackRock says macro case for BTC is strengthening after record 'up week' volume of 439 million shares in IBIT - CoinDesk",
+      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com",
+      "Bitcoin (BTC) price analysis: $180,000 targeted on Treasury buybacks - CoinDesk"
     ],
-    "updated": "2026-09-04"
+    "updated": "2026-09-11"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 69602.0,
-  "ma50": 68778.0,
+  "ma200": 70017.0,
+  "ma50": 70650.0,
   "above_200ma": true,
   "funding_rate": null,
   "long_short_ratio": null

@@ -4,8 +4,8 @@
   "allocation_pct": 8,
   "icon": "τ",
   "color": "#00d4ff",
-  "signal": "HOLD",
-  "price_usd": 224.8,
+  "signal": "BUY",
+  "price_usd": 236.41,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -27,35 +27,35 @@
     }
   },
   "ai_analysis": {
-    "signal": "HOLD",
+    "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit BTC-Dominanz-Headwind; Institutional Catalyst (Grayscale ETP) vs. Altcoin-Underperformance",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit KI-Narrativ-Rotation; BTC-Signal BUY, aber BTC-Dominanz noch erhöht (58.2%) bremst High-Beta-Altcoins.",
     "active_indicators": [
-      "BTC-Dominanz 59.2% (ungünstig für High-Beta TAO, aber nicht extremal; <55% wäre bullisch)",
-      "Fear & Greed 74/100 (Greed-Phase, aber nicht Euphorie; Raum für weitere Risikobereitschaft)",
-      "Grayscale ETP-Listing (institutioneller Katalysator, reduizert Friktionen, aber noch nicht approved)"
+      "Grayscale-Gewichtung (43% im AI Fund) – institutionelle Validierung & zukünftige Inflows",
+      "BTC-Signal = BUY – notwendige Bedingung für aggressive TAO-Position erfüllt",
+      "Dezentrales KI-Narrativ vs. Zentralisierung – strukturelle Megatrend, noch in früher Phase"
     ],
-    "summary": "TAO befindet sich in einer Akkumulationsphase mit strukturellem Tailwind (Grayscale ETP, dezentrales KI-Narrativ, Post-Halving-Deflation) und kurzfristigen Kopfwinden (BTC-Dominanz, Altcoin-Rotation). Der Kurs hat sich von $150–$180 stabilisiert; das aktuelle Niveau ($224.80) reflektiert bereits 40% Optimismus. HOLD ist optimal für 7-Jahres-Plan: Position ist etabliert, weitere Käufe warten auf BTC-Dominanz <56% oder auf einen klareren Institutional-Approval-Signal.",
+    "summary": "TAO profitiert von gleichzeitiger BTC-Stärke, institutionellem Grayscale-Backing und dem wachsenden Bewusstsein für dezentrale KI-Infrastruktur als Gegengewicht zu Hyperscalern. Die 43%-Gewichtung in Grascales AI Fund und die bevorstehende Halving-Deflation (abgeschlossen 2025) setzen Fundamentale Unterstützung. Risiko: BTC-Dominanz muss weiter sinken, damit TAO relative Outperformance liefert; frühe Ausführungsphase bleibt Unsicherheit.",
     "price_targets": {
-      "buy_zone": 195,
-      "buy_aggressiv": 170,
-      "take_profit_1_price": 320,
-      "take_profit_1_action": "25% verkaufen (~$2.7M Position → $675k realisiert)",
-      "take_profit_2_price": 500,
-      "take_profit_2_action": "50% der verbleibenden Position verkaufen (weitere Risikoreduktion)",
-      "concern_below": 160
+      "buy_zone": 220,
+      "buy_aggressiv": 200,
+      "take_profit_1_price": 380,
+      "take_profit_1_action": "30% Position reduzieren (Grayscale-Katalyst realisiering)",
+      "take_profit_2_price": 600,
+      "take_profit_2_action": "weitere 40% verkaufen (strukturelle Narrativ-Expansion)",
+      "concern_below": 180
     },
-    "bull_case": "Grayscale ETP-Listing würde institutionelle Kapitalströme auslösen (wie bei SOL 2021–2022); dezentrales KI-Narrativ reift parallel zu Nvidia-Capex-Welle und wird 2027–2028 zum Mainstream. TAO's deflationäre 21M-Supply + Bitcoin-Mechanik + Sub-$3B MCap schaffen asymmetrisches 10–30x-Potenzial bis 2030.",
-    "bear_case": "BTC-Dominanz könnte auf 65%+ steigen, wenn Makro in Risikovermeidung dreht; dezentrale KI bleibt Nische, während OpenAI/Anthropic zentralisierte Systeme dominieren. Grayscale-Listing könnte verzögert werden, Momentum-Sammler könnten dann abverkaufen.",
-    "signal_changer": "BUY-Signal: Grayscale ETP erhält SEC-Approval + BTC-Dominanz fällt <55%, oder BTC selbst dreht bullisch. SELL-Signal: BTC-Dominanz steigt dauerhaft >65%, oder Subnet-Aktivität/Validator-Metriken fallen merklich, oder Anthropic signalisiert Zentralisierung. CASH-Signal: Makro dreht in Rezessionsangst + VIX >30.",
+    "bull_case": "Grayscale-ETF (wenn genehmigt) + institutionelle Rotation in dezentrale KI erzeugen Multi-Jahres-Tailwind; TAO's $2.5B MCap vs. theoretischer Markt (Nvidia-Capex-Spillover) lässt 10–50x Potenzial zu.",
+    "bear_case": "Zentralisierte KI-Player (OpenAI, Anthropic, Google) dominieren weiterhin; BTC-Dominanz bleibt >60%, erstickt Altcoin-Rotation. Technisches Scheitern oder Regulatory-Angriff könnte Narrative kollabieren.",
+    "signal_changer": "BTC-Signal wechselt zu SELL/CASH → sofort auf HOLD downgraden. BTC-Dominanz >65% + Altcoin Fear & Greed <30 → CASH. Negative Grayscale-ETF-Entscheidung oder kritische Sicherheitslücke in Bittensor-Subnets → SELL.",
     "news_headlines": [
-      "Grayscale Named Its Decentralized AI Pick — and Anthropic’s the Reason - Yahoo Finance",
-      "Grayscale: Anthropic Block Sparks Interest in Decentralized AI - bitcoinfoundation.org",
-      "Bittensor (TAO) Surges 3.11% on Grayscale Fund Rebalance - CoinMarketCap",
-      "Grayscale seeks U.S. listing for Bittensor ETP in first institutional bet on decentralized AI - CoinDesk"
+      "Grayscale Bullish On Bittensor, Raises TAO Weight In AI Crypto Fund To 43% - Yellow.com",
+      "Anthropic, Bittensor, and the Rise of Decentralized AI - Grayscale",
+      "Why Capital Is Rotating From Layer 1s Into Bittensor's AI Network - Yellow.com",
+      "Grayscale Named Its Decentralized AI Pick — and Anthropic’s the Reason - Yahoo Finance"
     ],
-    "updated": "2026-09-04"
+    "updated": "2026-09-11"
   },
   "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
-  "market_cap_usd_billions": 2.42
+  "market_cap_usd_billions": 2.54
 }

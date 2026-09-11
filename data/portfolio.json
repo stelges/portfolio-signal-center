@@ -1,33 +1,33 @@
 {
-  "last_updated": "2026-09-04T20:01:06.488712Z",
+  "last_updated": "2026-09-11T20:12:08.514542Z",
   "updated_by": "update_intelligence.py v3 (GitHub Actions)",
-  "global_signal": "HOLD",
-  "global_summary": "Normales DCA fortführen",
-  "fear_greed": 74,
-  "btc_price_usd": 79773,
-  "btc_ath_dist_pct": -26.8,
-  "btc_30d_change_pct": 25.7,
-  "next_update": "2026-09-11T18:00:00Z",
+  "global_signal": "BUY",
+  "global_summary": "Akkumulieren – günstige Phase aktiv",
+  "fear_greed": 56,
+  "btc_price_usd": 77402,
+  "btc_ath_dist_pct": -29.0,
+  "btc_30d_change_pct": 21.1,
+  "next_update": "2026-09-18T18:00:00Z",
   "ai_weekly_briefing": {
-    "title": "DCA fortsetzen, Metaplanet-Discount nutzen",
-    "status": "Portfolio stabil, BTC führt an, Makro-Umfeld volatil mit steigendem USD und Renditen.",
-    "insight": "Metaplanet notiert unter NAV (0.941x) – seltene Kaufgelegenheit. BTC-Dominanz und Fear & Greed bei 74 sprechen für Fortsetzung der Strategie ohne Market-Timing.",
-    "action": "Monatliches DCA wie geplant ausführen; Cash-Reserve optional für Metaplanet-Position nutzen, ansonsten HOLD alle Positionen bis nächste Woche."
+    "title": "Alle Signale grün – DCA fortsetzen",
+    "status": "Portfolio in stabiler Position mit kauffreundlichen Signalen über alle Positionen hinweg.",
+    "insight": "Breite BUY-Signale deuten auf Marktkonsolidierung hin – besonders BTC (F&G 56/100) und Metaplanet (mNAV 0.8502x) bieten gutes Entry-Value. Der stabile DXY (99.11) und moderater 10Y-Zinssatz (4.97%) unterstützen das Makro-Setup für längerfristige Positionen.",
+    "action": "Planmäßiges monatliches DCA dieser Woche ausführen – keine Anpassungen nötig, 7-Jahres-Plan bleibt intakt."
   },
-  "market_regime": "bullish",
-  "btc_dominance_pct": 59.2,
+  "market_regime": "neutral",
+  "btc_dominance_pct": 58.2,
   "macro": {
-    "sp500": 7718.36,
-    "dxy": 99.14,
-    "gold": 4482.6,
-    "us10y": 4.78,
-    "usdjpy": 156.24
+    "sp500": 7656.98,
+    "dxy": 99.11,
+    "gold": 4391.3,
+    "us10y": 4.97,
+    "usdjpy": 153.68
   },
   "next_halving": {
-    "next_halving_estimated_utc": "2028-04-13T11:51:13Z",
+    "next_halving_estimated_utc": "2028-04-13T08:12:15Z",
     "next_halving_block": 1050000,
-    "blocks_remaining": 84479,
-    "current_block_height": 965521,
+    "blocks_remaining": 83448,
+    "current_block_height": 966552,
     "halving_source": "blockchain_calculated"
   }
 }

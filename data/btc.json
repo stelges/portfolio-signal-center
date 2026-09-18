@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "BUY",
-  "price_usd": 77402,
+  "signal": "HOLD",
+  "price_usd": 81115,
   "ath_usd": 109000,
-  "ath_dist_pct": -29.0,
-  "change_30d_pct": 21.1,
+  "ath_dist_pct": -25.6,
+  "change_30d_pct": 25.85,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,27 +25,27 @@
     }
   },
   "ai_analysis": {
-    "signal": "BUY",
+    "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on Erholung + schwacher Dollar + spätzyklische Liquiditätshoffnung (Pre-Halving Akkumulation)",
-    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationsphase: über dem MA200, starke 30-Tage-Performance (+21%), neutrales Sentiment (kein Euphorie-Überschuss) und ein strukturell schwacher Dollar liefern ein solides Kaufumfeld. Die hohe BTC-Dominanz (58.2%) signalisiert institutionelle Kapitalrotation in den 'sicheren Hafen' der Krypto-Welt, nicht riskante Altcoin-Spekulation. Bremsfaktor bleibt die 10Y-Rendite bei 4.97%, die Kapitalkosten hoch hält und aggressive Risikonahme dämpft.",
+    "macro_regime": "Risk-on mit strukturellen Bremsen – Liquiditätserholung trifft auf restriktive Zinspolitik (10Y bei 5%) und Gold-Flucht als Unsicherheitssignal",
+    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationsphase (~82.000 Blöcke vor Halving 2028) mit positivem Momentum (+25.9% in 30d), steht aber vor hartem Widerstand bei $82K. Der Markt ist strukturell bullish (über MA200 und MA50, $3.8B ETF-Zuflüsse, BlackRock-Engagement), wird jedoch durch restriktive Zinsen (10Y=5%) und Gold-Rallye als konkurrierende Safe-Haven-Alternative temporär gedeckelt. Sentiment bei 56/100 (Neutral) deutet auf keine Überhitzung hin – ideale DCA-Zone, aber kein klares Momentum-Signal für aggressive Aufstockung.",
     "active_indicators": [
-      "DXY (99.11, schwach): Historisch stärkster negativer Korrelator zu BTC – schwacher Dollar = Rückenwind für harte Assets und Risk-On",
-      "200-Tage MA ($70,017): BTC handelt klar darüber, klassisches Bullmarktsignal – Abstand ~+10%, gesund ohne Überhitzung",
-      "Halving-Zyklusposition: 83.448 Blöcke bis April 2028, historisch ist 18-24 Monate vor Halving eine der stärksten Akkumulationsphasen im Zyklus"
+      "10Y US-Rendite (5.0%) – Hohes 'risikofreies' Zinsniveau erhöht den Opportunitätskostendruck auf Risk-Assets wie BTC und dämpft aggressive Kapitalallokation trotz ETF-Zuflüssen",
+      "BTC-Dominanz (58.4%) – Klassisches Risk-off-Signal innerhalb Crypto: Kapital flieht in BTC als 'sicheren Hafen' der Asset-Klasse, Altcoins werden gemieden; bestätigt Akkumulationscharakter ohne Euphorie",
+      "Gold-Preis ($4.415) auf Allzeithoch steigend – Gleichzeitiger Anstieg von Gold und BTC-Stagnation unter $82K signalisiert Makro-Unsicherheit; historisch folgt BTC Gold mit Verzögerung in Risk-off-zu-Risk-on-Übergängen"
     ],
     "news_headlines": [
-      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
-      "Bitcoin Holds Above $81,000 As Macro Attention Returns - Yellow.com",
+      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - bitcoinfoundation.org",
       "BlackRock says macro case for BTC is strengthening after record 'up week' volume of 439 million shares in IBIT - CoinDesk",
-      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com",
-      "Bitcoin (BTC) price analysis: $180,000 targeted on Treasury buybacks - CoinDesk"
+      "How Bitcoin Became The World's Purest Macro Asset In 2026 - Yellow.com",
+      "Bitcoin ETFs see $3.8B inflows but BTC struggles to break $82K resistance amid macro pressures - Pluang",
+      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com"
     ],
-    "updated": "2026-09-11"
+    "updated": "2026-09-18"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 70017.0,
-  "ma50": 70650.0,
+  "ma200": 70389.0,
+  "ma50": 72477.0,
   "above_200ma": true,
   "funding_rate": null,
   "long_short_ratio": null

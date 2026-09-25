@@ -9,8 +9,8 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 0.7799,
-  "btc_nav_usd_billions": 3.26,
+  "mnav": 0.8881,
+  "btc_nav_usd_billions": 3.38,
   "zones": {
     "buy": {
       "label": "mNAV < 1.1x",
@@ -28,35 +28,35 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit USD-Stärke; BTC nach Korrektur (-25.6% vom ATH) in Akkumulationsphase; Japan-YEN schwach (156.76 USD/JPY) → USD-denominierte BTC-Assets profitieren von Währungswind",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit USD-Stärke; BTC korrigiert nach ATH, aber strukturelle Tailwinds (Yen-Schwäche, US Treasury-Expansion, Fear & Greed 71) bleiben intakt.",
     "active_indicators": [
-      "mNAV 0.7799x (kritisch: <0.9x = aggressive Kaufzone; historisch sehr selten)",
-      "BTC-Dominanz 58.4% + Fear&Greed 56 (Stabilisierung nach Sell-off, nicht Panik)",
-      "USD/JPY 156.76 (Schwacher Yen verstärkt Renditevorteil für MTPLF; JPY-Investor profitiert doppelt von BTC-Anstieg + Währung)"
+      "mNAV 0.8881x (KRITISCH: < 0.9x = aggressive Kaufzone, BTC mit Rabatt via Aktie)",
+      "Yen-Schwäche (USD/JPY 157.3 = Metaplanet profitiert von USD-Positionen, natürliche Währungs-Hedge)",
+      "BTC-Dominanz 58.2% + Fear & Greed 71 (Markt-Stabilität, keine Panik-Umgebung)"
     ],
-    "summary": "Metaplanet handelt mit 22% Rabatt auf BTC-NAV – eine statistische Anomalie, die in der 7-Jahres-DCA-Strategie **kaufwürdig** ist. Die aktuelle Expansion auf 43.000+ BTC und die US-Treasury-Struktur signalisieren Management-Conviction. Bei mNAV <0.9x und BTC in Korrektur ist dies eine seltene Gelegenheit für gehebelte BTC-Exposition.",
+    "summary": "Metaplanet notiert unter 0.9x mNAV – historisch eine extrem seltene und aggressive Kaufzone. Die neue US Treasury-Struktur ($135M Kapitalisierung, Superplanet-Deal) signalisiert institutionelle Validation und eröffnet Wachstumspfad. Bei 7-Jahres-DCA ist dies optimaler Einstiegspunkt für gehebelte BTC-Exposition.",
     "price_targets": {
-      "buy_zone_mnav": 0.95,
-      "buy_aggressiv_mnav": 0.78,
+      "buy_zone_mnav": 0.88,
+      "buy_aggressiv_mnav": 0.85,
       "take_profit_1_mnav": 1.15,
-      "take_profit_1_action": "10–15% des Position trimmen (Reduziere Hebel bei normalem mNAV)",
+      "take_profit_1_action": "20% der Position reduzieren (Rückkehr zu Fair-Value)",
       "take_profit_2_mnav": 1.5,
-      "take_profit_2_action": "Weitere 20–25% verkaufen (Fair Value + Aufschlag)",
+      "take_profit_2_action": "weitere 30% verkaufen (normales DCA-Regime)",
       "concern_mnav": 1.8
     },
-    "bull_case": "mNAV von 0.78x ist eine statistische Anomalie – selbst bei BTC-Stagnation führt Normalisierung auf 1.1–1.2x zu 40–50% Upside. Wenn BTC in den nächsten 12–24 Monaten auf $150k+ läuft (Zyklus-Norm), kann MTPLF durch mNAV-Expansion + BTC-Anstieg 5–8x machen.",
-    "bear_case": "Starker USD (DXY 100.2) und BTC noch -25.6% vom ATH deuten auf makro Unsicherheit; Schulden ($280M) werden bei USD-Stärke teurer. Wenn BTC unter $70k fällt oder Risk-off intensiviert sich, sinkt mNAV wieder unter 0.70x.",
-    "signal_changer": "BTC unter $68.000 oder mNAV-Expansion stagniert über 3 Monate → Signal zu HOLD. Umgekehrt: mNAV >1.5x oder BTC über $100k → TP2 realisieren und Hebel-Reduktion erwägen.",
+    "bull_case": "mNAV unter 0.9x ist statistisch Kaufgelegenheit; US Treasury-Expansion erhöht institutionelle Nachfrage und Liquidity. BTC-Korrektur (-22.9% von ATH) ist temporär – nächste Halving-Zyklusphase (2024/25 bereits begonnen) treibt mNAV-Expansion und BTC-Preis.",
+    "bear_case": "Yen-Volatilität könnte schnell umschlagen (Zinserhöhung BoJ); mNAV-Expansion braucht BTC-Rally – bei BTC-Absturz unter $70k wird Rabatt aufgezehrt. US Treasury-Struktur ist noch ungetestet, regulatorische Risiken möglich.",
+    "signal_changer": "mNAV über 1.0x (Exit buy zone) ODER BTC unter $72k + Fear & Greed unter 30 (Panic-Signale) ODER Yen-Appreciation (USD/JPY unter 150) würde zu HOLD/CASH führen.",
     "news_headlines": [
-      "Metaplanet buys another $170 million of bitcoin expanding treasury to 43,000 BTC - CoinDesk",
+      "Why Metaplanet (TSE:3350) Is Up 13.1% After Launching a U.S. Bitcoin Treasury Vehicle - Yahoo Finance",
+      "Japan's Metaplanet launching U.S. bitcoin treasury company through $135 million nanocap deal - CoinDesk",
       "Why Metaplanet (TSE:3350) Is Up 13.1% After Unveiling Its U.S. Bitcoin Treasury Structure - simplywall.st",
-      "Japan's Metaplanet Plants Its Flag in the US With $132M Bitcoin Treasury Deal - Yahoo Finance",
       "Metaplanet stakes $132M in bitcoin to build US treasury vehicle Superplanet - Dealroom"
     ],
-    "updated": "2026-09-18"
+    "updated": "2026-09-25"
   },
   "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien.",
-  "stock_price_usd": 1.5501,
-  "stock_price_jpy": 243.0,
-  "usdjpy": 156.76
+  "stock_price_usd": 1.8627,
+  "stock_price_jpy": 293.0,
+  "usdjpy": 157.3
 }

@@ -5,7 +5,7 @@
   "icon": "τ",
   "color": "#00d4ff",
   "signal": "HOLD",
-  "price_usd": 250.92,
+  "price_usd": 312.17,
   "circulating_supply": 10750000,
   "max_supply": 21000000,
   "market_cap_usd": null,
@@ -29,33 +29,33 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on mit Liquiditätszyklus + hohe BTC-Dominanz (58.4%) – günstig für Blue Chips, ungünstig für High-Beta Altcoins wie TAO. KI-Narrativ stark, aber Grayscale-Katalyst noch nicht in Preis eingepreist.",
+    "macro_regime": "Risk-on + Narrative-Zyklus (KI-Infrastruktur), aber BTC-Dominanz hoch (58.2%) = ungünstig für High-Beta-Altcoins. Goldilocks-Phase vor nächster Volatilität.",
     "active_indicators": [
-      "BTC-Dominanz 58.4% (strukturell ungünstig für TAO; <55% wäre Kaufsignal)",
-      "Grayscale AI-Fund-Gewichtung TAO 43% (institutional push, aber noch kein ETF-Genehmigung)",
-      "Fear & Greed 56/100 (neutral; erst >65 = echte Risk-on, <40 = sell-Signal)"
+      "BTC-Dominanz 58.2% (kritisch für TAO: >60% = verkaufsauslöser, <55% = bullish)",
+      "Grayscale-ETP-Antrag + Narrative-Momentum (Institutionalisierung = langfristiger Tailwind)",
+      "Post-Halving-Deflation (Dezember 2025 abgeschlossen): Emission reduziert, Knappheit wächst – Support für höhere Bewertung in 18–36 Monaten"
     ],
-    "summary": "TAO ist fundamental solid (dezentrale KI-Infrastruktur, Post-Halving-Deflation, 60+ Subnets) und Grayscale-Endorsement ist bullish, aber BTC-Dominanz und fehlende ETF-Genehmigung bremsen Altcoin-Rally. HOLD bis Grayscale-Katalyst (Q4 2026) oder BTC-Dominanz fällt unter 55%. Unter $200 wird es interessant zum Nachkaufen.",
+    "summary": "TAO befindet sich in einer Konsolidierungsphase nach Halving mit positivem Narrative (Grayscale-ETF, dezentrale KI), aber hohe BTC-Dominanz begrenzt kurzfristiges Upside. Für 7-Jahres-Portfolio optimal: HALTEN, nicht aggressiv kumulieren, bis BTC-Dominanz fällt oder BTC selbst ein neues Kaufsignal gibt.",
     "price_targets": {
-      "buy_zone": 200,
-      "buy_aggressiv": 175,
-      "take_profit_1_price": 380,
-      "take_profit_1_action": "30% reduzieren (Grayscale-ETF-Genehmigung oder BTC-Dominanz <52%)",
-      "take_profit_2_price": 550,
-      "take_profit_2_action": "50% des Rests (2028–2029 Zyklus-Peak-Szenario)",
-      "concern_below": 180
+      "buy_zone": 280,
+      "buy_aggressiv": 250,
+      "take_profit_1_price": 450,
+      "take_profit_1_action": "30% verkaufen (Gewinnsicherung, Narrative-Bestätigung)",
+      "take_profit_2_price": 650,
+      "take_profit_2_action": "50% der restlichen Position verkaufen (2027–2028 Zyklus-Spitze)",
+      "concern_below": 220
     },
-    "bull_case": "Grayscale positioniert TAO als Top-Pick für dezentralisierte KI; Halving-Deflation + wachsendes Subnet-Ökosystem schaffen 3–5-jähriges Explosionspotenzial. Bei Mainstream-KI-Boom und $10B+ MCap sind 3–5x realistisch bis 2028.",
-    "bear_case": "BTC-Dominanz bleibt >56% und drückt Alt-Season hinaus; zentralisierte KI-Anbieter (Nvidia, OpenAI) dominieren weiter & verdrängen dezentrale Infrastruktur als Nische. Technisches Risiko: Execution-Fehler bei Subnet-Koordination könnte Vertrauen brechen.",
-    "signal_changer": "BUY-Signal: (1) Grayscale-ETF genehmigt ODER (2) BTC-Dominanz fällt unter 55% ODER (3) Preis fällt auf $175–200 + Fear/Greed >70. SELL-Signal: BTC-Dominanz >62% + Grayscale-Anthopic-Block zerfällt OR TAO unter $150.",
+    "bull_case": "Dezentrale KI ist der logische nächste S-Curve nach Blockchain und DeFi; Grayscale-ETF würde institutionelles Kapital anziehen und TAO als Leittoken für KI-Infrastruktur positionieren. Post-Halving Knappheit + wachsende Subnets = ideale Voraussetzungen für 3–5x bis 2028.",
+    "bear_case": "Zentralisierte KI-Hyperscaler (OpenAI, Anthropic, xAI) dominieren die Nachfrage weiterhin; dezentrale Alternativen bleiben Nische. BTC-Dominanz bleibt >60%, Altcoin-Zyklus verzögert sich, TAO wird ausgepumpt wie andere 2021er-Narrative.",
+    "signal_changer": "POSITIV: BTC-Dominanz fällt unter 55% ODER Grayscale-ETF genehmigt + Launch im Q4 2026 ODER TAO bricht über $450 auf Volumen. NEGATIV: BTC-Dominanz steigt über 62% ODER TAO fällt unter $220 (Halving-Rally-Low wird gestestet).",
     "news_headlines": [
-      "Grayscale Bullish On Bittensor, Raises TAO Weight In AI Crypto Fund To 43% - Yellow.com",
       "Anthropic, Bittensor, and the Rise of Decentralized AI - Grayscale",
-      "Grayscale Named Its Decentralized AI Pick — and Anthropic’s the Reason - Yahoo Finance",
-      "Grayscale: Anthropic Block Sparks Interest in Decentralized AI - bitcoinfoundation.org"
+      "Grayscale files for first U.S. Bittensor ETP as decentralized AI gains momentum - ca.finance.yahoo.com",
+      "Grayscale: Anthropic Block Sparks Interest in Decentralized AI - Bitcoin Foundation",
+      "Bittensor (TAO) Surges 3.11% on Grayscale Fund Rebalance - CoinMarketCap"
     ],
-    "updated": "2026-09-18"
+    "updated": "2026-09-25"
   },
   "strategy_note": "Asymmetrische Wette. KI + Bitcoin-Mechanik (21M Supply, Halving). Kleinster MCap = größtes Upside.",
-  "market_cap_usd_billions": 2.7
+  "market_cap_usd_billions": 3.36
 }

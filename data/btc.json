@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "HOLD",
-  "price_usd": 81115,
+  "price_usd": 84009,
   "ath_usd": 109000,
-  "ath_dist_pct": -25.6,
-  "change_30d_pct": 25.85,
+  "ath_dist_pct": -22.9,
+  "change_30d_pct": 6.34,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,25 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on mit strukturellen Bremsen – Liquiditätserholung trifft auf restriktive Zinspolitik (10Y bei 5%) und Gold-Flucht als Unsicherheitssignal",
-    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationsphase (~82.000 Blöcke vor Halving 2028) mit positivem Momentum (+25.9% in 30d), steht aber vor hartem Widerstand bei $82K. Der Markt ist strukturell bullish (über MA200 und MA50, $3.8B ETF-Zuflüsse, BlackRock-Engagement), wird jedoch durch restriktive Zinsen (10Y=5%) und Gold-Rallye als konkurrierende Safe-Haven-Alternative temporär gedeckelt. Sentiment bei 56/100 (Neutral) deutet auf keine Überhitzung hin – ideale DCA-Zone, aber kein klares Momentum-Signal für aggressive Aufstockung.",
+    "macro_regime": "Stagflatorisches Risk-off mit selektiver Liquidität: hohe Realrenditen (10Y bei 5.18%) belasten Risk-Assets strukturell, Gold auf ATH signalisiert Kapitalflucht in Hartwährungen, DXY neutral erlaubt aber keine starke BTC-Gegenreaktion. BTC agiert als hybrides Asset zwischen Inflationsschutz und Risikoanlage.",
+    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationsphase (~19 Monate vor dem nächsten Halving April 2028), aber das Makroumfeld mit 5.18% 10Y-Renditen und Gold auf ATH schafft strukturellen Gegenwind. Das aktuelle Preisniveau ($84k) liegt komfortabel über dem 200-Tage-MA ($70.9k), zeigt aber kein klares Ausbruchssignal in Richtung $100k – der Fear & Greed von 71 deutet auf verhaltenen Optimismus hin, der jederzeit in Verkaufsdruck kippen kann. DCA-Kontinuität ist hier die rationale Strategie.",
     "active_indicators": [
-      "10Y US-Rendite (5.0%) – Hohes 'risikofreies' Zinsniveau erhöht den Opportunitätskostendruck auf Risk-Assets wie BTC und dämpft aggressive Kapitalallokation trotz ETF-Zuflüssen",
-      "BTC-Dominanz (58.4%) – Klassisches Risk-off-Signal innerhalb Crypto: Kapital flieht in BTC als 'sicheren Hafen' der Asset-Klasse, Altcoins werden gemieden; bestätigt Akkumulationscharakter ohne Euphorie",
-      "Gold-Preis ($4.415) auf Allzeithoch steigend – Gleichzeitiger Anstieg von Gold und BTC-Stagnation unter $82K signalisiert Makro-Unsicherheit; historisch folgt BTC Gold mit Verzögerung in Risk-off-zu-Risk-on-Übergängen"
+      "10Y US-Rendite (5.18%): In stagflatorischen Regimes mit hohen Realzinsen ist dies der wichtigste Druckpunkt für BTC – teures Kapital verhindert aggressiven Risikoappetit und begrenzt institutionelle Hebelwirkung.",
+      "Gold/BTC-Verhältnis (Gold ATH bei $4321): Historisch zeigt Gold-Outperformance in dieser Phase, dass Smart Money in klassische Sicherheit rotiert – BTC folgt oft mit 3-6 Monaten Verzögerung oder bleibt in Mittelposition.",
+      "BTC-Dominanz (58.2%): Hohe Dominanz bei $84k zeigt, dass Kapital im Kryptomarkt in BTC konzentriert bleibt und Altcoin-Season ausbleibt – typisch für Late-Accumulation vor dem nächsten Liquiditätsschub."
     ],
     "news_headlines": [
-      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - bitcoinfoundation.org",
-      "BlackRock says macro case for BTC is strengthening after record 'up week' volume of 439 million shares in IBIT - CoinDesk",
-      "How Bitcoin Became The World's Purest Macro Asset In 2026 - Yellow.com",
-      "Bitcoin ETFs see $3.8B inflows but BTC struggles to break $82K resistance amid macro pressures - Pluang",
-      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - galaxy.com"
+      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
+      "BlackRock's Mitchnick says macro case for bitcoin is strengthening after record trading in positive week - CoinDesk",
+      "Bitcoin Halving Cycle: Where BTC Could Bottom - galaxy.com",
+      "'Altitude sickness can wait': Bitcoin's historic short squeeze, Bessent catalyst may signal bull-market reset, analysts say - The Block",
+      "Will Bitcoin Soar to $70K or Tumble? August 2026 Showdown! - Phemex"
     ],
-    "updated": "2026-09-18"
+    "updated": "2026-09-25"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 70389.0,
-  "ma50": 72477.0,
+  "ma200": 70918.0,
+  "ma50": 75321.0,
   "above_200ma": true,
   "funding_rate": null,
   "long_short_ratio": null

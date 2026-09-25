@@ -5,9 +5,9 @@
   "icon": "◎",
   "color": "#9945ff",
   "signal": "HOLD",
-  "price_usd": 113.88,
+  "price_usd": 122.23,
   "ath_usd": 294,
-  "ath_dist_pct": -61.3,
+  "ath_dist_pct": -58.4,
   "network_revenue_annual_usd_billions": 2.85,
   "etf_status": "In Prüfung",
   "firedancer_status": "Coming 2026",
@@ -28,33 +28,33 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on mit strukturellem Altcoin-Headwind: BTC-Dominanz 58,4% (zu hoch), 10Y-Rendite stabil bei 5%, Fear & Greed neutral (56). Altcoins warten auf BTC-Bestätigung + BTC-Dom-Kompression.",
+    "macro_regime": "Risk-on + Late-Cycle Liquidität; BTC dominiert (58.2%), Altcoins folgen mit Hebel; Fear & Greed bei 71 = Euphorie ohne starke fundamentale Neubewertung.",
     "active_indicators": [
-      "BTC-Dominanz 58,4% (aktuell Altcoin-Bremse – relevantester Indikator für SOL 2026)",
-      "SOL/ETH-Ratio 0.0433 (strukturell schwach, Durchsatzvorsprung noch nicht im Preis)",
-      "Firedancer 2026-Roadmap (Catalyst Q4 2026, aber noch 3 Mo. Wartezeit = Unsicherheit)"
+      "BTC-Dominanz (58.2% = zu hoch) – SOL outperformt erst, wenn BTC-Dominanz unter 55% fällt; historisch stärkster Altcoin-Auslöser",
+      "SOL/ETH-Ratio (0.0454 vs. 0.05 ATH-Zone) – noch 10% Luft bis lokale Resistance; zeigt relative Stärke zu Konkurrenz",
+      "Firedancer-Upgrade-Timing (2026) – priced-in bei $122, aber 1M TPS noch unbewiesen; Katalysator liegt 6-12M in der Zukunft, nicht imminent"
     ],
-    "summary": "Solana bleibt ein 7-Jahres-Wert mit echtem Revenue ($2,85B/a) und Netzwerk-Momentum (DeFi, TPS-Roadmap), aber aktuell im Altcoin-Schatten. BTC-Dominanz 58,4% signalisiert zu frühen Einstieg; Firedancer ist Katalyst, nicht garantiert. HOLD = Portfolio halten, nicht nachkaufen.",
+    "summary": "Solana ist fundamentaler gesund (echte Revenue, echter Use-Case) und wurde im Altcoin-Cycle nach hinten geschlagen, aber der aktuelle Preis von $122 (-58% von ATH) ist bereits eine defensive Bewertung. Der nächste Hebel kommt von sinkender BTC-Dominanz, nicht von Hype – daher HOLD bis zu klaren Signalen.",
     "price_targets": {
-      "buy_zone": 95,
-      "buy_aggressiv": 80,
-      "take_profit_1_price": 160,
-      "take_profit_1_action": "25% Position realisieren (Gewinnmitnahme Q1 2027)",
-      "take_profit_2_price": 240,
-      "take_profit_2_action": "50% Position realisieren (Firedancer-Hype abverkaufen)",
-      "concern_below": 70
+      "buy_zone": 110,
+      "buy_aggressiv": 95,
+      "take_profit_1_price": 165,
+      "take_profit_1_action": "25% verkaufen (Firedancer-Erwartung in Preis)",
+      "take_profit_2_price": 220,
+      "take_profit_2_action": "50% des Restbestands verkaufen (SOL/ETH-Ratio zurück zu 0.082, ETH-weise Parität)",
+      "concern_below": 85
     },
-    "bull_case": "Firedancer bringt 200x TPS-Skalierbarkeit, SOL-ETF-Genehmigung (Q4 2026?) triggert institutionelle Käufe, BTC-Dominanz komprimiert sich typischerweise in Altseason → 2,5–3x bis 2027 ist realistisch.",
-    "bear_case": "BTC-Dominanz bleibt stabil >55%, Firedancer verschiebt sich oder erfüllt Erwartungen nicht, Konkurrenz (Sui, Aptos) kopiert Skalierungs-Narrative → SOL verharrt in 80–120er-Range.",
-    "signal_changer": "HOLD→BUY: BTC-Dominanz fällt unter 54% ODER BTC neues ATH + SOL-ETF-Genehmigung. HOLD→SELL: SOL fällt unter $70 ohne BTC-Support ODER Firedancer verzögert sich auf 2027.",
+    "bull_case": "Firedancer 2026 + sinkende BTC-Dominanz + SOL-ETF-Genehmigung würde Institutional Inflows triggern; echte Netzwerk-Revenue ($2.85B) rechtfertigt Bewertung langfristig.",
+    "bear_case": "Firedancer-Verzögerung oder technische Probleme könnten Hype platzen lassen; BTC-Dominanz bleibt stabil/steigt → SOL bleibt Underperformer im Altcoin-Zyklus.",
+    "signal_changer": "BTC-Dominanz bricht unter 55% + klare Firedancer-Roadmap-Updates = Upgrade zu BUY. Oder: BTC-Dominanz steigt über 60% + SOL unter $85 = SELL-Signal mit Pivot zu Stablecoin-Accumulation.",
     "news_headlines": [
       "Bitcoin or Solana: Which Doubles First? - 24/7 Wall St.",
-      "Solana Price Prediction 2026: Can Firedancer Lift SOL? - Memeburn",
       "Solana’s Leap: Firedancer Ignites a New Era for SOL - Phemex",
-      "Solana Price Prediction 2026: Can SOL Overtake Bitcoin? - bitcoinfoundation.org"
+      "Solana Price Prediction 2026: Can Firedancer Lift SOL? - Memeburn",
+      "Solana Price Prediction 2026: Can SOL Overtake Bitcoin? - Bitcoin Foundation"
     ],
-    "updated": "2026-09-18"
+    "updated": "2026-09-25"
   },
   "strategy_note": "L1 Wachstumswert mit echtem Revenue. 2.85B$/Jahr Netzwerk-Revenue – kein reines Narrativ.",
-  "eth_price_usd": 2632.59
+  "eth_price_usd": 2689.65
 }

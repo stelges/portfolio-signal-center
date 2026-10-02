@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "HOLD",
-  "price_usd": 84009,
+  "price_usd": 84418,
   "ath_usd": 109000,
-  "ath_dist_pct": -22.9,
-  "change_30d_pct": 6.34,
+  "ath_dist_pct": -22.6,
+  "change_30d_pct": 7.47,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,25 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Stagflatorisches Risk-off mit selektiver Liquidität: hohe Realrenditen (10Y bei 5.18%) belasten Risk-Assets strukturell, Gold auf ATH signalisiert Kapitalflucht in Hartwährungen, DXY neutral erlaubt aber keine starke BTC-Gegenreaktion. BTC agiert als hybrides Asset zwischen Inflationsschutz und Risikoanlage.",
-    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Akkumulationsphase (~19 Monate vor dem nächsten Halving April 2028), aber das Makroumfeld mit 5.18% 10Y-Renditen und Gold auf ATH schafft strukturellen Gegenwind. Das aktuelle Preisniveau ($84k) liegt komfortabel über dem 200-Tage-MA ($70.9k), zeigt aber kein klares Ausbruchssignal in Richtung $100k – der Fear & Greed von 71 deutet auf verhaltenen Optimismus hin, der jederzeit in Verkaufsdruck kippen kann. DCA-Kontinuität ist hier die rationale Strategie.",
+    "macro_regime": "Transitorische Entspannung bei strukturell hohen Zinsen – Risk-on mit Vorbehalt",
+    "summary": "Bitcoin befindet sich in einer klassischen Pre-Halving-Akkumulationsphase mit strukturell bullishem technischem Setup (über MA200, positive Momentum), wird jedoch durch das höchste 10Y-Zinsniveau seit 2007 gebremst. Die BTC-Dominanz auf fast 59% signalisiert defensive Kapitalrotation innerhalb Crypto, kein euphorischer Retail-Bull-Run. Gold fällt bei steigendem BTC – möglicherweise ein frühes Dekopplungssignal, das Institutionelle in BTC als digitales Gold rotieren lässt.",
     "active_indicators": [
-      "10Y US-Rendite (5.18%): In stagflatorischen Regimes mit hohen Realzinsen ist dies der wichtigste Druckpunkt für BTC – teures Kapital verhindert aggressiven Risikoappetit und begrenzt institutionelle Hebelwirkung.",
-      "Gold/BTC-Verhältnis (Gold ATH bei $4321): Historisch zeigt Gold-Outperformance in dieser Phase, dass Smart Money in klassische Sicherheit rotiert – BTC folgt oft mit 3-6 Monaten Verzögerung oder bleibt in Mittelposition.",
-      "BTC-Dominanz (58.2%): Hohe Dominanz bei $84k zeigt, dass Kapital im Kryptomarkt in BTC konzentriert bleibt und Altcoin-Season ausbleibt – typisch für Late-Accumulation vor dem nächsten Liquiditätsschub."
+      "10Y US-Rendite (5.28%): Historisch belastet jedes Zinsniveau über 5% Risk-Assets wie BTC massiv – teures Kapital reduziert Risikoappetit institutioneller Anleger und erhöht Opportunitätskosten",
+      "BTC-Dominanz (58.8%): Zeigt klare Kapitalrotation IN Bitcoin, NICHT in Altcoins – typisches Risk-off-within-Crypto-Signal, das auf Akkumulation durch erfahrene Akteure hinweist, aber breiten Bull-Markt noch nicht bestätigt",
+      "BTC vs. MA200 ($71,363): Preis 18% über dem 200-Tage-MA ist das stärkste technische Bullish-Signal im aktuellen Regime – historisch in Pre-Halving-Phasen ein zuverlässiger Akkumulationsindikator"
     ],
     "news_headlines": [
-      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
-      "BlackRock's Mitchnick says macro case for bitcoin is strengthening after record trading in positive week - CoinDesk",
-      "Bitcoin Halving Cycle: Where BTC Could Bottom - galaxy.com",
-      "'Altitude sickness can wait': Bitcoin's historic short squeeze, Bessent catalyst may signal bull-market reset, analysts say - The Block",
-      "Will Bitcoin Soar to $70K or Tumble? August 2026 Showdown! - Phemex"
+      "USD/JPY Falls as Yen Strengthens, But Bitcoin Rises: Is BTC Decoupling From Macro? - CryptoRank",
+      "Can Bitcoin’s price stay at $82K? A week of macro data will decide - AMBCrypto",
+      "BTC, ETH, SOL price news: Bitcoin’s worst week in months got a late macro rescue - CoinDesk",
+      "Why U.S. Macroeconomic Data Drives Bitcoin Price in 2026: Inflation, Interest Rates, and Liquidity Impact Explained - Bitcoin Foundation",
+      "Bitcoin Halving Cycle: Where BTC Could Bottom - galaxy.com"
     ],
-    "updated": "2026-09-25"
+    "updated": "2026-10-02"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 70918.0,
-  "ma50": 75321.0,
+  "ma200": 71363.0,
+  "ma50": 78119.0,
   "above_200ma": true,
   "funding_rate": null,
   "long_short_ratio": null

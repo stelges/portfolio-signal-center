@@ -1,33 +1,33 @@
 {
-  "last_updated": "2026-09-25T20:51:45.460226Z",
+  "last_updated": "2026-10-02T21:34:25.558110Z",
   "updated_by": "update_intelligence.py v3 (GitHub Actions)",
   "global_signal": "HOLD",
   "global_summary": "Normales DCA fortführen",
-  "fear_greed": 71,
-  "btc_price_usd": 84009,
-  "btc_ath_dist_pct": -22.9,
-  "btc_30d_change_pct": 6.34,
-  "next_update": "2026-10-02T18:00:00Z",
+  "fear_greed": 72,
+  "btc_price_usd": 84418,
+  "btc_ath_dist_pct": -22.6,
+  "btc_30d_change_pct": 7.47,
+  "next_update": "2026-10-09T18:00:00Z",
   "ai_weekly_briefing": {
-    "title": "Starker Bitcoin, Kaufgelegenheiten bei Alts",
-    "status": "Portfolio stabil, BTC führt mit Fear & Greed 71/100, Metaplanet und NVDA zeigen Kaufsignale.",
-    "insight": "Der starke DXY (101.01) belastet alternative Assets, bietet aber attraktive Entry-Punkte für DCA-Käufe. Metaplannets Discount auf mNAV (0.8881x) ist klassische Value-Opportunity im 7-Jahres-Horizont.",
-    "action": "Monatliches DCA wie geplant durchführen; Cash-Reserve gezielt bei NVDA und Metaplanet einsetzen, kein Trading, Kurs ignorieren."
+    "title": "Marktrotation: Opportunities in Schwäche",
+    "status": "Portfolio stabil, BTC seitwärts, selective Kaufsignale bei Metaplanet und NVDA.",
+    "insight": "Starker Dollar (DXY 101.92) und erhöhte Renditen (10Y 5.28%) schaffen Druck auf Risk Assets, gleichzeitig signalisieren niedrige Metaplanet-Bewertung (0.8757x mNAV) und NVDA-Korrektur attraktive DCA-Einstiege. BTC-Fear&Greed bei 72 zeigt gesunde Marktpsychologie ohne Euphorie.",
+    "action": "Diese Woche monatliches DCA wie geplant ausführen, mit Fokus auf NVDA und Metaplanet gemäß BUY-Signal; Cash-Reserve halten für weitere Schwäche."
   },
   "market_regime": "bullish",
-  "btc_dominance_pct": 58.2,
+  "btc_dominance_pct": 58.8,
   "macro": {
-    "sp500": 7743.41,
-    "dxy": 101.01,
-    "gold": 4321.4,
-    "us10y": 5.18,
-    "usdjpy": 157.3
+    "sp500": 7722.72,
+    "dxy": 101.92,
+    "gold": 4172.1,
+    "us10y": 5.28,
+    "usdjpy": 157.83
   },
   "next_halving": {
-    "next_halving_estimated_utc": "2028-04-13T06:01:52Z",
+    "next_halving_estimated_utc": "2028-04-12T23:44:32Z",
     "next_halving_block": 1050000,
-    "blocks_remaining": 81415,
-    "current_block_height": 968585,
+    "blocks_remaining": 80365,
+    "current_block_height": 969635,
     "halving_source": "blockchain_calculated"
   }
 }

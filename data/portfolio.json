@@ -1,33 +1,33 @@
 {
-  "last_updated": "2026-10-02T21:34:25.558110Z",
+  "last_updated": "2026-10-09T22:00:03.204095Z",
   "updated_by": "update_intelligence.py v3 (GitHub Actions)",
   "global_signal": "HOLD",
   "global_summary": "Normales DCA fortführen",
-  "fear_greed": 72,
-  "btc_price_usd": 84418,
-  "btc_ath_dist_pct": -22.6,
-  "btc_30d_change_pct": 7.47,
-  "next_update": "2026-10-09T18:00:00Z",
+  "fear_greed": 59,
+  "btc_price_usd": 82494,
+  "btc_ath_dist_pct": -24.3,
+  "btc_30d_change_pct": 4.3,
+  "next_update": "2026-10-16T18:00:00Z",
   "ai_weekly_briefing": {
-    "title": "Marktrotation: Opportunities in Schwäche",
-    "status": "Portfolio stabil, BTC seitwärts, selective Kaufsignale bei Metaplanet und NVDA.",
-    "insight": "Starker Dollar (DXY 101.92) und erhöhte Renditen (10Y 5.28%) schaffen Druck auf Risk Assets, gleichzeitig signalisieren niedrige Metaplanet-Bewertung (0.8757x mNAV) und NVDA-Korrektur attraktive DCA-Einstiege. BTC-Fear&Greed bei 72 zeigt gesunde Marktpsychologie ohne Euphorie.",
-    "action": "Diese Woche monatliches DCA wie geplant ausführen, mit Fokus auf NVDA und Metaplanet gemäß BUY-Signal; Cash-Reserve halten für weitere Schwäche."
+    "title": "Starker Dollar drückt, DCA weitermachen",
+    "status": "Portfolio stabil bei gemischten Signalen; BTC und SOL halten, Metaplanet und NVDA zeigen Einstiegschancen.",
+    "insight": "Der starke US-Dollar (DXY 102.23) bremst Alternative Assets, während die 10Y-Rendite (5.24%) Druck auf Growth-Werte ausübt. Dies schafft aber DCA-Gelegenheiten in BTC und Metaplanet mit besseren Einstiegspunkten.",
+    "action": "Planmäßiges monatliches DCA durchführen; erhöhte Allokation zu Metaplanet (mNAV Discount) und NVDA (Buy-Signal) nutzen, Cash-Reserve für weitere Schwäche bereithalten."
   },
-  "market_regime": "bullish",
-  "btc_dominance_pct": 58.8,
+  "market_regime": "neutral",
+  "btc_dominance_pct": 59.2,
   "macro": {
-    "sp500": 7722.72,
-    "dxy": 101.92,
-    "gold": 4172.1,
-    "us10y": 5.28,
-    "usdjpy": 157.83
+    "sp500": 7811.54,
+    "dxy": 102.23,
+    "gold": 4220.3,
+    "us10y": 5.24,
+    "usdjpy": 158.25
   },
   "next_halving": {
-    "next_halving_estimated_utc": "2028-04-12T23:44:32Z",
+    "next_halving_estimated_utc": "2028-04-12T17:40:10Z",
     "next_halving_block": 1050000,
-    "blocks_remaining": 80365,
-    "current_block_height": 969635,
+    "blocks_remaining": 79318,
+    "current_block_height": 970682,
     "halving_source": "blockchain_calculated"
   }
 }

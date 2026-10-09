@@ -5,9 +5,9 @@
   "icon": "◎",
   "color": "#9945ff",
   "signal": "HOLD",
-  "price_usd": 117.85,
+  "price_usd": 108.95,
   "ath_usd": 294,
-  "ath_dist_pct": -59.9,
+  "ath_dist_pct": -62.9,
   "network_revenue_annual_usd_billions": 2.85,
   "etf_status": "In Prüfung",
   "firedancer_status": "Coming 2026",
@@ -28,33 +28,33 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit erhöhter BTC-Dominanz – Altcoins warten auf Katalysator für Rotation",
+    "macro_regime": "Risk-on mit Liquiditätszyklus + hohe BTC-Dominanz (59.2%) = Altcoin-Headwind. Solana wartet auf Katalysator (Firedancer 2026, ETF-Genehmigung, BTC-Dominanz-Fall).",
     "active_indicators": [
-      "BTC-Dominanz 58.8% (zu hoch) – Altcoin-Rotation steht bevor, aber noch nicht eingeleitet",
-      "Fear & Greed 72/100 – Optimismus vorhanden, aber nicht euphorisch genug für aggressive Altcoin-Outperformance",
-      "Firedancer 2026-Roadmap + SOL-ETF-Antrag – echte Katalysatoren existieren, aber Timing unklar"
+      "BTC-Dominanz 59.2% (zu hoch) – Altcoins folgen erst bei <55%; SOL braucht BTC-Katalysator",
+      "Network Revenue $2.85B/Jahr + Firedancer Roadmap – echte fundamentale Verbesserung, nicht Narrativ",
+      "SOL/ETH-Ratio 0.0439 – historisch niedrig, Upside bei ETH-Outperformance oder SOL-Netzwerk-Beschleunigung"
     ],
-    "summary": "Solana hat solide Fundamentals (echte Network Revenue, Firedancer-Upgrade, ETF-Prospect), ist aber im Altcoin-Zyklus noch nicht freigegeben. BTC-Dominanz ist zu hoch und Fear & Greed noch nicht hoch genug für einen aggressiven Alt-Season-Run. Für einen 7-Jahres-Plan ist das aktuelle Niveau kein Kauf-Notfall, aber auch kein Verkauf.",
+    "summary": "Solana besitzt echte Fundamentalwerte (Revenue, Firedancer, ETF-Pipeline), liegt aber 62.9% unter ATH und wartet auf doppelten Rückenwind: BTC-Signal + fallende BTC-Dominanz. Im 7-Jahres-Plan ist HOLD optimal – Portfolio-Allokation (14%) hält Exposure, ohne gegen Regime zu erzwingen.",
     "price_targets": {
-      "buy_zone": 108,
-      "buy_aggressiv": 95,
+      "buy_zone": 95,
+      "buy_aggressiv": 85,
       "take_profit_1_price": 165,
-      "take_profit_1_action": "25% bei Firedancer-Ankündigung oder BTC-Dominanz unter 55% verkaufen",
-      "take_profit_2_price": 235,
-      "take_profit_2_action": "50% bei SOL-ETF-Genehmigung oder ETH-Outperformance (SOL/ETH > 0.055) verkaufen",
-      "concern_below": 85
+      "take_profit_1_action": "25% verkaufen (Firedancer-Ankündigung oder ETF-Zulassung)",
+      "take_profit_2_price": 220,
+      "take_profit_2_action": "50% verkaufen (Firedancer Beta + BTC-Dominanz <50%)",
+      "concern_below": 75
     },
-    "bull_case": "Firedancer liefert 1M TPS bis 2026 und löst echte Skalierungsprobleme – fundamentale Überlegenheit vs. ETH wird manifest. SOL-ETF-Genehmigung + BTC-Dominanz-Rückgang triggern Alt-Season mit doppeltem Rückenwind; Target $235–$350 in 18–24 Monaten ist rational.",
-    "bear_case": "BTC-Dominanz bleibt über 57%, Fear & Greed stagniert – Altcoin-Rotation verzögert sich um 6–12 Monate. Firedancer-Verzögerungen oder technische Probleme beschädigen Narrativ; SOL-ETF könnte abgelehnt werden. Absturz auf $85–$95 möglich.",
-    "signal_changer": "Wenn BTC-Dominanz unter 55% fällt ODER Fear & Greed über 82 steigt ODER Firedancer Beta-Launch mit >100k TPS nachweist → Signal zu BUY upgraden. Wenn SOL unter $100 fällt und BTC nicht signifikant bullisch ist → CASH prüfen.",
+    "bull_case": "Firedancer 2026 ist echter technischer Durchbruch (1M TPS vs 5k); ETF-Zulassung katapultiert institutionelle Nachfrage. SOL/ETH-Ratio bietet massive Reversion-Upside, wenn BTC-Dominanz fällt.",
+    "bear_case": "BTC-Dominanz 59.2% signalisiert noch Altcoin-Schwäche; Firedancer-Verzögerungen oder technische Rückschläge könnten auf $75 drücken. Makro-Zinsumfeld (10Y 5.24%) bleibt Liquidity-Bremse.",
+    "signal_changer": "BTC-Signal wechselt zu BUY + BTC-Dominanz fällt unter 55% = HOLD→BUY. Firedancer-Verschiebung oder ETF-Ablehnung = HOLD→CASH. Preis fällt unter $75 ohne fundamentalen Grund = aggressiver nachkaufen (DCA im 7-J-Plan).",
     "news_headlines": [
       "Bitcoin or Solana: Which Doubles First? - 24/7 Wall St.",
       "Solana’s Leap: Firedancer Ignites a New Era for SOL - Phemex",
-      "Solana Price Prediction 2026: Can SOL Overtake Bitcoin? - Bitcoin Foundation",
-      "Solana Price Prediction 2026: Can Firedancer Lift SOL? - Memeburn"
+      "Solana Price Prediction 2026: Can Firedancer Lift SOL? - Memeburn",
+      "Solana Price Prediction 2026: Can SOL Overtake Bitcoin? - Bitcoin Foundation"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-09"
   },
   "strategy_note": "L1 Wachstumswert mit echtem Revenue. 2.85B$/Jahr Netzwerk-Revenue – kein reines Narrativ.",
-  "eth_price_usd": 2658.38
+  "eth_price_usd": 2483.29
 }

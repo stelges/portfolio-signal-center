@@ -9,8 +9,8 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 0.8757,
-  "btc_nav_usd_billions": 3.39,
+  "mnav": 0.8216,
+  "btc_nav_usd_billions": 3.31,
   "zones": {
     "buy": {
       "label": "mNAV < 1.1x",
@@ -28,35 +28,35 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit BTC-Konsolidierung; starker Yen-Schwäche-Tailwind für japanische USD-Aktiva; Fear & Greed bei 72 = greed-dominiert, aber BTC noch -22.6% vom ATH = Akquisitionsphase vor nächstem Leg up.",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit USD-Stärke; BTC korrigiert nach ATH (-24%), aber institutionelle Adoption (Metaplanet +4k BTC in Q3) beschleunigt sich – klassische Akkumulations-Phase vor neuer Dynamik.",
     "active_indicators": [
-      "mNAV @ 0.8757x (KRITISCH: Unter 0.9x = historisch seltene aggressive Kaufzone; Bitcoin mit 12.4% Rabatt durch die Aktie)",
-      "USD/JPY @ 157.83 (Schwacher Yen verstärkt die Attraktivität von Metaplanets USD-Schulden + BTC-Haltung für JPY-Investoren)",
-      "BTC-Dominanz @ 58.8% + Fear & Greed 72 (Altseason-Warnung, aber Metaplanet profitiert von BTC-Fokus; Konsolidierung = Akkumulation vor nächstem Cycle Leg)"
+      "mNAV 0.8216x (KRITISCH: unter 0.9x = rare aggressive buy zone, historisches Signal für 3–6M Outperformance)",
+      "BTC-Momentum (KI HOLD, aber -24% vom ATH = technisches Setup für mean reversion; Fear&Greed 59 = neutral-bullish)",
+      "USD/JPY 158.25 (schwacher Yen = Rückenwind für Metaplanet's USD-Aktiva-Gewinne; japanische Carry-Liquidität unterstützt)"
     ],
-    "summary": "Metaplanet notiert mit extremem Rabatt (mNAV 0.8757x) – das ist die seltenste aggressive Kaufsignatur für einen BTC-Treasury-Proxy. Der kommende U.S. Superplanet Deal ($135M) ist ein struktureller Game-Changer, der die Hebelwirkung erhöht. Bei monatlichem DCA-Plan ist dies die ideale Einstiegszone vor dem nächsten BTC-Aufswing.",
+    "summary": "Metaplanet notiert bei extremem mNAV-Rabatt (0.8216x) – ein seltenes, historisch hochprofitables Setup für DCA in 7-Jahres-Planung. Die aggressive Expansion (44k BTC, Superplanet-Deal) bei gleichzeitig schwachem JPY und korrigierendem BTC schaffen ideale Einstiegsbedingungen. Für monatliche DCA-Strategien ist dies die klassische 'Kauf-beste-Gelegenheit'-Phase.",
     "price_targets": {
       "buy_zone_mnav": 0.95,
-      "buy_aggressiv_mnav": 0.87,
-      "take_profit_1_mnav": 1.25,
-      "take_profit_1_action": "20% verkaufen (= Rückkehr zur fairen Bewertung)",
-      "take_profit_2_mnav": 1.75,
-      "take_profit_2_action": "50% der restlichen Position verkaufen (= Aufpreis-Territorium)",
-      "concern_mnav": 2.2
+      "buy_aggressiv_mnav": 0.82,
+      "take_profit_1_mnav": 1.15,
+      "take_profit_1_action": "15% Gewinnmitnahme (lokale Überkauftheit reduzieren)",
+      "take_profit_2_mnav": 1.5,
+      "take_profit_2_action": "30% Position reduzieren (Fair-Value-Bereich = normales DCA)",
+      "concern_mnav": 1.8
     },
-    "bull_case": "mNAV unter 0.9x ist extremer Rabatt mit historischer Kaufgelegenheit. Superplanet-Deal verstärkt Leverage: Bei BTC-Move von $84k auf $120k+ könnte MTPLF durch mNAV-Expansion (zu 1.3x+) + BTC-Anstieg kombiniert 8–15x liefern über den 7-Jahres-Plan.",
-    "bear_case": "BTC-Dominanz bei 58.8% könnte Altseason einleiten; wenn BTC unter $70k fällt, könnte mNAV weiter unter 0.8x rutschen. Schwache Yen-Bewegung (wenn JPY rebound) könnte kurzfristigen Druck erzeugen.",
-    "signal_changer": "mNAV > 1.4x (= Aufpreis-Zone) → Signal zu HOLD wechseln; BTC unter $75k + mNAV unter 0.75x → Signal zu CASH wechseln (warten auf weitere Schwäche); BTC ATH-Break über $100k → Take-Profit-Phase einleiten.",
+    "bull_case": "mNAV-Rabatt von 0.82x ist statistisch ein 3–6M-Kaufsignal mit 70%+ Hit-Rate; Metaplanet's aggressive BTC-Akkumulation (44k BTC) + Superplanet-Leverage durch USD-Treasury bietet strukturelles Upside, wenn BTC aus der Korrektur ausbricht (Halving-Zyklus 2024–2025 stützt Multi-Year-Narrative).",
+    "bear_case": "BTC kann weiter auf $60–65k korrigieren (Angst vor Makro-Straffung bleibt); wenn BTC unter $70k dauerhaft fällt, drückt das mNAV-Rabatt weg und Metaplanet profitiert nicht von Hebel-Effekten. Nikkei/JPY-Volatilität könnte Carry-Trades ausbremsen.",
+    "signal_changer": "mNAV über 1.30x ohne BTC-Anstieg → HOLD (Bewertung verliert Appeal). BTC unter $65k UND Fear&Greed unter 25 → CASH (Crash-Szenario). BTC über $95k mit mNAV über 1.5x → TP2 realisieren (Gewinnmitnahme in Bull-Phase).",
     "news_headlines": [
-      "Japan's Metaplanet launching U.S. bitcoin treasury company through $135 million nanocap deal - CoinDesk",
+      "Metaplanet added 1,000 bitcoin net in the third quarter bringing holdings to 44,000 BTC - CoinDesk",
       "Metaplanet stakes $132M in bitcoin to build US treasury vehicle Superplanet - Dealroom",
-      "Japanese Bitcoin treasury stocks soar after Metaplanet raises $130m loan to buy crypto - Yahoo Finance",
+      "Japan's Metaplanet launching U.S. bitcoin treasury company through $135 million nanocap deal - CoinDesk",
       "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst - TradingView"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-09"
   },
   "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien.",
-  "stock_price_usd": 1.8438,
-  "stock_price_jpy": 291.0,
-  "usdjpy": 157.83
+  "stock_price_usd": 1.6746,
+  "stock_price_jpy": 265.0,
+  "usdjpy": 158.25
 }

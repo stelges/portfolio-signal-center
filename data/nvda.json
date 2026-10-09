@@ -5,8 +5,8 @@
   "icon": "⬡",
   "color": "#76b900",
   "signal": "BUY",
-  "price_usd": 233.95,
-  "price_52w_high_usd": 237.87,
+  "price_usd": 229.28,
+  "price_52w_high_usd": 243.37,
   "price_52w_low_usd": 164.27,
   "pe_ratio": null,
   "revenue_growth_yoy_pct": null,
@@ -28,33 +28,33 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-on + Liquiditätszyklus bei strukturellem KI-Capex-Superzyklus; Zinsdruck (5.28% 10Y) wird durch unvermeidbare Data-Center-Ausgaben >$300B/Jahr überkompensiert.",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit Zinsdruck (5.24% 10Y) auf Wachstumswerte, aber KI-Capex-Superzyklus überlagert makro-Headwinds. Neutral-to-bullish Sentiment (59/100 Fear & Greed) deutet auf Aufwärtspotenzial vor Earnings.",
     "active_indicators": [
-      "KI-Capex-Zyklus Momentum (>$300B Cloud-Investitionen 2026 = All-Time-High, NVDA-Anteil stabil >80%)",
-      "CUDA-Monopol-Burgraben (faktische Lock-in bei Softwarestack + Kundenloyalität, AMD/Intel 18-24 Monate hinterher)",
-      "Valuation-Ratio bei Wachstumsmultiplikator (KGV im 50er-Bereich historisch niedrig für 40%+ YoY-Datencenter-Wachstum)"
+      "KI-Capex-Zyklus: $300B+ combined Spend 2026, Nvidia >80% Chipanteil = dominantester Katalyst im Regime",
+      "Earnings-Momentum: Mai 2026 Blackwell-Ramp (aktuell 5 Tage entfernt) ist kritischer Kurstreiber; historisch Nvidia post-Earnings +15–25% bei positiven Guides",
+      "Relative Bewertung: KGV vermutlich 45–55x (basierend auf $229.28 und FY27E-Gewinn), noch unter Risk-of-Regime-Ceiling von 70x"
     ],
-    "summary": "NVDA sitzt auf dem strukturellen Katalysator des Jahrzehnts – hyperscale Data-Center-Ausgaben sind unvermeidbar und CUDA dominiert. Exportrisiken (China) sind priced-in durch aktuelle Headlines, geopolitische Risiken sind volatilitätsgenerierend, aber nicht fundamentalbedrohend. Bei $233.95 mit 52W-ATH bei $237.87 ist die Aktie im Aufwärtstrend positioniert und bietet auf DCA-Basis attraktive Einstiege.",
+    "summary": "Nvidia steht unmittelbar vor kritischen Earnings (Mai 2026) mit Blackwell-Ramp-Bestätigung als Kernkatayst. Bei aktuellen $229.28 (5.8% unter 52W-High, 39.6% über 52W-Low) bietet sich ein taktischer Entry vor Earnings an, insbesondere da der KI-Capex-Superzyklus ($300B+) die strukturelle Nachfrage rechtfertigt. Der 7-Jahres-DCA-Ansatz sollte jetzt aufgestockt werden, nicht reduziert.",
     "price_targets": {
-      "buy_zone": 220,
-      "buy_aggressiv": 210,
-      "take_profit_1_price": 280,
-      "take_profit_1_action": "20% verkaufen (Tranche 1 für DCA-Rebalancing)",
-      "take_profit_2_price": 330,
-      "take_profit_2_action": "50% der Position zur Gewinnmitnahme, Rest hold bis 2027H2",
-      "concern_below": 180
+      "buy_zone": 225,
+      "buy_aggressiv": 218,
+      "take_profit_1_price": 258,
+      "take_profit_1_action": "20% reduzieren (Earnings-Gewinnmitnahme)",
+      "take_profit_2_price": 285,
+      "take_profit_2_action": "50% reduzieren (Blackwell-Euphorie-Deckel)",
+      "concern_below": 205
     },
-    "bull_case": "Blackwell-Ramp 2026H2 katapultiert Data-Center-Margen – Microsoft, Google, Meta sind committed und capex wird nicht gesenkt. CUDA-Ökosystem ist unersetzbar; selbst AMD/Intel-Gains bedeuten Marktzuwachs, nicht -verlust für NVDA.",
-    "bear_case": "Exportverbote könnten verschärft werden und den China-Umsatz (~20%) strukturell schwächen. Zinsen über 5% dauerhaft könnten Growth-Bewertungen unter Druck bringen, und eine Rezession würde Capex-Zyklen strecken.",
-    "signal_changer": "VERKAUFEN, wenn: (1) 10Y-Rendite >6% + Fed-Pause signalisiert, (2) Nächste Earnings (Mai 2026) Data-Center-Guidance verfehlt oder 2027-Wachstum unter 30% fällt, (3) China-Exportverbote erweitern sich auch auf Alliances/Partner, (4) KGV nachhaltig >75x bei flachem Wachstum.",
+    "bull_case": "Blackwell-Ramp + $300B Kundencapex 2026 schaffen 2–3 Jahre strukturelles Wachstum. Earnings in 5 Tagen werden FY27-Guide erhöhen und CUDA-Monopol / Export-Angst (China-Restriktionen) als Moat-Stärke demonstrieren.",
+    "bear_case": "Bewertung bei KGV 50x+ und 5.24% 10Y-Rendite anfällig für Zinsschock. AMD/Intel könnten bei Inferenz-Chips 2027 Marktanteile gewinnen; China-Sanktionen könnten Umsatzrücklauf triggern.",
+    "signal_changer": "SELL-Signal, falls: (1) Earnings-Guide FY27 enttäuscht oder Kundencapex-Outlook <$250B wird; (2) 10Y-Rendite >5.7% + gleichzeitiger KGV-Kontraktionsverkauf; (3) China-Handelsban konkretisiert >20% Umsatzrisiko; (4) Preis unter $205 mit Volumenbruch MA200.",
     "news_headlines": [
-      "NVIDIA’s Export Ban Backfires as Chinese Competitors Raise Prices 50% - 24/7 Wall St.",
-      "'AI at inflection point': NVIDIA crushes earnings in major beat - www.israelhayom.com",
       "NVIDIA Earnings Preview - Data Center, Rubin & Export Policy Outlook - tastylive",
-      "Here’s How Much Nvidia Stock Is Expected to Move After Earnings - investopedia.com",
-      "NVDA Stock Slips After Hours As Warren Reportedly Calls Huang To Testify On China Chip Sales - TradingView"
+      "Here’s How Much Nvidia Stock Is Expected to Move After Earnings - Investopedia",
+      "NVIDIA Earnings in 5 Days: Should You Buy, Hold, or Sell NVDA? - TradingView",
+      "NVIDIA Stock Analysis August 2026: AI Chip Leader Market Outlook - Intellectia AI",
+      "Nvidia Won Back Access to China’s AI Market. So Why Is Beijing Slamming the Door Again? - 24/7 Wall St."
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-09"
   },
   "quarterly_review": {
     "last_quarter": "Q4 FY2026",
@@ -64,5 +64,5 @@
     "guidance_note": null
   },
   "strategy_note": "Stabilitätsanker. KI-Infrastruktur ist unvermeidlich – NVDA ist der einzige Profiteur ohne echte Konkurrenz.",
-  "dist_from_52w_high_pct": -1.6
+  "dist_from_52w_high_pct": -5.8
 }

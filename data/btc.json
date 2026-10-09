@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "HOLD",
-  "price_usd": 84418,
+  "price_usd": 82494,
   "ath_usd": 109000,
-  "ath_dist_pct": -22.6,
-  "change_30d_pct": 7.47,
+  "ath_dist_pct": -24.3,
+  "change_30d_pct": 4.3,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,37 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Transitorische Entspannung bei strukturell hohen Zinsen – Risk-on mit Vorbehalt",
-    "summary": "Bitcoin befindet sich in einer klassischen Pre-Halving-Akkumulationsphase mit strukturell bullishem technischem Setup (über MA200, positive Momentum), wird jedoch durch das höchste 10Y-Zinsniveau seit 2007 gebremst. Die BTC-Dominanz auf fast 59% signalisiert defensive Kapitalrotation innerhalb Crypto, kein euphorischer Retail-Bull-Run. Gold fällt bei steigendem BTC – möglicherweise ein frühes Dekopplungssignal, das Institutionelle in BTC als digitales Gold rotieren lässt.",
+    "macro_regime": "Risk-on mit Gegenwind – Liquiditätszyklus trifft auf hohe Realzinsen und selektive Safe-Haven-Nachfrage",
     "active_indicators": [
-      "10Y US-Rendite (5.28%): Historisch belastet jedes Zinsniveau über 5% Risk-Assets wie BTC massiv – teures Kapital reduziert Risikoappetit institutioneller Anleger und erhöht Opportunitätskosten",
-      "BTC-Dominanz (58.8%): Zeigt klare Kapitalrotation IN Bitcoin, NICHT in Altcoins – typisches Risk-off-within-Crypto-Signal, das auf Akkumulation durch erfahrene Akteure hinweist, aber breiten Bull-Markt noch nicht bestätigt",
-      "BTC vs. MA200 ($71,363): Preis 18% über dem 200-Tage-MA ist das stärkste technische Bullish-Signal im aktuellen Regime – historisch in Pre-Halving-Phasen ein zuverlässiger Akkumulationsindikator"
+      "10Y US-Rendite (5.24%) – historisch belastet hohe Realzinsen Risk-Assets und erhöhen Opportunitätskosten; entscheidend ob Renditen drehen",
+      "BTC-Dominanz (59.2%) – zeigt institutionelle Rotation in BTC als 'Digital Gold', kein Altseason-Signal; typisch für frühe Zyklusphase post-Halving-Vorfeld",
+      "Gold ($4220 steigend) – simultaner Anstieg von BTC und Gold deutet auf Währungs-/Systemvertrauen-Erosion als Treiber, nicht reine Risikobereitschaft"
     ],
+    "summary": "BTC befindet sich in einer Akkumulationsphase rund 18 Monate vor dem nächsten Halving, gestützt durch strukturelle institutionelle Nachfrage und einen schwächelnden Dollar. Der dominierende Widerspruch ist hohe Nominalrendite (5.24% 10Y) bei gleichzeitig steigendem Gold und BTC – Märkte preisen Kaufkraftverlust stärker als Zinsalternative ein. Sentiment ist neutral, kein Überhitzungssignal, aber auch kein kapitulatives Kaufsignal.",
+    "price_targets": {
+      "buy_zone": 76000,
+      "buy_aggressiv": 68000,
+      "take_profit_1_price": 98000,
+      "take_profit_1_action": "15-20% der Position reduzieren, ATH-Annäherung sichern",
+      "take_profit_2_price": 125000,
+      "take_profit_2_action": "weitere 30% verkaufen, post-ATH-Euphorie-Phase",
+      "concern_below": 71000
+    },
+    "bull_case": "Sobald die Fed pivotiert oder Renditen unter 4.5% fallen, dreht Liquidität massiv in Risk-Assets; kombiniert mit Halving-Momentum 2027/2028 sind $150k–$200k bis Ende 2027 historisch plausibel. Institutionelle FOMO (Fidelity $300k-Target) könnte den Zyklus früher beschleunigen.",
+    "bear_case": "Bleiben 10Y-Renditen über 5.5% oder steigen weiter, droht ein Risk-off-Schock der BTC auf $60k–$65k drückt; ein stärkerer Dollar (DXY >108) würde den globalen Liquiditätsentzug verstärken und die Akkumulationsphase verlängern.",
+    "signal_changer": "BUY-Upgrade: Renditen fallen unter 4.7% ODER BTC zieht stabil über $88k mit steigendem Volumen durch. CASH-Downgrade: BTC verliert $74k (200MA-Bruch) ODER DXY steigt über 106 bei gleichzeitig fallendem Gold.",
     "news_headlines": [
-      "USD/JPY Falls as Yen Strengthens, But Bitcoin Rises: Is BTC Decoupling From Macro? - CryptoRank",
-      "Can Bitcoin’s price stay at $82K? A week of macro data will decide - AMBCrypto",
-      "BTC, ETH, SOL price news: Bitcoin’s worst week in months got a late macro rescue - CoinDesk",
-      "Why U.S. Macroeconomic Data Drives Bitcoin Price in 2026: Inflation, Interest Rates, and Liquidity Impact Explained - Bitcoin Foundation",
-      "Bitcoin Halving Cycle: Where BTC Could Bottom - galaxy.com"
+      "Jordi Visser Says Bitcoin FOMO Will \"Kick In Very, Very Soon.\" Can BTC Stay Above $82,000? - 24/7 Wall St.",
+      "Fidelity Macro Chief Jurrien Timmer Says Bitcoin Bull Market Is Back, Targets $300K By 2029 - Yahoo Finance",
+      "Bitcoin Heads Higher on Macro Moves: Where Does BTC Go Next? - Decrypt News",
+      "Macro headwinds push Bitcoin to $82.9K despite historical 365-day breakout pattern - CoinDesk",
+      "Why U.S. Macroeconomic Data Drives Bitcoin Price in 2026: Inflation, Interest Rates, and Liquidity Impact Explained - Bitcoin Foundation"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-09"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 71363.0,
-  "ma50": 78119.0,
+  "ma200": 71848.0,
+  "ma50": 80714.0,
   "above_200ma": true,
   "funding_rate": null,
   "long_short_ratio": null

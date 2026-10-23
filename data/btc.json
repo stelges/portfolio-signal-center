@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "HOLD",
-  "price_usd": 81556,
+  "price_usd": 81390,
   "ath_usd": 109000,
-  "ath_dist_pct": -25.2,
-  "change_30d_pct": 4.29,
+  "ath_dist_pct": -25.3,
+  "change_30d_pct": -6.01,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,25 +27,25 @@
   "ai_analysis": {
     "signal": "HOLD",
     "confidence": "mittel",
-    "macro_regime": "Risk-off mit Resilienz – hohe Realzinsen belasten Risk-Assets, aber BTC entkoppelt sich partiell dank institutioneller Akkumulation und Halving-Antizipation",
-    "summary": "BTC handelt bei $81.5k knapp über dem 50-Tage-MA und deutlich über dem 200-Tage-MA – technisch bullish, aber ohne klaren Ausbruchsimpuls. Das Makroumfeld ist gespalten: hohe Renditen und schwächelnde Aktien (S&P -1.1%) bremsen aggressives Risikokapital, während Gold-Rallye und BTC-Resilienz auf eine strukturelle Hard-Asset-Rotation hindeuten. Mit 78k Blöcken bis zum nächsten Halving (April 2028) befinden wir uns in der frühen Akkumulationsphase – historisch kein optimaler Einstiegszeitpunkt für aggressive Positionen, aber ein schlechter Zeitpunkt zum Verkaufen.",
+    "macro_regime": "Risk-neutral mit strukturellem Gegenwind – erhöhte Anleiherenditen belasten Risk-Assets, Dollar stabil, institutionelle Akkumulation dämpft Abwärtsdruck",
+    "summary": "BTC befindet sich in einer Konsolidierungsphase zwischen MA50 ($81,790) und MA200 ($72,855), knapp unter dem ATH-Abstand von -25%. Das Makro-Umfeld ist zweigeteilt: Hohe Anleiherenditen und ein stabiler Dollar belasten kurzfristig, während institutionelle Nachfrage (BlackRock IBIT) und die Pre-Halving-Akkumulationslogik (~18 Monate bis Halving 2028) strukturell stützen. Normales DCA ist optimal – weder aggressive Erhöhung noch Zurückhaltung gerechtfertigt.",
     "active_indicators": [
-      "10Y US-Rendite bei 5.1% (historisch kritisch für Risk-Assets: teures Kapital drückt Diskontierungsrate, begrenzt aggressive Zuflüsse in BTC außerhalb institutioneller Flows)",
-      "Gold bei $4.188 steigend (Flucht in Hard Assets signalisiert Inflations-/Vertrauenskrise – historisch positiver Co-Indikator für BTC in späteren Zyklusphase, derzeit läuft Gold vor)",
-      "BTC-Dominanz 59.4% (Risk-off innerhalb Crypto – Kapital parkt in BTC, Altcoins werden gemieden; klassisches Akkumulationsmuster vor Altseason, bullish für BTC relativ zu Markt)"
+      "10Y US-Rendite (4.99%) – Historisch belastet ein 5%-Niveau Risk-Assets wie BTC durch höhere Opportunitätskosten und Liquiditätsentzug; entscheidend für die Trendrichtung",
+      "BTC-Dominanz (59.5%) – Signalisiert Risk-off innerhalb Crypto; Kapital flieht in BTC statt in Altcoins, was defensives Verhalten zeigt, aber BTC relative Stärke verleiht",
+      "200-Tage MA ($72,855) – Im Pre-Halving-Umfeld ist der Abstand zum MA200 der wichtigste strukturelle Anker; BTC darüber = intakter Bullenmarkt, darunter = Regime-Wechsel"
     ],
     "news_headlines": [
-      "Fidelity Macro Chief Jurrien Timmer Says Bitcoin Bull Market Is Back, Targets $300K By 2029 - Yahoo Finance",
-      "🥛 Macro hits RISK OFF. Bitcoin doesn't care 🤷 - Milk Road",
-      "Macro headwinds push Bitcoin to $82.9K despite historical 365-day breakout pattern - CoinDesk",
-      "Bitcoin Heads Higher on Macro Moves: Where Does BTC Go Next? - Decrypt",
-      "Why U.S. Macroeconomic Data Drives Bitcoin Price in 2026: Inflation, Interest Rates, and Liquidity Impact Explained - Bitcoin Foundation"
+      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
+      "BlackRock says macro case for BTC is strengthening after record 'up week' volume of 439 million shares in IBIT - CoinDesk",
+      "Bitcoin Rises As Institutional Demand And Macro Backdrop Support Prices - Seeking Alpha",
+      "Bitcoin Price Prediction for April: Can BTC Match Its 69% April Win Rate in 2026? - 24/7 Wall St.",
+      "Bitcoin (BTC) news: Macro risks mount as Ukraine adds to oil market uncertainty - CoinDesk"
     ],
-    "updated": "2026-10-16"
+    "updated": "2026-10-23"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 72353.0,
-  "ma50": 81254.0,
+  "ma200": 72855.0,
+  "ma50": 81790.0,
   "above_200ma": true,
   "funding_rate": null,
   "long_short_ratio": null

@@ -5,7 +5,7 @@
   "icon": "⬡",
   "color": "#76b900",
   "signal": "BUY",
-  "price_usd": 214.13,
+  "price_usd": 210.96,
   "price_52w_high_usd": 243.37,
   "price_52w_low_usd": 164.27,
   "pe_ratio": null,
@@ -28,33 +28,33 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit Zinsdruck; KI-Capex-Superzyklus überlagert Makro-Headwinds. Fear & Greed 63 = noch nicht euphorisch.",
+    "macro_regime": "Risk-on + Liquiditätszyklus mit Zinsplafond; KI-Capex-Superzyklus überlagert gesamtes Regime",
     "active_indicators": [
-      "KI-Capex-Zyklus (>$300B 2026, +80% Nvidia-Anteil) – in diesem Regime der stärkste Fundamental-Treiber für Semiconductors",
-      "CUDA-Monopol + Blackwell-Ramp (Mai 2026 Earnings) – technologische Moat überwiegt kurzfristige Bewertungssorgen",
-      "Relative Valuation (KGV ~50x bei >35% YoY-Wachstum) – immer noch im akzeptablen Band für 7-Jahres-DCA; China-Rückgang preis-eingerechnet"
+      "KI-Capex-Volumen ($300B+ 2026): Direkt proportional zu Nvidia-Umsatz/Margins; in diesem Regime wichtigster Demand-Proxy",
+      "CUDA-Monopol + Marktanteils-Defensibilität: China-Exportverbote treffen Konkurrenz härter als Nvidia; 34% China-Share vs. 80%+ Global = Wechselwirkung mit Geopolitik, nicht Kerngeschäft-Dekay",
+      "10Y-Rendite bei 4.99% (neutral, nicht restriktiv): Wachstumswerte können atmen; KGV-Expansion noch möglich, solange Fed nicht wieder zieht"
     ],
-    "summary": "NVDA notiert -12% vom 52W-Hoch, China-Headwinds sind bekannt und teilweise in den Kurs eingepreist. Der KI-Capex-Boom der Mega-Cap-Tech bleibt das dominierende Regime; Blackwell-Ramp im Mai 2026 sollte Bewertungskompression stoppen. DCA-monatlich ist optimal in diesem Drawdown.",
+    "summary": "Nvidia befindet sich in idealer Position während KI-Capex-Peak 2026; der -13% Pullback vom 52W-High ist psychologisch, nicht fundamental begründet. Blackwell-Ramp (Mai 2026 Earnings) sollte neues Vertrauen schaffen. Bei $210.96 mit stabiler Makro und rekordhohem CapEx-Zyklus = klassisches Einstiegs-Setup für DCA-Investor.",
     "price_targets": {
-      "buy_zone": 210,
+      "buy_zone": 205,
       "buy_aggressiv": 195,
       "take_profit_1_price": 245,
-      "take_profit_1_action": "15% Rebalancing (Gewinnmitnahme in KGV >60x)",
+      "take_profit_1_action": "20% der Position in Tranchen nehmen bei $240–250 (zurück zu 52W-High)",
       "take_profit_2_price": 280,
-      "take_profit_2_action": "25% weitere Gewinnmitnahme (Kursziel nach Blackwell-Ramp, vor Euphorie)",
+      "take_profit_2_action": "weitere 30% bei $270–285 (neuer ATH-Retest im Q2–Q3 2026 wahrscheinlich)",
       "concern_below": 185
     },
-    "bull_case": "KI-Capex-Zyklus ist strukturell, nicht zyklisch: $300B+ 2026 ist nur Anfang. Blackwell-Ramp im Mai sollte Markt-Skepsis zu China-Impact aufräumen, da Data-Center-Volumes kompensieren.",
-    "bear_case": "China-Export-Restriktionen könnten verschärft werden (35% Marktanteil verloren). 10Y-Rendite 5.1% bleibt Wachstumswert-Bremse; Bewertung über 70x KGV löst Rotation aus.",
-    "signal_changer": "Wenn Blackwell-Guidance enttäuschend ausfällt (Q2 FY26, Mai 2026) ODER China kündigt ASIC-Durchbruch an ODER 10Y bricht über 5.5% → HOLD/SELL. Wenn KGV über 75x ohne neuen Katalyst → Rebalancing Force.",
+    "bull_case": "KI-Capex-Zyklus ist strukturell, nicht zyklisch; Microsoft/Google/Amazon-Ankündigungen binden Volumen bis 2027. Blackwell-Verfügbarkeit (Mai 2026) + Margin-Expansion bei gleichzeitiger Skalierung = 40–50% Upsideluft bis 280–300.",
+    "bear_case": "Bewertung (KGV ~55x aktuell) preist Wachstum bereits ein; plötzliche Macro-Schocks (Fed-Hawkishness, Rezessionssignale) oder China-Verhandlungen, die Export-Verbote lockern, würden AMD/andere Konkurrenten begünstigen. ASML-Lieferketten-Engpässe könnten Produktion bremsen.",
+    "signal_changer": "1) 10Y-Rendite über 5.5% + Fed-Signale neuer Zinserhöhungen → KGV-Kompression. 2) Unerwartet schwache Blackwell-Pre-Orders (Aprilmeldungen) → Demand-Revision. 3) China-Deal, das AMD/HiSilicon plötzlich Marktzugang gibt → Monopol-Narrativ bricht. 4) Buch unter $180 (Gap unter 52W-Low) → Makro-Kapitulation, dann 'CASH' bis Klärung.",
     "news_headlines": [
-      "U.S. Export Restrictions Drive Nvidia China AI Chip Market Share Down to 34% - TIKR.com",
       "China May Reopen Nvidia's AI Market. How Will NVDA Stock React Monday? - Yahoo Finance",
-      "NVIDIA Earnings Preview - Data Center, Rubin & Export Policy Outlook - tastylive",
+      "Here’s How Much Nvidia Stock Is Expected to Move After Earnings - Investopedia",
       "NVIDIA’s Export Ban Backfires as Chinese Competitors Raise Prices 50% - 24/7 Wall St.",
+      "U.S. Export Restrictions Drive Nvidia China AI Chip Market Share Down to 34% - TIKR.com",
       "Weekly Recap: NVIDIA (NVDA) $86B revenue and Hugging Face $12.9B deal - TradingView"
     ],
-    "updated": "2026-10-16"
+    "updated": "2026-10-23"
   },
   "quarterly_review": {
     "last_quarter": "Q4 FY2026",
@@ -64,5 +64,5 @@
     "guidance_note": null
   },
   "strategy_note": "Stabilitätsanker. KI-Infrastruktur ist unvermeidlich – NVDA ist der einzige Profiteur ohne echte Konkurrenz.",
-  "dist_from_52w_high_pct": -12.0
+  "dist_from_52w_high_pct": -13.3
 }

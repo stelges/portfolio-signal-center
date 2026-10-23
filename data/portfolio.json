@@ -1,33 +1,33 @@
 {
-  "last_updated": "2026-10-16T20:14:32.313655Z",
+  "last_updated": "2026-10-23T20:47:35.811638Z",
   "updated_by": "update_intelligence.py v3 (GitHub Actions)",
   "global_signal": "HOLD",
   "global_summary": "Normales DCA fortführen",
-  "fear_greed": 63,
-  "btc_price_usd": 81556,
-  "btc_ath_dist_pct": -25.2,
-  "btc_30d_change_pct": 4.29,
-  "next_update": "2026-10-23T18:00:00Z",
+  "fear_greed": 50,
+  "btc_price_usd": 81390,
+  "btc_ath_dist_pct": -25.3,
+  "btc_30d_change_pct": -6.01,
+  "next_update": "2026-10-30T18:00:00Z",
   "ai_weekly_briefing": {
-    "title": "Starker BTC, Metaplanet Discount lockt",
-    "status": "Portfolio stabil im Hold-Modus, BTC bei $81.556 mit Fear & Greed 63/100.",
-    "insight": "Metaplanet notiert unter NAV (0.8661x) – klassisches Kaufsignal bei discount. DXY bleibt erhöht (101.77), unterstützt BTC-Stärke; 10Y-Rendite bei 5.1% signalisiert noch restriktives Umfeld.",
-    "action": "Diese Woche DCA wie geplant durchführen; Cash-Reserve anteilig in Metaplanet und NVDA (beide BUY) einsetzen, Rest in bestehende Positionen."
+    "title": "Makro-Druck, aber DCA-Plan intakt",
+    "status": "Portfolio stabil mit gezielten Kaufsignalen bei Metaplanet und NVDA; starker Dollar und steigende Renditen belasten.",
+    "insight": "Der DXY über 101 und 10Y-Renditen nahe 5% signalisieren Gegenwind für Risk Assets. Metaplanet bei 0.8395x mNAV und NVDA unter 211 bieten aber klassische DCA-Einstiegspunkte im Plan.",
+    "action": "Routinemäßige DCA-Käufe für Metaplanet und NVDA durchführen; BTC und SOL im HOLD bewahren; Cash-Reserve halten für mögliche Volatilität."
   },
   "market_regime": "neutral",
-  "btc_dominance_pct": 59.4,
+  "btc_dominance_pct": 59.5,
   "macro": {
-    "sp500": 7659.44,
-    "dxy": 101.77,
-    "gold": 4187.9,
-    "us10y": 5.1,
-    "usdjpy": 158.0
+    "sp500": 7623.68,
+    "dxy": 101.83,
+    "gold": 4008.4,
+    "us10y": 4.99,
+    "usdjpy": 156.83
   },
   "next_halving": {
-    "next_halving_estimated_utc": "2028-04-12T04:04:39Z",
+    "next_halving_estimated_utc": "2028-04-11T18:27:42Z",
     "next_halving_block": 1050000,
-    "blocks_remaining": 78239,
-    "current_block_height": 971761,
+    "blocks_remaining": 77170,
+    "current_block_height": 972830,
     "halving_source": "blockchain_calculated"
   }
 }

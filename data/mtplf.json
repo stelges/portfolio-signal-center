@@ -9,8 +9,8 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 0.8661,
-  "btc_nav_usd_billions": 3.28,
+  "mnav": 0.8395,
+  "btc_nav_usd_billions": 3.27,
   "zones": {
     "buy": {
       "label": "mNAV < 1.1x",
@@ -28,35 +28,35 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-on + Liquiditätszyklus mit USD-Stärke; BTC nach -25% Korrektur vom ATH – klassische DCA-Akkumulations-Setup für gehebelten Proxy",
+    "macro_regime": "Risk-on mit Bitcoin-Liquiditätszyklus + schwacher Yen; BTC konsolidiert nach Korrektur, Institutskapital sucht gehebelte Proxies",
     "active_indicators": [
-      "mNAV 0.8661x (im aggressiven Kaufbereich < 0.9x – historisch sehr selten und signalisiert extremen Rabatt)",
-      "BTC -25% vom ATH + Fear & Greed 63/100 (Greed-Phase, aber nicht euphorisch – Akkumulationsphase)",
-      "USD/JPY 158.0 (starker Dollar begünstigt Metaplanet als USD-Aktiva-Halter; Yen-Schwäche = Rückenwind für japanische BTC-Treasury-Company)"
+      "mNAV 0.8395x (KRITISCH: unter 0.9x = aggressive Kaufzone, Bitcoin mit 16% Rabatt via Aktie)",
+      "USD/JPY 156.83 (Metaplanet-Tailwind: USD-Aktiva in Yen-Bilanz profitieren, lockt JPN-Retail)",
+      "Superplanet-Launch + BitBonds (Growth-Katalysator: US-Expansion reduziert Single-Market-Risiko, neue Kapitalquelle)"
     ],
-    "summary": "Metaplanet notiert bei 0.8661x mNAV – einer der seltensten Rabattzustände in der Treasury-Company-Landschaft. Die $132M Superplanet-Kapitalisierung schafft neuen Growth-Catalyst und strukturelle Glaubwürdigkeit. Bei 7-Jahres-DCA ist dies eine aggressive Akkumulations-Gelegenheit.",
+    "summary": "Metaplanet handelt erstmals unter 0.9x mNAV – dies ist ein seltenes, statistisch aggressives Kaufsignal. Der Superplanet-Launch und schwache Yen bilden strukturelle Tailwinds. Mit 40k BTC im Treasury und nur 0.84x Bewertung ist dies DCA-typische Einstiegsgeometrie für 7-Jahres-Plan.",
     "price_targets": {
       "buy_zone_mnav": 0.95,
-      "buy_aggressiv_mnav": 0.85,
-      "take_profit_1_mnav": 1.15,
-      "take_profit_1_action": "15–20% Positionsgröße verkaufen (Kostenbasis-Sicherung)",
-      "take_profit_2_mnav": 1.5,
-      "take_profit_2_action": "30–40% weiterer Verkauf (Lockdown von Gewinnen)",
-      "concern_mnav": 2.0
+      "buy_aggressiv_mnav": 0.8,
+      "take_profit_1_mnav": 1.25,
+      "take_profit_1_action": "10–15% positon reduzieren (erste Gewinnsicherung)",
+      "take_profit_2_mnav": 1.8,
+      "take_profit_2_action": "30% Position verkaufen (strukturelle Umbewertung)",
+      "concern_mnav": 2.5
     },
-    "bull_case": "mNAV 0.8661x ist extremer Rabatt; Superplanet-Deal ist struktureller Wachstumskatalyst und eröffnet US-Expansion. Bei BTC-Rallye + mNAV-Normalisierung auf 1.2–1.5x ist 3–5x UAL realistisch über 7 Jahre.",
-    "bear_case": "Yahoo-Headline warnt vor 29% Überbe­wer­tung (widerspricht mNAV-Daten – möglicherweise Snapshot-Fehler oder alternative Bewertung). Yen-Volatilität und BTC-Drawdown-Risiken könnten Rabatt weiter ausweiten.",
-    "signal_changer": "mNAV > 1.25x = zu HOLD wechseln | BTC < $65k + mNAV > 0.98x = zu CASH für bessere Einstiegspunkte | Superplanet-Deal-Kündigung oder japanische Regulierung gegen BTC-Treasury = fundamentale Neubeurteilung",
+    "bull_case": "mNAV 0.84x ist statistisch ein Setup für mean reversion; Superplanet + BitBonds treiben Narrativ von 'Metaplanet = US-Bitcoin-Bank' (JPY-Schwäche + BTC-Rallye = doppelter Leverage). Bei BTC $150k + mNAV 1.5x wäre MTPLF $8–12 USD realistisch.",
+    "bear_case": "Yahoo Finance warnt vor 29% Überbewertung (alternative Modelle); BoJ könnte Yen stützen (JPY-Stärke = Gegenwind); BTC-Korrektur unter $60k würde mNAV-Expansion aufhalten. Leverage schneidet beide Wege.",
+    "signal_changer": "mNAV über 1.2x HALTEN. Über 1.8x: Reduktion beginnen. Unter 0.75x: Aggressiv doppelt kaufen. BoJ-Zinspolitik + USD-Schwäche: HOLD → CASH. BTC unter $60k: Pause im DCA.",
     "news_headlines": [
-      "Metaplanet (TSE:3350) Could Be 29% Overvalued On U.S. Bitcoin Treasury Plan - Yahoo Finance",
-      "Japan's Metaplanet launching U.S. bitcoin treasury company through $135 million nanocap deal - CoinDesk",
       "Why Metaplanet (TSE:3350) Is Up 13.1% After Launching a U.S. Bitcoin Treasury Vehicle - Yahoo Finance",
-      "Metaplanet stakes $132M in bitcoin to build US treasury vehicle Superplanet - Dealroom"
+      "Bitcoin treasury company Metaplanet unveils BitBonds with $1.3 million private debt sale - CoinDesk",
+      "Metaplanet stakes $132M in bitcoin to build US treasury vehicle Superplanet - Dealroom",
+      "Metaplanet (TSE:3350) Could Be 29% Overvalued On U.S. Bitcoin Treasury Plan - Yahoo Finance"
     ],
-    "updated": "2026-10-16"
+    "updated": "2026-10-23"
   },
   "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien.",
-  "stock_price_usd": 1.7532,
-  "stock_price_jpy": 277.0,
-  "usdjpy": 158.0
+  "stock_price_usd": 1.6897,
+  "stock_price_jpy": 265.0,
+  "usdjpy": 156.83
 }

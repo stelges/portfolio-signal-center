@@ -4,11 +4,11 @@
   "allocation_pct": 38,
   "icon": "₿",
   "color": "#f7931a",
-  "signal": "HOLD",
-  "price_usd": 81390,
+  "signal": "BUY",
+  "price_usd": 76736,
   "ath_usd": 109000,
-  "ath_dist_pct": -25.3,
-  "change_30d_pct": -6.01,
+  "ath_dist_pct": -29.6,
+  "change_30d_pct": -8.08,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -25,27 +25,39 @@
     }
   },
   "ai_analysis": {
-    "signal": "HOLD",
+    "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-neutral mit strukturellem Gegenwind – erhöhte Anleiherenditen belasten Risk-Assets, Dollar stabil, institutionelle Akkumulation dämpft Abwärtsdruck",
-    "summary": "BTC befindet sich in einer Konsolidierungsphase zwischen MA50 ($81,790) und MA200 ($72,855), knapp unter dem ATH-Abstand von -25%. Das Makro-Umfeld ist zweigeteilt: Hohe Anleiherenditen und ein stabiler Dollar belasten kurzfristig, während institutionelle Nachfrage (BlackRock IBIT) und die Pre-Halving-Akkumulationslogik (~18 Monate bis Halving 2028) strukturell stützen. Normales DCA ist optimal – weder aggressive Erhöhung noch Zurückhaltung gerechtfertigt.",
+    "macro_regime": "Risk-off mit erhöhten Zinsen – selektive Akkumulation in Zyklusassets",
     "active_indicators": [
-      "10Y US-Rendite (4.99%) – Historisch belastet ein 5%-Niveau Risk-Assets wie BTC durch höhere Opportunitätskosten und Liquiditätsentzug; entscheidend für die Trendrichtung",
-      "BTC-Dominanz (59.5%) – Signalisiert Risk-off innerhalb Crypto; Kapital flieht in BTC statt in Altcoins, was defensives Verhalten zeigt, aber BTC relative Stärke verleiht",
-      "200-Tage MA ($72,855) – Im Pre-Halving-Umfeld ist der Abstand zum MA200 der wichtigste strukturelle Anker; BTC darüber = intakter Bullenmarkt, darunter = Regime-Wechsel"
+      "10Y US-Rendite 4.93% (historisch belastet Risk-Assets stark, aber BTC hat sich oberhalb MA200 gehalten – zeigt relative Stärke trotz Gegenwind)",
+      "BTC/MA200-Abstand ($76.7k vs $73.1k) – Preis über langfristigem Trend, historisch valide Akkumulationszone in Pre-Halving-Phasen",
+      "Fear & Greed 30/100 (Angst-Zone) – historisch einer der stärksten konträren Kaufindikatoren im laufenden Bullzyklus, kombiniert mit hoher BTC-Dominanz 59.1%"
     ],
+    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Konsolidierung rund 30% unter ATH, mit Fear-Sentiment und makroökonomischem Gegenwind durch hohe Zinsen. Die Kombination aus Angst-Sentiment, MA200-Support und dem Halving-Zyklus (~April 2028) schafft jedoch eine historisch attraktive DCA-Akkumulationszone. BTC-Dominanz von 59.1% signalisiert institutionellen Fokus auf BTC, kein systemisches Krypto-Verkaufsregime.",
+    "price_targets": {
+      "buy_zone": 76000,
+      "buy_aggressiv": 71000,
+      "take_profit_1_price": 105000,
+      "take_profit_1_action": "20% der Position verkaufen",
+      "take_profit_2_price": 140000,
+      "take_profit_2_action": "40% der Position verkaufen",
+      "concern_below": 68000
+    },
+    "bull_case": "Zinssenkungszyklus setzt sich 2027 fort und trifft auf Post-Halving-Angebotsverknappung – historisches Muster würde ATHs Richtung $150k–$200k bis 2028/2029 implizieren. Institutionelle Akkumulation (ETF-Flows, Fidelity-Outlook) gibt dem Zyklus strukturellen Rückenwind.",
+    "bear_case": "Verharren der 10Y-Renditen über 5% kombiniert mit einer US-Rezession könnte BTC unter $68k drücken und den MA200 brechen, was technisch eine weitere Korrektur Richtung $55k–$60k auslösen würde. Gold-Schwäche als Risikoindikator signalisiert mögliche weitere Liquidationsrunden.",
+    "signal_changer": "Signal kippt auf CASH bei nachhaltigem Bruch unter $68k (MA200-Verlust) oder bei Anstieg der 10Y-Renditen über 5.5% mit gleichzeitig fallender BTC-Dominanz unter 55% – beides würde systemischen Risk-off ohne Krypto-Boden signalisieren. Signal kippt auf HOLD bei Stabilisierung ohne neues Momentum über $82k (50-Tage-MA).",
     "news_headlines": [
-      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
-      "BlackRock says macro case for BTC is strengthening after record 'up week' volume of 439 million shares in IBIT - CoinDesk",
-      "Bitcoin Rises As Institutional Demand And Macro Backdrop Support Prices - Seeking Alpha",
-      "Bitcoin Price Prediction for April: Can BTC Match Its 69% April Win Rate in 2026? - 24/7 Wall St.",
-      "Bitcoin (BTC) news: Macro risks mount as Ukraine adds to oil market uncertainty - CoinDesk"
+      "Why Now Is the Time to Add and Hold BTC - Galaxy",
+      "Fidelity Macro Chief Jurrien Timmer Says Bitcoin Bull Market Is Back, Targets $300K By 2029 - Yahoo Finance",
+      "Why bitcoin is down 'just' 32% a year after its record high of $126,000 - CoinDesk",
+      "Bitcoin – Why Coinbase warns BTC could fall to $75K amid macro risks - AMBCrypto",
+      "Top July 2026 Crypto Updates: Crypto Market at a Breaking Point — Is Another Crash Coming? - Bitcoin Foundation"
     ],
-    "updated": "2026-10-23"
+    "updated": "2026-10-30"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 72855.0,
-  "ma50": 81790.0,
+  "ma200": 73118.0,
+  "ma50": 81891.0,
   "above_200ma": true,
   "funding_rate": null,
   "long_short_ratio": null

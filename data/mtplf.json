@@ -9,8 +9,8 @@
   "btc_holdings": 40177,
   "debt_usd_millions": 280,
   "shares_millions": 1459,
-  "mnav": 0.8239,
-  "btc_nav_usd_billions": 3.08,
+  "mnav": 0.8069,
+  "btc_nav_usd_billions": 3.05,
   "zones": {
     "buy": {
       "label": "mNAV < 1.1x",
@@ -28,35 +28,35 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "hoch",
-    "macro_regime": "Risk-off + Defensive Positionierung (Fear & Greed 30) – gleichzeitig BTC-Akkumulationsphase mit strukturellem Tailwind (Japan-Lockerung, USD-Stärke begünstigt USD-Aktiva, Pre-Halving-Zyklus)",
+    "macro_regime": "Risk-off + Flucht in Sicherheit mit BTC-Wiederaufbau. Fear & Greed bei 28 → Panik-Phase; DXY 102.28 = starker USD stützt USD-Asset; BTC -30% vom ATH = Akkumulationszone für Treasury-Companies.",
     "active_indicators": [
-      "mNAV 0.8239x (KRITISCH: Historisch seltener Rabatt <0.9x – signalisiert maximale Sicherheitsmarge für BTC-Long)",
-      "Fear & Greed 30 (Extremer Pessimismus = klassische Akkumulationszone; historisch beste Renditen nach Scores <25–35)",
-      "USD/JPY 157.52 (Schwacher Yen hebelt USD-Denominated BTC-NAV; Metaplanet profitiert strukturell von Yen-Schwäche)"
+      "mNAV 0.8069x (KRITISCH: <0.9x = extreme Kaufzone, Bitcoin wird durch MTPLF mit 20% Rabatt gekauft)",
+      "BTC-Dominanz 59.2% (stabiles Ecosystem, kein Altcoin-Crash; Liquidität konzentriert sich auf BTC)",
+      "Fear & Greed 28 (Panic Selling Phase, aber Institutionelle kaufen Dips → Super League Deal zeigt Kapitalization)"
     ],
-    "summary": "Metaplanet notiert mit 0.8239x mNAV – ein Rabatt, der in der Historie dieser Aktie selten und aggressiv kaufenswert ist. Bei gleichzeitig extremem Markt-Pessimismus (F&G 30) und BTC-KI-Signal BUY handelt es sich um eine asymmetrische Einstiegszone für 7J-DCA. Die neue US-Treasury-Struktur (BitBonds, US-Vehicle) reduziert Jurisdiktionsrisiko und erhöht institutionelle Attraktivität.",
+    "summary": "Metaplanet notiert auf ALLZEIT-TIEFST-mNAV (0.8069x) – Bitcoin wird über MTPLF mit 20% Abschlag gehandelt. Der gerade genehmigte 2100-BTC-Deal + BitBonds-Pivot signalisieren Kapitalzufluss und Geschäftsausweitung in kritischer Akkumulationsphase. Bei 7-Jahres-DCA ist dies statistisch die aggressive Kauf-Gelegenheit.",
     "price_targets": {
       "buy_zone_mnav": 0.95,
-      "buy_aggressiv_mnav": 0.82,
-      "take_profit_1_mnav": 1.15,
-      "take_profit_1_action": "Erste 10–15% des Positions-Plus realisieren (Gewinnmitnahme in Aufregungsphasen)",
-      "take_profit_2_mnav": 1.5,
-      "take_profit_2_action": "25% der Gesamtposition verkaufen (normales DCA-Rebalancing)",
-      "concern_mnav": 2.0
+      "buy_aggressiv_mnav": 0.8,
+      "take_profit_1_mnav": 1.35,
+      "take_profit_1_action": "20% Gewinn mitnehmen (= BTC zur Parity + 35% Expansion)",
+      "take_profit_2_mnav": 1.85,
+      "take_profit_2_action": "50% Gewinn mitnehmen (= faire Bewertung nach BTC-Rally)",
+      "concern_mnav": 2.5
     },
-    "bull_case": "mNAV 0.82x ist historisch äußerst selten; bei BTC-Recovery auf $100k+ und mNAV-Normalisierung auf 1.2–1.5x würde MTPLF 3–5x machen (unabhängig von BTC-Preis). US-Treasury-Initiative senkt regulatorisches Risiko, hebelt aber Exposure gegenüber BTC exponentiell (Schuldenstruktur + Aktien-Multiplikator).",
-    "bear_case": "Fear & Greed 30 könnte auf 15 fallen → weitere Panik-Verkäufe in MTPLF trotz günstiger mNAV. Yen-Stärke oder Fed-Hawkishness (DXY >105) würde USD-Aktiva-Vorteil schwächen; Schuldenstand ($280M) ist bei BTC-Drawdown auf $40k+ ein Margin-Call-Risiko.",
-    "signal_changer": "mNAV über 1.30x bei BTC stagnierend → zu teuer, HOLD/CASH; BTC unter $55k + mNAV über 1.00x + Schuldendeflation-Signal → SELL 50%; Fear & Greed unter 10 + mNAV unter 0.75x → AGGRESSIV-BUY (douple position).",
+    "bull_case": "mNAV 0.8069x ist statistisch ein 40-Jahres-Tief für BTC-Treasury-Companies; Super League Deal + BitBonds-Fundraising = Geschäftsmomentum. In BTC-Bullen-Zyklen expandiert mNAV typischerweise auf 1.5–2.0x parallel zur BTC-Preis-Verdopplung.",
+    "bear_case": "Japanisches Regulierungsrisiko (FSA könnte Fremdfinanzierung beschränken); JPY-Stärke würde USD-Aktiva schwächen. Wenn BTC unter $60k fällt, könnte mNAV unter 0.75x rutschen.",
+    "signal_changer": "mNAV > 1.50x ohne BTC-Anstieg (Signal → HOLD/Teilverkauf). BTC-Crash < $60k oder regulatorischer Schlag gegen Japans BTC-Treasuries (Signal → CASH). Super League-Deal bricht auseinander (Abwärtsrisiko +30%).",
     "news_headlines": [
-      "Why Metaplanet (TSE:3350) Is Up 13.1% After Launching a U.S. Bitcoin Treasury Vehicle - Yahoo Finance",
+      "Super League Holders Approve Metaplanet’s 2100 Bitcoin Deal, Clearing Way for U.S. BTC Treasury - Yahoo Finance",
       "Japan's Metaplanet launching U.S. bitcoin treasury company through $135 million nanocap deal - CoinDesk",
-      "Metaplanet (TSE:3350) Could Be 29% Overvalued On U.S. Bitcoin Treasury Plan - Yahoo Finance",
+      "Why Metaplanet (TSE:3350) Is Up 13.1% After Launching a U.S. Bitcoin Treasury Vehicle - Yahoo Finance",
       "Bitcoin treasury company Metaplanet unveils BitBonds with $1.3 million private debt sale - CoinDesk"
     ],
-    "updated": "2026-10-30"
+    "updated": "2026-11-06"
   },
   "strategy_note": "BTC-Hebel. Bei mNAV < 1x kaufst du Bitcoin mit Rabatt. Einzigartig in Asien.",
-  "stock_price_usd": 1.549,
-  "stock_price_jpy": 244.0,
-  "usdjpy": 157.52
+  "stock_price_usd": 1.4959,
+  "stock_price_jpy": 237.0,
+  "usdjpy": 158.43
 }

@@ -5,10 +5,10 @@
   "icon": "₿",
   "color": "#f7931a",
   "signal": "BUY",
-  "price_usd": 76736,
+  "price_usd": 75964,
   "ath_usd": 109000,
-  "ath_dist_pct": -29.6,
-  "change_30d_pct": -8.08,
+  "ath_dist_pct": -30.3,
+  "change_30d_pct": -11.42,
   "next_halving": "April 2028",
   "zones": {
     "buy": {
@@ -27,37 +27,37 @@
   "ai_analysis": {
     "signal": "BUY",
     "confidence": "mittel",
-    "macro_regime": "Risk-off mit erhöhten Zinsen – selektive Akkumulation in Zyklusassets",
+    "macro_regime": "Risk-off mit erhöhten Realzinsen – Konsolidierungsphase im Post-Halving-Zyklus vor nächstem Halving 2028",
     "active_indicators": [
-      "10Y US-Rendite 4.93% (historisch belastet Risk-Assets stark, aber BTC hat sich oberhalb MA200 gehalten – zeigt relative Stärke trotz Gegenwind)",
-      "BTC/MA200-Abstand ($76.7k vs $73.1k) – Preis über langfristigem Trend, historisch valide Akkumulationszone in Pre-Halving-Phasen",
-      "Fear & Greed 30/100 (Angst-Zone) – historisch einer der stärksten konträren Kaufindikatoren im laufenden Bullzyklus, kombiniert mit hoher BTC-Dominanz 59.1%"
+      "10Y US-Rendite 4.86% (historisch belastet BTC als Risk-Asset, aber BTC hält MA200 – zeigt relative Stärke trotz Zinsdruck)",
+      "BTC über MA200 ($73.198) bei Fear & Greed 28 (Angst-Phasen nahe MA200 sind historisch optimale DCA-Einstiegszonen im Bullzyklus)",
+      "BTC-Dominanz 59.2% (Risk-off-Rotation in BTC als härtestes Crypto-Asset – institutionelle Präferenz, Altcoin-Risiko gemieden)"
     ],
-    "summary": "BTC befindet sich in einer klassischen Pre-Halving-Konsolidierung rund 30% unter ATH, mit Fear-Sentiment und makroökonomischem Gegenwind durch hohe Zinsen. Die Kombination aus Angst-Sentiment, MA200-Support und dem Halving-Zyklus (~April 2028) schafft jedoch eine historisch attraktive DCA-Akkumulationszone. BTC-Dominanz von 59.1% signalisiert institutionellen Fokus auf BTC, kein systemisches Krypto-Verkaufsregime.",
+    "summary": "BTC befindet sich in einer Kompressionsphase: hohe Realzinsen drücken auf Risk-Assets, gleichzeitig hält BTC knapp über dem MA200 – ein historisch bullishes Zeichen. Fear & Greed bei 28 signalisiert Marktpessimismus, der bei DCA-Strategien klassisch als Kaufsignal gilt. Der Zyklus befindet sich im Akkumulationsfenster vor dem nächsten Halving (April 2028), was historisch 12–24 Monate vor dem Halving starke Risk/Reward-Profile liefert.",
     "price_targets": {
-      "buy_zone": 76000,
-      "buy_aggressiv": 71000,
-      "take_profit_1_price": 105000,
+      "buy_zone": 74000,
+      "buy_aggressiv": 68000,
+      "take_profit_1_price": 95000,
       "take_profit_1_action": "20% der Position verkaufen",
-      "take_profit_2_price": 140000,
+      "take_profit_2_price": 120000,
       "take_profit_2_action": "40% der Position verkaufen",
       "concern_below": 68000
     },
-    "bull_case": "Zinssenkungszyklus setzt sich 2027 fort und trifft auf Post-Halving-Angebotsverknappung – historisches Muster würde ATHs Richtung $150k–$200k bis 2028/2029 implizieren. Institutionelle Akkumulation (ETF-Flows, Fidelity-Outlook) gibt dem Zyklus strukturellen Rückenwind.",
-    "bear_case": "Verharren der 10Y-Renditen über 5% kombiniert mit einer US-Rezession könnte BTC unter $68k drücken und den MA200 brechen, was technisch eine weitere Korrektur Richtung $55k–$60k auslösen würde. Gold-Schwäche als Risikoindikator signalisiert mögliche weitere Liquidationsrunden.",
-    "signal_changer": "Signal kippt auf CASH bei nachhaltigem Bruch unter $68k (MA200-Verlust) oder bei Anstieg der 10Y-Renditen über 5.5% mit gleichzeitig fallender BTC-Dominanz unter 55% – beides würde systemischen Risk-off ohne Krypto-Boden signalisieren. Signal kippt auf HOLD bei Stabilisierung ohne neues Momentum über $82k (50-Tage-MA).",
+    "bull_case": "Ein Rückgang der US-Renditen oder ein Fed-Pivot würde Liquidität freisetzen und BTC als ersten Nutznießer positionieren – kombiniert mit dem Pre-Halving-Akkumulationsnarrativ könnte ATH-Retest bei $109k und darüber möglich werden. Institutionelle Akkumulation bei Angst-Niveaus unter $80k ist historisch das Setup für spätere Parabeln.",
+    "bear_case": "Hält die 10Y-Rendite über 5% oder steigen japanische Zinsen aggressiv weiter, droht globaler Liquiditätsentzug – BTC könnte MA200 brechen und in Richtung $60–65k korrigieren. Ein Unterschreiten von $68k würde die Bullmarktstruktur technisch ernsthaft beschädigen.",
+    "signal_changer": "Signal kippt auf CASH wenn: BTC nachhaltig unter $68.000 schließt (MA200-Bruch + Bullmarktstrukturverlust) ODER 10Y-Rendite nachhaltig über 5.25% steigt ODER Fear & Greed unter 15 fällt ohne Preisstabilisierung. Signal eskaliert zu BUY-aggressiv wenn: BTC unter $68k fällt bei gleichzeitig sinkenden Renditen (klassisches Washout-Setup).",
     "news_headlines": [
-      "Why Now Is the Time to Add and Hold BTC - Galaxy",
-      "Fidelity Macro Chief Jurrien Timmer Says Bitcoin Bull Market Is Back, Targets $300K By 2029 - Yahoo Finance",
-      "Why bitcoin is down 'just' 32% a year after its record high of $126,000 - CoinDesk",
-      "Bitcoin – Why Coinbase warns BTC could fall to $75K amid macro risks - AMBCrypto",
-      "Top July 2026 Crypto Updates: Crypto Market at a Breaking Point — Is Another Crash Coming? - Bitcoin Foundation"
+      "Bitcoin Price Prediction 2026: Will BTC Finally Rally to 100k? - Bitcoin Foundation",
+      "Bitcoin heads for third winning week in a row as macro pressures mount - CNBC",
+      "Bitcoin's recent macro relief faces a challenge from Japanese interest rates - CoinDesk",
+      "Crypto Lending Market Update: Strategy’s BTC Sale, DeFi Recovery & Tokenized RWAs | Q2 2026 - Galaxy",
+      "Is 2026 a Good Year to Buy Bitcoin (BTC)? Here's the Bull and Bear Case at $75,000 BTC Price - 24/7 Wall St."
     ],
-    "updated": "2026-10-30"
+    "updated": "2026-11-06"
   },
   "strategy_note": "Basis-Position. In jedem 4-Jahres-Zeitraum positiv. Fundament des Portfolios.",
-  "ma200": 73118.0,
-  "ma50": 81891.0,
+  "ma200": 73198.0,
+  "ma50": 81997.0,
   "above_200ma": true,
   "funding_rate": null,
   "long_short_ratio": null
